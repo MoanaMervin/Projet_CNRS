@@ -1,0 +1,45 @@
++
+Liste des concours
+A : Sciences du vivant, de la terre et de l'environnement
+Ingénieur de recherche
+Concours N° 8
+Nbre de postes :
+1
+Emploi-type :
+Ingenieure ou ingenieur biologiste en plateforme scientifique
+Affectation :
+Centre de Nanosciences et de Nanotechnologies, PALAISEAU
+Groupe de fonction :
+Groupe 3
+Mission :
+L'Ingénieur-e biologiste en plateforme scientifique conduira les processus d'étude de milieux biologiques (fluides biologiques, tissus, cellules, bactéries, ...) allant de la préparation des échantillons biologiques , à la préparation et l'utilisation des puces micro-fluidiques jusqu'aux caractérisations des expériences (imagerie en fluorescence, spectroscopie optique et électrochimique et analyse informatique des données).
+Il-Elle conduira également la gestion des nouveaux laboratoires L2 de microbiologie/culture cellulaire, des salles de biochimie, et des salles de fabrication de puces fluidiques en verre et/ou en polymère situées en salle blanche.
+En parallèle, il-elle développera des protocoles de cultures cellulaires et bactériennes, et des protocoles de caractérisation (biochimiques, optiques,  électriques,...) du matériel biologique étudié.
+Activités :
+- Concevoir et appliquer les protocoles de culture cellulaire  bactérienne depuis la préparation des échantillons jusqu'à leur analyse (imagerie en fluorescence, spectroscopie optique et électrochimique) ;
+- Concevoir et conduire en spécialiste les procédés de micro-fluidique appropriés à chaque projet (pour la biologie cellulaire ou bactérienne, et la biochimie) ;
+- Assurer la pérennité des savoir-faire dans les techniques microfluidiques développées au sein de l'unité et le transfert technologique vers les personnels du C2N ;
+- Former aux principes et à la mise en œuvre des techniques de biologie en puce micro-fluidique, et encadrer les utilisateurs (commande des produits, gestion des déchets, sécurité, stérilisation, formation des utilisateurs) ;
+- Assurer une veille scientifique et technologique dans le domaine des cultures cellulaire et bactérienne, et des dispositifs fluidiques associés ;
+- Assurer le suivi technique des instruments (maintenance, mesures), former et encadrer les utilisateurs ;
+- Diffuser et valoriser les résultats et réalisations technologiques sous forme de rapports, brevets, publications, présentations orales, enseignement ;
+- Appliquer et faire appliquer en situation de travail les réglementations du domaine, en matière d'éthique, d'hygiène et de sécurité et de bonnes pratiques de laboratoire, en particulier pour le travail en salle blanche et au sein des laboratoires L2 ;
+- Participer à la rédaction de dossiers dans le cadre des demandes de financement dans le cadre des appels à projets de l'université (Poc In Labs, Graduates schools, Ecole doctorale,...), régionaux (SESAME, DIM,...), nationaux (ANR, ...) ou internationaux (Europe, ...).
+Compétences :
+- Connaissances en biologie cellulaire et en microbiologie, en biochimie et en chimie analytique.
+- Connaissances en spectroscopie et en microscopie à fluorescence.
+- Connaissances en réglementations en biologie cellulaire, microbiologie et biochimie, mettre en œuvre ces règles, former et conseiller les utilisateurs.
+- Compétences en croissances cellulaire et bactériologique sur puce.
+- Compétences en chimie analytique (fonctionnalisation biochimique, analyses, mise au point de banques de données sur les biomolécules d'intérêts en analyse).
+- Compétences en biochimie (caractérisations et analyses biochimiques, et en biologie moléculaire (manipulation ARN, ADN, purification de protéines...)
+- Compétences souhaitées dans le domaine de la micro-fluidique (microfabrication, prototypage rapide, détection).
+- Compétences en bio-informatique (utilisation de logiciels d'analyse et/ou de banques de données).
+- Compétence autour des dispositifs et instruments pour la culture cellulaire et de l'analyse biochimique (maintenance, mesures, conseil aux utilisateurs)
+- Anglais expression et compréhension écrites et orales : niveau B1.
+- Être à l'écoute et faire preuve d'intelligence relationnelle.
+- Faire preuve de rigueur et de réactivité.
+- Savoir apprécier les situations et faire preuve de diplomatie.
+Contexte :
+Le Centre de Nanosciences et de Nanotechnologies (C2N, https://www.c2n.universite-paris-saclay.fr/) est une unité mixte de recherche du CNRS, de l'Université Paris Saclay et de l'Université Paris Cité (UMR9001). Le C2N, composé d'environ 410 personnels, est situé en Ile de France à Palaiseau (91) au cœur du campus Paris Saclay.
+L'ingénieur-e de recherche sera affecté-e au département MicroNanoBioFluidique (MNBF), qui comprend 21 chercheurs et enseignants-chercheurs. L'agent évoluera sous la responsabilité hiérarchique du directeur du département MNBF, et travaillera, en particulier, en étroite relation avec les chercheurs microfluidiciens et biochimistes du département.
+Au-delà de ce département, il-elle prendra part à des projets transversaux de l'Unité dans son cœur de métier.

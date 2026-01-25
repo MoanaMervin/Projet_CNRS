@@ -1,0 +1,563 @@
+
+    <script language="JavaScript">
+
+      // Renvoyer la valeur du cookie dont le nom est passe en parametre
+      function getCookie(name) {
+        if (document.cookie.length == 0) {
+          return null;
+        }
+        var regSepCookie = new RegExp('(; )', 'g');
+        var cookies = document.cookie.split(regSepCookie);
+        for (var i = 0; i < cookies.length; i++) {
+          var regInfo = new RegExp('=', 'g');
+          var infos = cookies[i].split(regInfo);
+          if (infos[0] == name) {
+            return unescape(infos[1]);
+          }
+        }
+        return null;
+      }
+
+      // Generer un identifiant user temporaire a sauvegarder en cookie (si pas existant)
+      function getIdentifiantUserTemporaire() {
+        var tempUserId = getCookie("pde_temp_user_id");
+        if (tempUserId == null || tempUserId == "") {
+          var dateExpire = new Date();
+          dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+          tempUserId = Math.random().toString(16).slice(2);
+          document.cookie = "pde_temp_user_id=" + tempUserId + "; expires=" + dateExpire + "; path=/";
+        }
+        return tempUserId;
+      }
+
+      // Mettre a jour le badge compteur nombre de concours dans la page
+      function majBadgeCompteurConcours() {
+        var nbrConcours = getCookie("nbr_concours");
+        if (nbrConcours == null || nbrConcours == 0) {
+          document.getElementById("cptNbrConc").innerHTML = "+";
+        } else {
+          document.getElementById("cptNbrConc").innerHTML = nbrConcours;
+        }
+      }
+
+      // Ajouter un numero de concours a la liste des concours pre-selectionnes
+      function ajouterConcoursFavori(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours");
+        var nbrConcours = 0;
+        var dateExpire = new Date();
+        dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+
+        if (valCookieNumerosConcours == null || valCookieNumerosConcours == "") {
+          valCookieNumerosConcours = numero_concours;
+          nbrConcours = 1;
+        } else {
+          // Transformer la chaine en tableau
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau ne contient pas le numero de concours : Ajout en fin de liste
+          if (arrayCookieNumerosConcours.includes(numero_concours) == false) {
+            valCookieNumerosConcours = valCookieNumerosConcours + "|" + numero_concours;
+            nbrConcours = arrayCookieNumerosConcours.length + 1;
+          }
+        }
+        // Enregistrer la liste des numeros de concours et le nombre de concours en cookies
+        document.cookie = "numeros_concours=" + valCookieNumerosConcours + "; expires=" + dateExpire + "; path=/";
+        document.cookie = "nbr_concours=" + nbrConcours + "; expires=" + dateExpire + "; path=/";
+        majBadgeCompteurConcours();
+      }
+
+      // Supprimer un numero de concours de la liste des concours pre-selectionnes
+      function supprimerConcoursFavori(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours");
+        if (valCookieNumerosConcours != null && valCookieNumerosConcours != "") {
+          var nbrConcours = getCookie("nbr_concours");
+          var dateExpire = new Date();
+          dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+          // Transformer la chaine en tableau
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau contient le numero de concours : Reconstruction de la liste sans ce numero
+          if (arrayCookieNumerosConcours.includes(numero_concours) == true) {
+            valCookieNumerosConcours = "";
+            nbrConcours = 0;
+            for (var i = 0; i < arrayCookieNumerosConcours.length; i++) {
+              if (arrayCookieNumerosConcours[i] != numero_concours) {
+                if (valCookieNumerosConcours.length > 0) {
+                  valCookieNumerosConcours = valCookieNumerosConcours + "|";
+                }
+                valCookieNumerosConcours = valCookieNumerosConcours + arrayCookieNumerosConcours[i];
+                nbrConcours = nbrConcours + 1;
+              }
+            }
+          }
+
+          // Enregistrer la liste des numeros de concours et le nombre de concours en cookies
+          document.cookie = "numeros_concours=" + valCookieNumerosConcours + "; expires=" + dateExpire + "; path=/";
+          document.cookie = "nbr_concours=" + nbrConcours + "; expires=" + dateExpire + "; path=/";
+        }
+      }
+
+      // Gerer le numero de concours selon la liste des numeros de concours en cookie :
+      // - Si numero de concours absent de la liste => Clic pour ajouter le concours
+      // - Si numero de concours present dans la liste => Clic pour supprimer le concours
+      function gererConcoursFavori(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours");
+        if (valCookieNumerosConcours == null || valCookieNumerosConcours == "") {
+          // Si liste de concours vide : Ajout
+          ajouterConcoursFavori(numero_concours);
+          alert("Ajouté à ma sélection");
+        } else {
+          // Transformer la chaine en tableau
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau ne contient pas le numero de concours : Ajout
+          if (arrayCookieNumerosConcours.includes(numero_concours) == false) {
+            ajouterConcoursFavori(numero_concours);
+            alert("Ajouté à ma sélection");
+          }
+          else {
+            // Sinon : Suppression
+            supprimerConcoursFavori(numero_concours);
+            majBadgeCompteurConcours();
+            alert("Retiré de ma sélection");
+          }
+        }
+      }
+
+      // Fonction Ajax interrogation CEL : Existence candidature pour un concours
+      function ajaxRequeteCandidatConcoursCEL(cel_url_requete_candidat_concours) {
+        var tempUserId = getIdentifiantUserTemporaire();
+        cel_url_requete_candidat_concours = cel_url_requete_candidat_concours + "&pde_temp_user_id=" + tempUserId;
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', cel_url_requete_candidat_concours);
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState === 4) {
+            var reponseCEL = xhr.responseText;
+            if (reponseCEL == 1) {
+              // Si reponse = 1, candidature existe deja dans CEL sur ce concours par le candidat
+              // Desactiver le bouton "Postuler" de la fiche concours et l icone etoile favori
+              document.getElementById("btnPostuler").disabled = true;
+              document.getElementById("btnPostuler").title = "Vous avez déjà postulé à ce concours";
+              document.getElementById("iconefavori").style.visibility = "hidden";
+              document.getElementById("cptNbrConc").innerHTML = "";
+            }
+          }
+        };
+        xhr.send();
+      }
+
+      // Verifie si le concours a deja ete postule
+      function checkConcoursPostule(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours_postules");
+        if (valCookieNumerosConcours != null && valCookieNumerosConcours != "") {
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau contient le numero de concours :
+          // Desactiver le bouton "Postuler" de la fiche concours et l icone etoile favori
+          for (var i = 0; i < arrayCookieNumerosConcours.length; i++) {
+            if (arrayCookieNumerosConcours[i] == numero_concours) {
+              document.getElementById("btnPostuler").disabled = true;
+              document.getElementById("btnPostuler").title = "Vous avez déjà postulé à ce concours";
+              document.getElementById("iconefavori").style.visibility = "hidden";
+              document.getElementById("cptNbrConc").innerHTML = "";
+            }
+          }
+        }
+      }
+
+      // Ajouter un numero de concours a la liste des concours postules
+      function ajouterConcoursPostule(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours_postules");
+        var dateExpire = new Date();
+        dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+        if (valCookieNumerosConcours == null || valCookieNumerosConcours == "") {
+          valCookieNumerosConcours = numero_concours;
+        } else {
+          // Transformer la chaine en tableau
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau ne contient pas le numero de concours : Ajout en fin de liste
+          if (arrayCookieNumerosConcours.includes(numero_concours) == false) {
+            valCookieNumerosConcours = valCookieNumerosConcours + "|" + numero_concours;
+          }
+        }
+        // Enregistrer la liste des numeros de concours postules en cookie
+        document.cookie = "numeros_concours_postules=" + valCookieNumerosConcours + "; expires=" + dateExpire + "; path=/";
+      }
+
+      // Postuler au concours dans application CEL
+      function postulerCEL(numero_concours, detail_concours, cel_url_concours) {
+        if (confirm("Vous souhaitez postuler pour le concours " + detail_concours + ".\nConfirmez-vous ce choix ?")) {
+          // Supprimer le concours de la liste des concours pre-selectionnes
+          supprimerConcoursFavori(numero_concours);
+          majBadgeCompteurConcours();
+          // Ajouter le concours a la liste des concours postules
+          ajouterConcoursPostule(numero_concours);
+          // Desactiver le bouton "Postuler" de la fiche concours
+          document.getElementById("btnPostuler").disabled = true;
+          document.getElementById("btnPostuler").title = "Vous avez déjà postulé à ce concours";
+          // Desactiver l icone etoile favori
+          document.getElementById("iconefavori").style.visibility = "hidden";
+          document.getElementById("cptNbrConc").innerHTML = "";
+
+          // Transmettre identifiant user PDE temporaire a CEL
+          var tempUserId = getIdentifiantUserTemporaire();
+          cel_url_concours = cel_url_concours + "&pde_temp_user_id=" + tempUserId;
+
+          // Ouvrir application CEL dans une nouvelle fenetre
+          window.open(cel_url_concours, '_blank');
+        }
+      }
+
+      // Postuler dans application CEL a tous les concours pre-selectionnes
+      function postulerCELtous(cel_url_concours) {
+        var nbrConcours = getCookie("nbr_concours");
+        if (nbrConcours != null && nbrConcours > 0) {
+          if (confirm("Vous souhaitez postuler pour les " + nbrConcours + " concours pré-sélectionnés.\nConfirmez-vous ce choix ?")) {
+            var dateExpire = new Date();
+            dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+            // Ajouter tous les concours pre-selectionnes a la liste des concours postules
+            var valCookieNumerosConcours = getCookie("numeros_concours");
+            var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+            for (var i = 0; i < arrayCookieNumerosConcours.length; i++) {
+              ajouterConcoursPostule(arrayCookieNumerosConcours[i]);
+            }
+            // Vider la liste des concours pre-selectionnes
+            document.cookie = "numeros_concours=; expires=" + dateExpire + "; path=/";
+            // Reinitialiser le nombre de concours pre-selectionnes a 0
+            document.cookie = "nbr_concours=0; expires=" + dateExpire + "; path=/";
+
+            // Transmettre identifiant user PDE temporaire a CEL
+            var tempUserId = getIdentifiantUserTemporaire();
+            cel_url_concours = cel_url_concours + "&pde_temp_user_id=" + tempUserId;
+
+            // Ouvrir application CEL dans une nouvelle fenetre
+            window.open(cel_url_concours, '_blank');
+            // Recharger la page parente
+            window.opener.location.reload();
+            // Fermer la page
+            window.close();
+          }
+        }
+      }
+
+      // Supprimer un concours de la liste des concours pre-selectionnes, depuis icone corbeille
+      function supprimerConcoursListe(numero_concours) {
+        if (confirm("Vous souhaitez supprimer le concours n°" + numero_concours + ".\nConfirmez-vous ce choix ?")) {
+          supprimerConcoursFavori(numero_concours);
+          window.location.reload();
+          // Mettre a jour le badge compteur dans la fenetre parente
+          var nbrConcours = getCookie("nbr_concours");
+          if (nbrConcours == null || nbrConcours == 0) {
+            window.opener.document.getElementById("cptNbrConc").innerHTML = "+";
+          } else {
+            window.opener.document.getElementById("cptNbrConc").innerHTML = nbrConcours;
+          }
+        }
+      }
+
+      // Retour en haut de la page
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+
+    </script>
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src-elem 'self' *.cnrs.fr 'unsafe-inline'; script-src-attr 'self' *.cnrs.fr 'unsafe-inline'; frame-src 'self' *.cnrs.fr 'unsafe-inline'; connect-src 'self' *.cnrs.fr 'unsafe-inline'; font-src 'self' *.cnrs.fr 'unsafe-inline'; style-src 'self' *.cnrs.fr 'unsafe-inline'; img-src 'self' *.cnrs.fr data:; " />
+<link rel="stylesheet" href="/profil/css/autre.css" type="text/css">
+<link rel="stylesheet" href="/profil/css/backtotop.css" type="text/css">
+<title>fiche profil public</title>
+<SCRIPT LANGUAGE="JAVASCRIPT" SRC="/profil/js/comboliste.js"></SCRIPT>
+<SCRIPT LANGUAGE="JAVASCRIPT" SRC="/profil/js/jquery3.4.1.min.js"></SCRIPT>
+<SCRIPT LANGUAGE="JAVASCRIPT" SRC="/profil/js/jquery.textarea.js"></SCRIPT>
+
+      <script type="text/javascript">
+        function getXhr(){
+            var xhr = null;
+            try {
+                xhr = new XMLHttpRequest();
+            } catch(e){
+                xhr = new ActiveXObject("Microsoft.XMLHTTP" );
+            }
+            return xhr;
+          }
+
+          function updateElementByAjax (pUrl, pElementId, pAsynch){
+            updateElementWithFunctionByAjax(pUrl, pElementId, pAsynch, null, false);
+          }
+        /*
+        * Si utilisation de cette méthode, il faut définir la méthode "callBackMessagesErreur".
+        */
+        function updateMessagesErreur(pUrlCheckMessagesErreur) {
+            updateElementWithFunctionByAjax(pUrlCheckMessagesErreur, "erreur", true, callBackMessagesErreur, true);
+        }
+          function updateElementWithFunctionByAjax (pUrl, pElementId, pAsynch, pFunctionCall, pIsInnerHTML){
+            var xhr = getXhr();
+            xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4 && xhr.status  == 200 ){
+                var documentElement = document.getElementById(pElementId);
+                if (documentElement != null) {
+                  if (pIsInnerHTML) {
+                      $("#" + pElementId).html(xhr.responseText);
+                  } else {
+                    documentElement.outerHTML=xhr.responseText;
+                  }
+                  if(pFunctionCall != null) {
+                  pFunctionCall(xhr.responseText);
+                  }
+                }
+              }
+            };
+            xhr.open( "GET", pUrl,  pAsynch);
+            xhr.send(null);
+          }
+      </script>
+      
+<script>top.nbClick=0</script>
+</head>
+<body bgcolor="#FFFFFF"  onLoad=ajaxRequeteCandidatConcoursCEL('http://concoursexternesit.cnrs.fr/public/candidat/requete_get_candidat_concours.php?numero_concours=60'); >
+<div id="divglobale">
+<form name="formFiche" method="post" action="">
+           <script>top.boutonClique="";</script>
+<input type="hidden" name="hidFicheCourante" value="pg_profil_public_referens.pAfficheProfilPublic">
+<br>
+<table width="100%" border=0>
+<tr>
+<td align="left" width="5%"><input type="button" id="btnPostuler" name="btnPostuler" value="Postuler" onClick="postulerCEL('60', 'n°60 : IR - BAP Informatique, statistiques et calcul scientifique - Cheffe ou chef de projet / experte ou expert en Ingéniérie logicielle - Observatoire des sciences de l univers terre homme environnement temps astronomie Franche-Comté-Bourgogne, BESANCON', 'http://concoursexternesit.cnrs.fr/public/candidat/requete_postuler.php?numeros_concours=60');" ></td>
+<td align="left" width="3%">
+
+      <a id="iconefavori" onclick="gererConcoursFavori('60');"
+        title="Mes concours pr&eacute;-s&eacute;lectionn&eacute;s (favoris)"
+        style="text-decoration: none;">
+          <img src="/profil/images/icon_etoile_favori.png" width="60" height="60" border="0">
+          <span class="icon_etoile_favori_span" style="" id="cptNbrConc">+</span>
+      </a>
+</td>
+<td width="75%"></td>
+<td align="center">
+      <b>Liste des concours</b><br>
+      <a href="PG_PROFIL_PUBLIC_REFERENS.afficherListeConcoursPreselectionnes?destinationId=81"
+      onclick="window.open('PG_PROFIL_PUBLIC_REFERENS.afficherListeConcoursPreselectionnes?destinationId=81', 'newwindow', 'width=700,height=400'); return false;"
+      title="Consulter la liste de mes concours pr&eacute;-s&eacute;lectionn&eacute;s"><img src="/profil/images/icone_liste.png" width=40 height=40 border=0></a>
+      </td>
+</tr>
+</table>
+<center>
+    <table width="60%" border="2" cellspacing="0">
+    <tr>
+      <td class="enteteconcours" bordercolor="#CCCCCC"> 
+<p class="enteteconcours"><span class="enteteconcours">E : Informatique, statistiques et calcul scientifique</span></p>
+        
+<p class="enteteconcours"><span class="enteteconcours">Ingénieur de recherche</span></p>
+        <p class="enteteconcours"><span class="enteteconcours">Concours N&deg; 60</span></p>
+      </td>
+    </tr>
+  </table>
+  </center>
+  
+<p>&nbsp;</p>
+
+<table width="100%" border="0" cellspacing="0">
+  <tr height="25">
+    <td width="20%"><b>Nbre de postes : </b></td>
+    <td width="80%">1</td>
+  </tr>
+
+      <tr height="25">
+          <td width="20%"><b>Emploi-type :</b></td>
+          <td width="80%">Cheffe ou chef de projet / experte ou expert en Ingéniérie logicielle</td>
+      </tr>
+    
+</table>
+<br>
+<br>
+
+    <table width="100%" border="0">
+
+    <tr height="25">
+      <td width="20%"><b>Affectation :</b></td>
+      <td width="80%">Observatoire des sciences de l'univers terre homme environnement temps astronomie Franche-Comté-Bourgogne, BESANCON</td>
+    </tr> 
+<tr height="25"><td width="20%"><b>Groupe de fonction :</b></td><td width="80%">
+Groupe 3
+</td></tr>
+</td>
+    </tr>
+ </table>
+      
+<br>
+
+  <p>&nbsp;</p>
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="mission"><b>Mission :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr width="100">
+	  <td colspan="2">
+	
+Le chef de projet des services numérique devra définir, conduire et mettre en œuvre la gestion à long terme des jeux de données issus des différentes activités de l'OSU THETA (observation, recherche, plateformes, ressources patrimoniales). Il s'agira, autant que possible, d'homogénéiser les procédures et outils mis en œuvre au sein des Services Nationaux d'Observations (SNO) dans lesquels est impliqué l'OSU, en particulier ceux en Terre Solide (TS)  et en Surfaces et Interfaces Continentales (SIC), et des autres dispositifs adossés aux entrepôts de données de l'OSU.<BR>
+<BR>
+Il-elle agira comme référent « Science ouverte » de l'OSU, en lien avec l'Atelier de la Donnée dat@UBFC. Il-elle contribuera ainsi à la formalisation des procédures de gestion de données en interne et au sein des entrepôts de données associés ou gérés à l'OSU, en cohérence avec les recommandations des initiatives et infrastructures nationales (dont les infrastructures de recherche (IR) Data Terra, EPOS-France, OZCAR et RecolNat). Il-elle contribuera, et à terme cordonnera, les activités d'un futur Centre de Données et de Services (CDS) THEIA-THETA que l'OSU souhaite mettre en place.<BR>
+
+</td>
+    </tr>
+  </table>
+  
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="activites"><b>Activit&eacute;s :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+1) Piloter le développement et la mise en œuvre des services aux données de l'OSU THETA :<BR>
+<BR>
+- Organiser et documenter (plan de gestion de données, descriptions des workflows) le cycle de vie des structures productrices des jeux de données au sein de l'OSU.<BR>
+- Analyser les besoins techniques, définir les spécifications nécessaires des applications logicielles de curation des données, et contribuer à leur développement et mise en œuvre, en adéquation avec les standards et outils déployés au niveau national par les infrastructures de recherche du domaine, et en sappuyant sur les infrastructures numériques locales.<BR>
+<BR>
+2) Participer à la FAIRisation des données de l'OSU THETA, en termes :<BR>
+- De développement et mise en œuvre d'outils de contrôle-qualité, d'archivage et de diffusion de données de l'OSU.<BR>
+- D'intégration, en routine, des données et produits de données dans les entrepôts de l'OSU sous des formats standards, ouverts et libres, recommandés par les infrastructures de recherche.<BR>
+- De curation, en routine, des données et produits de données nécessitant la mise à jour de leurs méta-données vers des versions enrichies et interopérables.<BR>
+<BR>
+3) Piloter les missions de l'OSU, et représenter l'OSU, d'un point de vue technique, dans les infrastructures locales (Atelier de la Donnée dat@UBFC) et nationales (Data Terra, RecolNat) de services numériques aux données.<BR>
+
+</td>
+    </tr>
+  </table>
+  
+
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="competences"><b>Comp&eacute;tences :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+Savoirs :<BR>
+- Maîtrise de l'environnement Linux<BR>
+- Maitrise des langages Python et scripts<BR>
+- Maîtrise utilisateur des plateformes de systèmes de contrôle de version (Github, Gitlab, ...)<BR>
+- Connaissances approfondies des systèmes de gestion de BDD (notamment relationnels ; Postgresql...) et des services Web (ex : API Rest)<BR>
+- Connaissances approfondies d'outils de gestion de données géoréférencées (SIG)<BR>
+- Connaissances approfondies des types de données géophysiques (séries temporelles, imagerie satellitaire, ...)<BR>
+- Connaissance des normes, procédures et référentiels en vigueur en Science Ouverte au niveau national et Européen<BR>
+- Maîtrise de l'anglais scientifique et technique<BR>
+<BR>
+Savoir-faire :<BR>
+- Savoir collaborer au sein d'équipes pluridisciplinaires et en mode projet<BR>
+- Savoir organiser son propre travail pour piloter en parallèle plusieurs projets<BR>
+- Savoir piloter une équipe<BR>
+- Savoir communiquer et faire preuve de pédagogie et avoir la capacité à synthétiser/vulgariser dans un rôle de conseil et d'aide à la décision<BR>
+<BR>
+Savoir-être : <BR>
+- Disposer d'une appétence à apprendre<BR>
+- Aisance relationnelle<BR>
+- Sens de l'organisation<BR>
+- Rigueur / Fiabilité<BR>
+
+</td>
+    </tr>
+  </table>
+  
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="contexte"><b>Contexte :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+L'Observatoire des Sciences de l'Univers (OSU) THETA, à travers les différents laboratoires de recherche (Chrono-environnement, Biogéosciences, UTINAM, départements temps-fréquence de l'institut FEMTO-ST et deux équipes de l'ICB) et son Unité d'Appui et de Recherche (UAR 3245), regroupe environ 600 personnes qui mènent des activités de recherche liées aux 4 domaines du CNRS Terre & Univers. L'OSU participe au fonctionnement de 11 SNO ainsi qu'à la gestion d'une collection patrimoniale importante (paléontologique et géologique, avec implication forte dans l'IR RéColNat). L'ensemble de ces activités nécessitent une gestion organisée et optimisée des données et produits générés durant tout leur cycle de vie et suivant les principes FAIR, en cohérence avec les politiques nationales du domaine.<BR>
+<BR>
+Ce poste est basé dans les locaux de l'UAR THETA, situés sur le campus de Besançon (locaux de l'observatoire), qui comporte actuellement 17 personnes. L'agent-e sera intégré-e dans l'équipe d'informaticiens de l'UAR (qui comprend actuellement 1 IE CNRS et 1 IE université), dont il assurera l'encadrement, et il-elle travaillera en étroite collaboration avec le personnel des unités fédérées par l'OSU, sur le campus de Besançon et sur le campus de Dijon. Des déplacements seront à prévoir à Dijon, ainsi qu'au niveau national (voire, ponctuellement, international) pour échanger avec les acteurs des infrastructures de recherche impliquées dans la gestion des données.<BR>
+<BR>
+Après 6 mois d'ancienneté sur le poste, une partie des activités sont télé-travaillables et seront à définir avec la direction de l'UAR, sous réserve de respecter la réglementation en vigueur au CNRS. D'un point de vue hiérarchique, l'agent dépendra du directeur de l'UAR THETA.
+</td>
+    </tr>
+  </table>
+  
+<br>
+
+  <p>&nbsp;</p>
+
+  <table border="0" width="100%">
+    <tr align="center">
+      <td>
+	  	<script>
+		//ne pas afficher le bouton si login DS
+		//if (top.listeCourante!=""){
+		//   document.write("<input type='button' name='btnRetour' value='Retour &agrave; la liste' onClick='javascript:top.retourListe();'>");
+		//}
+		</script>
+		<input type="button" name="btnRetourConsult" value="Revenir &agrave; la liste des r&eacute;sultats" onClick="javascript:history.go(-1);">
+	  </td>
+    </tr>
+  </table>
+  
+</form>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+
+    <div class="container-top">
+      <a href="" class="top" id="scrollToTop"></a>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var containerTop = document.querySelector(".container-top");
+        var documentHeight = document.documentElement.scrollHeight;
+        var scrollTopBtn = document.querySelector("#scrollToTop");
+
+        function updateOpacity() {
+          var scrollPercentage = (window.scrollY / documentHeight) * 150;
+
+          var opacity = Math.min(1, Math.max(0, scrollPercentage / 75));
+
+          containerTop.style.opacity = opacity;
+        }
+
+        window.addEventListener("scroll", function () {
+          updateOpacity();
+        });
+
+        scrollTopBtn.addEventListener("click", function (event) {
+          event.preventDefault(); // Annule le comportement par défaut du lien
+          scrollToTop();
+        });
+
+        function scrollToTop() {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth" // Permet le défilement en douceur
+          });
+        }
+
+        updateOpacity();
+      });
+    </script>
+</body>
+
+			<head>
+  			  <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+  			  <META HTTP-EQUIV="Expires" CONTENT="-1">
+          <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src-elem 'self' *.cnrs.fr 'unsafe-inline'; script-src-attr 'self' *.cnrs.fr 'unsafe-inline'; frame-src 'self' *.cnrs.fr 'unsafe-inline'; connect-src 'self' *.cnrs.fr 'unsafe-inline'; font-src 'self' *.cnrs.fr 'unsafe-inline'; style-src 'self' *.cnrs.fr 'unsafe-inline'; img-src 'self' *.cnrs.fr data:; " />
+			</head>
+			
+</html>

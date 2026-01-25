@@ -1,0 +1,44 @@
++
+Liste des concours
+E : Informatique, statistiques et calcul scientifique
+Ingénieur d'études
+Concours N° 120
+Nbre de postes :
+1
+Emploi-type :
+Responsable assistance support
+Affectation :
+Direction des ressources humaines, PARIS 16
+Groupe de fonction :
+Groupe 3
+Mission :
+Au sein du service Recrutement et Intégration (SERI) de la direction des ressources humaines (DRH), le (la) chargé(e) de l'assistance support aura pour mission de mettre en œuvre et de piloter le déploiement et l'assistance aux utilisateurs sur les différents outils et systèmes d'information et de communication de ce service. A ce titre, il (elle) assurera la formation des utilisateurs internes et externes, la rédaction et la mise à jour de la documentation fonctionnelle et technique.
+Activités :
+-Rédiger et mettre à jour la documentation fonctionnelle et technique
+-Définir et optimiser les procédures pour mettre en place les processus d'assistance
+-Modéliser les processus métier
+-Concevoir, en relation avec les partenaires internes et/ou externes, des dispositifs de formation adaptés aux outils pour l'ensemble des utilisateurs
+-Aider à identifier et analyser des incidents/dysfonctionnements, proposer le cas échéant les évolutions applicatives associées (fonctionnelles ou techniques), optimiser les performances
+-Participer à l'élaboration d'outils de consultation, de contrôle et de gestion (scripts, procédures, requêtes, reporting)
+-Participer aux travaux de la mise en œuvre et du déploiement du nouvel outil de la gestion logistique du recrutement du service
+-Anticiper les changements et leurs impacts métiers de la mise en production d'un nouvel outil ou nouvelle application du service, en assurer la promotion par des actions de conseil et de communication auprès des utilisateurs
+-Analyser la qualité des services rendus aux utilisateurs ; mettre en place des indicateurs de suivi d'activité
+-Mettre en place des actions de formation spécifiques liées à ces outils à destination des utilisateurs.
+Compétences :
+Savoirs :
+-Avoir une bonne connaissance des systèmes d'informations
+-Savoir élaborer l'architecture et l'environnement technique et fonctionnel d'un système d'information
+-Avoir une bonne pratique des usages d'outils et applications informatiques en particulier RH (SIRH)
+-Maitriser les techniques de la conduite de projet SI
+-Savoir appliquer les techniques de conduite du changement dans la mise en œuvre d'outils SI
+-Connaitre les processus métier des ressources humaines et en particulier ceux liés au recrutement, à l'intégration et à la formation
+-Savoir élaborer des indicateurs de performance
+Savoir-faire :
+-Savoir faire des cartographies applicatives projetées sur des processus
+-Savoir coordonner et animer une réunion, accompagner et conseiller,
+-Avoir le sens du contact, de la pédagogie, et le goût du travail en équipe,
+-Être autonome et force de proposition, savoir rendre compte
+-Savoir s'adapter et être organisé, être en capacité de maîtriser les contraintes, les urgences, respecter les délais
+-Faire preuve de pédagogie dans ses échanges avec les différents acteurs internes (les autres services de la DRH, les membres de jury) et externes au service (principalement les candidats aux concours et examen).
+Contexte :
+La fonction s'exerce au sein de la DRH du CNRS et plus précisément au sein du Service Recrutement et Intégration (SERI) de la DRH. Ce service a pour mission de piloter et mettre en œuvre la politique recrutement et intégration de l'établissement. Il est composé d'une équipe de 20 personnes répartie sur 2 sites, l'un au siège à Paris et l'autre en région parisienne à Gif sur Yvette. Ce service utilise plusieurs applications informatiques RH différentes. Il traite notamment plus de 20 000 dossiers de candidatures par an et interagit avec toutes les directions de l'établissement. Il a pour projet en 2025 et 2026 l'implantation d'un nouvel outil de gestion du recrutement dont les utilisateurs seront à la fois internes et externes à l'établissement. Le chargé ou la chargée de l'assistance support travaillera notamment sur ce nouveau projet et sera sous la responsabilité hiérarchique de la responsable de service et de son adjointe. Il ou elle interagira également avec la direction des systèmes d'information (DSI), le service de traitement de l'information(SSTI) de la DRH et les agents du service recrutement et intégration. Le poste est situé sur le campus CNRS de Gif sur Yvette (dans l'Essonne), des déplacements hebdomadaires seront à prévoir à Paris au siège du CNRS dans le 16ème arrondissement (un jour par semaine). Ce poste permet de bénéficier de télétravail conformément aux dispositions prévues au CNRS.

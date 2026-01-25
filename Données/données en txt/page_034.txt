@@ -1,0 +1,42 @@
++
+Liste des concours
+C : Sciences de l'ingénieur et instrumentation scientifique
+Ingénieur de recherche
+Concours N° 34
+Nbre de postes :
+1
+Emploi-type :
+Experte ou expert en développement d'instrument
+Affectation :
+Observatoire des sciences de l'univers de l'UVSQ, GUYANCOURT
+Groupe de fonction :
+Groupe 3
+Mission :
+L'Ingénieur(e) de recherche conçoit, développe et maintien des instruments optiques de télédétection pour l'observation de l'atmosphère et de l'environnement.
+Il ou elle assure leur intégration sur des plateformes de mesure, contribue à l'analyse des données acquises, et participe activement à leur valorisation scientifique, en répondant aux engagements internationaux liés au centre de télédétection des gaz à l'état de traces réactif d'ACTRIS (Centre for Reactive trace Gases Remote Sensing CREGARS).
+Activités :
+-Concevoir et développer des systèmes optiques destinés à la collecte de données, notamment pour la télédétection, l'observation atmosphérique et la surveillance de l'environnement.
+- Assurer l'intégration des instruments optiques dans des plateformes d'observation.
+- Collaborer avec les équipes scientifiques et techniques pour analyser les besoins en instrumentation et proposer des solutions adaptées.
+- Contribuer à l'ensemble de la chaîne de traitement des données, depuis leur acquisition jusqu¿à leur analyse approfondie, en vue de leur exploitation dans des travaux scientifiques.
+- Participer à la rédaction des rapports et publications scientifiques et représenter le projet lors de conférences nationales ou internationales.
+- Participer à la maintenance et à l'étalonnage des instruments optiques.
+- Assurer une veille technologique dans le domaine de l'optique et de la télédétection.
+- Coordonner les activités techniques des équipes ainsi que des sous-traitants impliqués.
+Compétences :
+- Compétences en conception, développement et maintenance de systèmes optiques.
+- Connaissance approfondie en ingénierie optique et en physique appliquée.
+- Maîtrise des logiciels de conception optique (ex. : Zemax, Code V) et des outils de simulation.
+- Connaissances en télédétection, traitement d'image et analyse de données optiques issues d'observations environnementales.
+- Rigueur, autonomie et aptitude à travailler en équipe dans un contexte pluridisciplinaire.
+- Compétences en communication, notamment pour la rédaction de rapports et la diffusion des résultats.
+- Notions en gestion de projet technique (management,  qualité, etc.).
+- Connaissance des règles de sécurité à appliquer et faire appliquer, notamment face aux risques électriques et laser.
+- Maitrise de l'anglais technique du domaine (relation avec partenaires internationaux , niveau B2).
+- Connaissances de l'organisation et du fonctionnement de la recherche publique.
+Contexte :
+L'Observatoire de Versailles Saint-Quentin-en-Yvelines (OVSQ), rattaché à l'Université de Versailles Saint-Quentin-en-Yvelines (UVSQ) et à l'Institut National des Sciences de l'Univers (CNRS-INSU), est un centre de recherche pluridisciplinaire dédié aux sciences de l'environnement, de l'astronomie, de la physique de l'atmosphère et du climat. L'OVSQ participe à l'IR ACTRIS et à plusieurs Services Nationaux d'Observation (SNO), répondant ainsi aux engagements internationaux de ces programmes de recherche atmosphérique et contribuant au suivi à long terme des phénomènes naturels par des moyens d'observation in situ et par satellite.
+Le NDACC est un réseau de référence pour la surveillance des paramètres atmosphériques. En Europe, le NDACC a été intégré à l'infrastructure de recherche sur les aérosols, les nuages et les gaz traces (ACTRIS) et contribue fortement au centre thématique CREGARS dédié à la télédétection des gaz traces réactif d'ACTRIS.
+L'ingénieur·e sera particulièrement impliqué·e via le LATMOS dans le suivi d'instrumentations optiques (lidar, spectromètre), leurs améliorations et la mise en place de méthodes de calibration associées dans le cadre du SNO NDACC. Ces activités se feront notamment en lien avec les personnels de l'OVSQ et ceux impliqués dans le centre d'expertise ACTRIS (IPSL, OVSQ, LATMOS ). L'ingénieur sera intégré à l¿équipe Instrumentation Optique du LATMOS composée de 8 ingénieurs. Pour les développements instrumentaux, l'ingénieur·e pourra coordonner des équipes projets composées de 2 à 3 ingénieurs ou techniciens.
+Rattaché hiérarchiquement au directeur technique de l'OVSQ et fonctionnellement au responsable de l'équipe Instrumentation Optique du LATMOS, l'agent sera localisé sur notre site de Guyancourt.
+Des déplacements ponctuels sont à prévoir, en particulier, lors des réunions et des campagnes de mesure sur le terrain.

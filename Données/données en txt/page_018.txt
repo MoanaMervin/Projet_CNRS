@@ -1,0 +1,125 @@
++
+Liste des concours
+B : Sciences chimiques et science des matériaux
+Ingénieur de recherche
+Concours N° 18
+Nbre de postes :
+2
+Emploi-type :
+Ingenieure ou ingenieur de recherche en science  des matériaux / caractérisation
+1er poste du concours N° 18
+Affectation :
+Institut photonique d'analyse non-destructive européen des matériaux anciens, GIF SUR YVETTE
+Groupe de fonction :
+Groupe 2
+Mission :
+L'ingénieur·e de recherche en imageries avancées UV-Visibles / X appliquées aux matériaux anciens développera des techniques d'imageries spectrales UV-visible et de rayons X. Il intégrera les projets collaboratifs de l'unité.
+Il/elle concevra des dispositifs innovants, assurera le suivi des échantillons irradiés et contribuera aux développements méthodologiques de l'unité. Il/elle appuiera également les projets hébergés en adaptant les protocoles et les instruments aux spécificités des objets anciens et patrimoniaux.
+Activités :
+- Développer et mettre en œuvre des techniques de pointe de caractérisation des matériaux par sonde UV-visible et de rayons X.
+- Définir les protocoles de collecte de données parcimonieuses en minimisant l'irradiation des échantillons.
+- Mettre en place les protocoles de pré-caractérisation en interne et en externe au laboratoire de systèmes anciens en amont de leur étude sur synchrotron.
+- Assurer le test et la validation des méthodes algorithmiques développées au sein de l'unité et implémentées en R et Python, en particulier pour maximiser l'information extraite à faibles doses d'exposition.
+- Assurer la documentation, la maintenance et la publication des méthodes et des outils développés.
+- Former les utilisateurs à l'utilisation des protocoles d'analyses développés, pour assurer une utilisation pertinente des méthodes ainsi que le respect des règles d'hygiènes et de sécurité.
+- Accompagner les utilisateurs dans la mise en œuvre du traitement des données et de leur interprétation.
+- Effectuer des présentations et des formations afin d'assurer un transfert de connaissances et de compétences vers les communautés étudiant les matériaux anciens.
+- Diffuser et valoriser les résultats de la recherche.
+- Assurer une veille scientifique et technologique.
+Compétences :
+Connaissances liées au poste :
+- Compétences approfondies sur l'étude de matériaux hétérogènes et altérés.
+- Expertise en imagerie et spectroscopie de rayons X et/ou UV visible sur source de laboratoire et synchrotron.
+- Compétences générales en traitement de données d'imagerie, de spectroscopie et leur analyse statistique.
+Compétences opérationnelles :
+- Connaissances approfondies en développement de protocoles de caractérisation par imagerie de matériaux anciens.
+- Connaissances générales des modalités de manipulation et d'étude d'échantillons patrimoniaux en conformité avec l'éthique du domaine.
+- Expérience sur grand instrument appréciée, notamment en fluorescence, absorption et diffraction des rayons X ou de luminescence UV-visible.
+- Langue anglaise : B2 (cadre européen de référence pour les langues)
+Compétences comportementales :
+- Aptitude au travail en équipe ;
+- Excellentes capacités de communication ;
+- Autonomie, initiative et adaptabilité ;
+- Savoir gérer plusieurs projets en parallèle et leur calendrier.
+Contexte :
+L'ingénieur.e de recherche travaillera au sein de l'unité IPANEMA (UAR3461) et sera amené.e à travailler ponctuellement sur  la ligne de lumière PUMA (Photons Utilisés pour les Matériaux Anciens). Son activité sera intégrée à l'axe ISMA (instrumentation et spectroscopie pour les matériaux anciens) de l'unité. L'ensemble des activitées est localisée sur le site du Synchrotron SOLEIL de l'Université Paris-Saclay.
+IPANEMA ayant pour tutelles : CNRS / ministère de la Culture / Université de Versailles St Quentin / Museum National d'Histoire Naturelle, l'ingénieur.e de recherche évoluera dans un environnement professionnel interdisciplinaire, intégrant différents acteurs issus de la communauté des matériaux anciens et du synchrotron.
+L'unité soutient la recherche synchrotron menée par les utilisateurs accueillis dans l'unité, tout en développant ses propres travaux axés sur les méthodes et instruments dédiés à l'étude des matériaux anciens, issus de l'archéologie, des paléoenvironnements, de la paléontologie et du patrimoine culturel.
+Travaillant sur grand instrument (synchrotron), l'ingenieur.e de recherche pourra être amené.e - pour raison de service - à effectuer des travaux en dehors des horaires administratifs (soirées, week-end ou jours fériés).
+2eme poste du concours N° 18
+Affectation :
+Institut des NanoSciences de Paris, PARIS 05
+Groupe de fonction :
+Groupe 3
+Mission :
+Réaliser, conduire et développer des méthodes d'analyse par faisceaux d'ions pour
+des expériences de caractérisation des matériaux.
+S'impliquer dans des collaborations scientifiques nationales et internationales.
+Activités :
+-Mettre en œuvre des techniques d'analyse par faisceaux d'ions conduisant à
+l'obtention de connaissances sur la nature et les propriétés des matériaux
+étudiés.
+-Collaborer à des fins d'expertise avec d'autres laboratoires ou des entreprises.
+-Initier et/ou piloter tout ou partie d'un projet à l'échelle nationale ou
+Internationale.
+-Superviser la conduite des expériences, traiter les données expérimentales,
+interpréter les résultats en relation avec les objectifs de recherche.
+-Définir les protocoles expérimentaux adaptés aux matériaux et aux finalités du
+projet scientifique
+-Proposer des solutions analytiques en rapport avec un projet de recherche
+-Intégrer des nouveaux instruments aux nouveaux besoins de la recherche
+-Diffuser et valoriser ses résultats sous forme de rapports techniques,
+publications ou communications
+-Former et assister les utilisateurs sur les principes et la mise en œuvre d'une
+ou plusieurs techniques de caractérisation
+-Transmettre ses compétences dans le cadre d'actions de formation
+-Représenter et promouvoir les activités au sein des instances de pilotage de la
+recherche.
+-Echanger scientifiquement en anglais avec les équipes internationales
+-Se former et former les utilisateurs aux risques liés à l'utilisation des
+équipements
+-Assurer une veille scientifique et technologique
+Compétences :
+Connaissances :
+- Science des matériaux (connaissances approfondies)
+- Analyse par faisceaux d'ions (connaissances approfondies)
+- Une ou plusieurs méthodes d'élaboration de matériaux en couches minces
+(connaissances
+approfondies)
+- Caractérisation de matériaux (connaissances générales)
+- Instrumentation et mesure
+Compétences opérationnelles :
+- Maîtriser la mise en œuvre des techniques d'analyse par faisceaux d'ions
+- Savoir traiter, simuler et interpréter des données issues de l'analyse par
+faisceaux d'ions
+- Savoir élaborer une méthode scientifique
+- Savoir rédiger des rapports pour des contrats académiques et industriels
+- Savoir rédiger des articles scientifiques
+- Maîtriser l'anglais scientifique écrit et parlé, niveau B2 minimum
+Savoir-être :
+- Savoir travailler en équipe
+- Savoir travailler en autonomie et faire preuve d'initiative
+- Faire preuve de pédagogie et avoir de bonnes capacités relationnelles
+Contexte :
+Plateforme SAFIR à l'Institut des NanoSciences de Paris (INSP), Sorbonne
+Université, sur le campus de Jussieu à Paris (5e), au sein de l'équipe CONFID ,
+responsable de la plateforme, et composée de 3 enseignants chercheurs, 1
+chercheur CNRS, et 3 ingénieurs. L'agent sera sous la supervision hiérarchique du
+chef de l'équipe CONFID.
+La plateforme SAFIR (Système d'analyse par Faisceaux d'Ions Rapides) est un
+ensemble de lignes de faisceaux et de chambres d'analyses attachées à un
+accélérateur de particules électrostatique de 2.5 MV. Les méthodes habituelles
+RBS, NRA, ERDA, PIXE, PIGE sont pratiquées dans le cadre de la recherche en
+sciences des matériaux et physique de la matière condensée. De plus, des méthodes
+avancées moins répandues tels que la MEIS (Medium Energy Ion Scattering), la
+canalisation de particules et le profilage de concentrations atomiques en
+profondeur par résonance nucléaire étroite sont développées.
+La plateforme est dotée d'Ingénieur de Recherche qui en assume la responsabilité
+technique, un Ingénieur d'Etudes électronicien (0.5 ETP), et un Ingénieur de
+Recherche spécialiste du vide/ultra-vide (0.5 ETP).
+Parallèlement à l'activité scientifique de l'équipe CONFID et des équipes de
+l'INSP, la plateforme est ouverte depuis de nombreuses années à des utilisateurs
+externes, dans le cadre de son appartenance aux différentes structures, comme la
+Fédération EMIR&A du CNRS, ou par des projets d'infrastructures européens.
+Typiquement entre 10 et 20 groupes nationaux et internationaux bénéficient de
+SAFIR au cours d'une année.

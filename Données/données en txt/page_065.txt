@@ -1,0 +1,105 @@
++
+Liste des concours
+E : Informatique, statistiques et calcul scientifique
+Ingénieur de recherche
+Concours N° 65
+Nbre de postes :
+2
+Emploi-type :
+Experte ou expert en calcul scientifique
+1er poste du concours N° 65
+Affectation :
+GULLIVER, PARIS 05
+Groupe de fonction :
+Groupe 3
+Mission :
+Mettre en oeuvre des méthodes mathématiques et informatiques innovantes propres à la résolution de problèmes de physique et chimie théoriques.
+Assurer l'exploitation et la maintenance des moyens de calculs de l'unité et assister les utilisateurs dans la mise en œuvre de leurs projets.
+Activités :
+- Conduire des projets informatiques qui concourent par des méthodes de calcul, à la résolution d'une problématique scientifique.
+- Participer aux projets de recherche du laboratoire et aux publications associées
+- Concevoir des méthodes pour la modélisation, le calcul et la visualisation des résultats.
+- Apporter auprès des chercheurs du laboratoire une expertise dans l'utilisation des méthodes mathématiques et des techniques informatiques pour la modélisation et la simulation d'un phénomène physique.
+- Orienter le choix sur les méthodes et les outils pertinents en fonction du problème posé et de l'architecture des machines de calcul ciblées.
+- Transmettre les connaissances et les compétences en matière de calcul scientifique, au travers de présentations et de formations.
+- Participer au choix, à l'acquisition, à l'exploitation et à la maintenance des moyens de calculs.
+- Définir une veille technologique sur l'évolution des architectures matérielles et des systèmes concernés.
+Compétences :
+Connaissances :
+Mathématiques associées à la modélisation et la simulation numérique
+Langages de programmation niveau confirmé : C, Python
+Langages de programmation optionnels : Matlab, Julia, Fortran, Mathematica, Comsol, programmation parallèle et distribuée (e.g. MPI, CUDA)
+Algorithmique
+Architecture et l'environnement technique des moyens de calculs
+Ingénierie système et suivi de calculs sous Linux
+Langue anglaise : B2 à C1 (cadre européen commun de référence pour les langues)
+Savoir-faire :
+Piloter un projet
+Programmer dans différents environnements informatiques : Linux [requis], environnements de calcul intensif (High Performance Computing - HPC) [optionnel], outils collaboratifs et suivi de version (e.g. git) [optionnel]
+Apporter des réponses à des besoins spécifiques
+Poser un diagnostic et résoudre des problèmes
+Anticiper les évolutions fonctionnelles et techniques
+Mettre au point ou adapter des techniques nouvelles
+Expliciter les besoins et les prioriser
+Accompagner et conseiller
+Communiquer et faire preuve de pédagogie
+Assurer une veille
+Savoir-être
+Travailler en équipe
+Capacité à interagir avec des équipes multiculturelles
+Contexte :
+L'Unité Mixte de Recherche GULLIVER, installée au cœur de l'ESPCI-PSL - École Supérieure de Physique et de Chimie Industrielles , à Paris 5ème, est composée d'une vingtaine de chercheurs permanents et d'une quarantaine de thésards et post doctorants, pour moitié expérimentateurs, pour moitié théoriciens. L'ensemble est jeune et international ; les projets sont riches et variés.
+Les travaux de recherche du laboratoire, internationalement reconnus, portent sur la physique et la chimie de la matière molle.
+L'ingénieur-e assurera ses missions sous la responsabilité hiérarchique du directeur de l'unité.
+2eme poste du concours N° 65
+Affectation :
+Institut Denis Poisson, ORLEANS
+Groupe de fonction :
+Groupe 3
+Mission :
+Utiliser des méthodes mathématiques et informatiques pour modéliser, programmer, accéder aux données, résoudre des problèmes théoriques liés à la simulation, optimiser les performances sur une machine cible, et assurer le bon fonctionnement des moyens de calcul ainsi que l'accompagnement des utilisateurs.
+Activités :
+L'ensemble des activités de l'expert en calcul scientifique seront les suivantes :
+- Mettre en œuvre les méthodes d'analyse mathématique et de calcul intensif en lien avec les activités de recherche du laboratoire.
+- Accompagner le développement des thématiques du laboratoire utilisant le numérique (intelligence artificielle, apprentissage profond, simulations numériques, traitement d'images, statistiques et données, mathématiques expérimentales...).
+- Conseiller les chercheurs et les doctorants sur les méthodes mathématiques à employer en fonction du problème à traiter et de l'architecture des ressources de calculs utilisées.
+- Développer des codes pour traiter des problèmes spécifiques.
+- Assurer la maintenance et participer au développement de logiciels portés par le laboratoire.
+- Participer à des projets pluridisciplinaires nécessitant le développement de codes de calcul.
+- Optimiser des codes de calcul pour de nouvelles architectures (calcul parallèle, GPU).
+- Assurer la documentation, la maintenance et la publication des méthodes et outils développés.
+- Participer à l'administration, au maintien en conditions opérationnelles et au renouvellement des machines dédiées au calcul..
+- Assurer la fonction de correspondant pour le centre de calcul régional.
+Compétences :
+Savoirs / connaissances :
+- Outils mathématiques liés à la modélisation et à la simulation numérique (schémas numériques ...).
+- Algorithmique.
+- Maîtrise des langages de programmation usuels C, C++, Python.
+- Librairies pour les mathématiques et pour l'apprentissage profond (PyTorch, TensorFlow,...).
+- Connaissance en parallélisation.
+- Langue anglaise : maîtrise de l'anglais de B2 à C1 (cadre européen commun de référence pour les langues).
+Savoir-faire :
+- Travail en environnement UNIX.
+- Outils calcul scientifique (C, C++, Make, Python,...).
+- Programmation GPU.
+- Piloter un projet.
+- Encadrer / Animer une équipe.
+- Méthodologie de conduite de projet.
+- Apporter des réponses à des besoins spécifiques.
+- Mettre au point ou adapter des techniques nouvelles.
+- Programmer dans différents environnements informatiques.
+- Mettre en œuvre une démarche qualité.
+- Rédiger des documents.
+- Assurer une veille.
+Savoirs-être :
+- Accompagner et conseiller les chercheurs.
+- Travailler en équipe et collaborer avec des chercheurs d'autres disciplines.
+- Communiquer et faire preuve de pédagogie.
+- Savoir s'adapter.
+Contexte :
+L'Institut Denis Poisson est un laboratoire de mathématiques et physique théorique bi-localisé sur les sites des universités d'Orléans et de Tours. Le laboratoire compte environ une centaine de agents auxquels il convient d'ajouter une quarantaine de doctorants et post-doctorants.
+L'agent sera rattaché au CNRS et affecté au site d'Orléans où le service informatique est composé de 2 personnes : un administrateur système et un responsable calcul (poste demandé). Il devra pouvoir collaborer avec tous les membres du laboratoire, des sites orléanais et tourangeaux, qui utilisent l'outil numérique, par exemple les permanents et les doctorants de l'équipe EMS et de SPACE. Il sera placé directement sous l'autorité du directeur du laboratoire ou du sous-directeur.
+Le laboratoire a mis l'accent sur plusieurs projets qui requièrent soit le développement de codes numériques spécifiques, voire la livraison de logiciels open-source accompagnés de la documentation pour leur utilisation, soit un accompagnement dans l'utilisation de ressources numériques performantes. On peut ainsi mentionner les directions autour de l'intelligence artificielle, de l'apprentissage profond qui viennent s'ajouter aux thématiques plus anciennes de modélisation et de traitement d'images. Dans les années à venir, des thématiques de recherches émergentes sont susceptibles d'entrer dans le champs de compétence du laboratoire.
+Le laboratoire développe aussi des collaborations pluridisciplinaires avec d'autres partenaires académiques du campus ou des partenaires industriels.
+L'IDP dispose d'un parc informatique dédié au calcul avec des serveurs CPU multi-cœurs et des serveurs GPU qu'il convient de faire évoluer selon les besoins des équipes.
+Des déplacements réguliers sur Tours sont à prévoir pour assurer un même niveau de service sur les 2 sites.

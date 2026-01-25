@@ -1,0 +1,54 @@
++
+Liste des concours
+E : Informatique, statistiques et calcul scientifique
+Ingénieur de recherche
+Concours N° 58
+Nbre de postes :
+1
+Emploi-type :
+Cheffe ou chef de projet / experte ou expert en Ingéniérie logicielle
+Affectation :
+Observatoire des Sciences de l'Univers de l'Université Paris-Saclay - UAR, ORSAY
+Groupe de fonction :
+Groupe 3
+Mission :
+Concevoir et maintenir des infrastructures logicielles pour les segments sols de projets spatiaux en astrophysique.
+Ces infrastructures pourront concerner les opérations de ces missions spatiales, les chaines d'analyses des données produites ainsi que la mise à disposition et la valorisation scientifique de ces données.
+Activités :
+Tâches principales :
+- Concevoir des solutions logicielles aux problématiques posées par les projets spatiaux dans lesquels le laboratoire est impliqué en y imprimant les réponses aux attendus scientifiques.
+- Piloter les développements logiciels de ces solutions.
+- Interagir avec les scientifiques initiateurs ou contributeurs de la mission
+- Interagir avec les agences spatiales
+- Mettre en œuvre les stratégies de qualité logicielle de l¿unité.
+- Organiser le déploiement et les opérations des solutions mises en œuvre.
+Tâches secondaires :
+- Assurer les suivis des projets associés
+- Supporter ou opérer les outils développés
+- Encadrer les développeurs contractuels et prestataires de ces projets
+- Participer à des groupes de travail, réunions et conférences en France et à l'international
+Compétences :
+Connaissances :
+- Méthodologie de conduite de projet (connaissance approfondie)
+- Génie Logiciel (connaissance approfondie)
+- Langages de programmation (Python obligatoire, C/C++, Java, Fortran seraient un plus)
+- Enjeux techniques et scientifiques d¿une mission spatiale
+- Concepts et architectures du système d'information et de communication
+- Méthodes, outils, normes et procédures de la qualité (connaissance approfondie)
+- Anglais technique (connaissance approfondie)
+- Expériences en astrophysique, observatoires virtuels, science ouverte
+Compétences opérationnelles :
+- Piloter un projet et en rendre compte
+- Appliquer les techniques liées aux spécificités des projets spatiaux
+- Déléguer et évaluer
+- Pouvoir à terme encadrer / animer une équipe
+- Animer une réunion
+- Mettre en œuvre une démarche qualité
+- Assurer une veille technologique
+Contexte :
+Le laboratoire est centré sur la plateforme IDOC (Integrated Data and Operation Center), la plateforme de données de l'OSUPS (Observatoire des Sciences de l'Univers de l'Université Paris-Saclay). L'OSUPS a été créé en 2001. Il est actuellement composé de trois laboratoires : Institut d'Astrophysique Spatiale (IAS), Géoscience Paris Saclay (GEOPS) et Astrophysique, Instrumentation, Modélisation (AIM). Son périmètre pourra s'étendre.
+L'OSUPS rassemble un très fort potentiel technique et scientifique pour l'astrophysique spatiale, avec de multiples compétences et ressources. Il est notamment impliqué dans les projets JUICE/MAJIS, Plato et Solar Orbiter pour lesquels IDOC a actuellement de fortes responsabilités concernant le développement et l'exploitation des segments sol, et dans les projets JWST, Euclid, Bepi Colombo, Ariel, Solar-C, Litebird, etc.
+L'objectif d'IDOC est d'accompagner la genèse d'instruments d'observation (principalement des instruments spatiaux), leurs opérations et leur production de données scientifiques. Ces données ont ensuite vocation à être diffusées et valorisées en intégrant les principes de la science ouverte. La labellisation CoreTrustSeal du périmètre entrepôt de données d'IDOC est une reconnaissance de la qualité des actions menées par IDOC.
+IDOC est partenaire du méso-centre Paris Saclay.
+La personne recrutée sera placée sous la responsabilité hiérarchique du responsable de la plateforme IDOC, animée par une équipe d¿une vingtaine de personnes. Elle intègrera les équipes projet d'IDOC, ainsi que les équipes internationales associées avec l'objectif d'animer certains de ces projets.
+Le poste sera basé à l'IAS situé sur le campus universitaire d¿Orsay dans un environnement verdoyant. Il est situé à 8 min à pied du RER Orsay Ville. Il bénéficie des infrastructures de l'université Paris-Saclay pour les activités sportives et culturelles ainsi que d'un centre de loisirs pour les enfants du personnel.

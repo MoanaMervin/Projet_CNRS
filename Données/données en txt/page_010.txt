@@ -1,0 +1,46 @@
++
+Liste des concours
+A : Sciences du vivant, de la terre et de l'environnement
+Ingénieur de recherche
+Concours N° 10
+Nbre de postes :
+1
+Emploi-type :
+Ingenieure ou ingenieur de recherche en biologie animale
+Affectation :
+Institut de génomique fonctionnelle de Lyon, LYON 07
+Groupe de fonction :
+Groupe 3
+Mission :
+L'ingénieur(e) de recherche (IR) sera chargé(e) de l'organisation et du développement d'outils et de ressources (génétique de développement, gestion phénotypage et imagerie d'insectes, acquisition, analyses et stockage de données de séquençage haut débit) sur un modèle particulier : les insectes semi-aquatiques (Patineuses d'eau douce), en relation avec les projets de recherche de l'équipe.
+Activités :
+- Gérer et conduire des projets scientifiques et/ou techniques
+- Développer et mettre en œuvre un protocole d'édition du génome avec la technique Crispr/Cas9 chez les insectes semi-aquatiques. Former les utilisateurs, internes et collaborateurs, sur ce protocole.
+- Collaborer à des projets visant à comprendre les mécanismes génétiques qui sous-tendent la diversité phenotypique en utilisant des approches de génétique développementale et évolutive ainsi que des croisements d'animaux et des collectes de terrain.
+- Superviser la gestion de l'animalerie des insectes semi-aquatiques et veiller à son bon fonctionnement.
+- Former les nouvelles recrues de l'équipe sur l'élevage et l'organisation de l'animalerie.
+- Organiser et participer à des expéditions de terrain visant à échantillonner de multiples populations de certaines espèces
+- Assurer la réception et l'archivage des données NGS de l'équipe et participer à l'analyse bioinformatique de données NGS produites par l'équipe
+- Diffuser et valoriser les résultats sous forme de rapports techniques, de publications ou de présentations orales
+- Assurer la veille scientifique et technologique sur les méthodes à développer pour l'équipe.
+- Implication dans des activité transversales à l'échelle de l'Unité
+Compétences :
+- Connaissances en biologie moléculaire et de développement, en biologie évolutive et en écologie
+- Connaissances générales dans le domaine des sciences de la vie (physiologie, évolution, développement), et si possible dans le domaine de la génomique fonctionnelle, seront appréciées.
+- Connaissances générales de la déontologie, l'éthique, la loi et la réglementation concernant le domaine de recherche (en particulier sur la confidentialité et la sécurité informatique)
+- Expérience avérée de la gestion d'élevage d'insectes au sein d'une animalerie et de leur utilisation
+- Être à l'aise avec le travail sur des insectes issus de milieux naturels et le travail de terrain
+- Connaissances des méthodes d'étude de la fonction des gènes (RNAi et Crispr/Cas9, hybridation in situ) sur des insectes modèles non conventionnels
+- Expérience en phénotype des insectes pour quantifier la variation naturelle ou pour analyser l'effet de l'inactivation des gènes.
+- Maitriser les équipements clés et spécifiques de laboratoire (microscopie, loupe, micro-injection)
+- Connaissances en production de banques NGS (DNAseq, RNAseq, Single cell) et de travail sur clusters de calcul
+- Capacité à utiliser des outils d'analyse courants (Cluster d'analyse, bash, R ) pour les données de séquençage à haut débit : transcriptomique, épigénomique, génomique, de sauvegarde et protection des données...
+- Maitrise des bonnes pratiques de laboratoire, en particulier d'hygiène et sécurité
+- Maîtrise de l'anglais scientifique (oral, écrit) au niveau C1 (cadre européen de référence pour les langues)
+- Savoir interagir et organiser des réunions de travail avec des collaborateurs internationaux.
+- Disposer d'excellentes qualités relationnelles et de travail en équipe, de transmission de savoir en interne et vis-à-vis des collaborateurs.
+Contexte :
+L'Institut de Génomique Fonctionnelle de Lyon (IGFL) est une unité mixte multi-tutelle (Ecole Normale Supérieure de Lyon, UMR5242 CNRS, Université Lyon1 et USC INRAe) qui comprend environ 120 membres et 13 équipes de recherche. Ces dernières ont pour objectif de comprendre comment le génome façonne le développement, la physiologie et l'évolution des animaux en étudiant des organismes modèles conventionnels (Drosophile, souris etc..) et non standards (Crustacés, insectes semi-aquatiques etc). L'institut est situé au sein de l'ENS de Lyon, dans le quartier de Gerland, dans un bâtiment dédié, localisé au 32-34 avenue Tony Garnier.
+L'ingénieur(e) de recherche intègrera l'équipe « Génomique du Développement et Evolution » dirigée un directeur de recherche du CNRS. L'équipe travaille sur un modèle original, les insectes semi-aquatiques aussi appelés patineuses d'eau douce (Hétéroptères, Gerromorphes). C'est une équipe internationale dans la quelle l'anglais est généralement la langue de travail utilisée.
+L'équipe a développé une expertise unique dans la collecte et l'élevage de ces insectes pour les besoins des ses projets. Ceux-ci visent à répondre à de grandes questions biologiques, en lien avec la sélection sexuelle, la plasticité phénotypique, ou encore l'origine des innovations évolutives. Pour cela, l'équipe utilise de multiples approches liées à la biologie moléculaire et de développement, à la biologie évolutive et écologie, pour comprendre les mécanismes de l'évolution phénotypique. Nos approches vont des analyses bioinformatiques de données NGS (génomique, transcriptomique, épigénétique, RNAseq à l'échelle de la cellule unique) aux techniques d'étude de fonction des gènes comme l'interférence à l'ARN et l'histo-immuno-chimie, et le comportement.
+Ce poste implique de travailler au quotidien sur un modèle insecte non conventionnel, ce qui peut nécessiter une présence occasionnelle le week-end ou durant les jours fériés, notamment pendant les périodes sensibles c

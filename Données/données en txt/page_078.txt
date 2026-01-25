@@ -1,0 +1,40 @@
++
+Liste des concours
+E : Informatique, statistiques et calcul scientifique
+Ingénieur d'études
+Concours N° 119
+Nbre de postes :
+1
+Emploi-type :
+Administratrice ou administrateur des systèmes d'information
+Affectation :
+Centre de Calcul de l'Institut National de Physique Nucléaire et de Physique des Particules, VILLEURBANNE
+Groupe de fonction :
+Groupe 3
+Mission :
+La personne recrutée rejoindra l'équipe Calcul en charge de l'administration, de la gestion et de l'évolution des plateformes de calcul (un millier de serveurs Linux). Ces plateformes fournissent 24h/24, 7j/7, des environnements de calcul HTC, HPC et GPGPU, principalement aux expériences de recherche en physique corpusculaire. Il/elle aura en charge de l'opération des plateformes de calcul du Centre de Calcul de l'IN2P3.
+Activités :
+- Assurer le suivi de la production, optimiser l'utilisation des ressources de calcul.
+- Développer et déployer les outils permettant d'automatiser des tâches récurrentes dans le cadre de l'opération des plateformes de traitement des données.
+- Garantir le support niveau 3, l'analyse et la résolution d'incident.
+- Rédiger la documentation des procédures et des travaux réalisés dans le cadre de l'activité, dispenser des formations sur les outils et les technologies, intervenir en qualité d'expert.
+- Représenter le CC-IN2P3 dans des conférences ou des groupes de travail nationaux ou internationaux.
+- Assurer une veille technologique en relation avec le domaine d'application.
+Compétences :
+Connaissances
+- Système d'exploitation Linux en environnement réseau IP.
+- Outils de gestion de configuration et de déploiement automatisé (Puppet, ansible).
+- Systèmes de monitoring, en particulier Nagios.
+- Langages de programmation python et bash.
+- Outils de développement collaboratif (Git, CI, etc.).
+- Concepts des plateformes de traitement des données et des logiciels de traitement par lots HTCondor et Slurm.
+- Connaissance de l'environnement logiciel de la grille de calcul EGI/WLCG.
+- Concepts de « containerisation », logiciels Apptainer et Docker.
+- Concepts et bonnes pratiques de la sécurité informatique.
+Compétences opérationnelles
+- Capacité à rapporter sur son activité et à organiser ses tâches.
+- Capacité à établir un diagnostic et à résoudre des problèmes.
+- Capacité à travailler en équipe dans un environnement international et multiculturel.
+- Communication orale et écrite en langues française et anglaise.
+Contexte :
+Le Centre de Calcul de l'Institut national de physique nucléaire et de physique des particules (CCIN2P3) est une unité de service et de recherche du CNRS. Classé parmi les grandes infrastructures françaises de recherche, il a pour vocation de fournir des moyens de stockage et de traitement de données aux chercheurs impliqués dans les expériences de physique corpusculaire. Plus de 70 collaborations internationales utilisent ses services 24h/24, 7j/7 [Plus d'informations : https://cc.in2p3.fr].

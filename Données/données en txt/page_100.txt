@@ -1,0 +1,127 @@
++
+Liste des concours
+C : Sciences de l'ingénieur et instrumentation scientifique
+Ingénieur d'études
+Concours N° 102
+Nbre de postes :
+2
+Emploi-type :
+Ingenieure ou ingenieur en techniques expérimentales
+1er poste du concours N° 102
+Affectation :
+Institut P': Physique et Ingénierie en Matériaux, Mécanique et Énergétique, CHASSENEUIL DU POITOU
+Groupe de fonction :
+Groupe 3
+Mission :
+L'ingénieur-e en métrologie aura en charge l'installation et la mise en œuvre de systèmes de mesures optiques pour les utilisateurs sur différentes installations. Il/elle participera au développement et la mise au point des nouvelles techniques de mesures et leur intégration. Enfin il/elle contribuera à l'organisation du service métrologie optique.
+Activités :
+- Mettre au point les dispositifs expérimentaux ; définir, développer, tester, qualifier, procéder aux essais et aux étalonnages, écrire les procédures d'utilisations.
+- Concevoir et planifier tout ou partie d'un dispositif expérimental et la mesure associée.
+- Dimensionner le dispositif expérimental et élaborer et rédiger les documents de spécifications techniques, de conception et de réalisation associés aux mesures sur les dispositifs expérimentaux.
+- Mettre au point la qualification du dispositif expérimental, procéder aux essais et aux étalonnages, écrire les procédures d'utilisations.
+- Coordonner l'exploitation du dispositif et conduire les expérimentations.
+- Gérer des moyens techniques du service.
+- Réaliser, si besoin, le traitement et l'analyse des données.
+- Organiser et contrôler les interventions de maintenance préventive et interventions de dépannage.
+- Organiser et gérer les relations avec les fournisseurs et les constructeurs.
+- Établir un dossier de calcul, un schéma ou un plan en vue d'une réalisation.
+- Conseiller et former les utilisateurs des dispositifs expérimentaux à leur technique et à leur mise en œuvre dans le respect des normes d'utilisation.
+- Étudier les risques, mettre en œuvre et faire respecter les normes et les règles d'hygiène et sécurité.
+- Coordonner les relations aux interfaces, organiser l'échange d'informations avec les spécialistes des domaines techniques mobilisés dans l'expérience.
+Compétences :
+Connaissances requises :
+- Techniques et sciences de l'ingénieur (optique, conception mécanique, électronique,... ) (connaissance approfondie).
+- Sciences physiques (connaissance approfondie).
+- Métrologie non intrusive optique et laser (PIV, LDV, Granulométrie, surface libre, ..).
+- Dispositifs expérimentaux (connaissance approfondie).
+- Environnement et réseaux professionnels.
+- Techniques de présentation écrite et orale.
+- Langue anglaise : B1 à B2 (cadre européen commun de référence pour les langues)
+Savoir-faire :
+- Utiliser les logiciels spécifiques au domaine de la mesure non intrusive (LDV, PIV, Granulométrie).
+- Respecter les conditions d'utilisation des dispositifs expérimentaux.
+- Animer une réunion.
+- Appliquer les procédures d'assurance qualité.
+- Étudier les risques en particulier les risques laser, appliquer les normes et les règles d'hygiène et sécurité.
+- Assurer une veille technologique.
+- Aptitude au dialogue, à l'interaction avec les personnels du laboratoire.
+- Maitriser un ou plusieurs logiciels spécialisés de pilotage, de synchronisation et de traitements de données : LabVIEW, Python, Matlab,...
+- Savoir Organiser et gérer les relations avec les fournisseurs et les constructeurs.
+Savoir-être :
+- Rigueur et méthodologie.
+- Sens du travail en équipe.
+Contexte :
+Pour répondre à de nombreux défis dans le domaine de l'énergie, du transport et de l'environnement, l'Institut P' (environ 600 personnes) développe une forte composante expérimentale fondée sur des compétences reconnues en métrologie fine des écoulements au sein de fluides anisothermes ou non, réactifs ou non. Les expérimentations sont exigeantes, particulièrement pour l'intégration et la synchronisation des métrologies couplées.
+L'Institut se distingue notablement par la présence de nombreuses installations dans un environnement universitaire et les contraintes associées à la métrologie optique y sont très fortes. La synchronisation et le couplage des différentes métrologies à des cadences d'acquisition qui peuvent être extrêmement élevées demeurent un enjeu fondamental dans l'approche expérimentale développée à l'Institut.
+L'agent intégrera le département FTC (250 agents) de l'Institut Pprime, dans le service métrologique optique composé de 4 agents, contribuant à la formation des usagers, à la mise en place d'expériences et à leur réalisation, au redéploiement des techniques développées dans les équipes de recherche et à garantir la sécurité des bancs et des usagers.
+L'ingénieur sera sous la responsabilité d'un ingénieur du service de métrologie optique. Il sera basé sur le site du Futuroscope.
+Le poste se situe dans un secteur relevant de la protection du potentiel scientifique et technique (PPST) et nécessite donc, conformément à la réglementation, que l'arrivée soit autorisée par l'autorité compétente du Ministère de l'Enseignement Supérieur et de la Recherche.
+2eme poste du concours N° 102
+Affectation :
+Institut Lumière Matière, VILLEURBANNE
+Groupe de fonction :
+Groupe 3
+Mission :
+L'ingénieur(e) exploitera et développera des dispositifs expérimentaux dans le
+domaine de la physico-chimie ultra-rapide et des spectroscopies lasers. Il ou elle
+devra également s'investir sur l'ensemble des chaînes laser de l'unité (de la nano
+à l'attosecondes). Il ou elle sera le/la référent(e) laser de l'unité.
+Activités :
+- Mettre au point les dispositifs expérimentaux dans le domaine de
+l'optique, rédiger les documents de spécifications techniques, de conception et de
+réalisation associés
+- Mettre au point la qualification du dispositif expérimental, procéder aux
+essais et aux étalonnages, écrire les procédures d'utilisations ; définir,
+développer, tester et formaliser les protocoles
+- Coordonner l'exploitation du dispositif et conduire les expérimentations
+- Réaliser, si besoin, le traitement et l'analyse des données
+- Organiser et contrôler les interventions de maintenance préventive et les
+interventions de dépannage, gérer les relations avec les fournisseurs et les
+constructeurs
+- Former à la technique et à l'utilisation des dispositifs expérimentaux,
+étudier les risques, mettre en œuvre et faire respecter les normes et les règles
+d'hygiène et sécurité
+Compétences :
+Savoirs / connaissance
+-	Sciences physiques (connaissance approfondie)
+-	Techniques et sciences de l'ingénieur (optique, vide) (connaissance
+approfondie)
+-	Dispositifs expérimentaux (connaissance approfondie)
+-	Environnement et réseaux professionnels
+-	Techniques de présentation écrite et orale
+-	Langue anglaise : B1 à B2 (cadre européen commun de référence pour les
+langues)
+-
+Savoir-faire
+-	Respecter les conditions d'utilisation des dispositifs expérimentaux
+-	Mettre en œuvre les techniques adaptées notamment dans le domaine de
+l'optique et de l'imagerie
+-	Animer une réunion
+-	Appliquer les règles d'hygiène et de sécurité
+-	Assurer une veille technologique
+Savoir-être
+-	Travailler en équipe
+-	Savoir rendre compte
+Contexte :
+L'institut Lumière Matière (iLM) est une unité de recherche CNRS-Université Lyon 1
+localisée sur le campus Lyon Tech La Doua. Avec environ 300 collaborateurs dont
+une centaine de doctorants, l'ILM est un acteur majeur de la recherche en physique
+et chimie sur la région Auvergne Rhône Alpes, reconnu internationalement pour
+l'excellence de sa recherche. La recherche fondamentale, la réponse aux grands
+défis sociétaux et l'innovation sont au cœur de la démarche de cette unité.
+Ses scientifiques, engagés dans une recherche éthique et responsable, explorent
+six grands champs thématiques : Matériaux, énergie, photonique ; Matière molle ;
+Nanosciences ; Optique et dynamique ultrarapide ; Théorie et modélisation ;
+Vivant, santé, environnement. La plateforme technologique ILMTech, passerelle pour
+l'innovation, propose des instruments de pointe et une expertise au service des
+acteurs académiques et du monde socio-économique.
+L'agent intervient en particulier sur le plateau de sciences ultrarapides X-2M de
+la plateforme ILMTech et de l'équipe de recherche DYNAMO. Le plateau X-2M@ILMTech
+couple des sources lasers pulsée de dernière génération allant du THz à l'XUV et
+des sources d'ions et de molécules.
+L'agent est en charge de développements instrumentaux, de l'accueil et de la
+formation des utilisateurs externes. Il développe en particulier l'utilisation de
+ces sources de lumière pour l'étude de la matière moléculaire en phase condensée
+et en phase gazeuse. En parallèle, il intervient sur l'ensemble des chaînes laser
+de la nano à l'attoseconde présentes à l'iLM. Il sera le référent laser de
+l'unité. L'agent sera rattaché à ILMTech.

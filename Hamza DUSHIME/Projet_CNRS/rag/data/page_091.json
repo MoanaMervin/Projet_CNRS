@@ -1,0 +1,21 @@
+{
+  "source_file": "page_091.html",
+  "bap": "E : Informatique, statistiques et calcul scientifique",
+  "grade": "Ingénieur d'études",
+  "concours_label": "Concours N° 133",
+  "concours_num": "133",
+  "nb_postes": "1",
+  "emploi_type": "Ingenieure statisticienne ou ingenieur statisticien",
+  "nb_postes_detectes": 1,
+  "postes": [
+    {
+      "poste_num": 1,
+      "affectation": "Direction Europe et international, PARIS 16",
+      "groupe_fonction": "Groupe 3",
+      "mission": "Gérer des bases de données relatives aux collaborations européennes et internationales du CNRS et produire des analyses et indicateurs statistiques",
+      "activites": "- Organiser la collecte des données recensant les collaborations internationales jusqu¿à leur traitement statistique, élaborer l'enchainement des traitements, du choix des méthodes existantes à l'analyse des résultats et jusqu'à leur diffusion\n- Créer, structurer et gérer (maintenance, nettoyage, mise à jour,) des bases de données relatives à la coopération scientifique européenne et internationale du CNRS (données relatives aux outils de coopération, bases de données bibliométriques (OpenAlex/WoS), bases de données de la commission européenne - e-CORDA, LEAR) ;\n- Concevoir les traitements statistiques nécessaires pour s'assurer de la qualité des données\n- Définir et élaborer des indicateurs de coopération scientifique pertinents et robustes\n- Créer des tableaux de bords et de reporting ;\n- Développer des interfaces applicatives de collecte, de gestion et d'échanges de données ;\n- Répondre à des commandes internes et externes pour la réalisation d'études prospectives et de bilans ;\n- Rédiger des rapports et documentations;\n- Effectuer des présentations et des formations pour assurer un transfert de compétences.\n- Apporter le conseil aux utilisateurs qui ont besoin de mettre en œuvre des méthodes et des outils d'analyses de données ;",
+      "competences": "Connaissances :\nMaitrise des langages d'interrogation de bases données (ie. sql)\nMaîtrise d'outils innovants de traitement de données (en particulier par l'IA) et de visualisation de données (cartographies, SIG...)\nMaîtrise d'au moins un logiciel statistique (i.e. R)\nMaîtrise de langages programmation (Python, C++) et d'outils de fouille de données\nConnaissance du secteur de la recherche et des programmes européens serait apprécié.\nLangue anglaise : B1 à B2 (cadre européen commun de référence pour les langues)\nSavoir faire\nTraiter et synthétiser des données issues de sources dispersées\nConstruire et gérer une base de données\nProduire des rapports et participer à leur rédaction\nAvoir un esprit critique vis-à-vis des données à traiter et des résultats obtenus\nTravailler avec des contraintes de délais\nAimer travailler en équipe afin de comprendre et analyser les besoins des utilisateurs finaux\nSavoir être\nÊtre autonome et curieux\nEsprit de synthèse\nCommuniquer, écouter, expliquer",
+      "contexte": "L'Ingénieur.e statisticien.ne travaillera de concert avec le statisticien de la DEI et en étroite collaboration avec les secteurs géographiques de la direction Europe et Internationale (DEI), les bureaux à l'étranger, les autres directions du siège et les instituts scientifiques du CNRS pour garantir la complétude des données. Le suivi des collaborations issues des financements de la commission européenne et des collaborations internationales des unités du CNRS représente un enjeu fort pour l'organisme. Les données permettant de quantifier l'activité internationale (co-publications, actions soutenues par le CNRS, programmes européens) sont hétérogènes et dispersées. La consolidation de ces données est un chantier prioritaire pour l'organisme tout comme le développement d'outils d'aide à la décision analysant des données complexes en un temps réduit.\nLa direction Europe et internationale coordonne l'ensemble des opérations internationales conduites par le CNRS pour contribuer à structurer et consolider l'espace de la recherche. Elle apporte son appui aux unités de recherche qui s'engagent dans des actions structurantes avec des partenaires étrangers, y compris des organismes et universités."
+    }
+  ]
+}

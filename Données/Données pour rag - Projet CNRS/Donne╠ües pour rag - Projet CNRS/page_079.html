@@ -1,0 +1,555 @@
+
+    <script language="JavaScript">
+
+      // Renvoyer la valeur du cookie dont le nom est passe en parametre
+      function getCookie(name) {
+        if (document.cookie.length == 0) {
+          return null;
+        }
+        var regSepCookie = new RegExp('(; )', 'g');
+        var cookies = document.cookie.split(regSepCookie);
+        for (var i = 0; i < cookies.length; i++) {
+          var regInfo = new RegExp('=', 'g');
+          var infos = cookies[i].split(regInfo);
+          if (infos[0] == name) {
+            return unescape(infos[1]);
+          }
+        }
+        return null;
+      }
+
+      // Generer un identifiant user temporaire a sauvegarder en cookie (si pas existant)
+      function getIdentifiantUserTemporaire() {
+        var tempUserId = getCookie("pde_temp_user_id");
+        if (tempUserId == null || tempUserId == "") {
+          var dateExpire = new Date();
+          dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+          tempUserId = Math.random().toString(16).slice(2);
+          document.cookie = "pde_temp_user_id=" + tempUserId + "; expires=" + dateExpire + "; path=/";
+        }
+        return tempUserId;
+      }
+
+      // Mettre a jour le badge compteur nombre de concours dans la page
+      function majBadgeCompteurConcours() {
+        var nbrConcours = getCookie("nbr_concours");
+        if (nbrConcours == null || nbrConcours == 0) {
+          document.getElementById("cptNbrConc").innerHTML = "+";
+        } else {
+          document.getElementById("cptNbrConc").innerHTML = nbrConcours;
+        }
+      }
+
+      // Ajouter un numero de concours a la liste des concours pre-selectionnes
+      function ajouterConcoursFavori(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours");
+        var nbrConcours = 0;
+        var dateExpire = new Date();
+        dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+
+        if (valCookieNumerosConcours == null || valCookieNumerosConcours == "") {
+          valCookieNumerosConcours = numero_concours;
+          nbrConcours = 1;
+        } else {
+          // Transformer la chaine en tableau
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau ne contient pas le numero de concours : Ajout en fin de liste
+          if (arrayCookieNumerosConcours.includes(numero_concours) == false) {
+            valCookieNumerosConcours = valCookieNumerosConcours + "|" + numero_concours;
+            nbrConcours = arrayCookieNumerosConcours.length + 1;
+          }
+        }
+        // Enregistrer la liste des numeros de concours et le nombre de concours en cookies
+        document.cookie = "numeros_concours=" + valCookieNumerosConcours + "; expires=" + dateExpire + "; path=/";
+        document.cookie = "nbr_concours=" + nbrConcours + "; expires=" + dateExpire + "; path=/";
+        majBadgeCompteurConcours();
+      }
+
+      // Supprimer un numero de concours de la liste des concours pre-selectionnes
+      function supprimerConcoursFavori(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours");
+        if (valCookieNumerosConcours != null && valCookieNumerosConcours != "") {
+          var nbrConcours = getCookie("nbr_concours");
+          var dateExpire = new Date();
+          dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+          // Transformer la chaine en tableau
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau contient le numero de concours : Reconstruction de la liste sans ce numero
+          if (arrayCookieNumerosConcours.includes(numero_concours) == true) {
+            valCookieNumerosConcours = "";
+            nbrConcours = 0;
+            for (var i = 0; i < arrayCookieNumerosConcours.length; i++) {
+              if (arrayCookieNumerosConcours[i] != numero_concours) {
+                if (valCookieNumerosConcours.length > 0) {
+                  valCookieNumerosConcours = valCookieNumerosConcours + "|";
+                }
+                valCookieNumerosConcours = valCookieNumerosConcours + arrayCookieNumerosConcours[i];
+                nbrConcours = nbrConcours + 1;
+              }
+            }
+          }
+
+          // Enregistrer la liste des numeros de concours et le nombre de concours en cookies
+          document.cookie = "numeros_concours=" + valCookieNumerosConcours + "; expires=" + dateExpire + "; path=/";
+          document.cookie = "nbr_concours=" + nbrConcours + "; expires=" + dateExpire + "; path=/";
+        }
+      }
+
+      // Gerer le numero de concours selon la liste des numeros de concours en cookie :
+      // - Si numero de concours absent de la liste => Clic pour ajouter le concours
+      // - Si numero de concours present dans la liste => Clic pour supprimer le concours
+      function gererConcoursFavori(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours");
+        if (valCookieNumerosConcours == null || valCookieNumerosConcours == "") {
+          // Si liste de concours vide : Ajout
+          ajouterConcoursFavori(numero_concours);
+          alert("Ajouté à ma sélection");
+        } else {
+          // Transformer la chaine en tableau
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau ne contient pas le numero de concours : Ajout
+          if (arrayCookieNumerosConcours.includes(numero_concours) == false) {
+            ajouterConcoursFavori(numero_concours);
+            alert("Ajouté à ma sélection");
+          }
+          else {
+            // Sinon : Suppression
+            supprimerConcoursFavori(numero_concours);
+            majBadgeCompteurConcours();
+            alert("Retiré de ma sélection");
+          }
+        }
+      }
+
+      // Fonction Ajax interrogation CEL : Existence candidature pour un concours
+      function ajaxRequeteCandidatConcoursCEL(cel_url_requete_candidat_concours) {
+        var tempUserId = getIdentifiantUserTemporaire();
+        cel_url_requete_candidat_concours = cel_url_requete_candidat_concours + "&pde_temp_user_id=" + tempUserId;
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', cel_url_requete_candidat_concours);
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState === 4) {
+            var reponseCEL = xhr.responseText;
+            if (reponseCEL == 1) {
+              // Si reponse = 1, candidature existe deja dans CEL sur ce concours par le candidat
+              // Desactiver le bouton "Postuler" de la fiche concours et l icone etoile favori
+              document.getElementById("btnPostuler").disabled = true;
+              document.getElementById("btnPostuler").title = "Vous avez déjà postulé à ce concours";
+              document.getElementById("iconefavori").style.visibility = "hidden";
+              document.getElementById("cptNbrConc").innerHTML = "";
+            }
+          }
+        };
+        xhr.send();
+      }
+
+      // Verifie si le concours a deja ete postule
+      function checkConcoursPostule(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours_postules");
+        if (valCookieNumerosConcours != null && valCookieNumerosConcours != "") {
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau contient le numero de concours :
+          // Desactiver le bouton "Postuler" de la fiche concours et l icone etoile favori
+          for (var i = 0; i < arrayCookieNumerosConcours.length; i++) {
+            if (arrayCookieNumerosConcours[i] == numero_concours) {
+              document.getElementById("btnPostuler").disabled = true;
+              document.getElementById("btnPostuler").title = "Vous avez déjà postulé à ce concours";
+              document.getElementById("iconefavori").style.visibility = "hidden";
+              document.getElementById("cptNbrConc").innerHTML = "";
+            }
+          }
+        }
+      }
+
+      // Ajouter un numero de concours a la liste des concours postules
+      function ajouterConcoursPostule(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours_postules");
+        var dateExpire = new Date();
+        dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+        if (valCookieNumerosConcours == null || valCookieNumerosConcours == "") {
+          valCookieNumerosConcours = numero_concours;
+        } else {
+          // Transformer la chaine en tableau
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau ne contient pas le numero de concours : Ajout en fin de liste
+          if (arrayCookieNumerosConcours.includes(numero_concours) == false) {
+            valCookieNumerosConcours = valCookieNumerosConcours + "|" + numero_concours;
+          }
+        }
+        // Enregistrer la liste des numeros de concours postules en cookie
+        document.cookie = "numeros_concours_postules=" + valCookieNumerosConcours + "; expires=" + dateExpire + "; path=/";
+      }
+
+      // Postuler au concours dans application CEL
+      function postulerCEL(numero_concours, detail_concours, cel_url_concours) {
+        if (confirm("Vous souhaitez postuler pour le concours " + detail_concours + ".\nConfirmez-vous ce choix ?")) {
+          // Supprimer le concours de la liste des concours pre-selectionnes
+          supprimerConcoursFavori(numero_concours);
+          majBadgeCompteurConcours();
+          // Ajouter le concours a la liste des concours postules
+          ajouterConcoursPostule(numero_concours);
+          // Desactiver le bouton "Postuler" de la fiche concours
+          document.getElementById("btnPostuler").disabled = true;
+          document.getElementById("btnPostuler").title = "Vous avez déjà postulé à ce concours";
+          // Desactiver l icone etoile favori
+          document.getElementById("iconefavori").style.visibility = "hidden";
+          document.getElementById("cptNbrConc").innerHTML = "";
+
+          // Transmettre identifiant user PDE temporaire a CEL
+          var tempUserId = getIdentifiantUserTemporaire();
+          cel_url_concours = cel_url_concours + "&pde_temp_user_id=" + tempUserId;
+
+          // Ouvrir application CEL dans une nouvelle fenetre
+          window.open(cel_url_concours, '_blank');
+        }
+      }
+
+      // Postuler dans application CEL a tous les concours pre-selectionnes
+      function postulerCELtous(cel_url_concours) {
+        var nbrConcours = getCookie("nbr_concours");
+        if (nbrConcours != null && nbrConcours > 0) {
+          if (confirm("Vous souhaitez postuler pour les " + nbrConcours + " concours pré-sélectionnés.\nConfirmez-vous ce choix ?")) {
+            var dateExpire = new Date();
+            dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+            // Ajouter tous les concours pre-selectionnes a la liste des concours postules
+            var valCookieNumerosConcours = getCookie("numeros_concours");
+            var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+            for (var i = 0; i < arrayCookieNumerosConcours.length; i++) {
+              ajouterConcoursPostule(arrayCookieNumerosConcours[i]);
+            }
+            // Vider la liste des concours pre-selectionnes
+            document.cookie = "numeros_concours=; expires=" + dateExpire + "; path=/";
+            // Reinitialiser le nombre de concours pre-selectionnes a 0
+            document.cookie = "nbr_concours=0; expires=" + dateExpire + "; path=/";
+
+            // Transmettre identifiant user PDE temporaire a CEL
+            var tempUserId = getIdentifiantUserTemporaire();
+            cel_url_concours = cel_url_concours + "&pde_temp_user_id=" + tempUserId;
+
+            // Ouvrir application CEL dans une nouvelle fenetre
+            window.open(cel_url_concours, '_blank');
+            // Recharger la page parente
+            window.opener.location.reload();
+            // Fermer la page
+            window.close();
+          }
+        }
+      }
+
+      // Supprimer un concours de la liste des concours pre-selectionnes, depuis icone corbeille
+      function supprimerConcoursListe(numero_concours) {
+        if (confirm("Vous souhaitez supprimer le concours n°" + numero_concours + ".\nConfirmez-vous ce choix ?")) {
+          supprimerConcoursFavori(numero_concours);
+          window.location.reload();
+          // Mettre a jour le badge compteur dans la fenetre parente
+          var nbrConcours = getCookie("nbr_concours");
+          if (nbrConcours == null || nbrConcours == 0) {
+            window.opener.document.getElementById("cptNbrConc").innerHTML = "+";
+          } else {
+            window.opener.document.getElementById("cptNbrConc").innerHTML = nbrConcours;
+          }
+        }
+      }
+
+      // Retour en haut de la page
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+
+    </script>
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src-elem 'self' *.cnrs.fr 'unsafe-inline'; script-src-attr 'self' *.cnrs.fr 'unsafe-inline'; frame-src 'self' *.cnrs.fr 'unsafe-inline'; connect-src 'self' *.cnrs.fr 'unsafe-inline'; font-src 'self' *.cnrs.fr 'unsafe-inline'; style-src 'self' *.cnrs.fr 'unsafe-inline'; img-src 'self' *.cnrs.fr data:; " />
+<link rel="stylesheet" href="/profil/css/autre.css" type="text/css">
+<link rel="stylesheet" href="/profil/css/backtotop.css" type="text/css">
+<title>fiche profil public</title>
+<SCRIPT LANGUAGE="JAVASCRIPT" SRC="/profil/js/comboliste.js"></SCRIPT>
+<SCRIPT LANGUAGE="JAVASCRIPT" SRC="/profil/js/jquery3.4.1.min.js"></SCRIPT>
+<SCRIPT LANGUAGE="JAVASCRIPT" SRC="/profil/js/jquery.textarea.js"></SCRIPT>
+
+      <script type="text/javascript">
+        function getXhr(){
+            var xhr = null;
+            try {
+                xhr = new XMLHttpRequest();
+            } catch(e){
+                xhr = new ActiveXObject("Microsoft.XMLHTTP" );
+            }
+            return xhr;
+          }
+
+          function updateElementByAjax (pUrl, pElementId, pAsynch){
+            updateElementWithFunctionByAjax(pUrl, pElementId, pAsynch, null, false);
+          }
+        /*
+        * Si utilisation de cette méthode, il faut définir la méthode "callBackMessagesErreur".
+        */
+        function updateMessagesErreur(pUrlCheckMessagesErreur) {
+            updateElementWithFunctionByAjax(pUrlCheckMessagesErreur, "erreur", true, callBackMessagesErreur, true);
+        }
+          function updateElementWithFunctionByAjax (pUrl, pElementId, pAsynch, pFunctionCall, pIsInnerHTML){
+            var xhr = getXhr();
+            xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4 && xhr.status  == 200 ){
+                var documentElement = document.getElementById(pElementId);
+                if (documentElement != null) {
+                  if (pIsInnerHTML) {
+                      $("#" + pElementId).html(xhr.responseText);
+                  } else {
+                    documentElement.outerHTML=xhr.responseText;
+                  }
+                  if(pFunctionCall != null) {
+                  pFunctionCall(xhr.responseText);
+                  }
+                }
+              }
+            };
+            xhr.open( "GET", pUrl,  pAsynch);
+            xhr.send(null);
+          }
+      </script>
+      
+<script>top.nbClick=0</script>
+</head>
+<body bgcolor="#FFFFFF"  onLoad=ajaxRequeteCandidatConcoursCEL('http://concoursexternesit.cnrs.fr/public/candidat/requete_get_candidat_concours.php?numero_concours=120'); >
+<div id="divglobale">
+<form name="formFiche" method="post" action="">
+           <script>top.boutonClique="";</script>
+<input type="hidden" name="hidFicheCourante" value="pg_profil_public_referens.pAfficheProfilPublic">
+<br>
+<table width="100%" border=0>
+<tr>
+<td align="left" width="5%"><input type="button" id="btnPostuler" name="btnPostuler" value="Postuler" onClick="postulerCEL('120', 'n°120 : IE - BAP Informatique, statistiques et calcul scientifique - Responsable assistance support - Direction des ressources humaines, PARIS 16', 'http://concoursexternesit.cnrs.fr/public/candidat/requete_postuler.php?numeros_concours=120');" ></td>
+<td align="left" width="3%">
+
+      <a id="iconefavori" onclick="gererConcoursFavori('120');"
+        title="Mes concours pr&eacute;-s&eacute;lectionn&eacute;s (favoris)"
+        style="text-decoration: none;">
+          <img src="/profil/images/icon_etoile_favori.png" width="60" height="60" border="0">
+          <span class="icon_etoile_favori_span" style="" id="cptNbrConc">+</span>
+      </a>
+</td>
+<td width="75%"></td>
+<td align="center">
+      <b>Liste des concours</b><br>
+      <a href="PG_PROFIL_PUBLIC_REFERENS.afficherListeConcoursPreselectionnes?destinationId=81"
+      onclick="window.open('PG_PROFIL_PUBLIC_REFERENS.afficherListeConcoursPreselectionnes?destinationId=81', 'newwindow', 'width=700,height=400'); return false;"
+      title="Consulter la liste de mes concours pr&eacute;-s&eacute;lectionn&eacute;s"><img src="/profil/images/icone_liste.png" width=40 height=40 border=0></a>
+      </td>
+</tr>
+</table>
+<center>
+    <table width="60%" border="2" cellspacing="0">
+    <tr>
+      <td class="enteteconcours" bordercolor="#CCCCCC"> 
+<p class="enteteconcours"><span class="enteteconcours">E : Informatique, statistiques et calcul scientifique</span></p>
+        
+<p class="enteteconcours"><span class="enteteconcours">Ingénieur d'études</span></p>
+        <p class="enteteconcours"><span class="enteteconcours">Concours N&deg; 120</span></p>
+      </td>
+    </tr>
+  </table>
+  </center>
+  
+<p>&nbsp;</p>
+
+<table width="100%" border="0" cellspacing="0">
+  <tr height="25">
+    <td width="20%"><b>Nbre de postes : </b></td>
+    <td width="80%">1</td>
+  </tr>
+
+      <tr height="25">
+          <td width="20%"><b>Emploi-type :</b></td>
+          <td width="80%">Responsable assistance support</td>
+      </tr>
+    
+</table>
+<br>
+<br>
+
+    <table width="100%" border="0">
+
+    <tr height="25">
+      <td width="20%"><b>Affectation :</b></td>
+      <td width="80%">Direction des ressources humaines, PARIS 16</td>
+    </tr> 
+<tr height="25"><td width="20%"><b>Groupe de fonction :</b></td><td width="80%">
+Groupe 3
+</td></tr>
+</td>
+    </tr>
+ </table>
+      
+<br>
+
+  <p>&nbsp;</p>
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="mission"><b>Mission :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr width="100">
+	  <td colspan="2">
+	
+Au sein du service Recrutement et Intégration (SERI) de la direction des ressources humaines (DRH), le (la) chargé(e) de l'assistance support aura pour mission de mettre en œuvre et de piloter le déploiement et l'assistance aux utilisateurs sur les différents outils et systèmes d'information et de communication de ce service. A ce titre, il (elle) assurera la formation des utilisateurs internes et externes, la rédaction et la mise à jour de la documentation fonctionnelle et technique.  
+</td>
+    </tr>
+  </table>
+  
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="activites"><b>Activit&eacute;s :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+-Rédiger et mettre à jour la documentation fonctionnelle et technique<BR>
+-Définir et optimiser les procédures pour mettre en place les processus d'assistance<BR>
+-Modéliser les processus métier <BR>
+-Concevoir, en relation avec les partenaires internes et/ou externes, des dispositifs de formation adaptés aux outils pour l'ensemble des utilisateurs<BR>
+-Aider à identifier et analyser des incidents/dysfonctionnements, proposer le cas échéant les évolutions applicatives associées (fonctionnelles ou techniques), optimiser les performances<BR>
+-Participer à l'élaboration d'outils de consultation, de contrôle et de gestion (scripts, procédures, requêtes, reporting)<BR>
+-Participer aux travaux de la mise en œuvre et du déploiement du nouvel outil de la gestion logistique du recrutement du service<BR>
+-Anticiper les changements et leurs impacts métiers de la mise en production d'un nouvel outil ou nouvelle application du service, en assurer la promotion par des actions de conseil et de communication auprès des utilisateurs<BR>
+-Analyser la qualité des services rendus aux utilisateurs ; mettre en place des indicateurs de suivi d'activité<BR>
+-Mettre en place des actions de formation spécifiques liées à ces outils à destination des utilisateurs.<BR>
+<BR>
+
+</td>
+    </tr>
+  </table>
+  
+
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="competences"><b>Comp&eacute;tences :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+Savoirs :<BR>
+-Avoir une bonne connaissance des systèmes d'informations <BR>
+-Savoir élaborer l'architecture et l'environnement technique et fonctionnel d'un système d'information<BR>
+-Avoir une bonne pratique des usages d'outils et applications informatiques en particulier RH (SIRH)<BR>
+-Maitriser les techniques de la conduite de projet SI<BR>
+-Savoir appliquer les techniques de conduite du changement dans la mise en œuvre d'outils SI<BR>
+-Connaitre les processus métier des ressources humaines et en particulier ceux liés au recrutement, à l'intégration et à la formation<BR>
+-Savoir élaborer des indicateurs de performance<BR>
+<BR>
+Savoir-faire :<BR>
+-Savoir faire des cartographies applicatives projetées sur des processus<BR>
+-Savoir coordonner et animer une réunion, accompagner et conseiller, <BR>
+-Avoir le sens du contact, de la pédagogie, et le goût du travail en équipe,<BR>
+-Être autonome et force de proposition, savoir rendre compte<BR>
+-Savoir s'adapter et être organisé, être en capacité de maîtriser les contraintes, les urgences, respecter les délais<BR>
+-Faire preuve de pédagogie dans ses échanges avec les différents acteurs internes (les autres services de la DRH, les membres de jury) et externes au service (principalement les candidats aux concours et examen).<BR>
+<BR>
+<BR>
+
+</td>
+    </tr>
+  </table>
+  
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="contexte"><b>Contexte :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+La fonction s'exerce au sein de la DRH du CNRS et plus précisément au sein du Service Recrutement et Intégration (SERI) de la DRH. Ce service a pour mission de piloter et mettre en œuvre la politique recrutement et intégration de l'établissement. Il est composé d'une équipe de 20 personnes répartie sur 2 sites, l'un au siège à Paris et l'autre en région parisienne à Gif sur Yvette. Ce service utilise plusieurs applications informatiques RH différentes. Il traite notamment plus de 20 000 dossiers de candidatures par an et interagit avec toutes les directions de l'établissement. Il a pour projet en 2025 et 2026 l'implantation d'un nouvel outil de gestion du recrutement dont les utilisateurs seront à la fois internes et externes à l'établissement. Le chargé ou la chargée de l'assistance support travaillera notamment sur ce nouveau projet et sera sous la responsabilité hiérarchique de la responsable de service et de son adjointe. Il ou elle interagira également avec la direction des systèmes d'information (DSI), le service de traitement de l'information(SSTI) de la DRH et les agents du service recrutement et intégration. Le poste est situé sur le campus CNRS de Gif sur Yvette (dans l'Essonne), des déplacements hebdomadaires seront à prévoir à Paris au siège du CNRS dans le 16ème arrondissement (un jour par semaine). Ce poste permet de bénéficier de télétravail conformément aux dispositions prévues au CNRS.<BR>
+<BR>
+
+</td>
+    </tr>
+  </table>
+  
+<br>
+
+  <p>&nbsp;</p>
+
+  <table border="0" width="100%">
+    <tr align="center">
+      <td>
+	  	<script>
+		//ne pas afficher le bouton si login DS
+		//if (top.listeCourante!=""){
+		//   document.write("<input type='button' name='btnRetour' value='Retour &agrave; la liste' onClick='javascript:top.retourListe();'>");
+		//}
+		</script>
+		<input type="button" name="btnRetourConsult" value="Revenir &agrave; la liste des r&eacute;sultats" onClick="javascript:history.go(-1);">
+	  </td>
+    </tr>
+  </table>
+  
+</form>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+
+    <div class="container-top">
+      <a href="" class="top" id="scrollToTop"></a>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var containerTop = document.querySelector(".container-top");
+        var documentHeight = document.documentElement.scrollHeight;
+        var scrollTopBtn = document.querySelector("#scrollToTop");
+
+        function updateOpacity() {
+          var scrollPercentage = (window.scrollY / documentHeight) * 150;
+
+          var opacity = Math.min(1, Math.max(0, scrollPercentage / 75));
+
+          containerTop.style.opacity = opacity;
+        }
+
+        window.addEventListener("scroll", function () {
+          updateOpacity();
+        });
+
+        scrollTopBtn.addEventListener("click", function (event) {
+          event.preventDefault(); // Annule le comportement par défaut du lien
+          scrollToTop();
+        });
+
+        function scrollToTop() {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth" // Permet le défilement en douceur
+          });
+        }
+
+        updateOpacity();
+      });
+    </script>
+</body>
+
+			<head>
+  			  <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+  			  <META HTTP-EQUIV="Expires" CONTENT="-1">
+          <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src-elem 'self' *.cnrs.fr 'unsafe-inline'; script-src-attr 'self' *.cnrs.fr 'unsafe-inline'; frame-src 'self' *.cnrs.fr 'unsafe-inline'; connect-src 'self' *.cnrs.fr 'unsafe-inline'; font-src 'self' *.cnrs.fr 'unsafe-inline'; style-src 'self' *.cnrs.fr 'unsafe-inline'; img-src 'self' *.cnrs.fr data:; " />
+			</head>
+			
+</html>

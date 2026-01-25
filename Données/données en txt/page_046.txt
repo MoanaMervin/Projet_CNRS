@@ -1,0 +1,43 @@
++
+Liste des concours
+D : Sciences humaines et sociales
+Ingénieur de recherche
+Concours N° 46
+Nbre de postes :
+1
+Emploi-type :
+Ingenieure ou ingenieur de recherche en production, traitement et analyse de données
+Affectation :
+Identité et Différenciation de l'Espace, de l'Environnement et des Sociétés, MONT ST AIGNAN
+Groupe de fonction :
+Groupe 3
+Mission :
+L'IR sera responsable de la conception, du pilotage et de la gestion de dispositifs de collecte et de traitement de données en ligne provenant de sources variées telles que des réseaux sociaux, des enquêtes, des images satellites ou encore des capteurs embarqués nécessitant une maitrise des méthodes de crowdsourcing. La construction d'outils d'interrogation entre les différentes bases de données et d'interfaces pour leur visualisation sera également une des missions attendues. L'IR aura enfin pour mission de contribuer à l'animation méthodologique de l'UMR et de la représenter par sa participation aux principaux réseaux scientifiques et professionnels (MAGIS, CIST notamment). De par ces missions, la personne recrutée participera aux réponses à des appels d'offre notamment en lien avec les enjeux du changement climatique sur la santé (maladies émergentes dans un contexte OneHealth, maladies à transmission vectorielle dans des environnements changeant) et d'analyse des vulnérabilités territoriales (évaluation des populations exposées, analyse des scénarios de mitigation). La personne recrutée devra s'assurer de la cohérence des dispositifs méthodologiques mis en œuvre dans plusieurs projets de recherche comprenant de la modélisation spatio-temporelle, plus particulièrement des modèles de simulation à base d'agents. Elle contribuera à améliorer des chaînes de traitement existantes sous R et Python.
+Activités :
+Veille scientifique :Assurer une veille continue sur les bases de données, notamment spatialisées, en lien avec les thématiques de recherche sur les questions des mobilités, des risques et de la santé
+Identifier les nouvelles sources de données pertinentes et les technologies émergentes en matière de collecte et de traitement de données
+Contribuer à la réflexion sur les techniques et les méthodes de l'apprentissage automatique.
+Conception et mise en place de dispositifs de collecte automatisée :
+Développer avec les autres IR du laboratoire des méthodologies innovantes pour la collecte automatisée de données multisources.
+Mettre en place des outils de collecte automatisée des données (API) et sera en mesure de garantir leur qualité, leur fiabilité et leur intégrité.
+Traitement et analyse des données multiformes :Développer des protocoles et des méthodes de traitement et d'analyse des données géospatiales.
+Garantir la qualité et la validité de ces données
+Assurer l'analyse de ces données et être en mesure d'en interpréter les résultats tout en les rendant communicables et expertisables par les chercheurs. Visualisation et exploitation des données : Créer des outils de visualisation interactive permettant l'exploration et l'analyse des données
+Veiller à ce que ces résultats présentés sous forme de tableaux de bord interactifs mêlant diverses formes de visualisation, puissent aider à la prise de décision et à la communication des résultats auprès des chercheurs, des décideurs et du grand public.
+Projets de recherche appliquée :
+Participer à des projets de génération de populations synthétiques pour des études de modélisation démographique et de vulnérabilité territoriale
+Contribuer à des projets d'analyse des vulnérabilités territoriales liées au changement climatique
+Contribuer aux projets de recherche dans le domaine des mobilités. Collaboration et coordination :Travailler en collaboration avec des équipes multidisciplinaires.
+Compétences :
+Très bonne maîtrise des outils de crowdsourcing, des méthodes de traitement et d'analyses de données multiformats et de géo-visualisation. La personne devra maîtriser des outils de Datavisualisation et avoir des bases en Machine Learning. Seront appréciées une expérience de participation à plusieurs projets collectifs de recherche, de publications scientifiques et une connaissance préalable des réseaux scientifiques sur la santé. Savoirs généraux, théoriques ou disciplinaires Connaissances dans le domaine des risques et de la santé
+Connaissance de l¿analyse spatiale et de la géomatique
+Connaissance générale des méthodes et outils de production de données
+Connaissance générale des bases de données (SQL, NoSQL, etc.) et des techniques de gestion des grandes masses de données
+Connaissance générale des méthodes de la télédétection et de la génération de population synthétique
+Connaissance générale en Intelligence Artificielle et en Apprentissage automatique, supervisé ou non supervisé. Savoirs sur l'environnement professionnel Connaissance de l'environnement et des réseaux professionnels
+Cadre légal et déontologique
+Documentation et archivage pérenne des données issues de la recherche Savoir-faire opérationnels
+Compétences en programmation (Python, R, etc.) pour l'automatisation des collectes de données, le traitement de données complexes et la visualisation des résultats Comprendre et analyser le problème scientifique posé. Évaluer et maîtriser le degré d'approximation des méthodes utilisées
+Identifier les critères de choix des méthodes et des tests de validation adaptés aux problématiques scientifiques
+Contexte :
+L'UMR CNRS IDEES est un laboratoire de recherche pluridisciplinaire et plurisite (Caen, Le Havre et Rouen) en SHS. Le poste sera localisé dans son site rouennais, au campus de Mont-Saint-Aignan. L'UMR IDEES regroupe environ 120 chercheur.e.s autour de spécialités reconnues en France et à l'international telles que la modélisation et l'analyse spatiale, la santé et les risques, le transport et les environnements portuaires, les Technologies d'Information et de la Communication (TIC) ou encore les recompositions socio-territoriales. Elle est pluridisciplinaire dans ses objets et ses méthodes, les données à collecter, traiter et analyser pouvant être de sources diverses : capteurs, mesures, prises de vue aériennes, données issues de réseaux sociaux, données de la statistique publique et données de simulation. Cette richesse appuie son axe central « Sources, modèles, simulation » dans des développements méthodologiques et ses opérations de formation. L'UMR est par ailleurs inscrite dans un écosystème de recherche normand, où elle y ancre une partie de ses terrains. Elle est par ailleurs partie prenante de réseaux de recherche nationaux (FR CIST, GDR MAGIS,....).

@@ -1,0 +1,552 @@
+
+    <script language="JavaScript">
+
+      // Renvoyer la valeur du cookie dont le nom est passe en parametre
+      function getCookie(name) {
+        if (document.cookie.length == 0) {
+          return null;
+        }
+        var regSepCookie = new RegExp('(; )', 'g');
+        var cookies = document.cookie.split(regSepCookie);
+        for (var i = 0; i < cookies.length; i++) {
+          var regInfo = new RegExp('=', 'g');
+          var infos = cookies[i].split(regInfo);
+          if (infos[0] == name) {
+            return unescape(infos[1]);
+          }
+        }
+        return null;
+      }
+
+      // Generer un identifiant user temporaire a sauvegarder en cookie (si pas existant)
+      function getIdentifiantUserTemporaire() {
+        var tempUserId = getCookie("pde_temp_user_id");
+        if (tempUserId == null || tempUserId == "") {
+          var dateExpire = new Date();
+          dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+          tempUserId = Math.random().toString(16).slice(2);
+          document.cookie = "pde_temp_user_id=" + tempUserId + "; expires=" + dateExpire + "; path=/";
+        }
+        return tempUserId;
+      }
+
+      // Mettre a jour le badge compteur nombre de concours dans la page
+      function majBadgeCompteurConcours() {
+        var nbrConcours = getCookie("nbr_concours");
+        if (nbrConcours == null || nbrConcours == 0) {
+          document.getElementById("cptNbrConc").innerHTML = "+";
+        } else {
+          document.getElementById("cptNbrConc").innerHTML = nbrConcours;
+        }
+      }
+
+      // Ajouter un numero de concours a la liste des concours pre-selectionnes
+      function ajouterConcoursFavori(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours");
+        var nbrConcours = 0;
+        var dateExpire = new Date();
+        dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+
+        if (valCookieNumerosConcours == null || valCookieNumerosConcours == "") {
+          valCookieNumerosConcours = numero_concours;
+          nbrConcours = 1;
+        } else {
+          // Transformer la chaine en tableau
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau ne contient pas le numero de concours : Ajout en fin de liste
+          if (arrayCookieNumerosConcours.includes(numero_concours) == false) {
+            valCookieNumerosConcours = valCookieNumerosConcours + "|" + numero_concours;
+            nbrConcours = arrayCookieNumerosConcours.length + 1;
+          }
+        }
+        // Enregistrer la liste des numeros de concours et le nombre de concours en cookies
+        document.cookie = "numeros_concours=" + valCookieNumerosConcours + "; expires=" + dateExpire + "; path=/";
+        document.cookie = "nbr_concours=" + nbrConcours + "; expires=" + dateExpire + "; path=/";
+        majBadgeCompteurConcours();
+      }
+
+      // Supprimer un numero de concours de la liste des concours pre-selectionnes
+      function supprimerConcoursFavori(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours");
+        if (valCookieNumerosConcours != null && valCookieNumerosConcours != "") {
+          var nbrConcours = getCookie("nbr_concours");
+          var dateExpire = new Date();
+          dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+          // Transformer la chaine en tableau
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau contient le numero de concours : Reconstruction de la liste sans ce numero
+          if (arrayCookieNumerosConcours.includes(numero_concours) == true) {
+            valCookieNumerosConcours = "";
+            nbrConcours = 0;
+            for (var i = 0; i < arrayCookieNumerosConcours.length; i++) {
+              if (arrayCookieNumerosConcours[i] != numero_concours) {
+                if (valCookieNumerosConcours.length > 0) {
+                  valCookieNumerosConcours = valCookieNumerosConcours + "|";
+                }
+                valCookieNumerosConcours = valCookieNumerosConcours + arrayCookieNumerosConcours[i];
+                nbrConcours = nbrConcours + 1;
+              }
+            }
+          }
+
+          // Enregistrer la liste des numeros de concours et le nombre de concours en cookies
+          document.cookie = "numeros_concours=" + valCookieNumerosConcours + "; expires=" + dateExpire + "; path=/";
+          document.cookie = "nbr_concours=" + nbrConcours + "; expires=" + dateExpire + "; path=/";
+        }
+      }
+
+      // Gerer le numero de concours selon la liste des numeros de concours en cookie :
+      // - Si numero de concours absent de la liste => Clic pour ajouter le concours
+      // - Si numero de concours present dans la liste => Clic pour supprimer le concours
+      function gererConcoursFavori(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours");
+        if (valCookieNumerosConcours == null || valCookieNumerosConcours == "") {
+          // Si liste de concours vide : Ajout
+          ajouterConcoursFavori(numero_concours);
+          alert("Ajouté à ma sélection");
+        } else {
+          // Transformer la chaine en tableau
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau ne contient pas le numero de concours : Ajout
+          if (arrayCookieNumerosConcours.includes(numero_concours) == false) {
+            ajouterConcoursFavori(numero_concours);
+            alert("Ajouté à ma sélection");
+          }
+          else {
+            // Sinon : Suppression
+            supprimerConcoursFavori(numero_concours);
+            majBadgeCompteurConcours();
+            alert("Retiré de ma sélection");
+          }
+        }
+      }
+
+      // Fonction Ajax interrogation CEL : Existence candidature pour un concours
+      function ajaxRequeteCandidatConcoursCEL(cel_url_requete_candidat_concours) {
+        var tempUserId = getIdentifiantUserTemporaire();
+        cel_url_requete_candidat_concours = cel_url_requete_candidat_concours + "&pde_temp_user_id=" + tempUserId;
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', cel_url_requete_candidat_concours);
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState === 4) {
+            var reponseCEL = xhr.responseText;
+            if (reponseCEL == 1) {
+              // Si reponse = 1, candidature existe deja dans CEL sur ce concours par le candidat
+              // Desactiver le bouton "Postuler" de la fiche concours et l icone etoile favori
+              document.getElementById("btnPostuler").disabled = true;
+              document.getElementById("btnPostuler").title = "Vous avez déjà postulé à ce concours";
+              document.getElementById("iconefavori").style.visibility = "hidden";
+              document.getElementById("cptNbrConc").innerHTML = "";
+            }
+          }
+        };
+        xhr.send();
+      }
+
+      // Verifie si le concours a deja ete postule
+      function checkConcoursPostule(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours_postules");
+        if (valCookieNumerosConcours != null && valCookieNumerosConcours != "") {
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau contient le numero de concours :
+          // Desactiver le bouton "Postuler" de la fiche concours et l icone etoile favori
+          for (var i = 0; i < arrayCookieNumerosConcours.length; i++) {
+            if (arrayCookieNumerosConcours[i] == numero_concours) {
+              document.getElementById("btnPostuler").disabled = true;
+              document.getElementById("btnPostuler").title = "Vous avez déjà postulé à ce concours";
+              document.getElementById("iconefavori").style.visibility = "hidden";
+              document.getElementById("cptNbrConc").innerHTML = "";
+            }
+          }
+        }
+      }
+
+      // Ajouter un numero de concours a la liste des concours postules
+      function ajouterConcoursPostule(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours_postules");
+        var dateExpire = new Date();
+        dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+        if (valCookieNumerosConcours == null || valCookieNumerosConcours == "") {
+          valCookieNumerosConcours = numero_concours;
+        } else {
+          // Transformer la chaine en tableau
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau ne contient pas le numero de concours : Ajout en fin de liste
+          if (arrayCookieNumerosConcours.includes(numero_concours) == false) {
+            valCookieNumerosConcours = valCookieNumerosConcours + "|" + numero_concours;
+          }
+        }
+        // Enregistrer la liste des numeros de concours postules en cookie
+        document.cookie = "numeros_concours_postules=" + valCookieNumerosConcours + "; expires=" + dateExpire + "; path=/";
+      }
+
+      // Postuler au concours dans application CEL
+      function postulerCEL(numero_concours, detail_concours, cel_url_concours) {
+        if (confirm("Vous souhaitez postuler pour le concours " + detail_concours + ".\nConfirmez-vous ce choix ?")) {
+          // Supprimer le concours de la liste des concours pre-selectionnes
+          supprimerConcoursFavori(numero_concours);
+          majBadgeCompteurConcours();
+          // Ajouter le concours a la liste des concours postules
+          ajouterConcoursPostule(numero_concours);
+          // Desactiver le bouton "Postuler" de la fiche concours
+          document.getElementById("btnPostuler").disabled = true;
+          document.getElementById("btnPostuler").title = "Vous avez déjà postulé à ce concours";
+          // Desactiver l icone etoile favori
+          document.getElementById("iconefavori").style.visibility = "hidden";
+          document.getElementById("cptNbrConc").innerHTML = "";
+
+          // Transmettre identifiant user PDE temporaire a CEL
+          var tempUserId = getIdentifiantUserTemporaire();
+          cel_url_concours = cel_url_concours + "&pde_temp_user_id=" + tempUserId;
+
+          // Ouvrir application CEL dans une nouvelle fenetre
+          window.open(cel_url_concours, '_blank');
+        }
+      }
+
+      // Postuler dans application CEL a tous les concours pre-selectionnes
+      function postulerCELtous(cel_url_concours) {
+        var nbrConcours = getCookie("nbr_concours");
+        if (nbrConcours != null && nbrConcours > 0) {
+          if (confirm("Vous souhaitez postuler pour les " + nbrConcours + " concours pré-sélectionnés.\nConfirmez-vous ce choix ?")) {
+            var dateExpire = new Date();
+            dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+            // Ajouter tous les concours pre-selectionnes a la liste des concours postules
+            var valCookieNumerosConcours = getCookie("numeros_concours");
+            var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+            for (var i = 0; i < arrayCookieNumerosConcours.length; i++) {
+              ajouterConcoursPostule(arrayCookieNumerosConcours[i]);
+            }
+            // Vider la liste des concours pre-selectionnes
+            document.cookie = "numeros_concours=; expires=" + dateExpire + "; path=/";
+            // Reinitialiser le nombre de concours pre-selectionnes a 0
+            document.cookie = "nbr_concours=0; expires=" + dateExpire + "; path=/";
+
+            // Transmettre identifiant user PDE temporaire a CEL
+            var tempUserId = getIdentifiantUserTemporaire();
+            cel_url_concours = cel_url_concours + "&pde_temp_user_id=" + tempUserId;
+
+            // Ouvrir application CEL dans une nouvelle fenetre
+            window.open(cel_url_concours, '_blank');
+            // Recharger la page parente
+            window.opener.location.reload();
+            // Fermer la page
+            window.close();
+          }
+        }
+      }
+
+      // Supprimer un concours de la liste des concours pre-selectionnes, depuis icone corbeille
+      function supprimerConcoursListe(numero_concours) {
+        if (confirm("Vous souhaitez supprimer le concours n°" + numero_concours + ".\nConfirmez-vous ce choix ?")) {
+          supprimerConcoursFavori(numero_concours);
+          window.location.reload();
+          // Mettre a jour le badge compteur dans la fenetre parente
+          var nbrConcours = getCookie("nbr_concours");
+          if (nbrConcours == null || nbrConcours == 0) {
+            window.opener.document.getElementById("cptNbrConc").innerHTML = "+";
+          } else {
+            window.opener.document.getElementById("cptNbrConc").innerHTML = nbrConcours;
+          }
+        }
+      }
+
+      // Retour en haut de la page
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+
+    </script>
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src-elem 'self' *.cnrs.fr 'unsafe-inline'; script-src-attr 'self' *.cnrs.fr 'unsafe-inline'; frame-src 'self' *.cnrs.fr 'unsafe-inline'; connect-src 'self' *.cnrs.fr 'unsafe-inline'; font-src 'self' *.cnrs.fr 'unsafe-inline'; style-src 'self' *.cnrs.fr 'unsafe-inline'; img-src 'self' *.cnrs.fr data:; " />
+<link rel="stylesheet" href="/profil/css/autre.css" type="text/css">
+<link rel="stylesheet" href="/profil/css/backtotop.css" type="text/css">
+<title>fiche profil public</title>
+<SCRIPT LANGUAGE="JAVASCRIPT" SRC="/profil/js/comboliste.js"></SCRIPT>
+<SCRIPT LANGUAGE="JAVASCRIPT" SRC="/profil/js/jquery3.4.1.min.js"></SCRIPT>
+<SCRIPT LANGUAGE="JAVASCRIPT" SRC="/profil/js/jquery.textarea.js"></SCRIPT>
+
+      <script type="text/javascript">
+        function getXhr(){
+            var xhr = null;
+            try {
+                xhr = new XMLHttpRequest();
+            } catch(e){
+                xhr = new ActiveXObject("Microsoft.XMLHTTP" );
+            }
+            return xhr;
+          }
+
+          function updateElementByAjax (pUrl, pElementId, pAsynch){
+            updateElementWithFunctionByAjax(pUrl, pElementId, pAsynch, null, false);
+          }
+        /*
+        * Si utilisation de cette méthode, il faut définir la méthode "callBackMessagesErreur".
+        */
+        function updateMessagesErreur(pUrlCheckMessagesErreur) {
+            updateElementWithFunctionByAjax(pUrlCheckMessagesErreur, "erreur", true, callBackMessagesErreur, true);
+        }
+          function updateElementWithFunctionByAjax (pUrl, pElementId, pAsynch, pFunctionCall, pIsInnerHTML){
+            var xhr = getXhr();
+            xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4 && xhr.status  == 200 ){
+                var documentElement = document.getElementById(pElementId);
+                if (documentElement != null) {
+                  if (pIsInnerHTML) {
+                      $("#" + pElementId).html(xhr.responseText);
+                  } else {
+                    documentElement.outerHTML=xhr.responseText;
+                  }
+                  if(pFunctionCall != null) {
+                  pFunctionCall(xhr.responseText);
+                  }
+                }
+              }
+            };
+            xhr.open( "GET", pUrl,  pAsynch);
+            xhr.send(null);
+          }
+      </script>
+      
+<script>top.nbClick=0</script>
+</head>
+<body bgcolor="#FFFFFF"  onLoad=ajaxRequeteCandidatConcoursCEL('http://concoursexternesit.cnrs.fr/public/candidat/requete_get_candidat_concours.php?numero_concours=113'); >
+<div id="divglobale">
+<form name="formFiche" method="post" action="">
+           <script>top.boutonClique="";</script>
+<input type="hidden" name="hidFicheCourante" value="pg_profil_public_referens.pAfficheProfilPublic">
+<br>
+<table width="100%" border=0>
+<tr>
+<td align="left" width="5%"><input type="button" id="btnPostuler" name="btnPostuler" value="Postuler" onClick="postulerCEL('113', 'n°113 : IE - BAP Sciences de l ingénieur et instrumentation scientifique - Ingenieure electronicienne ou ingenieur electronicien - Division technique de l INSU, GIF SUR YVETTE', 'http://concoursexternesit.cnrs.fr/public/candidat/requete_postuler.php?numeros_concours=113');" ></td>
+<td align="left" width="3%">
+
+      <a id="iconefavori" onclick="gererConcoursFavori('113');"
+        title="Mes concours pr&eacute;-s&eacute;lectionn&eacute;s (favoris)"
+        style="text-decoration: none;">
+          <img src="/profil/images/icon_etoile_favori.png" width="60" height="60" border="0">
+          <span class="icon_etoile_favori_span" style="" id="cptNbrConc">+</span>
+      </a>
+</td>
+<td width="75%"></td>
+<td align="center">
+      <b>Liste des concours</b><br>
+      <a href="PG_PROFIL_PUBLIC_REFERENS.afficherListeConcoursPreselectionnes?destinationId=81"
+      onclick="window.open('PG_PROFIL_PUBLIC_REFERENS.afficherListeConcoursPreselectionnes?destinationId=81', 'newwindow', 'width=700,height=400'); return false;"
+      title="Consulter la liste de mes concours pr&eacute;-s&eacute;lectionn&eacute;s"><img src="/profil/images/icone_liste.png" width=40 height=40 border=0></a>
+      </td>
+</tr>
+</table>
+<center>
+    <table width="60%" border="2" cellspacing="0">
+    <tr>
+      <td class="enteteconcours" bordercolor="#CCCCCC"> 
+<p class="enteteconcours"><span class="enteteconcours">C : Sciences de l'ingénieur et instrumentation scientifique</span></p>
+        
+<p class="enteteconcours"><span class="enteteconcours">Ingénieur d'études</span></p>
+        <p class="enteteconcours"><span class="enteteconcours">Concours N&deg; 113</span></p>
+      </td>
+    </tr>
+  </table>
+  </center>
+  
+<p>&nbsp;</p>
+
+<table width="100%" border="0" cellspacing="0">
+  <tr height="25">
+    <td width="20%"><b>Nbre de postes : </b></td>
+    <td width="80%">1</td>
+  </tr>
+
+      <tr height="25">
+          <td width="20%"><b>Emploi-type :</b></td>
+          <td width="80%">Ingenieure electronicienne ou ingenieur electronicien</td>
+      </tr>
+    
+</table>
+<br>
+<br>
+
+    <table width="100%" border="0">
+
+    <tr height="25">
+      <td width="20%"><b>Affectation :</b></td>
+      <td width="80%">Division technique de l'INSU, GIF SUR YVETTE</td>
+    </tr> 
+<tr height="25"><td width="20%"><b>Groupe de fonction :</b></td><td width="80%">
+Groupe 3
+</td></tr>
+</td>
+    </tr>
+ </table>
+      
+<br>
+
+  <p>&nbsp;</p>
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="mission"><b>Mission :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr width="100">
+	  <td colspan="2">
+	
+L'Ingénieur d¿Études en Electronique sera chargé d'étudier, de concevoir et de développer des dispositifs électroniques, tels que des cartes électroniques et des bancs de tests et de réaliser les intégrations et essais associés, dans le cadre des projets de développement instrumentaux soutenus par la Division Technique de l'INSU.
+</td>
+    </tr>
+  </table>
+  
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="activites"><b>Activit&eacute;s :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+- Elaborer les spécifications techniques des besoins en fonction des cahiers des charges, en concertation avec avec les responsables de projet et au sein d'équipe multi-métiers (électronique, optique, mécanique, thermique, contrôle commande).<BR>
+- Concevoir des ensembles électroniques dans le domaine de l'instrumentation sol et embarquée.<BR>
+- Etudier et/ou simuler les éléments d'un sous-système électronique (schéma cartes sous outil conception assisté par ordinateurs ).<BR>
+- Etudier et réaliser le routage des PCB des cartes électroniques mixte analogique / numérique (CMS, FPGA, µC).<BR>
+- Réaliser les achats (composants, cartes, câbles) et la sous-traitance associée.<BR>
+- Développer les bancs de tests nécessaires aux recettes des cartes.<BR>
+- Rédiger les rapports techniques, notices d'utilisations.<BR>
+- Accompagner et conseiller les stagiaires et apprentis accueillis dans l'unité<BR>
+- Assurer une veille technologique en participant aux réseaux du CNRS.<BR>
+
+</td>
+    </tr>
+  </table>
+  
+
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="competences"><b>Comp&eacute;tences :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+- Connaissances approfondies en électronique analogique et numérique.<BR>
+- Connaissances générales en instrumentation (physique du capteur, actionneurs).<BR>
+- Connaissances approfondies d'un logiciel de conception de circuits électroniques (Altium Designer, Kicad). <BR>
+- Connaissances approfondies des méthodes et outils de tests et contrôles (bancs de tests, oscilloscope, multimètre, alimentations).<BR>
+- Connaissances des technologies des circuits imprimés et des contraintes de routage pour la  réalisation de cartes multicouches, règles de CEM associée.<BR>
+- Connaissance des règles et normes de câblage (connecteurs spécifiques).<BR>
+- Connaissances générales en logiciel de banc de tests et informatique industrielle (Arduino, Labview, python).<BR>
+<BR>
+- Connaissances de familles de micro-contrôleurs et des langages de programmation associés <BR>
+- Connaissances de composants programmables (FPGA) et des langages de programmation associés (VHDL ).<BR>
+<BR>
+- Aptitude au travail en équipe projet.<BR>
+- Maitrise de l'Anglais technique.<BR>
+
+</td>
+    </tr>
+  </table>
+  
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="contexte"><b>Contexte :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+La Division Technique (DT) de l'Institut National des Sciences de l'Univers (INSU) est une Unité d'Appui à la Recherche (UAR 855) du CNRS. Elle regroupe 47 personnes du niveau ingénieur, technicien ou administratif ainsi que 21 marins. La DT assure de nombreuses tâches au niveau national, parmi lesquelles : la mise en œuvre d'une flotte de sept navires de stations ; la mise à disposition d'un parc d'instrumentation océanographique hauturière et côtière (matériel d'hydrologie, de mouillage, de prélèvement) utilisé par les laboratoires effectuant des mesures à la mer ; la maintenance et la mise à disposition d'un parc géophysique mobile ; le développement et la maintenance d'instruments nationaux.<BR>
+La DT apporte un soutien aux développements instrumentaux dans le cadre des demandes de soutien annuelles ainsi que pour les programmes structurants de l'INSU (EquipEx+, PEPR, IR/TGIR, SNO, AAP IIT, Actions Prioritaires). Certains développements instrumentaux nécessitent un travail collaboratif entre agents de plusieurs des sites de la DT.<BR>
+ <BR>
+L'Ingénieur d¿Etudes en Electronique, exercera son activité au sein du service Instrumentation Electronique du site de la Division Technique de l'INSU, basé à Gif-Sur-Yvette (91), sous la responsabilité hiérarchique du responsable du service. Il pourra accéder aux formations CNRS nécessaires pour adapter ses compétences au profil du poste et sera accompagné par les experts métiers du service. Au cours de son activité dans le cadre de projets en instrumentation embarquée, l'agent pourra être amené à se déplacer sur des sites de mission terrain en France et à l'étranger (en moyenne 15j par an).<BR>
+ <BR>
+Les activités associées à ce poste sont également ouvertes au télétravail (dans le cadre mis en place au CNRS).<BR>
+
+</td>
+    </tr>
+  </table>
+  
+<br>
+
+  <p>&nbsp;</p>
+
+  <table border="0" width="100%">
+    <tr align="center">
+      <td>
+	  	<script>
+		//ne pas afficher le bouton si login DS
+		//if (top.listeCourante!=""){
+		//   document.write("<input type='button' name='btnRetour' value='Retour &agrave; la liste' onClick='javascript:top.retourListe();'>");
+		//}
+		</script>
+		<input type="button" name="btnRetourConsult" value="Revenir &agrave; la liste des r&eacute;sultats" onClick="javascript:history.go(-1);">
+	  </td>
+    </tr>
+  </table>
+  
+</form>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+
+    <div class="container-top">
+      <a href="" class="top" id="scrollToTop"></a>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var containerTop = document.querySelector(".container-top");
+        var documentHeight = document.documentElement.scrollHeight;
+        var scrollTopBtn = document.querySelector("#scrollToTop");
+
+        function updateOpacity() {
+          var scrollPercentage = (window.scrollY / documentHeight) * 150;
+
+          var opacity = Math.min(1, Math.max(0, scrollPercentage / 75));
+
+          containerTop.style.opacity = opacity;
+        }
+
+        window.addEventListener("scroll", function () {
+          updateOpacity();
+        });
+
+        scrollTopBtn.addEventListener("click", function (event) {
+          event.preventDefault(); // Annule le comportement par défaut du lien
+          scrollToTop();
+        });
+
+        function scrollToTop() {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth" // Permet le défilement en douceur
+          });
+        }
+
+        updateOpacity();
+      });
+    </script>
+</body>
+
+			<head>
+  			  <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+  			  <META HTTP-EQUIV="Expires" CONTENT="-1">
+          <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src-elem 'self' *.cnrs.fr 'unsafe-inline'; script-src-attr 'self' *.cnrs.fr 'unsafe-inline'; frame-src 'self' *.cnrs.fr 'unsafe-inline'; connect-src 'self' *.cnrs.fr 'unsafe-inline'; font-src 'self' *.cnrs.fr 'unsafe-inline'; style-src 'self' *.cnrs.fr 'unsafe-inline'; img-src 'self' *.cnrs.fr data:; " />
+			</head>
+			
+</html>

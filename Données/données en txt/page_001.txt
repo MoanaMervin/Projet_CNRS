@@ -1,0 +1,148 @@
++
+Liste des concours
+A : Sciences du vivant, de la terre et de l'environnement
+Ingénieur de recherche
+Concours N° 1
+Nbre de postes :
+3
+Emploi-type :
+Ingenieure ou ingenieur biologiste en analyse de données
+1er poste du concours N° 1
+Affectation :
+Données de recherche pour l'Histoire Naturelle, l'Ecologie et l'Environnement, PARIS 05
+Groupe de fonction :
+Groupe 3
+Mission :
+L'ingénieur-e de recherche (IR) en analyse de données -omiques apportera son expertise opérationnelle afin de répondre aux questionnements écologiques, biologiques et évolutifs des chercheurs du Muséum National d'Histoire Naturelle (MNHN) et du CNRS Ecologie & Environnement (CNRS & E&E) dans une approche intégrative des données -omiques.
+Activités :
+1) Soutien en analyse de projets -omiques
+-	Orienter et conseiller en amont les utilisateurs pour la mise en œuvre des protocoles expérimentaux (essentiellement liés au séquençage haut débit) et des méthodes d'étude.
+-	Analyser des données (prétraitement, analyse, visualisation) en utilisant les méthodes appropriées ou en en développant de nouvelles.
+-	Participer, en lien avec les porteurs des projets de recherche, à l'interprétation des données ainsi qu'à leur valorisation (rédaction d'articles scientifiques, mise à disposition des outils d'analyse développés).
+-	Participer à la rédaction et la mise en œuvre de projets de type ANR ou ERC portés par des chercheurs du MNHN et du CNRS E&E (aspects techniques de l'acquisition de données, moyens de leur analyse, et de leur gestion).
+-	Participer et contribuer à l'enrichissement des données moléculaires autour des collections spécifiques du MNHN.
+2) Veille, formation et animation
+-	Assurer la veille technologique et scientifique sur les méthodes -omiques à haut débit, et pouvoir assurer le transfert d'outils d'analyse développés chez les organismes modèles vers des organismes non-conventionnels.
+-	Participer aux enseignements en analyse et gestion de données proposés par l'établissement et enrichir l'offre de formation continue des utilisateurs.
+-	Participer à l'animation d'un réseau de bio-informaticiens et de chercheurs utilisant la bio-informatique au MNHN.
+-	Encadrer les étudiants et les contractuels sur les activités de l-équipe "Bioinformatique, Génétique, Génomique"
+Compétences :
+Savoir
+-	Avoir une connaissance approfondie des approches -omiques courantes (assemblage et annotation des génomes, génomique fonctionnelle et évolutive...), tant dans leurs finalités que dans leur mise en pratique dans des contextes biologiques variés et non-conventionnels.
+- 	Langue anglaise : B2 à C1 (cadre européen commun de référence pour les langues)
+Savoir Faire
+-	Maîtrise d'un ou plusieurs langages de programmation (Python, R, C, C++, etc.).
+-	Maîtrise des méthodes d'analyses de données issues des technologies de séquençage haut débit ; capacité à tenir compte dans les modèles des limites de ces techniques.
+-	Connaissance des principales bases de données biologiques, génomiques, protéomiques voir métabolomiques, utiles à l'analyse de données multi-omiques (NCBI, ENA, KEGG, ...)
+-	Maîtrise des outils permettant le versionnage, la mise à disposition et l'utilisation d'outils informatiques (Git, gestionnaires de pipelines, conteneurs...)
+-	Connaissance des méthodes d'apprentissage machine et de classification (Réseaux de neurones profonds, Random Forest, Support Vector Machine, ...) souhaitable.
+-	Connaissances de base en installation et maintenance de systèmes de type Unix.
+-	Capacité à gérer plusieurs projets en parallèle et adaptation à des thématiques variées et changeantes.
+-	Capacités d'adaptation aux évolutions technologiques.
+-	Connaissance des recommandations liées à la science ouverte
+Savoir être
+-	Aptitude à travailler en équipe
+-	Autonomie, rigueur, méthode et fiabilité
+-	Bon relationnel, en raison du travail constant avec une vaste communauté de partenaires scientifiques
+Contexte :
+Ce poste a pour ambition de poursuivre les efforts engagés depuis plusieurs années dans la mise en place par l'Institut Ecologie et environnement (E&E) du CNRS et le MNHN, d'un pôle de compétences mutualisées en analyse de données de biologie des organismes, d'évolution et de biodiversité.
+L'ingénieur.e de recherche recruté.e rejoindra l'UAR DoHNEE (Données de recherche pour l'Histoire naturelle, l'Ecologie et l'Environnement), sur le site du jardin des plantes (Paris, 5ème arrondissement). Cette UAR nouvellement créée (janvier 2025) compte environ 30 agents (permanents et CDD) et a pour objectif d'offrir pour les agents du MNHN et du CNRS E&E un soutien pour l'acquisition et l'analyses de leurs données ainsi qu'un accompagnement dans leur valorisation, leur diffusion et leur pérennisation.
+L'ingénieur-e de recherche recruté.e apportera son expertise opérationnelle pour former et accompagner les chercheurs dans leurs projets basés sur des données -omiques variées, principalement (méta)génomiques et (méta)transcriptomiques. Il/elle mettra en œuvre, développera et mettra à disposition des outils bioinformatiques adaptés à l'étude d'espèces non-modèles variées afin de répondre aux questionnements écologiques, biologiques et évolutifs des chercheurs du MNHN et CNRS & E&E dans une approche intégrative. Il/elle s'appliquera à travailler dans un cadre favorisant la reproductibilité des analyses et la science ouverte (données FAIR).
+Il/elle travaillera plus spécifiquement dans le pôle « Services/activités autour des données » au sein de l'équipe « Bioinformatique, Génétique, Génomique » (BGG), et sera encadré hiérarchiquement par le/la responsable d'équipe.
+2eme poste du concours N° 1
+Affectation :
+Institut Necker Enfants Malades - Centre de Recherche, PARIS 15
+Groupe de fonction :
+Groupe 3
+Mission :
+Assurer le pilotage d'un hub bioinformatique à l'Institut Necker Enfants Malades (INEM) et  la mise en œuvre des analyses intégratives de génomique à grande échelle, de protéomique, de métabolomique, ainsi que des ensembles de données cliniques, afin de déchiffrer les facteurs moléculaires, physiologiques et environnementaux qui contribuent à la pathogenèse des maladies.
+Activités :
+-	Conseiller les chercheurs de l'INEM en matière d'analyses bioinformatiques
+-	Développer un réseau de bioinformaticiens au sein de l'INEM
+-	Développer les liens dans le domaine bioinformatique avec d'autres Instituts de recherche
+-	Développer des ressources communes pour analyser les données (boite à outils, codes, applications )
+-	Réaliser différents types d'analyses (liste non exhaustive) :
+o	scRNA-Seq (differential analysis, gene regulatory network, ligand/receptor pairs, etc.)
+o	Bulk RNA-Seq (co-expression analysis, biomarkers, differential analysis, gene regulatory network, etc.)
+o	Statistical analysis (descriptive, exploratory, PCA, etc.)
+o	AI (machine learning)
+o	Reproduction of methods from a paper
+o	Integration and analysis of multi-omics data
+-	Développer des pipelines d'analyse sur mesure pour soutenir les projets développés par les équipes de l'INEM.
+-	Diffuser et valoriser les résultats sous forme de rapports techniques ou d'études.
+-	Adapter les applications informatiques aux besoins des projets
+-	Utiliser les pipelines disponibles publiquement pour les ensembles de données multi-omiques impliquant la manipulation de R, Python, etc.
+-	Organiser des cours de formation pour les débutants dans les outils/programmes les plus pertinents au niveau de l'Institut.
+Compétences :
+Savoirs :
+-	Solide formation dans une discipline quantitative (informatique, mathématiques, physique ou similaire).
+-	Maîtrise des principaux langages de codage et de biologie
+-	Excellentes compétences en programmation en Python et/ou R.
+-	Connaissances et compréhension des grands systèmes physiologiques et biologiques.
+Savoirs faire :
+-	Expérience dans la mise en œuvre de pipelines de traitement de données dans un service de cloud computing.
+-	Expérience de travail avec des données biologiques, y compris les données omiques.
+-	Expérience dans l'utilisation de logiciels bioinformatiques disponibles publiquement.
+-	Utilisation préalable d'environnements de calcul à haute performance.
+-	Expérience des analyses computationnelles et statistiques à grande échelle, de l'analyse d'ensembles de données d'expression génique et d'épigénomique, et des approches d'analyse intégrative utilisant des outils computationnels et statistiques.
+-	Maîtrise de l'anglais (écrit et oral) - Niveau B1 à B2
+-	Expérience dans la mise en forme et la présentation de résultats
+Savoirs-être :
+-	Être motivé(e) et rigoureux(se) dans son travail
+-	Avoir le sens de l'organisation et de l'autonomie
+-	Savoir travailler en équipe et avec de multiples interlocuteurs
+Contexte :
+L'ingénieur.e de recherche recruté.e rejoindra l'INEM,  situé Faculté de Médecine de l'Université Paris Cité, Campus Necker au 160 rue de Vaugirard, 75015 Paris.
+Il/elle assurera le pilotage d'un hub bioinformatique à l'INEM. Ce hub bioinformatique est un service d'expertise de haut niveau en bio-informatique au bénéfice de toutes les équipes.
+L'ingénieur.e sera responsable d'un pôle bio-informatique à l'INEM. Dans ce cadre il/elle développera des liens étroits avec les équipes d'autres instituts pour travailler en réseau sur méthodologies et compétences.
+A ce titre il/elle sera responsable de l'analyse des données des projets des équipes de recherche de l'INEM. Il/elle mettra en œuvre, pour l'ensemble des équipes de l'INEM, des analyses intégratives de génomique à grande échelle (données transcriptionnelles en vrac et unicellulaires, séquençage de l'exome entier et du génome entier, accessibilité et topologie de la chromatine), de protéomique, de métabolomique, ainsi que des ensembles de données cliniques, afin de déchiffrer les facteurs moléculaires, physiologiques et environnementaux qui contribuent à la pathogenèse des maladies.
+L'ingénieur.e sera placé.e sous responsabilité de la directrice de l'INEM au plan fonctionnel et de la secrétaire générale au plan hiérarchique.
+Positionné(e) dans un environnement scientifique multi-disciplinaire, il/elle sera en contact avec les équipes de recherche de l'INEM souhaitant analyser - ou approfondir par de nouvelles approches bio-informatiques/computationnelles - leurs résultats à grande échelle.
+L'ingénieur.e bénéficiera par ailleurs d'un environnement intellectuel et scientifique très favorable sur le campus Necker avec la présence de la plateforme Bio-informatique de l'Institut Imagine dont les activités recouvrent essentiellement les traitements et analyses des données de NGS et RNA-seq.
+3eme poste du concours N° 1
+Affectation :
+Centre International de Recherche en Infectiologie, LYON 07
+Groupe de fonction :
+Groupe 3
+Mission :
+L'ingénieur biologiste sera chargé de concevoir, réaliser et superviser des analyses de données issues de la recherche en science du vivant, sur les thématiques d'immunologie, virologie et bactériologie, au sein du service de bioinformatique.
+Activités :
+1) Réaliser des analyses de données en bioinformatique, en collaboration avec les équipes du Centre International de Recherche en Infectiologie (CIRI).
+- Analyser des données omics, participer à la définition des projets de recherche
+- Participer au co-encadrement du personnel pour le partie bioinformatique des projets de recherche
+- Développer de nouvelles compétences au sein du service bioinformatique et biostatistique BIBS, telles que l'intégration de données multi-omics ou l'IA (Intelligence Artificielle)
+- Développer et implémenter de nouveaux pipelines d'analyse, de gestion, et de visualisation de données et les rendre disponibles aux équipes.
+- Valoriser les résultats scientifiques en collaboration avec les équipes de recherche
+2) Développer la bioinformatique au sein du CIRI.
+- Conseiller et échanger avec les biologistes et bioinformaticien·ne·s, notamment au cours de la permanence hebdomadaire du service
+- Organiser des activités de formation en partenariat avec des services similaires d'autres centres de recherche
+- Développer l'utilisation de l'IA pour les analyses bioinformatiques.
+- Effectuer la veille technologique du domaine, le développement et l'entretien des workflows d'analyse
+Compétences :
+Savoirs / connaissances
+- Diplôme Bac+5 (Master ou ingénieur) ou doctorat en bioinformatique, biologie computationnelle, génomique ou domaine connexe.
+- Compréhension des techniques d'analyse de données biologiques et multi-omics.
+- Connaissances appréciées en IA.
+- Connaissances appréciées dans le domaine de l'immunologie et l'infectiologie.
+- Langue anglaise : B2 à C1 (cadre européen commun de référence pour les langues)
+Savoir-faire
+- Excellentes capacités à interagir avec les biologistes.
+- Maîtrise de l'environnement Unix/Linux, et de plusieurs langages de programmation (dont R et/ou Python).
+- Maîtrise d'outils classiques dans l'analyse de données omics (analyse qualité, nettoyage des données, alignement, quantification, statistiques associées, visualisation).
+- Maîtrise des outils de versionning (git), de gestion de workflow (ex, nextflow), et de cluster de calcul (slurm).
+- Capacité à assurer la traçabilité des projets (FAIR) afin qu'ils puissent être suivis ou repris avec efficacité.
+- Expérience en enseignement ou en formation.
+- Capacité à réaliser une veille scientifique des outils bioinformatiques.
+- Aisance dans l'expression orale et écrite.
+- Maîtrise de l'anglais technique du domaine, capacité à conduire des réunions et rédiger des documents techniques dans cette langue.
+Savoirs-être
+- Bonnes capacités relationnelles, d'écoute, de communication et de pédagogie.
+- Appétence pour l'intégration de nouvelles technologies.
+- Autonomie, rigueur, curiosité, prise d'initiative.
+- Garantir la qualité et la pertinence des outils d'analyse et des résultats.
+- Aptitude au travail en équipe dans un environnement multidisciplinaire en biologie.
+- Sens de l'organisation.
+Contexte :
+Le CIRI, Centre International de Recherche en Infectiologie, est une Unité Mixte de Recherche (INSERM, CNRS, Université Lyon 1, ENS de Lyon), qui comprend 26 équipes de recherche avec plus de 400 personnes réparties sur différents sites et dans trois départements: Virologie, Bactériologie, Immunologie. L'ensemble des équipes utilise des données issues de technologies à haut débit, et les besoins en bioinformatique et en analyse de données sont de plus en plus grands et divers, notamment avec les perspectives qu'offrent le développement actuel de l'IA. L'ingénieur·e de recherche intégrera le Service de BioInformatique et BioStatistique (BIBS) établi depuis 2015 sur le site de Gerland (Bâtiment Franklin) et actuellement composé de trois membres permanents : une Ingénieure de Recherche, qui coordonne le service, et un Maître de Conférence Universitaire en Biologie pour le pôle en bioinformatique, ainsi qu'un Ingénieur d'Études en Biostatistique pour le pôle biostatistique. L'ingénieur·e bénéficiera d'un environnement scientifique interdisciplinaire stimulant, d'une communauté dynamique de bioinformaticien·ne·s réparti·e·s dans les équipes, de l'expertise de l'équipe BIBS et d'un accès aux moyens de calculs nécessaires (cluster, machines virtuelles). La diversité des projets de recherche pourra l'amener à se former sur de nouvelles techniques et thématiques d'analyses tout en s'appuyant sur ses expériences précédentes.
+Il/Elle sera rattaché·e hiérarchiquement à la coordinatrice du service et au Directeur d'Unité.
+Contrainte particulière de travail : Après 6 mois d'ancienneté sur le poste, une partie des activités pourra être réalisée en télétravail (jusqu'à 2 jours par semaine). Elle sera à définir avec le responsable de structure et sous réserve de respecter la réglementation en vigueur au CNRS.

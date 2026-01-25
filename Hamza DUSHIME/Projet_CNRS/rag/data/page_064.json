@@ -1,0 +1,21 @@
+{
+  "source_file": "page_064.html",
+  "bap": "E : Informatique, statistiques et calcul scientifique",
+  "grade": "Ingénieur de recherche",
+  "concours_label": "Concours N° 64",
+  "concours_num": "64",
+  "nb_postes": "1",
+  "emploi_type": "Experte ou expert en information statistique",
+  "nb_postes_detectes": 1,
+  "postes": [
+    {
+      "poste_num": 1,
+      "affectation": "Laboratoire d'océanographie de Villefranche, VILLEFRANCHE SUR MER",
+      "groupe_fonction": "Groupe 3",
+      "mission": "L'agent développera des outils numériques avancés pour traiter et analyser des\ndonnées océanographiques hétérogènes, facilitant ainsi la compréhension des\nprocessus biogéochimiques et biologiques marins.",
+      "activites": "o Adapter et améliorer les outils existants (e.g. modèles d'apprentissage profond\npour générer de nouvelles variables biogéochimiques ou exploiter des images de\nplancton ; modèles bio-optiques appliqués aux plateformes satellitaires et in\nsitu), notamment en intégrant de nouvelles sources de données (acoustiques,\nhyperspectrales, imagerie haute résolution).\no Concevoir et mettre en œuvre de nouvelles méthodes numériques adaptées à\nl'hétérogénéité des données, en concertation avec les équipes chargées de leur\nacquisition afin de faciliter leur utilisation synergique.\no Assurer une veille technologique en analyse de données, notamment en\napprentissage machine, pour intégrer de nouvelles approches au laboratoire.\no Contribuer à des projets nationaux/internationaux et aux publications\nscientifiques associées.\no Participer à l'administration des serveurs de calcul et de données.\no Réaliser des présentations, formations internes et rédiger des documents\ntechniques pour assurer le transfert de compétences.",
+      "competences": "- Savoirs / connaissances\no Expertise en outils d'analyse de données et modélisation statistique dont\nl'apprentissage machine (notamment Multi Layer Perceptron et Convolutional Neural\nNetworks).\no Connaissance approfondie d'au moins un langage de programmation\nscientifique : Python, R, (éventuellement MATLAB).\no Compétences en océanographie (biogéochimie, biologie, écologie ou\nphysique) ou en informatique (satistiques, apprentissage) avec des connaissances\nen océanographie.\no Maîtrise de l'environnement Unix/Linux.\no Anglais scientifique et technique niveau B2 (écrit et oral).\n- Savoir-faire\no Développer et appliquer des modèles statistiques et des outils\nd'apprentissage machine\no Maîtrise de la manipulation et de l'analyse des jeux de données\nvolumineux stockés en divers formats (e.g. fichiers NetCDF) ou récupérables par\nApplication Programming Interfaces (API).\no Notions d'administration système Linux appréciées.\no Communiquer efficacement, transmettre des connaissances, identifier\nl'information pertinente et réaliser des synthèses.\n- Savoirs-être\no Ouverture d'esprit et curiosité intellectuelle.\no Capacité pédagogique et aptitude au travail collaboratif.\no Adaptabilité à la diversité des disciplines (biogéochimie, écologie,\nphysique).\no Autonomie et prise d'initative.",
+      "contexte": "L'agent travaillera avec les équipes « Optique Marine, Télédétection &\nApplications Biogéochimiques\" (OMTAB) et « Computational Plankton Ecology »\n(COMPLEx) du Laboratoire d'Océanographie de Villefranche (LOV), équipes reconnues\ninternationalement pour leur expertise en optique marine, biogéochimie et\nécologie du plancton, ainsi que leur contribution dans les programmes\nd'observation (en particulier BGC-Argo) et les bases de données (notamment\nEcoTaxa).\nAffectation au Laboratoire d'Océanographie de Villefranche, à Villefranche-sur-\nMer. Des déplacements sont à prévoir dans le cadre des projets internationaux\ndans lesquels le laboratoire est impliqué.\nLe poste sera affecté aux équipes OMTAB et COMPLEx du LOV (Villefranche/Mer),\nlaboratoire reconnu pour l'analyse de données marines et son implication dans les\nprogrammes d'observations et projets de recherche nationaux et internationaux,\nnotamment la communauté OneArgo. Possibilité de télétravail avec un maximum de\ndeux jours par semaine.\nhttps://lov.imev-mer.fr"
+    }
+  ]
+}

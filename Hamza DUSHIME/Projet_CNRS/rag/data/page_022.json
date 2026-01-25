@@ -1,0 +1,21 @@
+{
+  "source_file": "page_022.html",
+  "bap": "C : Sciences de l'ingénieur et instrumentation scientifique",
+  "grade": "Ingénieur de recherche",
+  "concours_label": "Concours N° 22",
+  "concours_num": "22",
+  "nb_postes": "1",
+  "emploi_type": "Experte ou expert en développement d'expérimentation",
+  "nb_postes_detectes": 1,
+  "postes": [
+    {
+      "poste_num": 1,
+      "affectation": "Laboratoire Jean Perrin, PARIS 05",
+      "groupe_fonction": "Groupe 3",
+      "mission": "Développer des systèmes d'imagerie pour l'étude des systèmes vivants,\nincluant le contrôle de différents capteurs et actuateurs, l'acquisition et le\ntraitement de données en temps réel.",
+      "activites": "- Concevoir, en lien avec les équipes concernées, des systèmes d'imagerie pour le\nvivant adaptés aux différents types de systèmes biologiques étudiés.\n- Concevoir des architectures de contrôle et d'acquisition de données, incluant\nl'automatisation des mesures et des signaux de commandes sur différents types\nd'appareil (caméras, capteurs, moteurs, etc.), l'analyse des signaux en temps\nréel et l'interfaçage graphique.\n- Développer des programmes de traitement d'images automatisés (et/ou\ninteractifs)\net de visualisation, adaptés aux besoins spécifiques des équipes.\n- Réaliser un travail bibliographique afin d'évaluer les différentes solutions\ntechniques adaptées.\n- Mettre au point et valider les dispositifs et programmes ainsi réalisés.\n- Former les utilisateurs à l'utilisation de ces programmes.\n- Présenter, diffuser et valoriser les réalisations.",
+      "competences": "- Connaissance approfondie en optique, et plus particulièrement dans le\ndomaine de la microscopie optique et de l'imagerie pour le vivant.\n- Connaissance approfondie des méthodes de programmation et\nd'automatisation pour le contrôle, l'interfaçage d'expériences et l'analyse de\ndonnées en temps réel. Il peut s'agir par exemple de détection et de suivi\nautomatisé d'objet, de systèmes de réalité virtuelle, de contrôle en température,\netc.\n- Connaissance approfondie en traitement et analyse d'image.\n- Connaissance générale en physique des interactions lumière/matière,\nphysique statistique, traitement du signal.\n- Connaissance de base en électronique et en mécanique.\n- Maîtrise de l'Anglais indispensable, niveau B2.",
+      "contexte": "Le laboratoire Jean Perrin est une unité de recherche CNRS/SU installée sur le\ncampus de Jussieu, regroupant ~50 personnes dont environ 25 titulaires. Ses\nactivités se situent à l'interface entre la Physique et la Biologie. Le LJP est\nmembre de l'IBPS (Institut de Biologie Paris Seine) qui regroupe l'ensemble des\nlaboratoires de Biologie du Campus.\nLe LJP développe des dispositifs expérimentaux originaux centrés sur des\napproches d'imagerie dans des environnements complexes. Le LJP dispose d'une\ncompétence reconnue en microscopie pour le vivant et en spectroscopie (e.g.\nmicroscopie multi- photon, par nappe laser, super-résolution, Raman). Nous\nréalisons également des dispositifs milli- ou micro-fluidiques afin de sonder les\npropriétés de systèmes biologiques dans des contextes parfaitement contrôlés. Ces\nexpériences impliquent l'acquisition de larges jeux de données, ce qui nécessite\nla mise au point d'approches automatisées pour l'extraction, la visualisation et\nl'analyse de ces données.\nLa personne recrutée travaillera au profit des différentes équipes\nExpérimentales, sous la responsabilité hiérarchique de la Direction d'unité. Elle\nsera intégrée à un nouveau service de soutien à la recherche mis en place à\nl'occasion de ce recrutement, qui regroupera, outre la personne recrutée, deux IR\nspécialisés en microscopie (dont l'un est rattaché partiellement à la plateforme\nd'imagerie de l'IBPS), ainsi qu'un IE en fabrication mécanique. Ce service\nbénéficiera d'une large autonomie dans son organisation, et notamment dans la\nprise en charge des différents projets. Ce mode d'organisation visera en outre à\npermettre un échange efficace des compétences entre ses différents membres. Nous\nnous engageons également à ce que la personne recrutée bénéficie de formations\nadaptées à ses besoins."
+    }
+  ]
+}

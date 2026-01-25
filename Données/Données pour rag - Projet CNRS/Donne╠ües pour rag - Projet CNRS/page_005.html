@@ -1,0 +1,613 @@
+
+    <script language="JavaScript">
+
+      // Renvoyer la valeur du cookie dont le nom est passe en parametre
+      function getCookie(name) {
+        if (document.cookie.length == 0) {
+          return null;
+        }
+        var regSepCookie = new RegExp('(; )', 'g');
+        var cookies = document.cookie.split(regSepCookie);
+        for (var i = 0; i < cookies.length; i++) {
+          var regInfo = new RegExp('=', 'g');
+          var infos = cookies[i].split(regInfo);
+          if (infos[0] == name) {
+            return unescape(infos[1]);
+          }
+        }
+        return null;
+      }
+
+      // Generer un identifiant user temporaire a sauvegarder en cookie (si pas existant)
+      function getIdentifiantUserTemporaire() {
+        var tempUserId = getCookie("pde_temp_user_id");
+        if (tempUserId == null || tempUserId == "") {
+          var dateExpire = new Date();
+          dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+          tempUserId = Math.random().toString(16).slice(2);
+          document.cookie = "pde_temp_user_id=" + tempUserId + "; expires=" + dateExpire + "; path=/";
+        }
+        return tempUserId;
+      }
+
+      // Mettre a jour le badge compteur nombre de concours dans la page
+      function majBadgeCompteurConcours() {
+        var nbrConcours = getCookie("nbr_concours");
+        if (nbrConcours == null || nbrConcours == 0) {
+          document.getElementById("cptNbrConc").innerHTML = "+";
+        } else {
+          document.getElementById("cptNbrConc").innerHTML = nbrConcours;
+        }
+      }
+
+      // Ajouter un numero de concours a la liste des concours pre-selectionnes
+      function ajouterConcoursFavori(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours");
+        var nbrConcours = 0;
+        var dateExpire = new Date();
+        dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+
+        if (valCookieNumerosConcours == null || valCookieNumerosConcours == "") {
+          valCookieNumerosConcours = numero_concours;
+          nbrConcours = 1;
+        } else {
+          // Transformer la chaine en tableau
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau ne contient pas le numero de concours : Ajout en fin de liste
+          if (arrayCookieNumerosConcours.includes(numero_concours) == false) {
+            valCookieNumerosConcours = valCookieNumerosConcours + "|" + numero_concours;
+            nbrConcours = arrayCookieNumerosConcours.length + 1;
+          }
+        }
+        // Enregistrer la liste des numeros de concours et le nombre de concours en cookies
+        document.cookie = "numeros_concours=" + valCookieNumerosConcours + "; expires=" + dateExpire + "; path=/";
+        document.cookie = "nbr_concours=" + nbrConcours + "; expires=" + dateExpire + "; path=/";
+        majBadgeCompteurConcours();
+      }
+
+      // Supprimer un numero de concours de la liste des concours pre-selectionnes
+      function supprimerConcoursFavori(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours");
+        if (valCookieNumerosConcours != null && valCookieNumerosConcours != "") {
+          var nbrConcours = getCookie("nbr_concours");
+          var dateExpire = new Date();
+          dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+          // Transformer la chaine en tableau
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau contient le numero de concours : Reconstruction de la liste sans ce numero
+          if (arrayCookieNumerosConcours.includes(numero_concours) == true) {
+            valCookieNumerosConcours = "";
+            nbrConcours = 0;
+            for (var i = 0; i < arrayCookieNumerosConcours.length; i++) {
+              if (arrayCookieNumerosConcours[i] != numero_concours) {
+                if (valCookieNumerosConcours.length > 0) {
+                  valCookieNumerosConcours = valCookieNumerosConcours + "|";
+                }
+                valCookieNumerosConcours = valCookieNumerosConcours + arrayCookieNumerosConcours[i];
+                nbrConcours = nbrConcours + 1;
+              }
+            }
+          }
+
+          // Enregistrer la liste des numeros de concours et le nombre de concours en cookies
+          document.cookie = "numeros_concours=" + valCookieNumerosConcours + "; expires=" + dateExpire + "; path=/";
+          document.cookie = "nbr_concours=" + nbrConcours + "; expires=" + dateExpire + "; path=/";
+        }
+      }
+
+      // Gerer le numero de concours selon la liste des numeros de concours en cookie :
+      // - Si numero de concours absent de la liste => Clic pour ajouter le concours
+      // - Si numero de concours present dans la liste => Clic pour supprimer le concours
+      function gererConcoursFavori(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours");
+        if (valCookieNumerosConcours == null || valCookieNumerosConcours == "") {
+          // Si liste de concours vide : Ajout
+          ajouterConcoursFavori(numero_concours);
+          alert("Ajouté à ma sélection");
+        } else {
+          // Transformer la chaine en tableau
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau ne contient pas le numero de concours : Ajout
+          if (arrayCookieNumerosConcours.includes(numero_concours) == false) {
+            ajouterConcoursFavori(numero_concours);
+            alert("Ajouté à ma sélection");
+          }
+          else {
+            // Sinon : Suppression
+            supprimerConcoursFavori(numero_concours);
+            majBadgeCompteurConcours();
+            alert("Retiré de ma sélection");
+          }
+        }
+      }
+
+      // Fonction Ajax interrogation CEL : Existence candidature pour un concours
+      function ajaxRequeteCandidatConcoursCEL(cel_url_requete_candidat_concours) {
+        var tempUserId = getIdentifiantUserTemporaire();
+        cel_url_requete_candidat_concours = cel_url_requete_candidat_concours + "&pde_temp_user_id=" + tempUserId;
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', cel_url_requete_candidat_concours);
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState === 4) {
+            var reponseCEL = xhr.responseText;
+            if (reponseCEL == 1) {
+              // Si reponse = 1, candidature existe deja dans CEL sur ce concours par le candidat
+              // Desactiver le bouton "Postuler" de la fiche concours et l icone etoile favori
+              document.getElementById("btnPostuler").disabled = true;
+              document.getElementById("btnPostuler").title = "Vous avez déjà postulé à ce concours";
+              document.getElementById("iconefavori").style.visibility = "hidden";
+              document.getElementById("cptNbrConc").innerHTML = "";
+            }
+          }
+        };
+        xhr.send();
+      }
+
+      // Verifie si le concours a deja ete postule
+      function checkConcoursPostule(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours_postules");
+        if (valCookieNumerosConcours != null && valCookieNumerosConcours != "") {
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau contient le numero de concours :
+          // Desactiver le bouton "Postuler" de la fiche concours et l icone etoile favori
+          for (var i = 0; i < arrayCookieNumerosConcours.length; i++) {
+            if (arrayCookieNumerosConcours[i] == numero_concours) {
+              document.getElementById("btnPostuler").disabled = true;
+              document.getElementById("btnPostuler").title = "Vous avez déjà postulé à ce concours";
+              document.getElementById("iconefavori").style.visibility = "hidden";
+              document.getElementById("cptNbrConc").innerHTML = "";
+            }
+          }
+        }
+      }
+
+      // Ajouter un numero de concours a la liste des concours postules
+      function ajouterConcoursPostule(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours_postules");
+        var dateExpire = new Date();
+        dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+        if (valCookieNumerosConcours == null || valCookieNumerosConcours == "") {
+          valCookieNumerosConcours = numero_concours;
+        } else {
+          // Transformer la chaine en tableau
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau ne contient pas le numero de concours : Ajout en fin de liste
+          if (arrayCookieNumerosConcours.includes(numero_concours) == false) {
+            valCookieNumerosConcours = valCookieNumerosConcours + "|" + numero_concours;
+          }
+        }
+        // Enregistrer la liste des numeros de concours postules en cookie
+        document.cookie = "numeros_concours_postules=" + valCookieNumerosConcours + "; expires=" + dateExpire + "; path=/";
+      }
+
+      // Postuler au concours dans application CEL
+      function postulerCEL(numero_concours, detail_concours, cel_url_concours) {
+        if (confirm("Vous souhaitez postuler pour le concours " + detail_concours + ".\nConfirmez-vous ce choix ?")) {
+          // Supprimer le concours de la liste des concours pre-selectionnes
+          supprimerConcoursFavori(numero_concours);
+          majBadgeCompteurConcours();
+          // Ajouter le concours a la liste des concours postules
+          ajouterConcoursPostule(numero_concours);
+          // Desactiver le bouton "Postuler" de la fiche concours
+          document.getElementById("btnPostuler").disabled = true;
+          document.getElementById("btnPostuler").title = "Vous avez déjà postulé à ce concours";
+          // Desactiver l icone etoile favori
+          document.getElementById("iconefavori").style.visibility = "hidden";
+          document.getElementById("cptNbrConc").innerHTML = "";
+
+          // Transmettre identifiant user PDE temporaire a CEL
+          var tempUserId = getIdentifiantUserTemporaire();
+          cel_url_concours = cel_url_concours + "&pde_temp_user_id=" + tempUserId;
+
+          // Ouvrir application CEL dans une nouvelle fenetre
+          window.open(cel_url_concours, '_blank');
+        }
+      }
+
+      // Postuler dans application CEL a tous les concours pre-selectionnes
+      function postulerCELtous(cel_url_concours) {
+        var nbrConcours = getCookie("nbr_concours");
+        if (nbrConcours != null && nbrConcours > 0) {
+          if (confirm("Vous souhaitez postuler pour les " + nbrConcours + " concours pré-sélectionnés.\nConfirmez-vous ce choix ?")) {
+            var dateExpire = new Date();
+            dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+            // Ajouter tous les concours pre-selectionnes a la liste des concours postules
+            var valCookieNumerosConcours = getCookie("numeros_concours");
+            var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+            for (var i = 0; i < arrayCookieNumerosConcours.length; i++) {
+              ajouterConcoursPostule(arrayCookieNumerosConcours[i]);
+            }
+            // Vider la liste des concours pre-selectionnes
+            document.cookie = "numeros_concours=; expires=" + dateExpire + "; path=/";
+            // Reinitialiser le nombre de concours pre-selectionnes a 0
+            document.cookie = "nbr_concours=0; expires=" + dateExpire + "; path=/";
+
+            // Transmettre identifiant user PDE temporaire a CEL
+            var tempUserId = getIdentifiantUserTemporaire();
+            cel_url_concours = cel_url_concours + "&pde_temp_user_id=" + tempUserId;
+
+            // Ouvrir application CEL dans une nouvelle fenetre
+            window.open(cel_url_concours, '_blank');
+            // Recharger la page parente
+            window.opener.location.reload();
+            // Fermer la page
+            window.close();
+          }
+        }
+      }
+
+      // Supprimer un concours de la liste des concours pre-selectionnes, depuis icone corbeille
+      function supprimerConcoursListe(numero_concours) {
+        if (confirm("Vous souhaitez supprimer le concours n°" + numero_concours + ".\nConfirmez-vous ce choix ?")) {
+          supprimerConcoursFavori(numero_concours);
+          window.location.reload();
+          // Mettre a jour le badge compteur dans la fenetre parente
+          var nbrConcours = getCookie("nbr_concours");
+          if (nbrConcours == null || nbrConcours == 0) {
+            window.opener.document.getElementById("cptNbrConc").innerHTML = "+";
+          } else {
+            window.opener.document.getElementById("cptNbrConc").innerHTML = nbrConcours;
+          }
+        }
+      }
+
+      // Retour en haut de la page
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+
+    </script>
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src-elem 'self' *.cnrs.fr 'unsafe-inline'; script-src-attr 'self' *.cnrs.fr 'unsafe-inline'; frame-src 'self' *.cnrs.fr 'unsafe-inline'; connect-src 'self' *.cnrs.fr 'unsafe-inline'; font-src 'self' *.cnrs.fr 'unsafe-inline'; style-src 'self' *.cnrs.fr 'unsafe-inline'; img-src 'self' *.cnrs.fr data:; " />
+<link rel="stylesheet" href="/profil/css/autre.css" type="text/css">
+<link rel="stylesheet" href="/profil/css/backtotop.css" type="text/css">
+<title>fiche profil public</title>
+<SCRIPT LANGUAGE="JAVASCRIPT" SRC="/profil/js/comboliste.js"></SCRIPT>
+<SCRIPT LANGUAGE="JAVASCRIPT" SRC="/profil/js/jquery3.4.1.min.js"></SCRIPT>
+<SCRIPT LANGUAGE="JAVASCRIPT" SRC="/profil/js/jquery.textarea.js"></SCRIPT>
+
+      <script type="text/javascript">
+        function getXhr(){
+            var xhr = null;
+            try {
+                xhr = new XMLHttpRequest();
+            } catch(e){
+                xhr = new ActiveXObject("Microsoft.XMLHTTP" );
+            }
+            return xhr;
+          }
+
+          function updateElementByAjax (pUrl, pElementId, pAsynch){
+            updateElementWithFunctionByAjax(pUrl, pElementId, pAsynch, null, false);
+          }
+        /*
+        * Si utilisation de cette méthode, il faut définir la méthode "callBackMessagesErreur".
+        */
+        function updateMessagesErreur(pUrlCheckMessagesErreur) {
+            updateElementWithFunctionByAjax(pUrlCheckMessagesErreur, "erreur", true, callBackMessagesErreur, true);
+        }
+          function updateElementWithFunctionByAjax (pUrl, pElementId, pAsynch, pFunctionCall, pIsInnerHTML){
+            var xhr = getXhr();
+            xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4 && xhr.status  == 200 ){
+                var documentElement = document.getElementById(pElementId);
+                if (documentElement != null) {
+                  if (pIsInnerHTML) {
+                      $("#" + pElementId).html(xhr.responseText);
+                  } else {
+                    documentElement.outerHTML=xhr.responseText;
+                  }
+                  if(pFunctionCall != null) {
+                  pFunctionCall(xhr.responseText);
+                  }
+                }
+              }
+            };
+            xhr.open( "GET", pUrl,  pAsynch);
+            xhr.send(null);
+          }
+      </script>
+      
+<script>top.nbClick=0</script>
+</head>
+<body bgcolor="#FFFFFF"  onLoad=ajaxRequeteCandidatConcoursCEL('http://concoursexternesit.cnrs.fr/public/candidat/requete_get_candidat_concours.php?numero_concours=5'); >
+<div id="divglobale">
+<form name="formFiche" method="post" action="">
+           <script>top.boutonClique="";</script>
+<input type="hidden" name="hidFicheCourante" value="pg_profil_public_referens.pAfficheProfilPublic">
+<br>
+<table width="100%" border=0>
+<tr>
+<td align="left" width="5%"><input type="button" id="btnPostuler" name="btnPostuler" value="Postuler" onClick="postulerCEL('5', 'n°5 : IR - BAP Sciences du vivant, de la terre et de l environnement - Ingenieure ou ingenieur biologiste en plateforme scientifique - Institut de Biologie Moléculaire et Cellulaire, STRASBOURG', 'http://concoursexternesit.cnrs.fr/public/candidat/requete_postuler.php?numeros_concours=5');" ></td>
+<td align="left" width="3%">
+
+      <a id="iconefavori" onclick="gererConcoursFavori('5');"
+        title="Mes concours pr&eacute;-s&eacute;lectionn&eacute;s (favoris)"
+        style="text-decoration: none;">
+          <img src="/profil/images/icon_etoile_favori.png" width="60" height="60" border="0">
+          <span class="icon_etoile_favori_span" style="" id="cptNbrConc">+</span>
+      </a>
+</td>
+<td width="75%"></td>
+<td align="center">
+      <b>Liste des concours</b><br>
+      <a href="PG_PROFIL_PUBLIC_REFERENS.afficherListeConcoursPreselectionnes?destinationId=81"
+      onclick="window.open('PG_PROFIL_PUBLIC_REFERENS.afficherListeConcoursPreselectionnes?destinationId=81', 'newwindow', 'width=700,height=400'); return false;"
+      title="Consulter la liste de mes concours pr&eacute;-s&eacute;lectionn&eacute;s"><img src="/profil/images/icone_liste.png" width=40 height=40 border=0></a>
+      </td>
+</tr>
+</table>
+<center>
+    <table width="60%" border="2" cellspacing="0">
+    <tr>
+      <td class="enteteconcours" bordercolor="#CCCCCC"> 
+<p class="enteteconcours"><span class="enteteconcours">A : Sciences du vivant, de la terre et de l'environnement</span></p>
+        
+<p class="enteteconcours"><span class="enteteconcours">Ingénieur de recherche</span></p>
+        <p class="enteteconcours"><span class="enteteconcours">Concours N&deg; 5</span></p>
+      </td>
+    </tr>
+  </table>
+  </center>
+  
+<p>&nbsp;</p>
+
+<table width="100%" border="0" cellspacing="0">
+  <tr height="25">
+    <td width="20%"><b>Nbre de postes : </b></td>
+    <td width="80%">1</td>
+  </tr>
+
+      <tr height="25">
+          <td width="20%"><b>Emploi-type :</b></td>
+          <td width="80%">Ingenieure ou ingenieur biologiste en plateforme scientifique</td>
+      </tr>
+    
+</table>
+<br>
+<br>
+
+    <table width="100%" border="0">
+
+    <tr height="25">
+      <td width="20%"><b>Affectation :</b></td>
+      <td width="80%">Institut de Biologie Moléculaire et Cellulaire, STRASBOURG</td>
+    </tr> 
+<tr height="25"><td width="20%"><b>Groupe de fonction :</b></td><td width="80%">
+Groupe 2
+</td></tr>
+</td>
+    </tr>
+ </table>
+      
+<br>
+
+  <p>&nbsp;</p>
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="mission"><b>Mission :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr width="100">
+	  <td colspan="2">
+	
+L'ingénieur-e de recherche rejoindra l'équipe de la plateforme protéomique <BR>
+Strasbourg-Esplanade et prendra en charge, sous la direction de l'ingénieur-e <BR>
+responsable, les prestations de service et de recherche en protéomique, le <BR>
+maintien des appareillages ainsi que des projets de développements technologiques <BR>
+et organisationnels propres à la plateforme.
+</td>
+    </tr>
+  </table>
+  
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="activites"><b>Activit&eacute;s :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+Réaliser toutes les étapes de la préparation des échantillons protéiques. <BR>
+Concevoir, appliquer et adapter les techniques de biochimie (Différentiel de <BR>
+protéome, APMS, BioID, purifications de protéines..) de l'analyse protéomique <BR>
+sur les échantillons.<BR>
+Piloter les chaînes instrumentales (Orbitrap Qexactive Plus de Thermo <BR>
+Scientific, et Tims TOF Pro2 de Bruker), en assurer le bon fonctionnement et le <BR>
+maintien des performances<BR>
+Maîtriser les étapes de post-processing informatique et statistique des données <BR>
+MS<BR>
+Rédiger les comptes-rendus d'analyse : algorithmes de recherche en banque de <BR>
+données pour l'identification et la quantification des protéines, analyse <BR>
+statistique, data mining (enrichissement fonctionnel, réseaux d'interactions <BR>
+protéine-protéine)<BR>
+Assurer le suivi des analyses à moyen et long terme, conseiller les <BR>
+collaborateurs, aider les équipes partenaires à valoriser les résultats obtenus <BR>
+(rédaction d'articles scientifiques)<BR>
+Conduire le développement de techniques d'analyse biochimique et de traitement <BR>
+bioinformatique des données LC-MSMS<BR>
+Déployer les développements mis en place pour en faire bénéficier l'ensemble des <BR>
+autres collaborateurs<BR>
+Développer des scripts à façon pour la génération de comptes-rendus et de suivi <BR>
+de projets<BR>
+Maitriser les outils statistiques de validation des expériences, ainsi que des <BR>
+outils de visualisation des données pour publication (analyse en composante <BR>
+principale, volcano plot, heat map, par exemple)<BR>
+Assurer une veille technologique <BR>
+Seconder le responsable de la plateforme dans le suivi administratif et <BR>
+financier <BR>
+Participer au montage de dossiers de labellisation et de demande de <BR>
+financement plateforme<BR>
+Appliquer et faire appliquer les règlementations en matière d'éthique, <BR>
+d'hygiène et sécurité et de bonnes pratiques de laboratoire<BR>
+Encadrer les personnels non-permanents et former les étudiants en stage<BR>
+Concevoir et animer des actions de formation<BR>
+Communiquer et réaliser des présentations en anglais lors de séminaire
+</td>
+    </tr>
+  </table>
+  
+
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="competences"><b>Comp&eacute;tences :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+Savoirs :<BR>
+-Bonne connaissance des techniques de biochimie des protéines et de la chimie <BR>
+analytique, <BR>
+-Connaissance des systèmes de spectrométrie de masse et de chromatographie <BR>
+liquide), <BR>
+-Connaissance des principaux outils d'analyse de données de spectrométrie de <BR>
+masse dédiés à la protéomique. L'utilisation d'un langage de programmation (e.g. <BR>
+R, python) est nécessaire,<BR>
+-Connaissance des règlementations d'Hygiène et Sécurité, <BR>
+-Communication en anglais : niveau B2 à C1 (cadre européen commun de référence <BR>
+pour les langues).<BR>
+<BR>
+Savoir-faire :<BR>
+-Réaliser une prestation de recherche selon un protocole défini et l'adapter <BR>
+selon les prestations, <BR>
+-Avoir de solides connaissances théoriques et pratiques en analyse protéomique : <BR>
+une expérience pour l'acquisition DDA et DIA est nécessaire,<BR>
+-Conduire et maintenir une instrumentation scientifique de pointe, <BR>
+-Rédiger les comptes-rendus de résultats, <BR>
+-Assurer une bonne communication avec les collaborateurs,<BR>
+-Organiser le suivi de projets à moyen et long terme, gérer les priorités, <BR>
+-Communiquer et valoriser les résultats obtenus avec les équipes partenaires,<BR>
+-Structurer, planifier et suivre une démarche qualité en recherche.<BR>
+<BR>
+Savoirs-être :<BR>
+Il ou elle devra faire preuve de rigueur et de réactivité, avoir un esprit de <BR>
+synthèse et d'initiative et avoir le sens de l'organisation.  Les qualités <BR>
+relationnelles, une capacité à travailler en équipe et le sens du service sont <BR>
+également essentiels au regard du caractère collaboratif inhérent au travail de <BR>
+plateforme technologique.<BR>
+
+</td>
+    </tr>
+  </table>
+  
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="contexte"><b>Contexte :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+La personne recrutée exercera son activité au sein de la plateforme Protéomique <BR>
+Strasbourg-Esplanade de l'Institut de biologie Moléculaire et Cellulaire (IBMC) et <BR>
+sera placé -e sous l'autorité hiérarchique de la responsable de la plateforme <BR>
+protéomique.<BR>
+ La plateforme fait partie de l'unité d'appui et de recherche (UAR1589, 17 <BR>
+personnes) de l'IBMC. Cette plateforme est mutualisée. Les principaux <BR>
+collaborateurs de la plateforme font partie des équipes de recherche de 3 <BR>
+instituts de recherche situés sur le campus de l'Esplanade à Strasbourg, à savoir <BR>
+l'IBMC (UPR 9002, UPR 9022, UPR 3572), l'IBMP (UPR 2357) Institut de biologie <BR>
+moléculaire des plantes et le GMGM (UMR 7156) Génétique moléculaire, génomique, <BR>
+microbiologie (La plateforme travaille également avec des laboratoires situés en-<BR>
+dehors de ce campus, au niveau local (INSERM, ESBS, INRAE) et national. <BR>
+L'IBMC (250 personnes) héberge l'UAR à laquelle est rattachée la plateforme <BR>
+protéomique, ainsi que 3 unités propres de recherche du CNRS: UPR3572 I2CT <BR>
+(Immunologie Immunopathologie et Chimie Thérapeutique), UPR9022 M3I (Modèles <BR>
+Insectes d'Immunité Innée), UPR9002 ARN (Architecture et Réactivité de l'ARN). Il <BR>
+est localisé sur le campus de l'Esplanade à Strasbourg au centre d'un réseau <BR>
+hautement scientifique.<BR>
+Le campus universitaire de l'Esplanade se trouve à proximité du centre de <BR>
+Strasbourg. Il est desservi par les transports en commun. Il offre des <BR>
+possibilités de restauration type CROUS et restaurant administratif. <BR>
+
+</td>
+    </tr>
+  </table>
+  
+<br>
+
+  <p>&nbsp;</p>
+
+  <table border="0" width="100%">
+    <tr align="center">
+      <td>
+	  	<script>
+		//ne pas afficher le bouton si login DS
+		//if (top.listeCourante!=""){
+		//   document.write("<input type='button' name='btnRetour' value='Retour &agrave; la liste' onClick='javascript:top.retourListe();'>");
+		//}
+		</script>
+		<input type="button" name="btnRetourConsult" value="Revenir &agrave; la liste des r&eacute;sultats" onClick="javascript:history.go(-1);">
+	  </td>
+    </tr>
+  </table>
+  
+</form>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+
+    <div class="container-top">
+      <a href="" class="top" id="scrollToTop"></a>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var containerTop = document.querySelector(".container-top");
+        var documentHeight = document.documentElement.scrollHeight;
+        var scrollTopBtn = document.querySelector("#scrollToTop");
+
+        function updateOpacity() {
+          var scrollPercentage = (window.scrollY / documentHeight) * 150;
+
+          var opacity = Math.min(1, Math.max(0, scrollPercentage / 75));
+
+          containerTop.style.opacity = opacity;
+        }
+
+        window.addEventListener("scroll", function () {
+          updateOpacity();
+        });
+
+        scrollTopBtn.addEventListener("click", function (event) {
+          event.preventDefault(); // Annule le comportement par défaut du lien
+          scrollToTop();
+        });
+
+        function scrollToTop() {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth" // Permet le défilement en douceur
+          });
+        }
+
+        updateOpacity();
+      });
+    </script>
+</body>
+
+			<head>
+  			  <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+  			  <META HTTP-EQUIV="Expires" CONTENT="-1">
+          <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src-elem 'self' *.cnrs.fr 'unsafe-inline'; script-src-attr 'self' *.cnrs.fr 'unsafe-inline'; frame-src 'self' *.cnrs.fr 'unsafe-inline'; connect-src 'self' *.cnrs.fr 'unsafe-inline'; font-src 'self' *.cnrs.fr 'unsafe-inline'; style-src 'self' *.cnrs.fr 'unsafe-inline'; img-src 'self' *.cnrs.fr data:; " />
+			</head>
+			
+</html>

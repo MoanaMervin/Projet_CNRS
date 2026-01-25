@@ -1,0 +1,55 @@
++
+Liste des concours
+E : Informatique, statistiques et calcul scientifique
+Ingénieur de recherche
+Concours N° 68
+Nbre de postes :
+1
+Emploi-type :
+Experte ou expert en calcul scientifique
+Affectation :
+OCA-Galilée, NICE
+Groupe de fonction :
+Groupe 3
+Mission :
+L'experte ou l'expert aura pour mission d'accompagner l'évolution des Services Nationaux d'Observation de l'OCA en géosciences et astronomie en termes de calcul haute performance sur des codes existants et en développement dans le cadre de grands projets (SKA, VIRGO) ou d'interactions avec les agences (ESA) dans un contexte de forte croissance des besoins et d'accroissement du coût des ressources (prix, énergie).
+Activités :
+- Analyser les besoins des Services Nationaux d'Observation relatifs au besoin de
+calcul haute performance sur des supercalculateurs et les traduire en
+spécifications fonctionnelles et développements techniques (planification
+logicielle)
+- Etudier des questions relatives au co-développement logiciel et matériel de
+systèmes de calcul de haute performance pour des applications préalablement
+identifiées, notamment définir des benchmarks en vue d'identifier et de
+caractériser des voies possibles d'amélioration logicielle et/ou matérielle
+- Prototyper ces améliorations et collaborer avec les développeurs pour
+l'optimisation du logiciel
+- Développer une infrastructure orchestrant l'exécution de benchmarks et capable
+de mesurer divers aspects liés à l'exécution (performance, flux de données,
+consommation etc.) sur différentes plateformes
+- Exécuter les benchmarks sur une variété de plateformes et interpréter les
+résultats, par exemple via du profilage ou de l'analyse de données.
+Compétences :
+- Maîtrise du calcul haute performance (HPC) et du parallélisme
+hybride (MPI et openMP) ainsi que des techniques d'optimisation dans un contexte
+de programmation parallèle (benchmark, profilage)
+- Maîtrise des environnements HPC, incluant l'ordonnancement de tâches (SLURM) et les gestionnaires de paquets (module, Spack)
+- Une connaissance des outils de gestion de grille (OSG et EGEE)
+- Maîtrise de l'anglais (B2 écrit, oral) : rédaction de documents, participation active aux réunions
+- Une connaissance des méthodes agile (Scrum, ...)
+- Une connaissance des technologies de conteneurs (tels Docker, Singularity, Sarus) serait un plus
+Savoirs-faire :
+- Savoir-faire opérationnel en C++ moderne (14+)
+- Savoir-faire opérationnel en traitement et analyse de données est souhaité
+- Une connaissance des méthodes d'animation d'équipe agile (Scrum Master) serait un plus
+- Une expérience sur une grappe de serveurs (nationale ou régionale) serait un plus
+Savoirs-être :
+- Créativité et sens de l'innovation
+- Goût du travail en équipe
+Contexte :
+L'ingénieur(e) mènera son activité au sein de l'OCA. Cet établissement exerce ses missions dans le domaine des Sciences de l'Univers (géosciences, astronomie et astrophysique). Il est composé de trois unités de recherche (UMR) et d'une unité d'appui et de recherche (UAR) avec près de 450 personnes au total sur 4 sites (siège au Mont-Gros à Nice, le site instrumenté de Calern à Caussols, un bâtiment à Valrose (UniCA) à Nice et sur le campus du CNRS à Sophia Antipolis).
+L'ingénieur(e) sera intégré(e) dans l'équipe Direction des Systèmes d'Information de l'UAR. Il/elle sera amené(e) à travailler sur des projets émanant des différentes UMR de l'OCA et ainsi d'interagir directement avec les membres de plusieurs équipes.
+Au sein de la DSI, l'agent(e) travaillera au sein du pôle Services Nationaux d'Observation (SNO) numérique composé de 3 personnes (2 ingénieurs d'étude et un ingénieur de recherche), sous la responsabilité hiérarchique directe du responsable de la DSI.
+L'agent(e) travaillera principalement sur le site du Mont-Gros à Nice, mais sera amené(e) à se déplacer sur d'autres sites de la région (Valrose, Calern, Sophia Antipolis).
+L'agent(e) travaillera principalement au sein de grands projets comme SKA ou VIRGO, avec les porteurs de projet au sein des 3 laboratoires Artemis, Lagrange et Geoazur.
+L'agent(e) pourra bénéficier de formations nécessaires à l'exercice de cette fonction.

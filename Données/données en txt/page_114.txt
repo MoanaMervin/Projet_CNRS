@@ -1,0 +1,100 @@
++
+Liste des concours
+B : Sciences chimiques et science des matériaux
+Ingénieur d'études
+Concours N° 92
+Nbre de postes :
+2
+Emploi-type :
+Ingenieure ou ingenieur en analyse chimique
+1er poste du concours N° 92
+Affectation :
+Laboratoire des sciences de l'environnement marin, PLOUZANE
+Groupe de fonction :
+Groupe 3
+Mission :
+Mettre en œuvre et adapter les techniques d'analyses des éléments traces provenant de différentes matrices : eau de mer, sédiments, particules en suspension.
+Activités :
+- Assurer la mise en œuvre des techniques de mesure des éléments traces (métaux traces, germanium et silicium) en conditions ultra-propres par ICP-MS (HR et MC)
+- Définir et mettre au point les processus de traitement des échantillons : minéralisation des particules, purification et préconcentration de l'eau de mer sur colonne (SeaFAST ou manuellement)
+- Établir et optimiser les protocoles adaptés, depuis l'échantillonnage jusqu'à l'analyse, en fonction des éléments à analyser
+- Contrôler et régler quotidiennement les ICP-MS
+- Assurer le contrôle qualité des données acquises par ICP-MS
+- Rédiger les rapports d'analyse, les notes techniques et les protocoles de mise en œuvre des méthodes d'utilisation des appareils
+- Assurer une veille technique dans le domaine en actualisant ses connaissances par la recherche bibliographique et la participation à des formations professionnelles nationales
+- Diagnostiquer et traiter les anomalies de fonctionnement courantes de l'appareillage
+- Garantir les bonnes pratiques de laboratoire : se former et informer sur les risques liés aux techniques et aux produits utilisés ; faire appliquer les règles d'hygiène et de sécurité
+- Former, encadrer et transférer son savoir-faire
+- Participer aux missions océanographiques (ex. GEOTRACES, BIOGEOSCAPES), en gérer la partie technique et logistique, y compris les prélèvements à bord (rosette propre, GEOFISH, préleveur d'aérosols)
+- Appliquer et faire appliquer les règles en hygiène et sécurité et leur évolution
+Compétences :
+Savoirs / connaissances
+o Techniques de conditionnement et d'analyses d'échantillons en conditions ultra-propres (salles blanches)
+o Réglementation en matière d'hygiène et de sécurité
+o Outils mathématiques et informatiques nécessaires à l'exploitation des résultats
+o Organisation et fonctionnement de l'enseignement supérieur et de la recherche publique
+o Environnement et réseaux professionnels
+o Anglais scientifique et technique du domaine (B1)
+Savoir-faire
+o Maîtriser parfaitement la spectrométrie de masse à plasma à couplage inductif (SF-ICP-MS), 3 ans d'expérience minimum
+o Travailler en conditions ultra-propres (de l'échantillonnage à l'analyse)
+o Valoriser les résultats sous forme de rapports ou d'articles scientifiques
+o Appliquer les règles d'hygiène et de sécurité
+o Utiliser les outils de recherche bibliographique (maîtrise)
+o Appliquer les techniques de maintenance des matériels
+o Mettre en œuvre une démarche qualité
+Savoirs-être
+o Travail en équipe
+o Sens du relationnel
+o Sens de l'initiative
+Contexte :
+Le LEMAR est un laboratoire qui vise à mieux comprendre le fonctionnement des écosystèmes marins et la dynamique des grands cycles biogéochimiques marins tels que le carbone, l'azote, le silicium et les métaux traces.
+La compréhension des cycles biogéochimiques et de l'évolution des écosystèmes constitue un enjeu majeur pour mieux appréhender les impacts des pressions anthropiques et les conséquences du changement climatique sur le fonctionnement des écosystèmes océaniques.
+Au sein de l'équipe CHIBIDO, l'étude des cycles biogéochimiques océaniques du silicium et des métaux traces constituent deux thématiques historiques pour lesquelles le LEMAR est largement reconnu par la communauté internationale. Ce groupe participe très activement aux grands programmes de recherche internationaux tels que GEOTRACES et BIOGEOSCAPES (~ une campagne d'envergure par an). Ces recherches sont au cœur de projets de recherche en cours (PPR LIFEDEEPER et ClimArctic), ANR (AWESOMESWINGS, SWINGS), JRP SIMSON, ou soumis (ANR ChoRhiSO, CASCADES). Elles nécessitent le prélèvement, le conditionnement et l'analyse exacte et précise des métaux traces et du silicium purifié qui seront assurés par l'ingénieur-e d'études recruté-e.
+2eme poste du concours N° 92
+Affectation :
+HydroSciences Montpellier, MONTPELLIER
+Groupe de fonction :
+Groupe 3
+Mission :
+Mettre en œuvre et développer des techniques de préparation et d'analyse des échantillons par des couplages chromatographie - spectrométrie de masses haute résolution pour identifier des contaminants émergents dans les matrices environnementales (eaux, sédiments, organismes). Coordonner les analyses de l'exposome et du métabolome.
+Activités :
+Activité 1 :
+-Gérer le parc instrumental (équipements de chromatographie couplée à la spectrométrie de masse haute résolution) de l'équipe ContEm accueillant les plateaux PONTEM (Biocampus) et ExposEm (HydroSciences) et garantir des conditions de travail en sécurité au laboratoire :
+-Maintenir les équipements fonctionnels (calibration instrumentale, gestion de l'entretien) en coordination avec les personnels du laboratoire et le SAV des équipements
+-Rédiger la documentation technique (protocoles d'analyses, fiche de vie des appareils) et les comptes rendus d'activité
+-Rédiger les appels d'offre pour l'achat de nouveaux instruments
+-Rédiger et suivre le plan de gestion de données
+-Assurer la fonction d'Assistant de Prévention
+Activité 2 :
+-Participer aux projets de recherche de l'équipe ContEm
+-Assurer une veille bibliographique en chimie analytique dans le cadre des projets de recherche et en présenter la synthèse en réunion
+-Développer/Mettre au point de nouvelles méthodes de préparation des échantillons et d'analyses ciblées et non-ciblées spécifiques à l'équipe
+-Rédiger les parties méthodologiques/analytiques des projets de recherche et des articles scientifiques associés
+-Encadrer la partie analytique des travaux des stagiaires et doctorants, rédiger les livrables méthodologiques
+Activité 3 :
+-Coordonner les analyses d'exposome et métabolome des plateaux ExposEm et PONTEM
+-Réaliser des analyses quantitatives/qualitatives de contaminants par chromatographie couplée à la spectrométrie de masse haute résolution : mise en place des contrôles qualité, validation des résultats, rédaction des rapports d'analyses
+-Développer des protocoles de préparation des échantillons et d'analyses selon des approches ciblées et non-ciblées pour répondre aux partenaires sollicitant les plateaux
+-Contribuer à piloter les demandes : établir les devis d'analyses, participer aux réunions d'avancement
+-Participer à des groupes de travail internes/externes à l'équipe
+Compétences :
+- Posséder une solide formation en physico-chimie et chimie analytique
+- Maitriser les principes fondamentaux de la préparation d'échantillons environnementaux
+- Être autonome dans l'utilisation d'équipements de chromatographie couplée à la spectrométrie de masse haute résolution
+- Savoir développer et mettre en œuvre des méthodes d'analyse ciblées et non ciblées sur des matrices variées (eaux, sols, sédiments, matrices biologiques...)
+- Maîtriser les critères de validation analytiques (LOD, LOQ, linéarité, exactitude, taux de récupération...)
+- Être familier des logiciels de traitement de données scientifiques (ex : XCalibur, Compound Discoverer, R)
+- Disposer de notions en statistiques appliquées au traitement de données analytiques et environnementales
+- Connaître les fondements d'un système de management de la qualité et les exigences métrologiques associées (ex. : traçabilité, incertitudes, contrôle qualité)
+- Disposer d'un niveau d'anglais B2 (cadre européen commun de référence pour les langues)
+- Communiquer efficacement à l'écrit et à l'oral dans un registre scientifique et technique
+- Maîtriser les bases de la gestion de projet et les outils associés (planification, suivi d'avancement...)
+- Être à l'écoute et adopter une posture bienveillante
+- Faire preuve d'autonomie, de curiosité et de proactivité dans la résolution de problèmes techniques ou scientifiques
+- Faire preuve de rigueur, d'esprit d'analyse et de sens de l'organisation
+Contexte :
+L'ingénieur (H/F) sera affecté au sein du laboratoire HydroSciences Montpellier (HSM), dans l'équipe ContEm située à l'UFR Pharmacie, en lien avec ses deux plateformes techniques : ExposEM (HSM, mesure de l'exposome et des contaminants à l'état d'ultra-traces dans des matrices environnementales complexes) et PONTEM (HSM et Biocampus, métabolomique environnementale non ciblée).
+L'équipe ContEm à l'UFR Pharmacie est composée de 5 enseignants-chercheurs (EC), 1 EC praticien hospitalier, 1 directeur de recherche IRD et 2 techniciens. Elle accueille en moyenne, par année, 5 à 6 stagiaires, doctorants et post-doctorants. Elle développe des travaux sur les contaminants émergents préoccupants dans les écosystèmes aquatiques. Elle s'appuie sur des approches d'exposomique et d'analyses omiques pour étudier à la fois le devenir de ces substances dans l'environnement et leurs effets biologiques sur les organismes aquatiques. Ces travaux reposent principalement sur l'utilisation de la chromatographie couplée à la spectrométrie de masse haute résolution (LC-HRMS).
+L'ingénieur (H/F) contribuera à la pérennité, au bon fonctionnement et à l'évolution des deux plateaux techniques pilotés par l'équipe, assurera le pilotage des équipements lourds (3 HPLC-HRMS, 1 GC-Triple Quad), le développement de nouvelles approches analytiques dans le domaine environnement et environnement-santé, l'analyse des échantillons issus des projets de recherche et des demandes des plateaux techniques et le traitement de données. Il/elle participera à la formation et à l'accompagnement technique des utilisateurs (étudiants, chercheurs, personnels de l'unité).
+L'ingénieur (H/F) travaillera sous la direction du responsable d'équipe et des plateaux, et en concertation avec la direction de l'UMR et ses assistants de prévention. Le travail se fera en collaboration avec les membres de l'équipe ContEm et avec les utilisateurs des techniques analytiques (étudiants et chercheurs internes ou externes à HSM).

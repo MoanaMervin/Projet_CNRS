@@ -1,0 +1,679 @@
+
+    <script language="JavaScript">
+
+      // Renvoyer la valeur du cookie dont le nom est passe en parametre
+      function getCookie(name) {
+        if (document.cookie.length == 0) {
+          return null;
+        }
+        var regSepCookie = new RegExp('(; )', 'g');
+        var cookies = document.cookie.split(regSepCookie);
+        for (var i = 0; i < cookies.length; i++) {
+          var regInfo = new RegExp('=', 'g');
+          var infos = cookies[i].split(regInfo);
+          if (infos[0] == name) {
+            return unescape(infos[1]);
+          }
+        }
+        return null;
+      }
+
+      // Generer un identifiant user temporaire a sauvegarder en cookie (si pas existant)
+      function getIdentifiantUserTemporaire() {
+        var tempUserId = getCookie("pde_temp_user_id");
+        if (tempUserId == null || tempUserId == "") {
+          var dateExpire = new Date();
+          dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+          tempUserId = Math.random().toString(16).slice(2);
+          document.cookie = "pde_temp_user_id=" + tempUserId + "; expires=" + dateExpire + "; path=/";
+        }
+        return tempUserId;
+      }
+
+      // Mettre a jour le badge compteur nombre de concours dans la page
+      function majBadgeCompteurConcours() {
+        var nbrConcours = getCookie("nbr_concours");
+        if (nbrConcours == null || nbrConcours == 0) {
+          document.getElementById("cptNbrConc").innerHTML = "+";
+        } else {
+          document.getElementById("cptNbrConc").innerHTML = nbrConcours;
+        }
+      }
+
+      // Ajouter un numero de concours a la liste des concours pre-selectionnes
+      function ajouterConcoursFavori(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours");
+        var nbrConcours = 0;
+        var dateExpire = new Date();
+        dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+
+        if (valCookieNumerosConcours == null || valCookieNumerosConcours == "") {
+          valCookieNumerosConcours = numero_concours;
+          nbrConcours = 1;
+        } else {
+          // Transformer la chaine en tableau
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau ne contient pas le numero de concours : Ajout en fin de liste
+          if (arrayCookieNumerosConcours.includes(numero_concours) == false) {
+            valCookieNumerosConcours = valCookieNumerosConcours + "|" + numero_concours;
+            nbrConcours = arrayCookieNumerosConcours.length + 1;
+          }
+        }
+        // Enregistrer la liste des numeros de concours et le nombre de concours en cookies
+        document.cookie = "numeros_concours=" + valCookieNumerosConcours + "; expires=" + dateExpire + "; path=/";
+        document.cookie = "nbr_concours=" + nbrConcours + "; expires=" + dateExpire + "; path=/";
+        majBadgeCompteurConcours();
+      }
+
+      // Supprimer un numero de concours de la liste des concours pre-selectionnes
+      function supprimerConcoursFavori(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours");
+        if (valCookieNumerosConcours != null && valCookieNumerosConcours != "") {
+          var nbrConcours = getCookie("nbr_concours");
+          var dateExpire = new Date();
+          dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+          // Transformer la chaine en tableau
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau contient le numero de concours : Reconstruction de la liste sans ce numero
+          if (arrayCookieNumerosConcours.includes(numero_concours) == true) {
+            valCookieNumerosConcours = "";
+            nbrConcours = 0;
+            for (var i = 0; i < arrayCookieNumerosConcours.length; i++) {
+              if (arrayCookieNumerosConcours[i] != numero_concours) {
+                if (valCookieNumerosConcours.length > 0) {
+                  valCookieNumerosConcours = valCookieNumerosConcours + "|";
+                }
+                valCookieNumerosConcours = valCookieNumerosConcours + arrayCookieNumerosConcours[i];
+                nbrConcours = nbrConcours + 1;
+              }
+            }
+          }
+
+          // Enregistrer la liste des numeros de concours et le nombre de concours en cookies
+          document.cookie = "numeros_concours=" + valCookieNumerosConcours + "; expires=" + dateExpire + "; path=/";
+          document.cookie = "nbr_concours=" + nbrConcours + "; expires=" + dateExpire + "; path=/";
+        }
+      }
+
+      // Gerer le numero de concours selon la liste des numeros de concours en cookie :
+      // - Si numero de concours absent de la liste => Clic pour ajouter le concours
+      // - Si numero de concours present dans la liste => Clic pour supprimer le concours
+      function gererConcoursFavori(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours");
+        if (valCookieNumerosConcours == null || valCookieNumerosConcours == "") {
+          // Si liste de concours vide : Ajout
+          ajouterConcoursFavori(numero_concours);
+          alert("Ajouté à ma sélection");
+        } else {
+          // Transformer la chaine en tableau
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau ne contient pas le numero de concours : Ajout
+          if (arrayCookieNumerosConcours.includes(numero_concours) == false) {
+            ajouterConcoursFavori(numero_concours);
+            alert("Ajouté à ma sélection");
+          }
+          else {
+            // Sinon : Suppression
+            supprimerConcoursFavori(numero_concours);
+            majBadgeCompteurConcours();
+            alert("Retiré de ma sélection");
+          }
+        }
+      }
+
+      // Fonction Ajax interrogation CEL : Existence candidature pour un concours
+      function ajaxRequeteCandidatConcoursCEL(cel_url_requete_candidat_concours) {
+        var tempUserId = getIdentifiantUserTemporaire();
+        cel_url_requete_candidat_concours = cel_url_requete_candidat_concours + "&pde_temp_user_id=" + tempUserId;
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', cel_url_requete_candidat_concours);
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState === 4) {
+            var reponseCEL = xhr.responseText;
+            if (reponseCEL == 1) {
+              // Si reponse = 1, candidature existe deja dans CEL sur ce concours par le candidat
+              // Desactiver le bouton "Postuler" de la fiche concours et l icone etoile favori
+              document.getElementById("btnPostuler").disabled = true;
+              document.getElementById("btnPostuler").title = "Vous avez déjà postulé à ce concours";
+              document.getElementById("iconefavori").style.visibility = "hidden";
+              document.getElementById("cptNbrConc").innerHTML = "";
+            }
+          }
+        };
+        xhr.send();
+      }
+
+      // Verifie si le concours a deja ete postule
+      function checkConcoursPostule(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours_postules");
+        if (valCookieNumerosConcours != null && valCookieNumerosConcours != "") {
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau contient le numero de concours :
+          // Desactiver le bouton "Postuler" de la fiche concours et l icone etoile favori
+          for (var i = 0; i < arrayCookieNumerosConcours.length; i++) {
+            if (arrayCookieNumerosConcours[i] == numero_concours) {
+              document.getElementById("btnPostuler").disabled = true;
+              document.getElementById("btnPostuler").title = "Vous avez déjà postulé à ce concours";
+              document.getElementById("iconefavori").style.visibility = "hidden";
+              document.getElementById("cptNbrConc").innerHTML = "";
+            }
+          }
+        }
+      }
+
+      // Ajouter un numero de concours a la liste des concours postules
+      function ajouterConcoursPostule(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours_postules");
+        var dateExpire = new Date();
+        dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+        if (valCookieNumerosConcours == null || valCookieNumerosConcours == "") {
+          valCookieNumerosConcours = numero_concours;
+        } else {
+          // Transformer la chaine en tableau
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau ne contient pas le numero de concours : Ajout en fin de liste
+          if (arrayCookieNumerosConcours.includes(numero_concours) == false) {
+            valCookieNumerosConcours = valCookieNumerosConcours + "|" + numero_concours;
+          }
+        }
+        // Enregistrer la liste des numeros de concours postules en cookie
+        document.cookie = "numeros_concours_postules=" + valCookieNumerosConcours + "; expires=" + dateExpire + "; path=/";
+      }
+
+      // Postuler au concours dans application CEL
+      function postulerCEL(numero_concours, detail_concours, cel_url_concours) {
+        if (confirm("Vous souhaitez postuler pour le concours " + detail_concours + ".\nConfirmez-vous ce choix ?")) {
+          // Supprimer le concours de la liste des concours pre-selectionnes
+          supprimerConcoursFavori(numero_concours);
+          majBadgeCompteurConcours();
+          // Ajouter le concours a la liste des concours postules
+          ajouterConcoursPostule(numero_concours);
+          // Desactiver le bouton "Postuler" de la fiche concours
+          document.getElementById("btnPostuler").disabled = true;
+          document.getElementById("btnPostuler").title = "Vous avez déjà postulé à ce concours";
+          // Desactiver l icone etoile favori
+          document.getElementById("iconefavori").style.visibility = "hidden";
+          document.getElementById("cptNbrConc").innerHTML = "";
+
+          // Transmettre identifiant user PDE temporaire a CEL
+          var tempUserId = getIdentifiantUserTemporaire();
+          cel_url_concours = cel_url_concours + "&pde_temp_user_id=" + tempUserId;
+
+          // Ouvrir application CEL dans une nouvelle fenetre
+          window.open(cel_url_concours, '_blank');
+        }
+      }
+
+      // Postuler dans application CEL a tous les concours pre-selectionnes
+      function postulerCELtous(cel_url_concours) {
+        var nbrConcours = getCookie("nbr_concours");
+        if (nbrConcours != null && nbrConcours > 0) {
+          if (confirm("Vous souhaitez postuler pour les " + nbrConcours + " concours pré-sélectionnés.\nConfirmez-vous ce choix ?")) {
+            var dateExpire = new Date();
+            dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+            // Ajouter tous les concours pre-selectionnes a la liste des concours postules
+            var valCookieNumerosConcours = getCookie("numeros_concours");
+            var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+            for (var i = 0; i < arrayCookieNumerosConcours.length; i++) {
+              ajouterConcoursPostule(arrayCookieNumerosConcours[i]);
+            }
+            // Vider la liste des concours pre-selectionnes
+            document.cookie = "numeros_concours=; expires=" + dateExpire + "; path=/";
+            // Reinitialiser le nombre de concours pre-selectionnes a 0
+            document.cookie = "nbr_concours=0; expires=" + dateExpire + "; path=/";
+
+            // Transmettre identifiant user PDE temporaire a CEL
+            var tempUserId = getIdentifiantUserTemporaire();
+            cel_url_concours = cel_url_concours + "&pde_temp_user_id=" + tempUserId;
+
+            // Ouvrir application CEL dans une nouvelle fenetre
+            window.open(cel_url_concours, '_blank');
+            // Recharger la page parente
+            window.opener.location.reload();
+            // Fermer la page
+            window.close();
+          }
+        }
+      }
+
+      // Supprimer un concours de la liste des concours pre-selectionnes, depuis icone corbeille
+      function supprimerConcoursListe(numero_concours) {
+        if (confirm("Vous souhaitez supprimer le concours n°" + numero_concours + ".\nConfirmez-vous ce choix ?")) {
+          supprimerConcoursFavori(numero_concours);
+          window.location.reload();
+          // Mettre a jour le badge compteur dans la fenetre parente
+          var nbrConcours = getCookie("nbr_concours");
+          if (nbrConcours == null || nbrConcours == 0) {
+            window.opener.document.getElementById("cptNbrConc").innerHTML = "+";
+          } else {
+            window.opener.document.getElementById("cptNbrConc").innerHTML = nbrConcours;
+          }
+        }
+      }
+
+      // Retour en haut de la page
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+
+    </script>
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src-elem 'self' *.cnrs.fr 'unsafe-inline'; script-src-attr 'self' *.cnrs.fr 'unsafe-inline'; frame-src 'self' *.cnrs.fr 'unsafe-inline'; connect-src 'self' *.cnrs.fr 'unsafe-inline'; font-src 'self' *.cnrs.fr 'unsafe-inline'; style-src 'self' *.cnrs.fr 'unsafe-inline'; img-src 'self' *.cnrs.fr data:; " />
+<link rel="stylesheet" href="/profil/css/autre.css" type="text/css">
+<link rel="stylesheet" href="/profil/css/backtotop.css" type="text/css">
+<title>fiche profil public</title>
+<SCRIPT LANGUAGE="JAVASCRIPT" SRC="/profil/js/comboliste.js"></SCRIPT>
+<SCRIPT LANGUAGE="JAVASCRIPT" SRC="/profil/js/jquery3.4.1.min.js"></SCRIPT>
+<SCRIPT LANGUAGE="JAVASCRIPT" SRC="/profil/js/jquery.textarea.js"></SCRIPT>
+
+      <script type="text/javascript">
+        function getXhr(){
+            var xhr = null;
+            try {
+                xhr = new XMLHttpRequest();
+            } catch(e){
+                xhr = new ActiveXObject("Microsoft.XMLHTTP" );
+            }
+            return xhr;
+          }
+
+          function updateElementByAjax (pUrl, pElementId, pAsynch){
+            updateElementWithFunctionByAjax(pUrl, pElementId, pAsynch, null, false);
+          }
+        /*
+        * Si utilisation de cette méthode, il faut définir la méthode "callBackMessagesErreur".
+        */
+        function updateMessagesErreur(pUrlCheckMessagesErreur) {
+            updateElementWithFunctionByAjax(pUrlCheckMessagesErreur, "erreur", true, callBackMessagesErreur, true);
+        }
+          function updateElementWithFunctionByAjax (pUrl, pElementId, pAsynch, pFunctionCall, pIsInnerHTML){
+            var xhr = getXhr();
+            xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4 && xhr.status  == 200 ){
+                var documentElement = document.getElementById(pElementId);
+                if (documentElement != null) {
+                  if (pIsInnerHTML) {
+                      $("#" + pElementId).html(xhr.responseText);
+                  } else {
+                    documentElement.outerHTML=xhr.responseText;
+                  }
+                  if(pFunctionCall != null) {
+                  pFunctionCall(xhr.responseText);
+                  }
+                }
+              }
+            };
+            xhr.open( "GET", pUrl,  pAsynch);
+            xhr.send(null);
+          }
+      </script>
+      
+<script>top.nbClick=0</script>
+</head>
+<body bgcolor="#FFFFFF"  onLoad=ajaxRequeteCandidatConcoursCEL('http://concoursexternesit.cnrs.fr/public/candidat/requete_get_candidat_concours.php?numero_concours=3'); >
+<div id="divglobale">
+<form name="formFiche" method="post" action="">
+           <script>top.boutonClique="";</script>
+<input type="hidden" name="hidFicheCourante" value="pg_profil_public_referens.pAfficheProfilPublic">
+<br>
+<table width="100%" border=0>
+<tr>
+<td align="left" width="5%"><input type="button" id="btnPostuler" name="btnPostuler" value="Postuler" onClick="postulerCEL('3', 'n°3 : IR - BAP Sciences du vivant, de la terre et de l environnement - Ingenieure ou ingenieur biologiste en analyse de données - Santé Lyon-Est - Louis Léopold Ollier, LYON 08', 'http://concoursexternesit.cnrs.fr/public/candidat/requete_postuler.php?numeros_concours=3');" ></td>
+<td align="left" width="3%">
+
+      <a id="iconefavori" onclick="gererConcoursFavori('3');"
+        title="Mes concours pr&eacute;-s&eacute;lectionn&eacute;s (favoris)"
+        style="text-decoration: none;">
+          <img src="/profil/images/icon_etoile_favori.png" width="60" height="60" border="0">
+          <span class="icon_etoile_favori_span" style="" id="cptNbrConc">+</span>
+      </a>
+</td>
+<td width="75%"></td>
+<td align="center">
+      <b>Liste des concours</b><br>
+      <a href="PG_PROFIL_PUBLIC_REFERENS.afficherListeConcoursPreselectionnes?destinationId=81"
+      onclick="window.open('PG_PROFIL_PUBLIC_REFERENS.afficherListeConcoursPreselectionnes?destinationId=81', 'newwindow', 'width=700,height=400'); return false;"
+      title="Consulter la liste de mes concours pr&eacute;-s&eacute;lectionn&eacute;s"><img src="/profil/images/icone_liste.png" width=40 height=40 border=0></a>
+      </td>
+</tr>
+</table>
+<center>
+    <table width="60%" border="2" cellspacing="0">
+    <tr>
+      <td class="enteteconcours" bordercolor="#CCCCCC"> 
+<p class="enteteconcours"><span class="enteteconcours">A : Sciences du vivant, de la terre et de l'environnement</span></p>
+        
+<p class="enteteconcours"><span class="enteteconcours">Ingénieur de recherche</span></p>
+        <p class="enteteconcours"><span class="enteteconcours">Concours N&deg; 3</span></p>
+      </td>
+    </tr>
+  </table>
+  </center>
+  
+<p>&nbsp;</p>
+
+<table width="100%" border="0" cellspacing="0">
+  <tr height="25">
+    <td width="20%"><b>Nbre de postes : </b></td>
+    <td width="80%">2</td>
+  </tr>
+
+      <tr height="25">
+          <td width="20%"><b>Emploi-type :</b></td>
+          <td width="80%">Ingenieure ou ingenieur biologiste en analyse de données</td>
+      </tr>
+    
+</table>
+<br>
+<table width="100%" border="0" cellspacing="0">
+<tr>
+<td class="soustitreprincipal">1er poste du concours N&deg; 3</td>
+</tr>
+</table>
+<br>
+
+    <table width="100%" border="0">
+
+    <tr height="25">
+      <td width="20%"><b>Affectation :</b></td>
+      <td width="80%">Santé Lyon-Est - Louis Léopold Ollier, LYON 08</td>
+    </tr> 
+<tr height="25"><td width="20%"><b>Groupe de fonction :</b></td><td width="80%">
+Groupe 3
+</td></tr>
+</td>
+    </tr>
+ </table>
+      
+<br>
+
+  <p>&nbsp;</p>
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="mission"><b>Mission :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr width="100">
+	  <td colspan="2">
+	
+L'ingénieur.e de recherche aura pour mission de structurer et développer l'analyse d'image au sein de la plateforme de microscopie du CIQLE. Il/Elle sera également en charge d'effectuer des missions de conseil et de formation au sein du réseau France BioImaging (FBI).<BR>
+<BR>
+Les principales missions seront :<BR>
+1. Offrir une assistance sur site pour les problèmes liés à l'analyse d'images.<BR>
+2. Maintenir une infrastructure pour l'analyse d'images autonome. Faire face au déploiement de nouveaux outils complexes.<BR>
+3. Créer, déployer et généraliser des outils d'analyse avancés pour les projets des scientifiques du campus. En particulier, développer des pipelines d'analyses permettant de quantifier le signal fluorescent dans des images "gros volumes" acquises sur des microscopes à feuilles de lumière.<BR>
+4. Formations et organisations de journées scientifiques du site.<BR>
+5. Participer aux travaux du réseau France BioImaging (FBI)<BR>
+
+</td>
+    </tr>
+  </table>
+  
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="activites"><b>Activit&eacute;s :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+- Définition des objectifs du projet et des stratégies à mettre en œuvre, en interaction avec les chercheurs<BR>
+- Mise en place de pipelines d'analyse<BR>
+- Développement d'algorithmes dédiés <BR>
+- Gestion de l'infrastructure<BR>
+- Conseil aux utilisateurs<BR>
+- Dissémination des ressources<BR>
+- Coanimer et donner des formations au club d'analyse d'images du nœud Rhônalpin de FBI.<BR>
+- Coanimer, donner des formations et effectue une veille technologique au sein du réseau France Bioimaging Analyst Specialists (FBIAS)<BR>
+- Référent(e) au niveau Rhônalpin du réseau FBI-Data (gestion de données de microscopie)<BR>
+- Participer au bureau exécutif du nœud Rhônalpin de FBI<BR>
+<BR>
+
+</td>
+    </tr>
+  </table>
+  
+
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="competences"><b>Comp&eacute;tences :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+- Connaissances approfondies en "Deep Learning" <BR>
+- Connaissances approfondies sur les méthodes de recalage et segmentation d'objets de grandes dimensions<BR>
+- capacité à travailler en autonomie<BR>
+- Savoir faire preuve d'organisation <BR>
+- Domaine de formation souhaité : électronique, instrumentation et biosciences, un PhD en analyse d'image serait un plus<BR>
+- la connaissance  des techniques de microscopie de fluorescence serait un plus<BR>
+- une expertise sur les logiciels d'analyse de type AMIRA-AVISO, ARIVIS ou IMARIS serait un plus <BR>
+- Expérience souhaitée dans la gestion des gros fichiers (>20 Go, photonique, IRM, scanner ou autre)
+</td>
+    </tr>
+  </table>
+  
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="contexte"><b>Contexte :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+La plateforme Lyon Multiscale Imaging Centre (LyMIC) coordonnée par l'Université Claude Bernard Lyon 1 est une plateforme de microscopie pluridisciplinaire dédiée à l'imagerie multi-échelle. Guichet unique, le LyMIC fédère trois centres spécifiques offrant des outils, des services, des compétences et des formations portant sur la microscopie photonique, la microscopie électronique ainsi que la microscopie à force atomique. Le Centre d'Imagerie Quantitative Lyon-Est (CIQLE), dépendant de la SFR Santé Lyon Est est localisé sur le Campus Rockfeller, le Centre Technologique des Microstructures (CTµ) est localisé sur le Campus LyonTech La Doua, et le Plateau Technique d'Imagerie / Microscopie (PLATIM), dépendant de la SFR Biosciences est localisé sur le Campus de l'ENS Lyon à Gerland. Ces trois centres offrent un accès à des microscopes performants ainsi qu'à de nombreuses techniques de préparation d'échantillon.<BR>
+L'ingénieur(e) de recherche recruté(e) sera basé(e) au CIQLE et placé(e) sous la responsabilité du directeur de la SFR Santé Lyon Est (Stéphane Marinesco) afin de développer l'analyse d'image au sein de LyMIC et du nœud Rhône-Alpes de France Bio-Imaging. Le poste pourra être mutualisé sur la SFR Santé-Lyon Est et sur FBI à hauteur de 80%-20%. Il/elle sera chargé(e) de structurer et développer l'analyse d'image au sein de la plateforme de microscopie du CIQLE. L'ingénieur devra être moteur dans l'élaboration de la stratégie, dans la réalisation et la bonne conduite des projets. L'ingénieur(e) effectuera des missions de conseil et de formation au sein du réseau France BioImaging (FBI).<BR>
+
+</td>
+    </tr>
+  </table>
+  
+<br>
+<table width="100%" border="0" cellspacing="0">
+<tr>
+<td class="soustitreprincipal">2eme poste du concours N&deg; 3</td>
+</tr>
+</table>
+<br>
+
+    <table width="100%" border="0">
+
+    <tr height="25">
+      <td width="20%"><b>Affectation :</b></td>
+      <td width="80%">Multi-ingénierie pour les systèmes vivants, MARSEILLE 09</td>
+    </tr> 
+<tr height="25"><td width="20%"><b>Groupe de fonction :</b></td><td width="80%">
+Groupe 3
+</td></tr>
+</td>
+    </tr>
+ </table>
+      
+<br>
+
+  <p>&nbsp;</p>
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="mission"><b>Mission :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr width="100">
+	  <td colspan="2">
+	
+L'ingénieur.e sera chargé.e de développer et de mettre en œuvre des techniques avancées d'analyse de données et d'apprentissage automatique, adaptées au traitement des images de systèmes vivants.
+</td>
+    </tr>
+  </table>
+  
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="activites"><b>Activit&eacute;s :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+- Analyser et traiter des données d'imagerie, tout en accompagnant les chercheurs dans leur exploitation. Cela inclut la mise en œuvre de techniques avancées (analyse de grands jeux de données, apprentissage supervisé/non supervisé, réduction de dimension, statistiques multivariées et deep learning), la proposition de solutions adaptées à leurs problématiques de recherche et l'interprétation critique des résultats obtenus<BR>
+- Développer des workflows d'analyse d'images ainsi que des scripts, macros et plugins sur mesure<BR>
+- Assurer une veille scientifique et technique en effectuant des recherches bibliographiques sur les méthodes et technologies avancées dans le domaine de l'analyse des images<BR>
+- Participer à la mise en place d'outils pour le partage de données et de transfert de code, en utilisant des solutions comme OMERO pour les données images, ainsi que GitHub et GitLab<BR>
+- Contribuer au transfert de connaissances entre les différentes équipes de recherche<BR>
+- Organiser et animer des cours sur l'analyse des données d'imagerie destinés à la communauté scientifique, notamment aux étudiants en doctorat, aux post-doctorants et aux chercheurs<BR>
+
+</td>
+    </tr>
+  </table>
+  
+
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="competences"><b>Comp&eacute;tences :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+Savoirs :<BR>
+- Maîtrise de Python, Java ou MATLAB ; une connaissance de R serait un atout<BR>
+- Solides compétences en machine learning et deep learning, avec une expérience des framework Tensorflow/PyTorch et dans l'exploitation des capacités GPU (CUDA)<BR>
+- Maîtrise des techniques avancées d'analyse statistique de données et capacité à traiter des données multimodales<BR>
+- Compétences dans le développement de pipelines de traitement et d'analyse d'images, avec un accent sur les algorithmes de suivi<BR>
+- Maîtrise de l'anglais ; connaissance du français appréciée<BR>
+<BR>
+Savoir-faire :<BR>
+- Expérience avec des outils de science des données tels que Python, numpy, scipy, scikit-learn, matplotlib et Jupyter Notebook<BR>
+- Expérience en ingénierie logicielle professionnelle, développement de logiciels et stratégies de partage de données sont des atouts<BR>
+- Expérience en infrastructure et informatique haute performance liée à l'analyse d'images, y compris la gestion de serveurs/bases de données avec Docker et Singularity sur des services de calcul haute performance avec GPU, serait un plus<BR>
+<BR>
+Savoir-être :<BR>
+- Excellentes compétences en travail d'équipe et capacité à interagir avec des chercheurs de divers domaines, notamment la biologie, la physique, les mathématiques et l'informatique<BR>
+- Bonnes capacités relationnelles, compétences en communication<BR>
+- Capacité à travailler de manière autonome<BR>
+<BR>
+
+</td>
+    </tr>
+  </table>
+  
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="contexte"><b>Contexte :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+L'ingénieur.e rejoindra la plateforme multi-ingénierie pour les systèmes vivants (MEP CENTURI), située sur le campus de Luminy à Marseille.<BR>
+CENTURI est un projet interdisciplinaire qui rassemble des chercheurs issus de diverses disciplines : biologie, physique, mathématiques, informatique et ingénierie. Son objectif est de mieux comprendre comment les systèmes vivants fonctionnent en étudiant leur organisation et leur dynamique.<BR>
+<BR>
+La MEP CENTURI a pour mission d'apporter une expertise supplémentaire dans des domaines clés tels que le traitement d'images, la bioinformatique, l'apprentissage automatique, le développement de logiciels et la mécatronique. Les ingénieurs de la plateforme accompagnent et conseillent la communauté scientifique, pour des questions de recherche ponctuelles ou pour des projets de plus longue durée.<BR>
+CENTURI regroupe une centaine d'équipes de recherche provenant de 21 laboratoires. La plateforme aide les chercheurs à relever les défis liés aux grandes quantités de données en biologie moderne, notamment pour l'acquisition, la gestion et l'analyse des données biologiques.<BR>
+<BR>
+La MEP CENTURI offre un environnement de travail collaboratif et stimulant, avec de nombreuses opportunités d'échanges entre disciplines et d'innovation scientifique.<BR>
+<BR>
+<BR>
+
+</td>
+    </tr>
+  </table>
+  
+<br>
+
+  <p>&nbsp;</p>
+
+  <table border="0" width="100%">
+    <tr align="center">
+      <td>
+	  	<script>
+		//ne pas afficher le bouton si login DS
+		//if (top.listeCourante!=""){
+		//   document.write("<input type='button' name='btnRetour' value='Retour &agrave; la liste' onClick='javascript:top.retourListe();'>");
+		//}
+		</script>
+		<input type="button" name="btnRetourConsult" value="Revenir &agrave; la liste des r&eacute;sultats" onClick="javascript:history.go(-1);">
+	  </td>
+    </tr>
+  </table>
+  
+</form>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+
+    <div class="container-top">
+      <a href="" class="top" id="scrollToTop"></a>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var containerTop = document.querySelector(".container-top");
+        var documentHeight = document.documentElement.scrollHeight;
+        var scrollTopBtn = document.querySelector("#scrollToTop");
+
+        function updateOpacity() {
+          var scrollPercentage = (window.scrollY / documentHeight) * 150;
+
+          var opacity = Math.min(1, Math.max(0, scrollPercentage / 75));
+
+          containerTop.style.opacity = opacity;
+        }
+
+        window.addEventListener("scroll", function () {
+          updateOpacity();
+        });
+
+        scrollTopBtn.addEventListener("click", function (event) {
+          event.preventDefault(); // Annule le comportement par défaut du lien
+          scrollToTop();
+        });
+
+        function scrollToTop() {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth" // Permet le défilement en douceur
+          });
+        }
+
+        updateOpacity();
+      });
+    </script>
+</body>
+
+			<head>
+  			  <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+  			  <META HTTP-EQUIV="Expires" CONTENT="-1">
+          <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src-elem 'self' *.cnrs.fr 'unsafe-inline'; script-src-attr 'self' *.cnrs.fr 'unsafe-inline'; frame-src 'self' *.cnrs.fr 'unsafe-inline'; connect-src 'self' *.cnrs.fr 'unsafe-inline'; font-src 'self' *.cnrs.fr 'unsafe-inline'; style-src 'self' *.cnrs.fr 'unsafe-inline'; img-src 'self' *.cnrs.fr data:; " />
+			</head>
+			
+</html>

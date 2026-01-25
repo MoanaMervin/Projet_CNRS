@@ -1,0 +1,57 @@
++
+Liste des concours
+C : Sciences de l'ingénieur et instrumentation scientifique
+Ingénieur de recherche
+Concours N° 36
+Nbre de postes :
+1
+Emploi-type :
+Experte ou expert en développement d'instrument
+Affectation :
+Institut de Physique des deux Infinis de Lyon, VILLEURBANNE
+Groupe de fonction :
+Groupe 3
+Mission :
+Au sein du service instrumentation, la personne recrutée participera au développement de différents instruments scientifiques pour les équipes de recherche de l'IP2I.
+Avec un profil de niveau ingénieur système, la personne aura pour mission de travailler sur la mise en place de grands projets au sein des plateformes de l'IP2I (TESSERACT, VIRGO). A plus long terme, il/elle s'impliquera sur la préparation des détecteurs de troisième génération (Einstein Telescope ou FCC-ee).
+Activités :
+Les activités de l'ingénieur(e) recruté(e) s'intègreront dans les projets en cours et dans la définition précise des projets à venir. En particulier, il/elle devra :
+- Analyser les besoins scientifiques et les traduire en spécifications techniques.
+- Élaborer les cahiers des charges des projets en collaboration avec les physiciens et mettre en place la structure projet.
+- Organiser et coordonner la décomposition fonctionnelle du système.
+- Définir l'organigramme des tâches et les plannings.
+- Rédiger les spécifications techniques en réponse aux besoins en termes de performances.
+- Rédiger des dossiers de définition de systèmes et sous-systèmes.
+- Mettre en place les marges et définir le bilan instrumental.
+- Mettre en place les tests de validation.
+- Piloter et contrôler les intégrations des systèmes et sous-systèmes, et en gérer les interfaces.
+- Établir la liste des verrous technologiques et superviser leur résolution en collaboration avec les différents groupes impliqués dans les projets.
+- Organiser le suivi et la réalisation du dispositif au cours de ces différentes étapes.
+- Organiser et conduire les revues de projets et rendre compte de l'avancement.
+- Diffuser et valoriser ses travaux, assurer le transfert de technologie.
+Compétences :
+Savoirs / connaissances académiques:
+- Techniques et sciences de l'ingénieur
+- Métrologie
+- Cryogénie
+- Physique de la détection (optique, traitement du signal,...)
+- Méthodes de calcul et traitement de données
+Savoir-faire / connaissances acquises par expériences:
+- Caractérisation des détecteurs interférométriques (modélisation des bruits, acquisition de données,...) ou infrarouge
+- Caractérisation de grands détecteurs en physique des particules (modélisation et utilisation d'outils de simulation optique ou de simulation de système de détections complexes)
+- Gestion et management de projet : GANTT, WBS, analyse des risques
+- Techniques de présentation écrite et orale, anglais courant (niveau C)
+- Publication dans des revues internationales à comité de lecture
+- Encadrement d'équipe
+- Travail à l'international
+Savoirs-être:
+- Facilités à travailler en équipe
+- Capacité au management d'équipe
+- Capacité de communication
+Contexte :
+L'Institut de Physique des 2 Infinis de Lyon est une Unité Mixte de Recherche dont les tutelles sont le CNRS/IN2P3 et l'Université Claude Bernard Lyon 1. L'IP2I est composé d'environ 250 personnes, dont environ 170 permanents. Ses locaux sont localisés sur le campus de la Doua à Villeurbanne (69).
+L'IP2I est impliqué dans de grandes collaborations au travers de ses thématiques de recherche, en particulier au CERN, au GANIL, et autres sites internationaux.
+L'ingénieur/ingénieure de recherche sera affecté(e) au service d'instrumentation composé de 12 agents (5 IR, 5 IE, 2AI). Le service est impliqué dans de nombreux projets internationaux tels que VIRGO, Euclid, CMS, ALICE, RICOCHET, TESSERACT. Le service gère aussi des plateaux techniques (CRYORED, LARG-DET).
+La personne recrutée sera en charge des études techniques et de la réalisation d'instruments scientifiques proposés par les groupes scientifiques de l'IP2I. Il/Elle travaillera en étroite collaboration avec les physiciens des différents groupes et sera amené(e) à préparer les futurs  grands projets  que ça soit au CERN  ou sur d'autres projets de grande envergure en préparation.
+Le service Instrumentation de l'IP2I possède un savoir-faire en caractérisation fine des chaînes de détection des détecteurs dans divers environnements extrêmes (sur accélérateurs, spatiaux, souterrain). Notamment il travaille sur le développement d'outils de nouvelle génération comme des jumeaux digitaux pour le développement de ces futurs détecteurs avec des plateformes dédiées à ces tests et caractérisations. La personne recrutée sera amenée à travailler sur ces plateformes et à avoir un rôle moteur pour le design et le dimensionnement de ces détecteurs. Une expérience préalable est vivement souhaitée.
+Le travail se réalise en environnement contrôlé, salle blanche etc... Des déplacements sont à prévoir dans le cadre des projets collaboratifs (typiquement 1 fois par semaine).

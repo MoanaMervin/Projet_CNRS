@@ -1,0 +1,49 @@
++
+Liste des concours
+E : Informatique, statistiques et calcul scientifique
+Ingénieur d'études
+Concours N° 131
+Nbre de postes :
+1
+Emploi-type :
+Ingenieure statisticienne ou ingenieur statisticien
+Affectation :
+Direction des ressources humaines, PARIS 16
+Groupe de fonction :
+Groupe 3
+Mission :
+Au sein du Service Prospective et Pilotage (SPP) de la direction des ressources humaines (DRH), le-la chargé-e d'études quantitatives et de modélisations statistiques aura comme mission principale de produire et suivre annuellement les prévisions pluriannuelles de départs de l'établissement à partir d'un modèle statistique et de contribuer  à la production de tableaux sur un périmètre dédié recouvrant notamment les effectifs et les flux physiques de personnel (recrutements et départs). La mission consistera à organiser la collecte, la gestion, la préparation des données et leur traitement statistique au moyen des outils statistiques et informatiques les mieux adaptés au contexte d'une étude ainsi que d'élaborer l'enchainement des traitements, du choix des méthodes existantes à l'analyse des résultats et jusqu'à leur diffusion au niveau national et vers les instituts.
+Activités :
+Modélisation et traitements statistiques :
+- Produire les données issues du modèle de prévision des départs (retraites, autres sorties définitives et sorties temporaires) ;
+- Actualiser le modèle existant selon les modifications constatées de comportements en matière de départ et/ou les évolutions réglementaires liées (notamment âge légal des départs à la retraite), afin de produire des prévisions de départs à cinq ans ;
+- Proposer des évolutions du modèle de prévision des départs ;
+- Utiliser l'analyse des flux élaborée pour la modélisation afin d'alimenter la partie sur les sorties définitives du Rapport Social Unique (RSU) ;
+- Répondre aux différentes demandes récurrentes ou ponctuelles de la direction et du ministère de l'Enseignement Supérieur et de la Recherche concernant les départs réalisés et les départs prévisionnels par population (chercheurs et ingénieurs / techniciens) selon une vision quantitative et qualitative ;
+- Présenter et restituer les travaux de prévisions dans le cadre des dialogues de gestion RH annuels avec les instituts ;
+- Investiguer/expérimenter l'apport de l'IA dans les chantiers et travaux portés par le pôle prospective métiers (une formation pourra être proposée lors de la prise de poste).
+Contribution aux bases de données RH et sociales :
+- Assurer les traitements statistiques sous SAS et/ou R des bases de données issues du SIRH (Système d'Information des Ressources Humaines) dans le cadre de la contribution demandée pour le RSU et pour le module de visualisation des données relatives aux ressources humaines du CNRS constituant l'infocentre RH de référence pour l'établissement ;
+- Travailler à l'automatisation des traitements statistiques,;
+- Contrôler la fiabilité et la cohérence des données au sein de ces bases ;
+- Analyser les données produites et restituer les résultats sous forme de tableaux et de commentaires principalement pour les parties relatives aux départs.
+Compétences :
+Savoirs :
+- Maîtrise des concepts et des méthodes de traitement statistique et de modélisation appliqués aux populations ou au domaine RH
+- Maîtrise du traitement, de l'analyse et de la présentation de données (analyse multivariée, analyse factorielle, statistiques descriptives, connaissance de la modélisation de prévision) - -  - Maîtrise de SAS et/ou R, ACCESS, EXCEL
+- Maîtrise des techniques de collecte et de traitement des données
+- Maîtrise de l'exploitation de données issues de systèmes d'informations
+- Connaissance ou motivation à se former aux évolutions en cours sur la réglementation en matière de départ à la retraite des fonctionnaires d'Etat (âge légal, limite d'âge, etc.)
+- Connaissance ou motivation à se former aux unités de mesure utilisées en RH (PPP, ETP, ETPT, etc.)
+- Connaissance ou motivation à se former aux référentiels corps, grades, métiers et disciplines de l'Enseignement Supérieur et de la Recherche (ESR)
+- Connaissance de langages de programmation (VBA, Access, SQL, etc.)
+Savoir-faire :
+- Appliquer un dispositif de contrôle
+- Construire et gérer une base de données
+- Rédiger la documentation et les modes opératoires associés
+- Réaliser des synthèses écrites et orales
+- Avoir une capacité de rédaction, d'analyse
+- Savoir vulgariser et être à l'aise à l'oral
+- Travailler en équipe et organiser son travail dans un calendrier annuel défini en transversalité avec des interlocuteurs variés
+Contexte :
+Le service Prospective et Pilotage (SPP) a comme mission le pilotage des effectifs de l'établissement (24 800 ETPT sous plafond financés sur subvention d'Etat) et de la masse salariale associée (2,6 milliards d'€) ainsi que la description des métiers de l'établissement (242 métiers issus du référentiel REFERENS III), la compréhension de leurs évolutions et l'identification des personnels qui les exercent. La mission du service répond à la fois à un objectif de gestion des effectifs d'un point de vue quantitatif sous contrainte de plafond annuel et à un objectif de prospective sur les emplois et les compétences incluant notamment la mise en œuvre d'une démarche de Gestion Prévisionnelle des Emplois, des Effectifs et des Compétences (GPEEC). Dans ce contexte, le service est l'interlocuteur du ministère de tutelle pour les comptes rendus d'effectifs et de masse salariale et la production de toutes les données nécessaires pour produire le rapport social unique et répondre à l'ensemble des enquêtes internes et externes. Au sein du service, le pôle Prospective métiers où se situe le poste mobilise des techniques et des compétences qualitatives et quantitatives destinées à éclairer la décision. En collaboration directe avec les autres membres du pôle, le poste proposé est en hiérarchie fonctionnelle avec la responsable du pôle Prospective. Le poste est situé à Paris, au siège du CNRS dans le 16ème arrondissement. Il permet de bénéficier de télétravail conformément aux dispositions prévues au CNRS.

@@ -1,0 +1,42 @@
++
+Liste des concours
+E : Informatique, statistiques et calcul scientifique
+Ingénieur de recherche
+Concours N° 56
+Nbre de postes :
+1
+Emploi-type :
+Cheffe ou chef de projet / experte ou expert en Ingéniérie logicielle
+Affectation :
+Génomique Métabolique, EVRY COURCOURONNES
+Groupe de fonction :
+Groupe 3
+Mission :
+La plateforme MicroScope de l'Unité Mixte de Recherche  « Génomique Métabolique » (UMR8030) est un système d'information intégré offrant des outils bioinformatiques pour l'annotation et l'analyse comparée de génomes procaryotes (plus de 7000 comptes utilisateurs et 1700 citations). Le/la chef-fe de projet aura pour mission de développer des méthodes bioinformatiques permettant de répondre à diverses problématiques en génomique microbienne, dont l'analyse massive de données par des approches pangénomiques.
+Activités :
+- Conception et développement de méthodes bioinformatiques innovantes pour l'analyse de génomes microbiens, en étroite collaboration avec les chercheurs de l'équipe
+- Validations des méthodes et implémentation dans des logiciels et chaînes de traitements automatisées
+- Contribution au choix des technologies informatiques, en veillant au respect des principes FAIR
+- Encadrement d'ingénieurs et accompagnement technique des membres de l'équipe pour promouvoir les bonnes pratiques en développement
+Compétences :
+Le/la chef-fe de projet devra posséder des connaissances dans les domaines suivants :
+-
+- Outils/algorithmes en bioinformatique
+- Modélisation et programmation objet
+- Bases de données
+- Parallélisation de calculs
+- Systèmes d'exploitation Linux et langages de script
+- Génomique et microbiologie
+- Anglais technique oral et écrit (selon Le cadre européen de référence pour les langues (CECRL))
+Des compétences opérationnelles :
+- Développement de méthodes bioinformatiques à grande échelle concernant notamment l'analyse de pangénomes
+- Management et gestion de projets logiciels
+- Conception et développement d'applications à architecture multi-tiers : base de données, système de production (workflow/HTC), interface utilisateur Web
+Les compétences organisationnelles suivantes seront nécessaires :
+- Gestion et planification des tâches
+- Esprit d'initiative et d'innovation
+- Capacité à animer le collectif de travail
+- Ecoute des besoins utilisateurs
+- Bonne capacité de communication orale et écrite (anglais et français)
+Contexte :
+L'UMR « Génomique Métabolique » à Évry constitue l'unité de recherche fondamentale du Genoscope. Elle explore la biodiversité microbienne à travers l'étude des génomes et du métabolisme. Dans ce cadre, le Laboratoire d'Analyses Bioinformatiques pour la Génomique et le Métabolisme (LABGeM) a développé une expertise de pointe dans l'annotation et l'analyse comparative des génomes procaryotes, notamment via la plateforme MicroScope (https://mage.genoscope.cns.fr/microscope, membre de l'Institut Français de Bioinformatique) et le logiciel d'analyse de pangénomes PPanGGOLiN (https://github.com/labgem/PPanGGOLiN). Sous la responsabilité du directeur du LABGeM, le/la chef-fe de projet pilotera les développements informatiques stratégiques pour soutenir les évolutions majeures de la plateforme MicroScope. Ses missions s'inscrivent dans un contexte interdisciplinaire, à l'interface entre microbiologie, bioinformatique et science des données, en interaction étroite avec les membres du LABGeM (~15 personnes dont 5 chercheurs et 3 ingénieurs permanents), d'autres équipes de recherche et les utilisateurs finaux. Des déplacements ponctuels en France et à l'étranger sont à prévoir dans le cadre de collaborations. Une partie des activités pourra être réalisée en télétravail, en accord avec le chef de laboratoire et dans le respect de la réglementation en vigueur au CNRS.

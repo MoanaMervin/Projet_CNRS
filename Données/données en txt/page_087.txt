@@ -1,0 +1,89 @@
++
+Liste des concours
+E : Informatique, statistiques et calcul scientifique
+Ingénieur d'études
+Concours N° 129
+Nbre de postes :
+1
+Emploi-type :
+Ingenieure ou ingenieur en ingénierie logicielle
+Affectation :
+Institut des Systèmes Complexes de Paris Île-de-France, PARIS 13
+Groupe de fonction :
+Groupe 2
+Mission :
+L'ingénieur-e participera à une ou plusieurs phases du cycle de vie des logiciels : analyse, développement, qualification, intégration, déploiement dans le respect du cahier des charges, des normes et des règles de sécurité. Il/elle assurera la gestion et l'administration des bases de données. Il/elle assumera des responsabilités de gestion de projet pour la ou les phases prises en charge.
+Activités :
+- Prendre en charge tout ou partie de l'activité de gestion de projet (estimer, planifier, suivre)
+- Prendre en charge le développement logiciel et la gestion des données de l'équipe
+- Contribuer au développement d'applications web
+- Contribuer au développement d'applications basées sur de l'intelligence artificielle
+- Contribuer au développement d'applications mobiles (iOS ou Android)
+- Contribuer à la mise en place et au respect des dispositions qualité et des normes
+- Rédiger et mettre à niveau les documentations techniques et fonctionnelles.
+- Animer et encadrer éventuellement une équipe
+Développement et Bases de données:
+- Modéliser, concevoir et/ou paramétrer tout ou partie de la solution logicielle
+- Développer et tester les objets et composants
+- Veiller à la sécurité des systèmes
+- Mettre en œuvre les logiciels de gestion de bases de données, en assurer l'adaptation, l'administration et la maintenance
+- Garantir la disponibilité et la qualité des données par le maintien et l'amélioration des performances (tuning) et fonctionnalités
+- Administrer les autorisations d'accès ainsi que les problématiques de sécurité des données
+- Monitoring applicatif en multi-couche
+- Échanger avec le RSSI de l'unité et le services DSI du CNRS pour garantir la sécurité des applications et des bases de données
+- Assurer la maintenance évolutive et curative des développements réalisés.
+Qualification:
+- Élaborer la stratégie de test, concevoir, spécifier et exécuter des tests fonctionnels et/ou techniques
+- Opérer le diagnostic des incidents signalés.
+Intégration:
+- Créer et tester les packages applicatifs et les scripts de déploiement en production
+- Intégrer dans les environnements de tests et de production les solutions logicielles.
+Déploiement:
+- Réceptionner, installer, documenter, mettre à disposition les packages en assurant le suivi des versions
+- Assurer une assistance fonctionnelle et/ou technique aux exploitants et aux utilisateurs
+Compétences :
+Savoirs :
+- Méthodologie de conduite de projet
+- Génie logiciel
+- Méthodes de modélisation et de développement
+- Architecture et environnement technique du système d'information
+- Systèmes de gestion de base de données
+- Connaissances d'outils de NLP
+- AI Agentic workflow
+- Gestion et centralisation des services d¿authentification
+- Service oriented application (SOA)
+- Méthodes d'analyse et de conception / mise en production/ de tests
+- Protocoles de communication
+- Frameworks
+- Langage de programmation et d'administration système
+- Performance et métrologie
+- Référentiel des bonnes pratiques
+- Sécurité des systèmes d'information et de communication
+- Anglais technique (B2)
+Savoir-faire :
+- Maîtrise de langages et outils pour développement d'application web  (TypeScript, Javascript, Apache, Ngnix, PHP, Python, NodeJS, Redis, Html5, CSS),
+- Gestion de grandes bases de données SQL et NoSQL (Postgresql, MongoDB, Redis, Elastic Search),
+- Expérience avec des outils de développement backend pour le Web tels que Flask / Node.js /  PHP appréciée,
+- Techniques de conteneurisation telles que Docker
+- Techniques d'authentification telles que keyCloak, 2FA et services d'authentification tiers
+- Outils de monitoring tels que LogStash et FileBeat
+- Développement « back-end » d'applications impliquant la gestion de données de type graphes ou textuelles /
+- Expérience collaborative open-source appréciée,
+- Développement de « front end » d'applications web impliquant des traitements de données back-end,
+- Maîtrise des outils de versioning de type git
+- Savoir analyser les besoins des utilisateurs, les traduire en spécifications techniques,
+- Sécurisation d'application pour la protection des données personnelles et des attaques informatiques
+- Connaissances des réglementations RGPD
+- Élaborer et mettre en œuvre un plan de tests (maîtrise)
+- Appliquer les procédures
+Savoir-être :
+- Travail en équipe
+- Capacité de conceptualisation
+- Rigueur
+Contexte :
+L'Institut des Systèmes Complexes de Paris Île-de-France (ISC-PIF, http://iscpif.fr) est une Unité d'Appui à la Recherche du CNRS comportant une vingtaine de personnes (titulaires et contractuels). Conjuguant les efforts de 12 EPST franciliens autour de recherches interdisciplinaires sur les systèmes complexes. L'ISC-PIF héberge plusieurs plateformes : https://multivacplatform.org/ ; https://openportability.org/ ; http://cpp.linkrbrain.org/; https://gargantext.org/fr/ ; https://openmole.org/.
+L'ISC-PIF héberge de nombreux services mutualisés dans le domaine de l'analyse de données (en particulier concernant l'analyse de grands corpus textuels) et le calcul haute performance. Ces services sont accessibles à distance depuis des interfaces ad hoc ; ils utilisent et génèrent des masses de données importantes. A l'ISC-PIF, l'ingénieur-e recruté-e travaillera sous la responsabilité du directeur d'unité et de la secrétaire générale. En openspace, il sera en étroite collaboration avec les équipes travaillant sur les plateformes de l'ISC-PIF et plus spécialement en lien direct avec le responsable de la plateforme Multivac, son responsable fonctionnel. Ses activités seront cependant ouvertes sur les travaux des autres plateformes de l'ISC-PIF.
+Conditions particulières d'exercice :
+- Astreintes éventuelles ou horaires décalés adaptés aux nécessités de service.
+- Possibilité de télétravail jusqu'à deux jours par semaine.
+L'Institut des Systèmes Complexes de Paris IdF conçoit et déploie plusieurs plateformes technologiques du backend au frontend. Dans ses missions et au cours de sa carrière, l'Ingénieur.e en ingénierie logicielle et données sera amené à développer de nouvelles compétences et à travailler sur des technologies de pointes.

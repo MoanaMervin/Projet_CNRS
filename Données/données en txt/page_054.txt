@@ -1,0 +1,53 @@
++
+Liste des concours
+E : Informatique, statistiques et calcul scientifique
+Ingénieur de recherche
+Concours N° 54
+Nbre de postes :
+1
+Emploi-type :
+Cheffe ou chef de projet / experte ou expert en infrastructures
+Affectation :
+Institut du Développement et des Ressources en Informatique Scientifique, ORSAY
+Groupe de fonction :
+Groupe 1
+Mission :
+Coordonner les activités de la composante « Outils internes et réseau » de l'équipe DTI (Direction Technique Informatique). Garantir, maintenir en condition opérationnelle, superviser et faire évoluer les architectures des réseaux, à la fois internes aux supercalculateurs et aux machines de service associées, et externes pour permettre la connectivité de l'IDRIS aux différents réseaux français, européens et internationaux.
+Activités :
+- Coordonner la composante « Outils internes et réseau » constituée de 2 ingénieurs et faire évoluer l'infrastructure réseau de l'IDRIS pour intégrer de nouvelles technologies fiables, robustes et performantes.
+- Définir les nouvelles architectures informatiques, réseaux et sécurité, pour les nouveaux besoins du centre.
+- Administrer les infrastructures réseau de l'IDRIS et celles des plateformes hébergées. Administrer les pare-feux et les équipements filtrants ainsi que les interconnexions du centre avec nos partenaires ou RENATER.
+- Concevoir et administrer des outils de monitoring et de métrologie.
+- Concevoir, mettre en oeuvre et maintenir en condition opérationnelle des architectures techniques. Mettre en place de nouvelles architectures systèmes.
+- Administrere et suivre les équipements des services communs et les moyens informatiques attachés au personnel de l'IDRIS.
+- Négocier les achats informatiques avec les fournisseurs d'équipements.
+- Participer à des groupes de travail internes ou externes de projets qui impliquent l'IDRIS.
+- Maintenir une activité de veille technologique dans les domaines réseau, système et sécurité afin de permettre l'évolution de ces infrastructures
+Compétences :
+Savoirs :
+- Expertise dans les domaines système et réseaux ainsi que dans celui de la sécurité des systèmes.
+- Anticiper les évolutions fonctionnelles et techniques en assurant une activité de veille technologique.
+- Maitrise des concepts et techniques d'architecture des systèmes et réseaux.
+- Établir des bilans d'actions, des tableaux de bord, des indicateurs de gestion.
+- Maitrise générale des procédures de sécurité informatique.
+Savoir-faire :
+- Évaluer une solution d'infrastructure technique, d'informatique logicielle ou liée au système d'information.
+- Maitrise de l'administration de serveurs sous Linux et des procédures de sécurité associées.
+- Élaborer un cahier des charges.
+- Capacité à détecter, diagnostiquer et résoudre les problèmes matériels et logiciels et à maintenir un système dans un état opérationnel.
+- Piloter et gérer un projet ainsi qu'une petite équipe.
+- Animer un groupe de travail et communiquer aussi bien à l'oral qu'à l'écrit.
+- Savoir expliquer les choix et porter les décisions.
+- Savoir communiquer et rendre compte
+- Capacité de prospective et d'anticipation.
+Savoir Être :
+- Avoir le sens des responsabilités, du service et de la rigueur indispensables dans le contexte d'un centre national de calcul scientifique.
+- Disponibilité et aptitude au travail en équipe ainsi que le sens des relations humaines.
+- Aptitude à fédérer autour de solutions innovantes.
+- Identifier les priorités et être réactif.
+- Reconnaitre, mobiliser et fédérer le collectif du groupe.
+Contexte :
+L'IDRIS (www.idris.fr) est le centre national du CNRS pour le calcul numérique intensif de très haute performance (HPC) et l'intelligence artificielle (IA), au service des communautés scientifiques de la recherche. Il héberge, exploite et met à disposition de plus de 3700 chercheurs et ingénieurs les ressources de Jean Zay, l'un des supercalculateurs hybrides accélérés parmi les plus puissants d'Europe.
+Depuis plusieurs années, l'IDRIS noue des relations avec des organismes de recherche et d'enseignement supérieur visant à ajouter, à côté de ses missions nationales, un ancrage fort dans le grand projet de campus Paris-Saclay via un service d'hébergement de ressources (IFB Core Cluster, Machines Ruche et Fusion du Mesocentre Moulon CentraleSupelec, Ecole Normale Supérieure Paris-Saclay).
+Le supercalculateur Jean Zay ainsi que les configurations hébergées sont installés dans une salle d'ordinateurs de 1000 m² et l'infrastructure technique nécessaire à leur bon fonctionnement, de type datacenter, occupe 2000 m² de locaux techniques pour une capacité électrique de 4 MW.
+Le poste est ouvert dans l'équipe DTI (Direction Technique Informatique) composée de 16 ingénieurs et aura la charge de la composante « Outils internes et réseau ». La personne recrutée sera placée sous la responsabilité hiérarchique du responsable d'équipe.

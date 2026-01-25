@@ -1,0 +1,60 @@
++
+Liste des concours
+E : Informatique, statistiques et calcul scientifique
+Ingénieur de recherche
+Concours N° 52
+Nbre de postes :
+1
+Emploi-type :
+Cheffe ou chef de projet / experte ou expert en ingénierie des systèmes d'information
+Affectation :
+Institut du Développement et des Ressources en Informatique Scientifique, ORSAY
+Groupe de fonction :
+Groupe 2
+Mission :
+Membre de la composante Sécurité de l'équipe DTI (Direction Technique Informatique), en collaboration directe avec le Responsable de la Sécurité des Systèmes d'Information de l'IDRIS, l'ingénieur.e en sécurité opérationnelle anime la démarche sécurité des systèmes d'information de l'unité (matériels, données et logiciels) en veillant à ce que les niveaux de sécurité et de confidentialité soient conformes à la réglementation externe et aux standards internes.
+Activités :
+1) Identifier les risques :
+- Réaliser des audits du système d'information et des systèmes de sécurité
+- Analyser les risques et les dysfonctionnements, les marges d'amélioration du système d'information, des procédures et des systèmes de sécurité
+- Définir les plans de remédiation et en assurer le suivi
+2) Mettre en œuvre et assurer le suivi des dispositifs de sécurité :
+- Concevoir, mettre en œuvre et gérer les outils de cybersécurité (bastion, authentification multi-facteurs, système de gestion des informations et des événements de sécurité (SIEM))
+- Assurer le maintien en conditions opérationnelles et de sécurité des dispositifs de contrôle d'accès physiques, vidéosurveillance et détection d'intrusion avec les prestataires
+- Gérer les incidents de sécurité : détection, qualification, analyse, remédiation, retour d'expérience
+- Élaborer et suivre des tableaux de bord des incidents sécurité.
+3) Communiquer et former sur les bonnes pratiques de sécurité :
+- Organiser, rédiger les supports et animer des sessions internes dédiées à la sensibilisation du personnel sur les bonnes pratiques de sécurité et la protection des données personnelles
+- Élaborer, présenter et faciliter l'appropriation des consignes et des outils auprès du personnel et des intervenants extérieurs
+- Conseiller et assister les équipes de l'IDRIS sur les réglementations, les choix d'architecures, de logiciels,
+4) Veille technologique et réglementaire :
+- Assurer une veille technologique, de manière à garantir la sécurité logique et physique du système d'information.
+- Identifier les nouveaux risques sur la sécurité du système d'information : apparition de nouvelles méthodes d'attaques informatiques
+- Rechercher des solutions innovantes pour répondre aux problématiques induites par l'introduction de nouvelles technologies et au besoin déployer les solutions de cybersécurité.
+Compétences :
+1) Savoirs / connaissances
+- Institutions et acteurs de la sécurité
+- Bonnes pratiques de sécurité
+- Authentification et chiffrement
+- Méthode d'analyse des risques
+- Notion sur les protocoles d'authentification (SSH, OpenIdConnect)
+- Notion sur les outils pare-feu, bastion
+- Notion de centralisation des logs et de monitoring
+- Connaissance du RGPD
+- Comprendre et lire l'anglais technique
+2) Savoir-faire
+- Administration Linux
+- Développement Python, PHP
+3) Savoir-être
+- Capacité d'écoute
+- Esprit d'analyse
+- Rigueur
+- Travail en équipe
+- Réactivité
+- Pédagogie
+Contexte :
+L'IDRIS (www.idris.fr) est le centre national du CNRS pour le calcul numérique intensif de très haute performance (HPC) et l'intelligence artificielle (IA), au service des communautés scientifiques de la recherche. Il héberge, exploite et met à disposition de plus de 3700 chercheurs et ingénieurs les ressources de Jean Zay, l'un des supercalculateurs hybrides accélérés parmi les plus puissants d'Europe.
+Depuis plusieurs années, l'IDRIS noue des relations avec des organismes de recherche et d'enseignement supérieur visant à ajouter, à côté de ses missions nationales, un ancrage fort dans le grand projet de campus Paris-Saclay via un service d'hébergement de ressources (IFB Core Cluster, Machines Ruche et Fusion du Mesocentre Moulon CentraleSupelec, Ecole Normale Supérieure Paris-Saclay).
+Le supercalculateur Jean Zay ainsi que les configurations hébergées sont installés dans une salle d'ordinateurs de 1000 m² et l'infrastructure technique nécessaire à leur bon fonctionnement, de type datacenter, occupe 2000 m² de locaux techniques pour une capacité électrique de 4 MW.
+Le poste est ouvert dans la Direction Technique Informatique composée de 16 ingénieurs.
+La personne recrutée sera postionnée dans l'équipe sécurité sous l'autorité hiérarchique du responsable de l'équipe DTI et sous responsabilité fonctionnelle du RSSI et RSSI-Adjointe.

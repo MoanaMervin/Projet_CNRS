@@ -1,0 +1,67 @@
++
+Liste des concours
+E : Informatique, statistiques et calcul scientifique
+Ingénieur de recherche
+Concours N° 51
+Nbre de postes :
+1
+Emploi-type :
+Cheffe ou chef de projet / experte ou expert en ingénierie des systèmes d'information
+Affectation :
+UAR PROGEDO, PARIS 06
+Groupe de fonction :
+Groupe 3
+Fonction mutualisée avec :
+TGIR Huma-Num
+Mission :
+Pour le compte de deux grandes infrastructures de recherche en sciences sociales (IR Progedo, IR Huma-Num), l'ingénieur.e aura pour mission de :
+1/ Pour Progedo, assurer le pilotage du système d'information ;
+2/ Pour Huma-num, piloter la maitrise d'ouvrage de services hébergés ;
+3/ Pour les deux infra, soutenir les activités et participer aux coopérations avec les infrastructures européennes.
+Activités :
+Le positionnement général du poste est celui d'un-e ingénieur-e dev-ops, devant pouvoir assurer rapidement la fonction de directeur technique pour Progedo.
+A ce titre, les activités principales sont :
+- Piloter l'évolution de la cartographie des systèmes d'information et de communication et des services qui y sont liés pour Progedo et Huma-Num
+- Piloter l'administration du système d'information de Progedo en termes de référentiels, règles, démarches, méthodologies et outils, en collaboration avec les experts métiers
+- Piloter la sécurité du système d'information de Progedo, évaluer les menaces, gérer les incidents de sécurité, piloter l'analyse des incidents/dysfonctionnements et les remédiations nécessaires en lien avec le CSSI d'Huma-Num
+- Coordonner les différents intervenants autour du système d'information de Progedo, dont, principalement, les équipes métier de Progedo, les équipes techniques d'Huma-Num et les prestataires externes
+- Surveiller la qualité des services de leur conception à leur exploitation et veiller à leur amélioration
+- Participer à créer et tester des packages applicatifs et des scripts, en complément des activités confiées aux prestataires externes
+- Participer à représenter les deux infrastructures dans le cadre des coopérations internationales entre infrastructures de recherche (par exemple CESSDA, DARIAH, OPERAS)
+- Assister la maîtrise d'ouvrage dans l'élaboration de cahiers des charges et de leur suivi pour les deux infrastructures, après évaluation et concertation
+- Rédiger la documentation technique du portail Quetelet-Progedo
+A titre secondaire, en qualité de « data scientist » pour les deux structures :
+- Soutenir la conception et à la mise en place des chaînes de traitement des données et des métadonnées
+- Collecter des données structurées ou non structurées
+- Développer les usages IA pour la génération de métadonnées, la bibliométrie et le traitement de données
+- Mettre en œuvre des systèmes de visualisation des données
+Compétences :
+Connaissances :
+- Expertise des technologies liées à l'opération des systèmes d'information d'une archive de sciences sociales
+- Expertise des technologies liées à la sécurité des systèmes d'information
+- Expertise dans au moins un langage de programmation (préférentiellement R et/ou Python)
+- Maitrise des protocoles d'échanges d'information (API, protocole OAI-PMH)
+- Maitrise de la conception et mise en œuvre de l'architecture et de l'environnement technique des systèmes d'information
+- Maîtrise des normes, méthodes, procédures et outils qualité
+- Connaissance des techniques de management transversal / projet
+- Connaissance du droit et normes de sécurité des systèmes d'information
+- Anglais : Niveau B2 minimum (cadre européen commun de référence pour les langues)
+Savoir-faire :
+- Administrer un système de base de données
+- Anticiper les évolutions fonctionnelles et techniques et accompagner les changements
+- Expliciter les besoins et les prioriser
+- Assurer un rôle d'aide à la décision
+- Assurer la formation des équipes sur les nouveaux outils
+-Transmettre des connaissances, développer des compétences
+Savoir-être :
+- Communiquer et faire preuve de pédagogie
+- Travailler en équipe, y compris dans un cadre international, et en relation avec des sous-traitants
+- S'adapter à un contexte en évolution constante
+- Etre autonome, capable de prendre des initiatives mais aussi de rendre compte régulièrement.
+Contexte :
+Le poste est mutualisé entre les 2 grandes infrastructures de recherche en sciences sociales, les IR Huma-Num (20%) et Progedo (80%). Les 2 infrastructures sont positionnées sur les services et les données pour les sciences humaines et sociales, ayant chacune vocation à venir en appui sur l'ensemble du cycle de vie des données de la recherche.
+Huma-Num prend en charge l'administration de l'ensemble des infrastructures informatiques et techniques. Progedo est principalement consacré à la production, à la documentation et à la diffusion de données quantitatives pour les sciences sociales.
+Le poste sera positionné à titre principal à Progedo, en devant assurer le déploiement et la continuité des services offerts à Progedo par Huma-Num. L'environnement informatique et technique est ainsi principalement positionné à Huma-Num et hébergé au Centre de calcul de l'IN2P3.
+L'ingénieur.e sera placé.e sous la responsabilité hiérarchique directe du Directeur de l'IR Progedo. Aucun autre poste de la BAP E dans les spécialités informatiques n'est actuellement présent à Progedo. L'infrastructure Progedo est en évolution, actuellement composée d'une dizaine de postes. Le candidat retenu sera en interaction en interne avec le Pôle Données principalement mais aussi avec les partenaires institutionnels.
+Pour les missions transverses de l'IR Huma-num (Pôles HSTC et Données) l'ingénieur.e rendra compte à son directeur.
+Les bureaux de Progedo et Huma-Num sont hébergés par la Fondation Maison des Sciences de l'Homme - 54 Boulevard Raspail à Paris (75006) et par le Campus Condorcet à Aubervilliers. Des déplacements en régions ou à l'étranger sont à envisager.

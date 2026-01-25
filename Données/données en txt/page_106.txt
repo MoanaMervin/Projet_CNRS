@@ -1,0 +1,97 @@
++
+Liste des concours
+C : Sciences de l'ingénieur et instrumentation scientifique
+Ingénieur d'études
+Concours N° 108
+Nbre de postes :
+1
+Emploi-type :
+Ingenieure ou ingenieur en conception instrumentale
+Affectation :
+Institut de planétologie et d'astrophysique de Grenoble, ST MARTIN D HERES
+Groupe de fonction :
+Groupe 3
+Mission :
+Concevoir, intégrer et tester tout ou partie des instruments pour l'astronomie
+dans le cadre de projets internationaux ou de projets de recherche et de
+développement dans lesquels le laboratoire est impliqué.
+Intervenir également dans la gestion et l'évolution des moyens techniques du
+laboratoire.
+Activités :
+1) Participer aux projets instrumentaux
+- Concevoir tout ou partie d'instruments ou de bancs de tests
+- Mettre au point les procédures d'intégration et de tests associées
+- Établir le cahier des charges des moyens d'intégration et de mesure
+- Contribuer aux intégrations en Europe et sur site
+- Mener des campagnes de mesures et de qualifications
+- Rédiger les rapports de mesures et d'essais ainsi que la documentation
+technique associée
+- Consulter les fournisseurs pour orienter le choix des composants, élaborer
+les demandes d'achat
+-Coordonner et contrôler, jusqu'à la recette, les réalisations et
+intégrations des services et des entreprises
+- Contrôler le respect des plans et du dispositif qualité des intervenants
+- Appliquer les règles de sécurité
+2) Assurer la mise en œuvre, la maintenance et l'évolution des moyens techniques
+du laboratoire
+- Gérer et planifier l'utilisation des locaux techniques
+- Veiller au respect des normes de sécurité et d'hygiène dans les locaux
+techniques
+- Participer à l'analyse des besoins en adaptation ou réaménagement des
+locaux techniques en lien avec l'évolution des activités
+- Assurer la coordination des interventions des prestataires spécialisés
+(services techniques de l'Université, entreprises extérieures)
+- Gérer le parc des équipements en l'inventoriant, en planifiant sa
+maintenance et sont étalonnage
+Compétences :
+Savoirs fondamentaux :
+- Maitriser les techniques et sciences de l'ingénieur (optique, mécanique)
+- Maitriser les techniques de l'instrumentation et de la mesure
+- Connaitre les disciplines générales de sciences physiques
+Savoir-faire opérationnels :
+- Savoir communiquer à l'écrit et à l'oral (techniques de présentation)
+- Savoir s'exprimer en langue anglaise : B1 à B2 (cadre européen commun de
+référence pour les langues)
+- Connaissance en programmation (python) et outils de traitement de texte
+(Office)
+- Savoir conduire une réunion (ordre du jour, animation, compte-rendu, ¿)
+- Appliquer les procédures d'assurance qualité
+- Appliquer les règles d'hygiène et de sécurité
+- Connaitre et appliquer la réglementation des marchés publics
+Savoir être :
+- Savoir mener les intégrations et les tests de façon méthodique, rigoureuse
+- Avoir le sens des relations humaines et de la communication
+- Être autonome, savoir gérer ses priorités, avoir le sens de l'organisation
+de l'anticipation
+- Savoir collaborer avec des profils variés (techniciens, chefs de projets,
+fournisseurs...)
+- Savoir évoluer dans un environnement changeant, s'adapter aux contraintes
+projet.
+- Être ouvert à la veille technologique, aux évolutions de la discipline et
+à la montée en compétences continue
+Contexte :
+L'Institut de Planétologie et d'Astrophysique de Grenoble (https://ipag.osug.fr)
+est une unité mixte de recherche du CNRS et de l'Université Grenoble Alpes et une
+unité de l'Observatoire des Sciences de l'Univers de Grenoble.
+L'IPAG est un acteur international de la recherche en astrophysique et en
+planétologie, mettant en œuvre des approches variées (expérimentation,
+instrumentation, observation, modélisation) en lien avec les grandes
+infrastructures de recherche de la discipline au sol et dans l'espace. Il compte
+environ 170 agents ainsi que de nombreux collaborateurs étrangers et invités.
+L'institut est investi sur les instruments de première lumière de l'Extremely
+Large Telescope (ELT https://elt.eso.org/) pour l'European Southern Observatory
+(ESO https://www.eso.org) notamment avec des contributions sur le système
+d'optique adaptative à étoiles laser de MORFEO
+(https://elt.eso.org/instrument/MORFEO/) ou le système d'imagerie haut contraste
+d'HARMONI (https://elt.eso.org/instrument/HARMONI/). Il mène également des
+recherches & développements (R&D) sur de nouveaux concepts visant à préparer la
+future instrumentation.
+Dans ce contexte, l'ingénieur-e fera partie du service « Plateformes et
+Intégrations Instrumentales » sous la responsabilité du chef de service. Il/elle
+aura la charge de mener en collaboration avec les autres ingénieurs du Groupe
+Technique, la conception et la réalisation de ces instruments. Il/elle interagira
+avec de nombreux acteurs internes (techniciens et ingénieurs des autres services
+et corps de métier) mais aussi du consortium ou de l'ESO. Il/elle se déplacera en
+Europe et dans le monde pour collaborer avec d'autres équipes ou contribuer à
+l'intégration de ces instruments sur les grands télescopes. Il/elle contribuera
+également à la gestion et à l'évolution des locaux techniques de l'unité.

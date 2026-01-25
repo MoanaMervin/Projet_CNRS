@@ -1,0 +1,970 @@
+
+    <script language="JavaScript">
+
+      // Renvoyer la valeur du cookie dont le nom est passe en parametre
+      function getCookie(name) {
+        if (document.cookie.length == 0) {
+          return null;
+        }
+        var regSepCookie = new RegExp('(; )', 'g');
+        var cookies = document.cookie.split(regSepCookie);
+        for (var i = 0; i < cookies.length; i++) {
+          var regInfo = new RegExp('=', 'g');
+          var infos = cookies[i].split(regInfo);
+          if (infos[0] == name) {
+            return unescape(infos[1]);
+          }
+        }
+        return null;
+      }
+
+      // Generer un identifiant user temporaire a sauvegarder en cookie (si pas existant)
+      function getIdentifiantUserTemporaire() {
+        var tempUserId = getCookie("pde_temp_user_id");
+        if (tempUserId == null || tempUserId == "") {
+          var dateExpire = new Date();
+          dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+          tempUserId = Math.random().toString(16).slice(2);
+          document.cookie = "pde_temp_user_id=" + tempUserId + "; expires=" + dateExpire + "; path=/";
+        }
+        return tempUserId;
+      }
+
+      // Mettre a jour le badge compteur nombre de concours dans la page
+      function majBadgeCompteurConcours() {
+        var nbrConcours = getCookie("nbr_concours");
+        if (nbrConcours == null || nbrConcours == 0) {
+          document.getElementById("cptNbrConc").innerHTML = "+";
+        } else {
+          document.getElementById("cptNbrConc").innerHTML = nbrConcours;
+        }
+      }
+
+      // Ajouter un numero de concours a la liste des concours pre-selectionnes
+      function ajouterConcoursFavori(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours");
+        var nbrConcours = 0;
+        var dateExpire = new Date();
+        dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+
+        if (valCookieNumerosConcours == null || valCookieNumerosConcours == "") {
+          valCookieNumerosConcours = numero_concours;
+          nbrConcours = 1;
+        } else {
+          // Transformer la chaine en tableau
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau ne contient pas le numero de concours : Ajout en fin de liste
+          if (arrayCookieNumerosConcours.includes(numero_concours) == false) {
+            valCookieNumerosConcours = valCookieNumerosConcours + "|" + numero_concours;
+            nbrConcours = arrayCookieNumerosConcours.length + 1;
+          }
+        }
+        // Enregistrer la liste des numeros de concours et le nombre de concours en cookies
+        document.cookie = "numeros_concours=" + valCookieNumerosConcours + "; expires=" + dateExpire + "; path=/";
+        document.cookie = "nbr_concours=" + nbrConcours + "; expires=" + dateExpire + "; path=/";
+        majBadgeCompteurConcours();
+      }
+
+      // Supprimer un numero de concours de la liste des concours pre-selectionnes
+      function supprimerConcoursFavori(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours");
+        if (valCookieNumerosConcours != null && valCookieNumerosConcours != "") {
+          var nbrConcours = getCookie("nbr_concours");
+          var dateExpire = new Date();
+          dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+          // Transformer la chaine en tableau
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau contient le numero de concours : Reconstruction de la liste sans ce numero
+          if (arrayCookieNumerosConcours.includes(numero_concours) == true) {
+            valCookieNumerosConcours = "";
+            nbrConcours = 0;
+            for (var i = 0; i < arrayCookieNumerosConcours.length; i++) {
+              if (arrayCookieNumerosConcours[i] != numero_concours) {
+                if (valCookieNumerosConcours.length > 0) {
+                  valCookieNumerosConcours = valCookieNumerosConcours + "|";
+                }
+                valCookieNumerosConcours = valCookieNumerosConcours + arrayCookieNumerosConcours[i];
+                nbrConcours = nbrConcours + 1;
+              }
+            }
+          }
+
+          // Enregistrer la liste des numeros de concours et le nombre de concours en cookies
+          document.cookie = "numeros_concours=" + valCookieNumerosConcours + "; expires=" + dateExpire + "; path=/";
+          document.cookie = "nbr_concours=" + nbrConcours + "; expires=" + dateExpire + "; path=/";
+        }
+      }
+
+      // Gerer le numero de concours selon la liste des numeros de concours en cookie :
+      // - Si numero de concours absent de la liste => Clic pour ajouter le concours
+      // - Si numero de concours present dans la liste => Clic pour supprimer le concours
+      function gererConcoursFavori(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours");
+        if (valCookieNumerosConcours == null || valCookieNumerosConcours == "") {
+          // Si liste de concours vide : Ajout
+          ajouterConcoursFavori(numero_concours);
+          alert("Ajouté à ma sélection");
+        } else {
+          // Transformer la chaine en tableau
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau ne contient pas le numero de concours : Ajout
+          if (arrayCookieNumerosConcours.includes(numero_concours) == false) {
+            ajouterConcoursFavori(numero_concours);
+            alert("Ajouté à ma sélection");
+          }
+          else {
+            // Sinon : Suppression
+            supprimerConcoursFavori(numero_concours);
+            majBadgeCompteurConcours();
+            alert("Retiré de ma sélection");
+          }
+        }
+      }
+
+      // Fonction Ajax interrogation CEL : Existence candidature pour un concours
+      function ajaxRequeteCandidatConcoursCEL(cel_url_requete_candidat_concours) {
+        var tempUserId = getIdentifiantUserTemporaire();
+        cel_url_requete_candidat_concours = cel_url_requete_candidat_concours + "&pde_temp_user_id=" + tempUserId;
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', cel_url_requete_candidat_concours);
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState === 4) {
+            var reponseCEL = xhr.responseText;
+            if (reponseCEL == 1) {
+              // Si reponse = 1, candidature existe deja dans CEL sur ce concours par le candidat
+              // Desactiver le bouton "Postuler" de la fiche concours et l icone etoile favori
+              document.getElementById("btnPostuler").disabled = true;
+              document.getElementById("btnPostuler").title = "Vous avez déjà postulé à ce concours";
+              document.getElementById("iconefavori").style.visibility = "hidden";
+              document.getElementById("cptNbrConc").innerHTML = "";
+            }
+          }
+        };
+        xhr.send();
+      }
+
+      // Verifie si le concours a deja ete postule
+      function checkConcoursPostule(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours_postules");
+        if (valCookieNumerosConcours != null && valCookieNumerosConcours != "") {
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau contient le numero de concours :
+          // Desactiver le bouton "Postuler" de la fiche concours et l icone etoile favori
+          for (var i = 0; i < arrayCookieNumerosConcours.length; i++) {
+            if (arrayCookieNumerosConcours[i] == numero_concours) {
+              document.getElementById("btnPostuler").disabled = true;
+              document.getElementById("btnPostuler").title = "Vous avez déjà postulé à ce concours";
+              document.getElementById("iconefavori").style.visibility = "hidden";
+              document.getElementById("cptNbrConc").innerHTML = "";
+            }
+          }
+        }
+      }
+
+      // Ajouter un numero de concours a la liste des concours postules
+      function ajouterConcoursPostule(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours_postules");
+        var dateExpire = new Date();
+        dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+        if (valCookieNumerosConcours == null || valCookieNumerosConcours == "") {
+          valCookieNumerosConcours = numero_concours;
+        } else {
+          // Transformer la chaine en tableau
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau ne contient pas le numero de concours : Ajout en fin de liste
+          if (arrayCookieNumerosConcours.includes(numero_concours) == false) {
+            valCookieNumerosConcours = valCookieNumerosConcours + "|" + numero_concours;
+          }
+        }
+        // Enregistrer la liste des numeros de concours postules en cookie
+        document.cookie = "numeros_concours_postules=" + valCookieNumerosConcours + "; expires=" + dateExpire + "; path=/";
+      }
+
+      // Postuler au concours dans application CEL
+      function postulerCEL(numero_concours, detail_concours, cel_url_concours) {
+        if (confirm("Vous souhaitez postuler pour le concours " + detail_concours + ".\nConfirmez-vous ce choix ?")) {
+          // Supprimer le concours de la liste des concours pre-selectionnes
+          supprimerConcoursFavori(numero_concours);
+          majBadgeCompteurConcours();
+          // Ajouter le concours a la liste des concours postules
+          ajouterConcoursPostule(numero_concours);
+          // Desactiver le bouton "Postuler" de la fiche concours
+          document.getElementById("btnPostuler").disabled = true;
+          document.getElementById("btnPostuler").title = "Vous avez déjà postulé à ce concours";
+          // Desactiver l icone etoile favori
+          document.getElementById("iconefavori").style.visibility = "hidden";
+          document.getElementById("cptNbrConc").innerHTML = "";
+
+          // Transmettre identifiant user PDE temporaire a CEL
+          var tempUserId = getIdentifiantUserTemporaire();
+          cel_url_concours = cel_url_concours + "&pde_temp_user_id=" + tempUserId;
+
+          // Ouvrir application CEL dans une nouvelle fenetre
+          window.open(cel_url_concours, '_blank');
+        }
+      }
+
+      // Postuler dans application CEL a tous les concours pre-selectionnes
+      function postulerCELtous(cel_url_concours) {
+        var nbrConcours = getCookie("nbr_concours");
+        if (nbrConcours != null && nbrConcours > 0) {
+          if (confirm("Vous souhaitez postuler pour les " + nbrConcours + " concours pré-sélectionnés.\nConfirmez-vous ce choix ?")) {
+            var dateExpire = new Date();
+            dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+            // Ajouter tous les concours pre-selectionnes a la liste des concours postules
+            var valCookieNumerosConcours = getCookie("numeros_concours");
+            var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+            for (var i = 0; i < arrayCookieNumerosConcours.length; i++) {
+              ajouterConcoursPostule(arrayCookieNumerosConcours[i]);
+            }
+            // Vider la liste des concours pre-selectionnes
+            document.cookie = "numeros_concours=; expires=" + dateExpire + "; path=/";
+            // Reinitialiser le nombre de concours pre-selectionnes a 0
+            document.cookie = "nbr_concours=0; expires=" + dateExpire + "; path=/";
+
+            // Transmettre identifiant user PDE temporaire a CEL
+            var tempUserId = getIdentifiantUserTemporaire();
+            cel_url_concours = cel_url_concours + "&pde_temp_user_id=" + tempUserId;
+
+            // Ouvrir application CEL dans une nouvelle fenetre
+            window.open(cel_url_concours, '_blank');
+            // Recharger la page parente
+            window.opener.location.reload();
+            // Fermer la page
+            window.close();
+          }
+        }
+      }
+
+      // Supprimer un concours de la liste des concours pre-selectionnes, depuis icone corbeille
+      function supprimerConcoursListe(numero_concours) {
+        if (confirm("Vous souhaitez supprimer le concours n°" + numero_concours + ".\nConfirmez-vous ce choix ?")) {
+          supprimerConcoursFavori(numero_concours);
+          window.location.reload();
+          // Mettre a jour le badge compteur dans la fenetre parente
+          var nbrConcours = getCookie("nbr_concours");
+          if (nbrConcours == null || nbrConcours == 0) {
+            window.opener.document.getElementById("cptNbrConc").innerHTML = "+";
+          } else {
+            window.opener.document.getElementById("cptNbrConc").innerHTML = nbrConcours;
+          }
+        }
+      }
+
+      // Retour en haut de la page
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+
+    </script>
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src-elem 'self' *.cnrs.fr 'unsafe-inline'; script-src-attr 'self' *.cnrs.fr 'unsafe-inline'; frame-src 'self' *.cnrs.fr 'unsafe-inline'; connect-src 'self' *.cnrs.fr 'unsafe-inline'; font-src 'self' *.cnrs.fr 'unsafe-inline'; style-src 'self' *.cnrs.fr 'unsafe-inline'; img-src 'self' *.cnrs.fr data:; " />
+<link rel="stylesheet" href="/profil/css/autre.css" type="text/css">
+<link rel="stylesheet" href="/profil/css/backtotop.css" type="text/css">
+<title>fiche profil public</title>
+<SCRIPT LANGUAGE="JAVASCRIPT" SRC="/profil/js/comboliste.js"></SCRIPT>
+<SCRIPT LANGUAGE="JAVASCRIPT" SRC="/profil/js/jquery3.4.1.min.js"></SCRIPT>
+<SCRIPT LANGUAGE="JAVASCRIPT" SRC="/profil/js/jquery.textarea.js"></SCRIPT>
+
+      <script type="text/javascript">
+        function getXhr(){
+            var xhr = null;
+            try {
+                xhr = new XMLHttpRequest();
+            } catch(e){
+                xhr = new ActiveXObject("Microsoft.XMLHTTP" );
+            }
+            return xhr;
+          }
+
+          function updateElementByAjax (pUrl, pElementId, pAsynch){
+            updateElementWithFunctionByAjax(pUrl, pElementId, pAsynch, null, false);
+          }
+        /*
+        * Si utilisation de cette méthode, il faut définir la méthode "callBackMessagesErreur".
+        */
+        function updateMessagesErreur(pUrlCheckMessagesErreur) {
+            updateElementWithFunctionByAjax(pUrlCheckMessagesErreur, "erreur", true, callBackMessagesErreur, true);
+        }
+          function updateElementWithFunctionByAjax (pUrl, pElementId, pAsynch, pFunctionCall, pIsInnerHTML){
+            var xhr = getXhr();
+            xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4 && xhr.status  == 200 ){
+                var documentElement = document.getElementById(pElementId);
+                if (documentElement != null) {
+                  if (pIsInnerHTML) {
+                      $("#" + pElementId).html(xhr.responseText);
+                  } else {
+                    documentElement.outerHTML=xhr.responseText;
+                  }
+                  if(pFunctionCall != null) {
+                  pFunctionCall(xhr.responseText);
+                  }
+                }
+              }
+            };
+            xhr.open( "GET", pUrl,  pAsynch);
+            xhr.send(null);
+          }
+      </script>
+      
+<script>top.nbClick=0</script>
+</head>
+<body bgcolor="#FFFFFF"  onLoad=ajaxRequeteCandidatConcoursCEL('http://concoursexternesit.cnrs.fr/public/candidat/requete_get_candidat_concours.php?numero_concours=121'); >
+<div id="divglobale">
+<form name="formFiche" method="post" action="">
+           <script>top.boutonClique="";</script>
+<input type="hidden" name="hidFicheCourante" value="pg_profil_public_referens.pAfficheProfilPublic">
+<br>
+<table width="100%" border=0>
+<tr>
+<td align="left" width="5%"><input type="button" id="btnPostuler" name="btnPostuler" value="Postuler" onClick="postulerCEL('121', 'n°121 : IE - BAP Informatique, statistiques et calcul scientifique - Administratrice ou administrateur systèmes et réseaux - Laboratoire de Physique des 2 infinis - Bordeaux, GRADIGNAN', 'http://concoursexternesit.cnrs.fr/public/candidat/requete_postuler.php?numeros_concours=121');" ></td>
+<td align="left" width="3%">
+
+      <a id="iconefavori" onclick="gererConcoursFavori('121');"
+        title="Mes concours pr&eacute;-s&eacute;lectionn&eacute;s (favoris)"
+        style="text-decoration: none;">
+          <img src="/profil/images/icon_etoile_favori.png" width="60" height="60" border="0">
+          <span class="icon_etoile_favori_span" style="" id="cptNbrConc">+</span>
+      </a>
+</td>
+<td width="75%"></td>
+<td align="center">
+      <b>Liste des concours</b><br>
+      <a href="PG_PROFIL_PUBLIC_REFERENS.afficherListeConcoursPreselectionnes?destinationId=81"
+      onclick="window.open('PG_PROFIL_PUBLIC_REFERENS.afficherListeConcoursPreselectionnes?destinationId=81', 'newwindow', 'width=700,height=400'); return false;"
+      title="Consulter la liste de mes concours pr&eacute;-s&eacute;lectionn&eacute;s"><img src="/profil/images/icone_liste.png" width=40 height=40 border=0></a>
+      </td>
+</tr>
+</table>
+<center>
+    <table width="60%" border="2" cellspacing="0">
+    <tr>
+      <td class="enteteconcours" bordercolor="#CCCCCC"> 
+<p class="enteteconcours"><span class="enteteconcours">E : Informatique, statistiques et calcul scientifique</span></p>
+        
+<p class="enteteconcours"><span class="enteteconcours">Ingénieur d'études</span></p>
+        <p class="enteteconcours"><span class="enteteconcours">Concours N&deg; 121</span></p>
+      </td>
+    </tr>
+  </table>
+  </center>
+  
+<p>&nbsp;</p>
+
+<table width="100%" border="0" cellspacing="0">
+  <tr height="25">
+    <td width="20%"><b>Nbre de postes : </b></td>
+    <td width="80%">4</td>
+  </tr>
+
+      <tr height="25">
+          <td width="20%"><b>Emploi-type :</b></td>
+          <td width="80%">Administratrice ou administrateur systèmes et réseaux</td>
+      </tr>
+    
+</table>
+<br>
+<table width="100%" border="0" cellspacing="0">
+<tr>
+<td class="soustitreprincipal">1er poste du concours N&deg; 121</td>
+</tr>
+</table>
+<br>
+
+    <table width="100%" border="0">
+
+    <tr height="25">
+      <td width="20%"><b>Affectation :</b></td>
+      <td width="80%">Laboratoire de Physique des 2 infinis - Bordeaux, GRADIGNAN</td>
+    </tr> 
+<tr height="25"><td width="20%"><b>Groupe de fonction :</b></td><td width="80%">
+Groupe 3
+</td></tr>
+</td>
+    </tr>
+ </table>
+      
+<br>
+
+  <p>&nbsp;</p>
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="mission"><b>Mission :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr width="100">
+	  <td colspan="2">
+	
+L'administrateur-trice systèmes et réseaux aura pour mission de cogérer et faire évoluer l'infrastructure informatique.<BR>
+Il/elle mettra en place et administrera les outils de déploiement systèmes et logiciels pour le parc informatique. <BR>
+Il/elle définira les procédures de gestion, déploiera les outils et en fera le support auprès des utilisateurs.<BR>
+<BR>
+
+</td>
+    </tr>
+  </table>
+  
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="activites"><b>Activit&eacute;s :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+- Planifier, installer, automatiser et améliorer les processus de production pour garantir la conformité des postes de travail<BR>
+- Participer à l'installation, au paramétrage et à la gestion des postes de travail et d'expérimentation sous Windows, MacOs et Linux<BR>
+- Participer à la démarche de sécurisation  de l'infrastructure Active Directory<BR>
+- Assister l'ingénieur réseau pour l'évolution de l'infrastructure réseaux du laboratoire<BR>
+- Assurer le support technique de niveau 2 et tracer les actions accomplies durant les interventions<BR>
+- Sensibiliser à la sécurité, conseiller et former les utilisateurs<BR>
+- Rédiger des notices techniques et des supports pour les utilisateurs (français et anglais)<BR>
+- Assurer la veille technologique sur les différents aspects de l'infrastructure système et de communication (matériels, logiciels, architecture, protocole, mode de transferts)<BR>
+
+</td>
+    </tr>
+  </table>
+  
+
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="competences"><b>Comp&eacute;tences :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+Savoirs :<BR>
+- Connaissance des concepts de base et techniques d'architecture des systèmes d'information.<BR>
+- Connaissance approfondie des systèmes d'exploitation usuels MS Windows, MacOS, Linux<BR>
+- Bonne connaissance des méthodes de sécurisation d'une infrastructure Active Directory<BR>
+- Bonne connaissance des architectures réseau (switches HP, WIFI)<BR>
+- Posséder un bon niveau anglais (technique et oral)<BR>
+- Savoir rédiger une documentation en français et en anglais<BR>
+<BR>
+Savoir-faire :<BR>
+- Maitriser les outils de scripting (powershell, bash, python ...)<BR>
+- Savoir administrer un outil de gestion de parc informatique (WAPT)<BR>
+- Savoir détecter, diagnostiquer et résoudre les problèmes et dysfonctionnements<BR>
+- Savoir gérer un incident de sécurité<BR>
+<BR>
+Savoir-être :<BR>
+- Capacité à travailler en équipe et à partager ses connaissances<BR>
+- Savoir faire preuve de curiosité et d'autonomie dans son travail<BR>
+- Être réactif et avoir le sens du service<BR>
+- Avoir un bon relationnel et être pédagogue<BR>
+- Capacité à intégrer et participer activement aux réseaux professionnels métiers<BR>
+
+</td>
+    </tr>
+  </table>
+  
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="contexte"><b>Contexte :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+Le LP2IB (Laboratoire de Physique des 2 Infinis de Bordeaux) est une Unité Mixte de Recherche de l'Institut de Physique des Particules et de Physique Nucléaire/Université de Bordeaux. Le laboratoire comporte 115 personnels dans 9 groupes de recherche et 5 services.<BR>
+<BR>
+L'environnement informatique du laboratoire est hétérogène : groupes de recherches en physique, chimie et biologie, services supports, plateformes d'analyse, cellules de transfert de technologie et enseignement. Cette diversité génère des besoins variés de ressources informatiques, tant logicielles que matérielles, et des contraintes de sécurité fortes. Le laboratoire est situé sur un campus excentré de l'université.<BR>
+<BR>
+La personne recrutée sera rattachée au service informatique de l'unité qui est composé :<BR>
+- d'un pôle Administrateurs Systèmes et Réseaux (ASR), composé de 3 ingénieurs systèmes, 1 technicien et 1 CDD assistant ingénieur<BR>
+- d'un pôle Développeurs/informaticiens scientifiques, composé de 4 ingénieurs.<BR>
+<BR>
+Cette fonction ouvre droit à la perception de l'Indemnité de Référence pour les Informaticiens (IRI).<BR>
+<BR>
+
+</td>
+    </tr>
+  </table>
+  
+<br>
+<table width="100%" border="0" cellspacing="0">
+<tr>
+<td class="soustitreprincipal">2eme poste du concours N&deg; 121</td>
+</tr>
+</table>
+<br>
+
+    <table width="100%" border="0">
+
+    <tr height="25">
+      <td width="20%"><b>Affectation :</b></td>
+      <td width="80%">Centre de Recherche en Informatique, Signal et Automatique de Lille, VILLENEUVE D ASCQ</td>
+    </tr> 
+<tr height="25"><td width="20%"><b>Groupe de fonction :</b></td><td width="80%">
+Groupe 3
+</td></tr>
+</td>
+    </tr>
+ </table>
+      
+<br>
+
+  <p>&nbsp;</p>
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="mission"><b>Mission :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr width="100">
+	  <td colspan="2">
+	
+Définir et mettre en œuvre les procédures de gestion, tout en assurant l'administration des composants systèmes, des infrastructures logicielles, des réseaux et des sites liés aux systèmes d'information, afin de garantir leur cohérence, leur qualité de service et leur sécurité .
+</td>
+    </tr>
+  </table>
+  
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="activites"><b>Activit&eacute;s :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+La personne recrutée accompagnera les ingénieurs en charge des aspects systèmes et réseaux de l'unité dans la mise en place d'un ensemble de processus, outils et automatisations qui permettront de fluidifier la création et la mise à disposition des services développés (ou fournis) par le pôle Informatique et Technique (PIT).<BR>
+En outre, cela consistera à : <BR>
+- Contribuer à l'évolution, la maintenance et l'automatisation du déploiement des services venant en support à l'infrastructure systèmes et réseaux propre ;<BR>
+- Suivre quotidiennement l'exploitation ;<BR>
+- Effectuer les actions et processus de gestion courante des applications en place dans toutes leurs dimensions (assistance aux utilisateurs, participation à la gestion des incidents, qualité de service, actions de formation) ;<BR>
+- Participer à l'accompagnement des développeurs de l'équipe dans l'appropriation de l'outillage DevOps et cloud mis en œuvre localement ;<BR>
+- Contribuer à assurer la Sécurité des Systèmes d'Information de l'unité en conformité avec les normes institutionnelles, nationales et européennes ;<BR>
+- Garantir l'interopérabilité du système d'information local avec ceux des tutelles ;<BR>
+- Réaliser une veille technologique active afin de suivre les évolutions technologiques et d'être force de proposition.<BR>
+
+</td>
+    </tr>
+  </table>
+  
+
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="competences"><b>Comp&eacute;tences :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+Savoir <BR>
+<BR>
+- Connaissance des technologies de virtualisation et des technologies cloud (VMware, Docker/Podman, HashiCorp Nomad) ;<BR>
+- Connaissances générales des systèmes d'exploitation Microsoft Windows (10, 2019 Server), GNU/Linux (Debian et dérivés) ainsi que macOS ;<BR>
+- Connaissance d'un langage de programmation (Python, Go, Rust, etc.) pour une application orientée systèmes ;<BR>
+- Compétences en réseaux IPv4/IPv6, compréhension des concepts et techniques des réseaux locaux et sans-fil ;<BR>
+- Connaissance générale des services systèmes associés aux réseaux informatiques (DNS, reverse proxy, etc.) ;<BR>
+- Maîtrise des procédés de sécurisation informatique et des techniques de sécurisation d'un parc informatique ;<BR>
+- Une connaissance d'un outil de déploiement et de gestion des configurations (Ansible, Puppet, ...) serait un plus ;<BR>
+<BR>
+Savoir-faire <BR>
+<BR>
+- Anticiper, analyser et évaluer les évolutions fonctionnelles et techniques ;<BR>
+- Réactivité, adaptabilité et capacité à faire évoluer ses connaissances ;<BR>
+- Qualités relationnelles permettant une bonne communication au sein de l'équipe ;<BR>
+- Capacités à gérer les requêtes utilisateurs en tenant compte des priorités et savoir les hiérarchiser.<BR>
+<BR>
+Savoir-être <BR>
+<BR>
+- Rigueur ;<BR>
+- Sens de la confidentialité ;<BR>
+- Anglais technique (idéalement niveau B2) ;<BR>
+- Capacités à travailler efficacement dans un environnement agile et à respecter les délais.<BR>
+
+</td>
+    </tr>
+  </table>
+  
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="contexte"><b>Contexte :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+CRIStAL est une unité mixte de recherche en sciences du numérique. Forte de ses 31 équipes de recherche, regroupées en 9 Groupes thématiques (GT), l'unité regroupe différentes compétences complémentaires permettant d'aborder les grands sujets sociétaux, certains d'entre eux étant identifiés en tant qu'axes transversaux prioritaires au sein de l'unité. Parmi ces axes transversaux, nous pouvons citer, par exemple, l'intelligence artificielle sous ses différentes facettes ; la cybersécurité ; la santé numérique ou encore la robotique.<BR>
+<BR>
+CRIStAL compte aujourd'hui près de 500 membres dont la moitié de permanents.<BR>
+L'administrateur systèmes et réseaux sera affecté au sein du Pôle Informatique et Technique (PIT), composé de 6 agents CNRS et universitaires et d'un apprenti et sera placé sous l'autorité du responsable du PIT. Ce service commun gère l'infrastructure de services propres et développe également des outils de gestion et de pilotage pour l'ensemble des usagers des services numériques de l'unité.<BR>
+<BR>
+
+</td>
+    </tr>
+  </table>
+  
+<br>
+<table width="100%" border="0" cellspacing="0">
+<tr>
+<td class="soustitreprincipal">3eme poste du concours N&deg; 121</td>
+</tr>
+</table>
+<br>
+
+    <table width="100%" border="0">
+
+    <tr height="25">
+      <td width="20%"><b>Affectation :</b></td>
+      <td width="80%">Délégation Aquitaine, TALENCE</td>
+    </tr> 
+<tr height="25"><td width="20%"><b>Groupe de fonction :</b></td><td width="80%">
+Groupe 3
+</td></tr>
+</td>
+    </tr>
+ </table>
+      
+<br>
+
+  <p>&nbsp;</p>
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="mission"><b>Mission :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr width="100">
+	  <td colspan="2">
+	
+Placé-e sous la responsabilité du chef de service, l'administrateur-trice systèmes et réseaux assure auprès des unités le conseil, le déploiement et le support pour les offres de service du CNRS. <BR>
+<BR>
+Il-elle définit les procédures de gestion et administre les composants systèmes, l'infrastructure réseau, de la délégation Aquitaine afin d'en assurer la cohérence, la qualité et la sécurité. <BR>
+<BR>
+Il-elle assure l'assistance aux utilisateurs du système d'information.
+</td>
+    </tr>
+  </table>
+  
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="activites"><b>Activit&eacute;s :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+- mutualiser les bonnes pratiques en matière d'utilisation du système d'information du domaine,<BR>
+- sécuriser la production,<BR>
+- gérer les évolutions et la maintenance des matériels, des systèmes d'exploitation et des principales applications conformément aux exigences nationales et aux processus qualité de la délégation régionale Aquitaine,<BR>
+- automatiser le déploiement des postes de travail fixes et portables, <BR>
+- participer aux actions de formation et d'accompagnement des utilisateurs,<BR>
+- assurer la partie technique du support aux utilisateurs des applications nationales,<BR>
+- gérer les accès au système d'information national et local,<BR>
+- participer au support aux utilisateurs sur les postes de travail,<BR>
+- Négocier avec les fournisseurs et les prestataires de services.
+</td>
+    </tr>
+  </table>
+  
+
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="competences"><b>Comp&eacute;tences :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+Connaissances :<BR>
+ <BR>
+- connaissance approfondie des systèmes d'exploitation Windows client, Windows serveur et Linux Debian et/ou Fedora<BR>
+- maîtrise des architectures réseau<BR>
+- connaissance en sécurité des systèmes d'information<BR>
+- maîtrise d'un ou plusieurs langages de script<BR>
+- une connaissance approfondie de MySQL, Apache et SharePoint serait un atout supplémentaire<BR>
+- connaissance de WordPress, SPIP, Drupal et Joomla<BR>
+- maîtrise des langages HTML, PHP et CSS<BR>
+- déploiement de site internet<BR>
+- virtualisation Hyper-V et/ou Proxmox et/ou Docker<BR>
+- configuration de serveurs Linux et Windows, équipements actifs réseaux.<BR>
+- diagnostic et résolution de problèmes dans des environnements Windows et Linux, sur commutateurs et routeurs<BR>
+- méthodes, outils, normes et procédures qualité<BR>
+- pratique de l'anglais technique : B1 à B2 (cadre européen commun de référence pour les langues)<BR>
+<BR>
+Compétences opérationnelles :<BR>
+ <BR>
+- anticiper les évolutions fonctionnelles et techniques<BR>
+- évaluer une solution informatique ou applicative<BR>
+- modéliser et concevoir les architectures techniques du système d'information<BR>
+- gérer la sécurité de l'information<BR>
+- rédiger et mettre à jour la documentation fonctionnelle et technique<BR>
+- assurer une veille technologique<BR>
+- travailler en équipe<BR>
+
+</td>
+    </tr>
+  </table>
+  
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="contexte"><b>Contexte :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+La délégation Aquitaine assure la gestion de près de 62 structures opérationnelles avec un effectif de 1756 personnels permanents et non permanents.<BR>
+<BR>
+Les services de la délégation régionale sont constitués de plus de 70 agents répartis dans les missions d'appui en ressources humaines, finances et comptabilité, partenariat et valorisation, systèmes d'information, prévention et sécurité, communication, médecine de prévention, patrimoine et logistique.<BR>
+<BR>
+<BR>
+L'administrateur systèmes et réseaux (H/F), intègrera le service des systèmes d'information composé d'un responsable de service, deux administrateurs systèmes et réseaux et d'un gestionnaire de parc informatique.<BR>
+<BR>
+Le parc est composé de 7 serveurs physiques, 1 baie de stockage, 30 serveurs virtuels sous Windows ou Linux, 12 commutateurs, 90 postes de travail sous Windows 10 ou Linux, 80 téléphones IP. Les équipements sont répartis sur 4 bâtiments reliés par le réseau inter-universitaire de Talence-Pessac-Gradignan. <BR>
+<BR>
+Les exigences en termes de disponibilité des composants du système d'information sont élevées : les équipements réseaux (routeur, pare-feu, cœur de réseau) sont configurés en haute disponibilité, les serveurs sont sauvegardés en continu avec pour la plupart un temps de rétablissement de l'ordre d'une heure.<BR>
+<BR>
+La personne recrutée assurera des interventions dans les unités du périmètre de la circonscription Aquitaine (agglomération de Bordeaux, Arcachon, Pau, Bayonne, la Rochelle, Chizé). <BR>
+<BR>
+Ce poste ouvre le droit à la perception de l'Indemnité de Référence des Informaticiens (IRI).<BR>
+
+</td>
+    </tr>
+  </table>
+  
+<br>
+<table width="100%" border="0" cellspacing="0">
+<tr>
+<td class="soustitreprincipal">4eme poste du concours N&deg; 121</td>
+</tr>
+</table>
+<br>
+
+    <table width="100%" border="0">
+
+    <tr height="25">
+      <td width="20%"><b>Affectation :</b></td>
+      <td width="80%">Fédération des Sciences Archéologiques de Bordeaux, PESSAC</td>
+    </tr> 
+<tr height="25"><td width="20%"><b>Groupe de fonction :</b></td><td width="80%">
+Groupe 2
+</td></tr>
+</td>
+    </tr>
+ </table>
+      
+<br>
+
+  <p>&nbsp;</p>
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="mission"><b>Mission :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr width="100">
+	  <td colspan="2">
+	
+L'ingénieur gère et administre les réseaux et les systèmes d'information pour en assurer la cohérence, la sécurité et la qualité pour les 3 UMR constituantes de la fédération de recherche (FSAB).<BR>
+
+</td>
+    </tr>
+  </table>
+  
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="activites"><b>Activit&eacute;s :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+- Administrer les postes et les serveurs : virtualisation, expérimentation, calcul, OS divers, Anti-virus, mise à jour, sauvegardes, inventaire.<BR>
+- Gérer le domaine Active Directory, les utilisateurs, les stratégies de groupes, la sécurité des postes, les processus systèmes et surveiller les performances.<BR>
+- Gérer les évolutions et la maintenance des matériels, des logiciels et du système.<BR>
+- Administrer le réseau : maintenance, amélioration et activités.<BR>
+- Sécuriser la production (sauvegarder, sécuriser les flux, prévoir et mettre en pratique des solutions de repli ou de contournement (PRA, PCA).<BR>
+- Mettre en place d'une politique de sécurité des systèmes de l'information.<BR>
+- Référencer et documenter.<BR>
+- Encadrer une équipe, assumer la responsabilité de projets<BR>
+- Gérer les sauvegardes des données des personnels, des projets et des expérimentations.<BR>
+- Acheter les ressources informatiques (serveurs, postes de travail, périphériques et logiciels).<BR>
+- Négocier avec les fournisseurs et les prestataires de services.<BR>
+- Gestion des sites WEB en relation avec la chargée de communication de la fédération de recherche.<BR>
+
+</td>
+    </tr>
+  </table>
+  
+
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="competences"><b>Comp&eacute;tences :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+1/ Savoirs :<BR>
+- Connaissances des systèmes d'exploitation (Windows MacOS, Linux) et des langages de programmation (PHP SQL HTM)<BR>
+- Active directory, base de données SQL, site WEB, logiciel de backup, sécurité des systèmes de l'information<BR>
+- Maîtrise des réseaux et leur architecture (DHCP, DNS, etc.)<BR>
+- Maîtrise en virtualisation (VMware, hyperV)<BR>
+- Performance et métrologie<BR>
+- Sécurité des systèmes d'information<BR>
+- Anglais technique<BR>
+- Rédiger et mettre à jour la documentation fonctionnelle et technique<BR>
+- Pratiquer une veille technologique<BR>
+- Travailler en équipe<BR>
+<BR>
+ <BR>
+2/ Savoir-faire :<BR>
+- Savoir informer et rendre compte ;<BR>
+- Savoir travailler en collaboration ;<BR>
+- Savoir gérer les priorités et planifier ;<BR>
+- Savoir rédiger et présenter ses dossiers ;<BR>
+- Savoir s'adapter et communiquer avec un public varié, travailler en équipe ;<BR>
+ <BR>
+3/ Savoirs-être :<BR>
+- Être force de proposition / Qualités relationnelles / Rigueur / Etre à l'écoute<BR>
+- Grandes capacités d'analyse et de synthèse.<BR>
+
+</td>
+    </tr>
+  </table>
+  
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="contexte"><b>Contexte :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+L'agent sera sous la responsabilité directe du directeur de la Fédération des Sciences Archéologiques de Bordeaux (FSAB).<BR>
+<BR>
+Poste mutualisé entre les 3 unités constitutives de la Fédération des Sciences Archéologiques de Bordeaux. Les laboratoires sont rattachés à 2 universités (UB et UBM), situés sur le même campus mais nécessitant une mobilité avec des déplacements fréquents.<BR>
+<BR>
+Cette fonction ouvre droit à la perception de l'Indemnité de Référence pour les Informaticiens (IRI).<BR>
+
+</td>
+    </tr>
+  </table>
+  
+<br>
+
+  <p>&nbsp;</p>
+
+  <table border="0" width="100%">
+    <tr align="center">
+      <td>
+	  	<script>
+		//ne pas afficher le bouton si login DS
+		//if (top.listeCourante!=""){
+		//   document.write("<input type='button' name='btnRetour' value='Retour &agrave; la liste' onClick='javascript:top.retourListe();'>");
+		//}
+		</script>
+		<input type="button" name="btnRetourConsult" value="Revenir &agrave; la liste des r&eacute;sultats" onClick="javascript:history.go(-1);">
+	  </td>
+    </tr>
+  </table>
+  
+</form>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+
+    <div class="container-top">
+      <a href="" class="top" id="scrollToTop"></a>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var containerTop = document.querySelector(".container-top");
+        var documentHeight = document.documentElement.scrollHeight;
+        var scrollTopBtn = document.querySelector("#scrollToTop");
+
+        function updateOpacity() {
+          var scrollPercentage = (window.scrollY / documentHeight) * 150;
+
+          var opacity = Math.min(1, Math.max(0, scrollPercentage / 75));
+
+          containerTop.style.opacity = opacity;
+        }
+
+        window.addEventListener("scroll", function () {
+          updateOpacity();
+        });
+
+        scrollTopBtn.addEventListener("click", function (event) {
+          event.preventDefault(); // Annule le comportement par défaut du lien
+          scrollToTop();
+        });
+
+        function scrollToTop() {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth" // Permet le défilement en douceur
+          });
+        }
+
+        updateOpacity();
+      });
+    </script>
+</body>
+
+			<head>
+  			  <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+  			  <META HTTP-EQUIV="Expires" CONTENT="-1">
+          <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src-elem 'self' *.cnrs.fr 'unsafe-inline'; script-src-attr 'self' *.cnrs.fr 'unsafe-inline'; frame-src 'self' *.cnrs.fr 'unsafe-inline'; connect-src 'self' *.cnrs.fr 'unsafe-inline'; font-src 'self' *.cnrs.fr 'unsafe-inline'; style-src 'self' *.cnrs.fr 'unsafe-inline'; img-src 'self' *.cnrs.fr data:; " />
+			</head>
+			
+</html>

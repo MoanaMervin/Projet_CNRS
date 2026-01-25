@@ -1,0 +1,76 @@
++
+Liste des concours
+A : Sciences du vivant, de la terre et de l'environnement
+Ingénieur de recherche
+Concours N° 9
+Nbre de postes :
+1
+Emploi-type :
+Ingenieure ou ingenieur biologiste en plateforme scientifique
+Affectation :
+Centre de résonance magnétique biologique et médicale, MARSEILLE 05
+Groupe de fonction :
+Groupe 3
+Mission :
+L'ingénieur.e biologiste devra concevoir et conduire des protocoles d'acquisitions
+innovants en IRM in vivo sur une plateforme préclinique et clinique comportant des
+systèmes ultra-bas à ultra-haut champs magnétiques, chez des modèles animaux
+(rongeurs) de pathologies humaines et chez l'humain.
+Activités :
+-Conduire des acquisitions IRM/SRM in vivo de modèles animaux (rongeurs) de
+pathologies humaines (système nerveux central, cardiovasculaire et musculaire, et
+inflammation/infection) et chez l'humain, en relation avec les projets des
+utilisateurs ou partenaires
+- Concevoir des protocoles mutualisés et innovants en IRM/SRM préclinique Bruker
+(7T, 9.4T, 11.75T) et clinique (3T (Siemens), 7T (Siemens), ultra-bas champ
+(Multiwave)), en relation avec les projets des utilisateurs ou partenaires, et
+établir le cahier des charges
+- Prendre en charge le traitement de données (logiciels développés au laboratoire)
+- Assurer et organiser la veille scientifique et technologique
+- Conseiller les utilisateurs et les partenaires sur les possibilités et limites
+des techniques disponibles, sur l'interprétation des données
+- Diffuser et valoriser les résultats et réalisations technologiques sous forme de
+rapports, brevets, publications, présentations orales, enseignement
+- Appliquer et faire appliquer en situation de travail les réglementations du
+domaine, en matière d'éthique, d'hygiène et de sécurité et de bonnes pratiques de
+laboratoire
+- Contribuer aux processus mis en place dans le cadre de la certification qualité
+du laboratoire
+Compétences :
+Savoirs :
+- Connaissances théoriques et pratiques en imagerie et spectroscopie de résonance
+magnétique in vivo chez le rongeur et l'humain à différents champs magnétiques
+(ultra-bas à ultra-haut champ)
+- Connaissance de la règlementation en matière d'expérimentation animale :
+formation à l'expérimentation animale niveau concepteur et mise en pratique
+- Connaissance des outils de recueil et de traitement des données (Codes Python,
+R,
+traitement de spectres SRM, FSLeyes,...))
+- Connaissance de la réglementation en matière d'hygiène et de sécurité
+- Connaissance du cadre légal et déontologique
+- Connaissances en métabolisme et physiologie, du rongeur et de l'humain
+- Connaissances élémentaires des techniques de biochimie et biologie cellulaire
+- Langue anglaise : B2 à C1 (cadre européen commun de référence pour les langues)
+Savoir-faire :
+- Coordonner différents projets
+- Expérience en imagerie et spectroscopie de résonance magnétique
+- Expérience en expérimentation animale
+- Expériences en technologies associées à l'imagerie (analyses biologiques,
+préparation pour l'histologie)
+Savoir-être :
+- Capacité de conceptualisation
+- Créativité / Sens de l'innovation
+- Travail d'équipe
+Contexte :
+Le Centre de Résonance Magnétique Biologique et Médicale (CRMBM, UMR7339,
+https://crmbm.univ-amu.fr) est spécialisé dans le développement et l'application
+de méthodes et d'instruments de Résonance Magnétique pour l'exploration
+morphologique, métabolique et fonctionnelle des systèmes nerveux, cardio-
+vasculaires, musculosquelettiques ainsi que de l'inflammation chez l'humain et
+dans des modèles animaux (rongeurs).
+Le poste d'ingénieur.e de recherche sera dédié à la plateforme préclinique
+(comportant des IRMs : 7T, 9.4T, 11.75T) située sur le site de la faculté des
+sciences médicales et paramédicales (campus Timone) du laboratoire, mais aussi à
+la plateforme de recherche clinique (comportant des IRMs : 55mT, 3T et 7T) située
+au CHU Timone. L'agent.e sera sous la responsabilité hiérarchique du directeur de
+l'unité.

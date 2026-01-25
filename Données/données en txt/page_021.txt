@@ -1,0 +1,200 @@
++
+Liste des concours
+B : Sciences chimiques et science des matériaux
+Ingénieur de recherche
+Concours N° 21
+Nbre de postes :
+3
+Emploi-type :
+Ingenieure ou ingenieur de recherche en science des matériaux / élaboration
+1er poste du concours N° 21
+Affectation :
+Institut NEEL, GRENOBLE
+Groupe de fonction :
+Groupe 3
+Mission :
+Concevoir et développer des procédés de nano/micro fabrication en salle blanche
+intégrant des étapes de gravures, de dépôts et de lithographies optiques et/ou
+électronique.
+Accompagner des chercheurs non utilisateurs réguliers de salle blanche dans la
+définition et la mise en place de leurs projets de micro/nano fabrication.
+S'impliquer dans des projets de recherche personnels.
+Activités :
+- Gestion de projet : Conduire et/ou participer à des projets de recherche,
+faire le lien avec les chercheurs, épauler ceux qui ne sont pas des utilisateurs
+réguliers de la salle blanche.
+- Concevoir de nouveaux procédés technologiques de nanofabrication et
+maintenir le savoir-faire développé existant.
+- Concevoir et développer des filières technologiques intégrant des étapes de
+gravures, de dépôts et de lithographies optiques et/ou électronique adaptées aux
+programmes de recherche.
+- Participer au fonctionnement quotidien de la salle blanche de NanoFab
+(commandes et approvisionnement consommables, rangement et nettoyage des hottes
+d'étalements et de produit chimique chimie)
+- Assurer, avec les autres agents du pôle, la formation des nouveaux
+utilisateurs et la maintenance des équipements prise en charge par l'équipe.
+- Informer sur les risques liés à l'utilisation des techniques et des équipements,
+faire respecter les consignes de sécurité et les bonnes pratiques en salle
+blanche.
+- Conseiller les utilisateurs des salles blanches sur les choix technologiques.
+- Déterminer, coordonner, mettre en œuvre les techniques de caractérisation
+physique, chimique, optique, structurale et autres pour le contrôle et la
+validation des matériaux et des process.
+- Diffuser et valoriser les résultats de la recherche.
+- Assurer une veille scientifique et technologique. Participer aux réseaux
+technologiques.
+Compétences :
+Savoirs fondamentaux :
+- Expertise en techniques de micro-nano fabrication
+- Maitrise en science des matériaux
+- Maitrise en techniques de caractérisation de matériaux (connaissances
+approfondies)
+- Expertise de l'environnement de salle blanche de classe iso 7
+- Gestion de projet
+Savoir-faire opérationnels :
+- Maitrise de la technique de lithographie électronique et optique
+- Maitrise de procédés de fabrication top-down et/ou bottom-up
+- Connaissances dans les techniques de dépôt sous vide (PVD)
+- Connaissances dans les techniques de gravures chimiques (humides et sèches)
+- Anglais : B2 minimum
+Savoir être :
+- S'intégrer dans l'équipe technologique du laboratoire en charge des technologies
+de nanofabrication et de la salle blanche
+- Bonnes capacités relationnelles
+- Savoir interagir avec différents utilisateurs (étudiants stagiaires, chercheurs,
+doctorants...) nationaux et internationaux
+Contexte :
+L'ingénieur-e de recherche en sciences des matériaux intégrera le pôle
+technologique NanoFab, composée de 2 ingénieurs de recherche, 1 ingénieur d'études
+et 2 assistants ingénieurs. Le pôle a pour objectif de développer et accompagner
+des projets de recherche et de fournir un équipement et une expertise de haute
+technologie en nanofabrication aux différents personnels de l'Institut Néel.
+La lithographie électronique est un exemple de technique particulièrement cruciale
+pour nos recherches et l'acquisition d'un masqueur a permis un accroissement des
+capacités de réalisation de nano-structures complexes (nanophotonique, circuits
+quantiques, détecteurs ...). L'ingénieur-e recruté-e devra fortement contribuer au
+développement futur de cette technique au sein de l'Institut Néel sur un nouvel
+équipement dernière génération en cours d'achat.
+La nanofabrication est à la base de nombreuses thématiques de recherche très
+dynamiques dans le laboratoire. Nous disposons de plusieurs salles blanches dont
+une de 220 m² qui propose différentes techniques : dépôt, gravure, lithographie
+électronique et optique, aux utilisateurs de l'Institut Néel mais aussi d'autres
+laboratoires grenoblois.
+Qu'elles soient faites à NanoFab (Institut Néel), ou à la Plateforme Technologique
+Amont (PTA, sur le site du CEA Grenoble), les réalisations actuelles demandent
+souvent la mise au point de procédés complexes incluant de nombreuses étapes
+utilisant des équipements et des techniques très variées.
+2eme poste du concours N° 21
+Affectation :
+Spintronique et technologie des composants, GRENOBLE
+Groupe de fonction :
+Groupe 3
+Mission :
+L'ingénieur-e en élaboration, traitement et contrôle structural/magnétique/
+électrique de matériaux pilotera et contribuera au développement de nouveaux
+matériaux et hétérostructures avancés en couches minces sur l'équipement
+industriel de dépôt 200mm, en collaboration étroite avec les chercheurs.
+Activités :
+- Coordonner et animer la démarche de développement : définition des objectifs,
+stratégie à suivre, réalisation des dépôts et des analyses, et bouclage vers les
+objectifs.
+- Réaliser et piloter la réalisation des dépôts de nouveaux matériaux et de
+nouveaux empilements spintroniques par pulvérisation cathodique.
+- Mettre en œuvre les techniques de caractérisations magnétique, électrique et
+structurale nécessaires à la compréhension du matériau.
+- Effectuer une veille technologique sur les matériaux pour la spintronique en
+coordination avec les chercheurs, (publications récentes, participation à des
+conférences).
+- Développer et adapter les appareillages en fonction des besoins et des
+évolutions des techniques.
+- Co-encadrer des travaux (stage, thèse) et assurer ou déléguer la formation sur
+les équipements (dépôt et caractérisation).
+- Prendre part à et/ou piloter la rédaction et la gestion de contrats de recherche
+(Université, région, ANR, Europe, industrie).
+- Interagir avec d'autres ingénieurs et techniciens ou des équipementiers, en
+charge de la maintenance des bâtis de dépôt.
+- Coordonner la réflexion du laboratoire dans les cas d'acquisition de nouveaux
+équipements de dépôt ou de caractérisations : établissement du cahier des charges,
+sélection des offres, mise en place et qualification de l'équipement.
+- Répondre aux sollicitations de partenaires ou clients industriels : mission
+d'expertise avec mise en place de collaborations ou de prestations.
+Compétences :
+Savoirs fondamentaux :
+- Connaissance et pratique approfondies de la structure et microstructure des
+matériaux (couches minces, magnétisme de couches minces et hétérostructures pour
+l'électronique de spin)
+- Connaissance et savoir-faire approfondis en processus de croissance par
+pulvérisation cathodique.
+- Connaissance des techniques de caractérisation structurale, électrique et
+magnétique, avec une expérience attestée en recherche ou recherche /
+développement.
+- Connaissance de base des procédés de salle blanche.
+Savoir-faire opérationnels :
+- Connaissance générale des techniques du vide (primaire, secondaire), de
+l'informatique (système, utilisation de logiciels bureautiques, de pilotage et de
+simulation), du contrôle des appareils (programmation, interfaçage).
+- Connaissance du monde industriel et de ses spécificités (confidentialité,
+réactivité, faisabilité et atteinte des objectifs, démarche qualité).
+- Bonne maîtrise de l'anglais, à l'écrit et oral, tant en compréhension qu'en
+expression.
+Savoir être :
+- Savoir travailler en équipe (communication, esprit d'équipe, engagement)
+- Faire preuve d'autonomie, prendre des initiatives et être force de proposition,
+planification des tâches
+- Faire preuve de rigueur et de précision
+Contexte :
+SPINTEC (Spintronique et technologie des composants) est un laboratoire conjoint
+du CEA-Grenoble, du CNRS et de l'Université Grenoble Alpes. Il a une activité de
+recherche en spintronique, travaillant à l'interface entre des activités
+fondamentales et d'autres plus applicatives, souvent en lien avec des partenaires
+industriels. Ainsi, la mission de SPINTEC est de produire des connaissances
+nouvelles, valorisées sous forme de publications, mais également de contribuer à
+convertir ces connaissances en innovation, impliquant dépôt de brevets et actions
+de valorisation. Ses projets sont organisés autour d'environ 35 chercheurs, pour
+un total de 120 personnes (dont personnels ingénieurs et techniques, doctorants et
+non permanents). Le laboratoire est impliqué dans de nombreuses collaborations
+internationales, dont des projets européens.
+La maîtrise de matériaux avancés en hétérostructures de couches minces et aux
+interfaces contrôlées est progressivement devenu un enjeu majeur pour développer
+une spintronique à l'état de l'art. Intégré-e dans le groupe technique de SPINTEC
+qui comprend 3 équipes (Matériaux / Instrumentation / Nanofabrication) de 11
+agents au total, et référant directement au responsable de l'équipe Matériaux,
+l'ingénieur-e en élaboration et science des matériaux sera en charge du pilotage,
+du développement des nouveaux matériaux ou empilements du laboratoire sur
+l'équipement industriel 200mm récemment acquis.
+3eme poste du concours N° 21
+Affectation :
+Laboratoire de physique de l'ENS, PARIS 05
+Groupe de fonction :
+Groupe 2
+Mission :
+L'ingénieur(e)  de recherche recruté prendra la responsabilité de la salle blanche du Laboratoire de Physique de l'Ecole normale supérieure (LPENS,UMR 8023).. Il/Elle veillera  à son bon fonctionnement et à son développement, tout en s'impliquant dans les activités de recherche et de formation qui s'y rapportent. Il/Elle assurera l'encadrement hierarchique d'une Ingénieure de Recherche et d'un Assistant Ingénieur.
+Activités :
+- L'ingénieur.e gèrera le budget de la plateforme (environ 120 k€), assurera son maintien à l'état de l'art et son adéquation avec les besoins des équipes de recherche l'utilisant.
+- Il/elle pilotera pilotera et encadrera l'équipe technique.
+- L'ingénieur.e mènera de nouveaux projets scientifiques et technologiques utiles aux thématiques du département faisant appel à l'ensemble des technologies présentes dans la salle blanche, telles que la lithographie (électronique, optique, laser), la gravure (ionique, chimique), le dépôt de couches minces et le transfert de matériaux bidimensionnels.
+- Il/elle formera les utilisateurs novices aux procédés technologiques de la salle blanche; il/elle les conseillera pour la mise en œuvre de ces procédés dans le respect des normes d'utilisation des appareils et des règles d'hygiène et de sécurité.
+- Il/elle co-pilotera avec le responsable de l'équipement, la montée en charge et le développement des procédés du masqueur électronique 100keV.
+- Il/elle participera aux maintenances des équipements de la salle blanche dont il aura la charge.
+- Il/elle assurera une veille scientifique et technologique et proposera le développement de nouvelles techniques et compétences en anticipant les évolutions. A cet effet, il mènera les demandes de financement.
+- Il/elle sera un acteur de la communauté scientifique de nanofabrication au niveau local et national via le réseau Renatech. A cet effet, il sera co-responsable du Groupement des Plateformes de micro- et Nanotechnologies de Paris (GPNP).
+Le travail de l'ingénieur.e s'effectuera principalement en salle blanche et il ou elle pourra bénéficier de formations internes et/ou externes.
+Compétences :
+Connaissances :
+-  Connaissance approfondie des sciences et techniques de l'ingénieur en salle blanche (techniques de salle blanche, techniques du vide, électronique, optique.
+-  Connaissance approfondie des sciences physiques, en particulier celles en lien avec les activités de recherche du laboratoire. La connaissance de la physique des matériaux bidimensionnels et/ou des semi- et supraconducteurs est un plus.
+-  Notions de base de chimie.
+Compétences opérationnelles :
+- Savoir informer sur les risques liés à l'utilisation des techniques et des produits et fera appliquer les règles de sécurité ;
+- Savoir encadrer les travaux pratiques en salle blanche (niveau L3 à M2), en proposant par exemple de nouveaux sujets.
+-  Bon niveau de langue anglaise (niveau B2 minimum);
+Savoirs être :
+-  Sens de l'organisation, des responsabilités, de l'encadrement ;
+-  Goût du travail en équipe et de la transmission du savoir-faire, sens du service pour le bien commun.
+Contexte :
+Le LPENS est lun des 2 laboratoires de recherche du Département de Physique de lEcole normale supérieure, l'autre étant le Laboratoire Kastler Brossel. Le LPENS est composé de 90 chercheur.e.s et enseignants-chercheur.e.s, 60 ITA et 180 doctorants et postdoctorants. C'est un laboratoire avec une forte activité expérimentale en  physique de la matière condensée, physique quantique, (micro et nano)-fluidique et biophysique.
+La salle blanche du LPENS accueille également les équipes de recherche du LKB, spécialisées en physique quantique, les 2 laboratoires ayant organisé leurs services techniques en plateformes communes.
+La salle blanche du LPENS fait par ailleurs partie du Groupement des Plateformes de micro- et Nanotechnologies de Paris (GPNP), labellisé centrale de proximité au sein du réseau Renatech+ (les autres acteurs de cette centrale sont à l'Institut des Nano-Sciences de Paris (INSP) à Sorbonne Université, le laboratoire Matériaux et Phénomènes Quantiques (MPQ) à  l'Université Paris Cité, l'Institut Pierre Gilles de Gennes et l'Observatoire de Paris).
+La salle blanche, d'une surface de 120m2  et  avec  un parc d'équipements d'un montant de 4 millions d'euros, accueille une cinquantaine d'utilisateurs par an, principalement des doctorant.e.s ou post-doctorant.e.s. La plateforme a développé un savoir-faire reconnu dans la nanostructuration de matériaux bidimensionnels (graphène, hBN, TMDC) et dans la fabrication de dispositifs quantiques à base de matériaux supra- et semiconducteurs.
+La salle blanche du LPENS est dans une phase d'expansion, avec une première étape en cours consistant en l'acquisition d'un masqueur 100keV à l'état de l'art, et une deuxième étape visant à doubler sa surface et à acquérir de nouveaux équipements d'ici à 5 ans. Le masqueur sera ouvert à la communauté scientifique parisienne.
+L'ingénieur.e sera placé.e sous la responsabilité du directeur technique du  LPENS.

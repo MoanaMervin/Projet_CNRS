@@ -1,0 +1,85 @@
++
+Liste des concours
+D : Sciences humaines et sociales
+Ingénieur de recherche
+Concours N° 43
+Nbre de postes :
+1
+Emploi-type :
+Ingenieure ou ingenieur de recherche en production, traitement et analyse de données
+Affectation :
+Maison des Sciences de l'Homme et de la Société Sud-Est, NICE
+Groupe de fonction :
+Groupe 3
+Mission :
+Concevoir, mettre en œuvre et assurer le suivi des programmes et protocoles
+expérimentaux de la plateforme technologique en sciences cognitives CoCoLab
+(Complexity and Cognition Lab) de la MSHS Sud-Est.
+Activités :
+- Concevoir, piloter, réaliser des protocoles expérimentaux
+- Aider à la conduite des opérations de recueil des données
+- Traiter les données, valider et interpréter les résultats et observations
+- Valoriser les réalisations et les résultats sous forme de publications
+scientifiques, rapports, de présentations orales¿
+- Transférer ses compétences dans le cadre d'actions de formation (formation
+continue, à la recherche, aux doctorante.e.s)
+- Participer aux instances de gouvernance de la plateforme et contribuer à son
+évolution, en fonction des besoins de la recherche
+- Assurer une veille scientifique et technologique, actualiser ses connaissances
+par des recherches documentaires et la participation à des réseaux
+professionnels.
+Compétences :
+Savoir :
+- Connaître au moins une discipline des sciences sociales et humaines concernées
+par la plateforme : psychologie, linguistique, économie expérimentale, etc.
+- Méthodes en traitement et analyse des données comportementales et
+physiologiques (connaissance approfondie)
+- Connaître la déontologie, l'éthique, la loi et la réglementation concernant la
+recherche expérimentale avec/sur l'humain.
+- Connaître les règles d'hygiène et de sécurité ainsi que les « règles de l'art
+» (les règles dans les domaines des techniques utilisées pour l'expérimentation)
+Savoir-faire :
+- Langages de programmation en vue de la conception de protocoles (connaissance
+approfondie)
+- Techniques et outils expérimentaux pour la collecte de données
+comportementales et physiologiques : électroencéphalogramme (EEG Biosemi,
+Neuroscan, Brainvision), pouls, conductance cutanée (système Biopac),
+oculométrie (système Tobii), reconnaissance faciale, observation et mesure de
+comportements, questionnaires, etc. (connaissance approfondie)
+- Des compétences dans l'expérimentation impliquant la réalité virtuelle et la
+diffusion d'odorants seraient un plus
+- Logiciels statistiques (connaissance approfondie)
+- Langue anglaise : B2 (cadre européen commun de référence pour les langues)
+Savoir-être :
+- Capacité de conceptualisation
+- Sens critique
+- Rigueur / Fiabilité
+- Sens de la confidentialité
+- Sens du travail en équipe, maîtrise de soi
+- Capacité d'ouverture sur l'environnement (académique et non académique)
+- Capacité d'écoute et d'adaptation à des utilisateurs variés
+Contexte :
+La MSHS Sud-Est est une Unité d'Appui et de Recherche sous tutelle d'Université
+Côte d'Azur, du CNRS et de l'Université de Corse Pasquale Paoli.
+Ses missions sont la fourniture de services et l'animation de la recherche en
+Sciences Humaines et Sociales (SHS). Elle est située sur le campus St Jean
+d'Angély de l'Université Côte d'Azur, à Nice. L'Unité compte 10 personnels ITRF
+et 19 laboratoires membres.
+Sa plateforme technologique CoCoLab permet de nourrir une recherche expérimentale
+en sciences cognitives pour trois communautés : 1) économie expérimentale, 2)
+olfaction-chimie-santé, 3) psychologie sociale et cognitive, linguistique, neuro-
+psychologie. Elle a également vocation à organiser l'interaction entre les SHS et
+les autres secteurs disciplinaires, ainsi que d'impulser des collaborations avec
+des partenaires du monde socio-économique.
+Après avoir suivi des formations internes et externes, l'ingénieur-e de recherche
+participera ainsi à des recherches sur la prise de décision, la communication, le
+langage, les interactions sociales, les émotions, les fonctions cognitives etc.
+L'ingénieur-e de recherche travaillera en collaboration avec un ingénieur
+d'études support de la plateforme et les personnels de la MSHS Sud-Est dont une
+partie des activités sont dédiées à CoCoLab (administration, finance,
+communication). L'ingénieur-e de recherche sera placé sous l'autorité
+hiérarchique de la direction de l'Unité. Il/elle participera au Comité de
+Pilotage du CoCoLab, chargé de la gouvernance de la plateforme.
+Une partie des activités peuvent être réalisées en télétravail et seront à
+définir avec la direction, sous réserve de respecter la règlementation en vigueur
+au CNRS.

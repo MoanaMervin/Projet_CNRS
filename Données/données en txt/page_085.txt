@@ -1,0 +1,51 @@
++
+Liste des concours
+E : Informatique, statistiques et calcul scientifique
+Ingénieur d'études
+Concours N° 126
+Nbre de postes :
+1
+Emploi-type :
+Ingenieure ou ingenieur en ingénierie logicielle
+Affectation :
+Relais d'information sur les sciences de la cognition, PARIS 05
+Groupe de fonction :
+Groupe 2
+Mission :
+L'ingénieur-e coordonnera et supervisera toutes les activités informatiques de l'unité : infrastructure de diffusion d'information du RISC, sites Internet, gestions des bases de données, etc. A l'écoute des autres membres de l'unité et des utilisateurs, il/elle veillera à la satisfaction des besoins et au bon fonctionnement des systèmes informatiques de l'unité.
+Il/elle aura également la mission de développer des projets informatiques pour proposer de nouvelles fonctionnalités et de nouveaux services à la communauté scientifique.
+Enfin, il/elle assurera le suivi des questions liées à la sécurité informatique.
+Activités :
+- Gestion des applications web (veille technologique, mises à jour, évolutions, gestion des incidents, sécurité, documentations).
+- Evolution des applications (gestion de projet, identification des besoins, développement, test et déploiement des solutions, intégration continue).
+- Relations avec les prestataires et partenaires (Huma-Num, CNRS, service informatique de l'ENS).
+- Suivi des besoins des usagers (agents du RISC et usagers externes).
+- Maintien des bases de données de l'unité.
+- Suivi des sites hébergés par le RISC.
+- Correspondant sécurité des systèmes informatiques.
+Compétences :
+Savoirs :
+Gestion de projet informatique:
+- Définition d'un cahier des charges.
+- Suivi du développement avec les partenaires extérieurs.
+- Implémentation et tests.
+- Maintien et mise à jour des solutions.
+- Gestion du temps (planification des tâches...).
+Développement web, bases de données et applications.
+Savoir-faire :
+- Très bonne maitrise des outils web (CMS, HTML, CSS, Java, PHP, JavaScript,  React/Typescript).
+- Très bonne maitrise des bases de données (MariaDB / PostgreSQL).
+- Très bonne maitrise du langage Python et de frameworks.
+- Compétences supplémentaires en administration et sécurité seraient un plus (Apache, https).
+- Expérience avec les outils de type forge et wiki serait également un plus (formations possibles).
+Savoir être :
+- Autonomie dans le travail et capacité d'organisation.
+- Etre à l'écoute des besoins.
+- Capacité de communication avec les collaborateurs en interne et en externe.
+- Réactivité et ouverture à de nouveaux outils.
+- Curiosité pour les sciences cognitives.
+Contexte :
+Le Relais d'Information sur les Sciences de la Cognition (RISC, UAR3332 CNRS et ENS) est une unité de service pour les sciences de la cognition, dont la mission originelle est de mettre en relation les différentes disciplines académiques de ce vaste domaine (psychologie, neurosciences, philosophie, linguistique, sciences sociales, etc.) et ses différents acteurs (chercheurs, étudiants, entreprises, grand public), à travers une information quotidienne sur les conférences (les Echos, >4000 abonnés), les offres d'emploi, etc. et un agenda des évènements en sciences cognitives (L'Agenda). Le RISC soutient également les initiatives des étudiants autour des sciences cognitives, notamment en accompagnant chaque année l'organisation du Forum des Sciences Cognitives. Enfin, pour soutenir l'activité de recherche, le RISC propose également un service de mise en relation des chercheurs avec des volontaires pour les expériences (Expesciences, >12000 volontaires inscrits).
+Le RISC est constitué d'une petite équipe (2 personnes + 1 directeur). Ses membres sont donc amenés à réfléchir et travailler ensemble aux différentes activités de l'unité, en forte interaction et de manière solidaire.
+Le RISC offre un cadre de travail agréable à l'Ecole Normale Supérieure, 29 rue d'Ulm (au centre de Paris) et bénéficie d'interactions nombreuses avec les unités de recherche, d¿appui à la recherche, et les étudiants en sciences cognitives, ainsi qu'avec une large communauté de chercheurs, ingénieurs et enseignants chercheurs au plan national.
+L'agent travaillera en concertation avec les prestataires de l'unité, les services informatiques de l'ENS et du CNRS.

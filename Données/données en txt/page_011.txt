@@ -1,0 +1,43 @@
++
+Liste des concours
+A : Sciences du vivant, de la terre et de l'environnement
+Ingénieur de recherche
+Concours N° 11
+Nbre de postes :
+1
+Emploi-type :
+Ingenieure ou ingenieur de recherche en environnements géo-naturels et anthropisés
+Affectation :
+Centre d'écologie fonctionnelle et évolutive, MONTPELLIER
+Groupe de fonction :
+Groupe 3
+Mission :
+L'ingénieur (H/F) assure la responsabilité technique des expérimentations de manipulation d'écosystème, des suivis écophysiologiques et écologiques à long-terme, et de l'encadrement des utilisateurs du site forestier de Puéchabon
+(http://puechabon.cefe.cnrs.fr/), géré par l'UMR 5175-CEFE et relevant des infrastructures de recherche européennes (ERIC) AnaEE (Analysis and Experimentation on Ecosystems) et ICOS (Integrated Carbon Observation System).
+Activités :
+- Définir des dispositifs et méthodes appropriés pour le suivi à long-terme d'expérimentations de manipulation d'écosystème forestier et du climat (exclusion de pluie, réchauffement, sylviculture), dans le cadre des règles de l'ERIC AnaEE
+- Concevoir, assurer ou superviser des campagnes de mesures écophysiologiques et dendrométriques sur des arbres forestiers : croissance, phénologie, potentiel hydrique, échanges gazeux, flux de sève, traits hydrauliques, architecture de l'arbre, limitations nutritives, effort reproductif...
+- Assurer la gestion des données : réaliser le contrôle qualité, le traitement, l'intégration en base et l'interprétation des données écophysiologiques et écologiques du site expérimental en vue de leur utilisation et publication; mettre en place des chaines de traitement documentées et reproductibles et gérer le cycle de vie des données
+- Accompagner, former et conseiller les utilisateurs de la plateforme AnaEE dans la conception et le suivi de mesures et d'expérimentations dans l'écosystème forestier
+- Organiser des collaborations au niveau national et international, gérer les relations avec les utilisateurs du site expérimental (accès aux données ou aux banques d'échantillons), organiser les activités et le bon déroulement des projets de recherche
+- Diffuser et valoriser les résultats et réalisations techniques du site expérimental auprès des partenaires de recherche, des étudiants, des acteurs forestiers et du grand public.
+Activités associées :
+- Participer au réseau professionnel AnaEE au niveau français et européen, réaliser la veille technologique associée et participer aux projets de recherche portés par l'ERIC et par la plateforme.
+- Assurer la collecte, le conditionnement et la conservation de banques d'échantillons environnementaux (végétaux, sol, eau, insectes...)
+- Étudier les risques spécifiques liés au travail en milieu naturel isolé, mettre en œuvre et faire respecter les normes et les règles d'hygiène et sécurité.
+Compétences :
+Savoirs généraux, théoriques ou disciplinaires :
+- Connaissances en écophysiologie de l'arbre, mesure des échanges gazeux et du stress hydrique
+- Connaissances en sciences forestières
+- Connaissances en traitement des données, calcul scientifique, programmation et systèmes d'information
+- Langue anglaise écrite et orale, niveau B2 à C1 (cadre européen commun de référence pour les langues), pour interagir avec les utilisateurs internationaux et participer aux réseaux européens
+Savoir-faire opérationnels :
+- Savoir gérer des dispositifs expérimentaux complexes et soumis aux aléas naturels (climatiques ou biologiques), pouvoir adapter en autonomie un protocole en fonction de ces aléas, et travailler dans des environnements scientifiques pluridisciplinaires
+- Savoir travailler de façon collective et en équipe avec d'autres ingénieurs et techniciens (H/F) et des chercheurs
+- Savoir organiser des plannings et gérer un budget et des échéances
+- Aptitude et gout pour le travail de terrain en forêt (missions plusieurs fois par semaine, activité physique au sol ou en hauteur pouvant impliquer l'utilisation d'outils, du matériel lourd et des déplacements en terrain escarpé, conditions climatiques potentiellement difficiles, travail de nuit parfois nécessaire)
+- Conduite de véhicules légers pour les déplacements et missions de terrain
+Contexte :
+L'UMR 5175-CEFE, regroupe 140 personnels permanents de 7 tutelles, avec son site principal sur le campus du CNRS, route de Mende à Montpellier, où l'agent disposera d'un bureau. Le CEFE mène des programmes de recherche sur le site forestier de Puéchabon qui comprend des dispositifs expérimentaux fortement instrumentés. Deux dispositifs d'exclusion des précipitations ont été installés afin de simuler des conditions de sécheresse accrue (gouttières dans le sous-bois, toit mobile au-dessus de la canopée). Une expérience de chauffage du sol complète ces dispositifs expérimentaux.
+Le site de Puéchabon a aussi pour mission de faire des suivis et mesures à long-terme avec une tour de mesure des échanges d'énergie, de carbone et d'eau entre l'écosystème forestier et l'atmosphère) et des suivis forestiers. Il est labellisé par les infrastructures européennes AnaEE-ERIC et ICOS-ERIC, par CNRS Écologie & Environnement SEE-Life, et est un des Systèmes d'Observation de l'Observatoire des Sciences de l'Univers OREME (Observatoire de REcherche Montpelliérain de l'Environnement).
+L'ingénieur (H/F) travaillera au sein de l'équipe FORECAST du CEFE, composée de 6 chercheurs étudiant les effets des changements planétaires sur les écosystèmes forestiers. Il/Elle effectuera son travail sous la responsabilité du chercheur responsable scientifique du site expérimental de Puéchabon, et avec un IE spécialisé en instrumentation scientifique et mesures des flux biogéochimiques. Son travail impliquera des déplacements 1 à 3 fois par semaine sur le site expérimental de 50 ha (situé à 40 km et environ 1 heure de route de Montpellier). Il/Elle sera responsable du bon fonctionnement des dispositifs expérimentaux, de l'acquisition et cohérence des données sur le long-terme et participera aux activités de recherche ayant lieu sur le site expérimental avec les utilisateurs extérieurs AnaEE, les étudiants de thèses et masters, et dans le cadre de consortiums de recherche.

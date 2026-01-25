@@ -1,0 +1,93 @@
++
+Liste des concours
+C : Sciences de l'ingénieur et instrumentation scientifique
+Ingénieur de recherche
+Concours N° 24
+Nbre de postes :
+1
+Emploi-type :
+Experte ou expert en développement d'expérimentation
+Affectation :
+Laboratoire national des champs magnétiques intenses, GRENOBLE
+Groupe de fonction :
+Groupe 3
+Mission :
+L'ingénieur de recherche sera chargé de concevoir, mettre en œuvre et exploiter
+des nouveaux dispositifs de mesure spécifiques à l'environnement champ magnétique
+très intense du LNCMI (Laboratoire national des champs magnétiques intenses).
+Intégré dans l'équipe Instrumentation Scientifique du site toulousain du LNCMI,
+sous la responsabilité du responsable d'équipe, il/elle travaillera
+prioritairement avec la communauté scientifique de l'IRL (International Reseach
+laboratory) Frontières Quantiques. Il/elle sera notamment en charge de développer
+des sondes expérimentales et d'accueillir les visiteurs canadiens au LNCMI à
+Toulouse et à Grenoble pour la mesure sous champ magnétique intense autour des
+matériaux quantiques. Au-delà de son engagement envers l'IRL, il/elle travaillera
+sur d'autres projets de développement d'instrumentation en champ pulsé et assurera
+l'accueil de visiteurs hors IRL.
+Activités :
+- Étudier les besoins scientifiques de la communauté de recherche, proposer les
+techniques et méthodes de mesure, de caractérisation adaptée sous champ magnétique
+intense pulsé;
+- Développer de nouveaux dispositifs d'expérimentation scientifique de haute
+technologie sous champ magnétique intense pulsé;
+- Réaliser des expériences sous champ magnétique intense (pulsé et statique) ainsi
+qu'analyser et valider les mesures;
+- Définir et gérer l'ensemble des ressources matérielles, financières; allouées au
+développement des expériences;
+- Former et informer sur le fonctionnement de l'équipement scientifique et sur les
+interventions qu'il nécessite dans le respect des règles de sécurité et de
+qualité;
+- Diagnostiquer les pannes, proposer des études pour analyser les défauts et les
+dysfonctionnements, présenter et mettre en œuvre des systèmes de mesure pour
+suivre les paramètres de fonctionnement;
+- Assurer une veille scientifique et technologique.
+Compétences :
+Savoirs fondamentaux :
+- Connaissances approfondies des techniques expérimentales en champs magnétiques
+intenses (mesures de transport électronique, ultrasons, aimantation,...) ainsi que
+de la préparation associée des échantillons.
+- Connaissances générales dans les domaines concernant les technologies et
+techniques associées à la production de champs magnétiques intenses.
+- Connaissances approfondies en physique du solide.
+- Connaissances générales en techniques du vide et cryogénie.
+- Connaissances générale des sciences et techniques de l'ingénieur (construction
+mécanique, électronique, traitement du signal).
+- Notions de base sur les règles des marchés publics.
+- Connaissance et application des règles d'hygiène et de sécurité.
+Savoir-faire opérationnels :
+- Maîtriser les logiciels de programmation, simulation, de pilotage d'instrument,
+d'acquisition de données  (Python, LabVIEW...);
+- Maîtriser les logiciels de traitement et d'analyse de données (Origin,
+Octave...);
+- Maîtriser les techniques de communication et d'animation de réunion;
+- Respecter les principes de confidentialité;
+- Anglais : niveau B2 selon le cadre européen de référence.
+Contexte :
+Le LNCMI est un des leaders mondiaux dans la production de champs magnétiques
+intenses (continus et pulsés) mis à la disposition de la communauté internationale
+pour la recherche scientifique. Les conditions expérimentales extrêmes liées à cet
+environnement spécialisé nécessitent la mise en place de sonde de mesures
+spécifiques et une très grande technicité dans leur réalisation.
+L'ingénieur exercera ses activités dans l'équipe Instrumentation
+Scientifique du site toulousain du LNCMI en charge de la conception, de la mise en
+œuvre et de l'exploitation des nouveaux dispositifs de mesure. Cette équipe est
+composée de quatre membres: un ingénieur de recherche (responsable de l'équipe), 2
+assistant-ingénieurs et un technicien sous la responsabilité hiérarchique du
+responsable d'équipe.
+La récente création de l'IRL Frontières Quantiques, fruit de 40 ans de
+collaboration entre chercheurs de Sherbrooke (Canada) et de France, d'échanges et
+de travaux de recherche franco-québécois autour des matériaux quantiques et de
+l'information quantique, ouvre de nouvelles perspectives de développement.
+L'objectif de cet IRL est de mener une recherche internationale collaborative de
+pointe, de faciliter l'échange de chercheurs et de favoriser des projets émergents
+entre les deux communautés. L'ingénieur sera donc à l'interface entre
+les chercheurs français et canadiens pour :
+i) Développer de nouvelles sondes expérimentales sous champ intense pulsé (non
+destructif et megagauss);
+ii) Effectuer des mesures sous champ magnétique intense au LNCMI à Toulouse et à
+Grenoble (quelques semaines/an) dans le cadre de propositions d'expériences
+soumises à l'EMFL (EuropeanMagnetic Field Laboratory) en priorité celles
+proposées au sein de l'IRL Frontières Quantiques;
+iii) Effectuer des mesures physiques complémentaires (conductivité thermique,
+mesure micro-onde, RMN...) à Sherbrooke (quelques semaines/an) et contribuer au
+développement de nouvelles sondes expérimentales.

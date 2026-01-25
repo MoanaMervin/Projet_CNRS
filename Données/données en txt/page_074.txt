@@ -1,0 +1,52 @@
++
+Liste des concours
+F : Culture, communication, production et diffusion des savoirs
+Ingénieur de recherche
+Concours N° 74
+Nbre de postes :
+1
+Emploi-type :
+Responsable de médiation scientifique et culturelle
+Affectation :
+DATA TERRA, MONTPELLIER
+Groupe de fonction :
+Groupe 3
+Mission :
+Piloter le dispositif transversal des Animations Régionales Thématique (ART) de l'Infrastructure de Recherche Data Terra ; faire connaître et contribuer aux usages des données, produits et services numériques issus des sciences du Système Terre et de l'environnement ; adpater et transférer les résultats aux divers publics et en particulier aux porteurs d'enjeux ; coordonner la médiation scientifique des pôles de données de l'IR Data Terra, et la communication de son pôle de données et services THEIA dédiée au Surfaces continentales.
+Activités :
+Développer et coordonner le réseau des Animations Régionales Thématiques de l'IR Data Terra : initier, conduire et développer des partenariats avec les régions et territoires de l'hexagone et outre-mer ainsi qu'en appui à des coopérations avec les Pays du Sud.
+Elaborer la stratégie de médiation scientifique de l'IR Data Terra, de ses pôles et dispositifs transversaux :
+- Concevoir et conduire des opérations de valorisation des résultats scientifiques (données multi-sources, produits et services numériques) et des animations (ateliers, etc) destinés à des publics variés (acteurs institutionnels, étudiants, chercheurs, formateurs, etc)
+- Rédiger des articles spécialisés destinés à des publics non-experts des données géolocalisées (spatiale, in-situ, aérienne), en particulier pour les surfaces continentales (pôle THEIA)
+- Mettre en place des outils pédagogiques
+Elaborer et mettre en place la stratégie de communication associée :
+- Travailler avec les coordinateurs des actions transverses de l'IR Data Terra ainsi qu'avec l'équipe de communication pour assurer la visibilité et l'impact des actions menées au sein des ART
+- Concevoir le plan de communication du dispositif des Animations Régionales de l'IR Data Terra
+- Rechercher, élaborer et rédiger des articles, des notes d'orientation, des notes pratiques, des podcasts, du contenu web, etc. en association avec les chercheurs concernés et les utilisateurs, en particulier avec les acteurs territoriaux
+-Exercer une veille scientifique sur les appels à projets en région, les prospectives scientifiques, etc.
+Assurer le suivi de l'utilisation des produits et services proposés par les pôles :
+- Participer à la formation des usagers avec des niveaux d'expertise variés
+- Rédiger des rapports et des documents pédagogiques pour les utilisateurs des données géolocalisées
+Compétences :
+Savoirs requis :
+- Connaissances et expériences (communication, médiation) au sein des organismes de la recherche et/ou des Universités
+- Connaissances sur l'organisation territoriale et sur les acteurs régionaux
+- Connaissances sur les techniques de communication et la mise en place des outils d'observation des publics
+- Expériences de l'accompagnement des équipes de recherche productrices de données
+- Connaissances sur les outils pédagogiques
+- Connaissances sur les méthodologies d'évaluation et d'enquêtes
+- Compétences rédactionnelles en français et en anglais
+- Expérience souhaitable dans les domaines de l'édition, de la communication et de la valorisation scientifique
+Savoirs faire / être :
+- Initier et conduire des partenariats
+- Communiquer et faire preuve de pédagogie
+- Travail en équipe
+- Être force de proposition pour mettre en place des outils d'observation des publics
+- Bonnes capacités d'interactions et de travail en équipe de communication
+- Grande autonomie de travail, organisation, sens des priorités, rigueur et fiabilité
+Contexte :
+L'IR Data Terra a pour ambition de développer et opérer une infrastructure numérique distribuée de données (spatiales, in-situ, sols, expérimentation, modélisation...) et de services pour observer, comprendre et prévoir de manière intégrée l'historique, le fonctionnement et l'évolution du système Terre. Elle propose aux communautés scientifiques et aux acteurs publics et privés, des produits thématiques et des services numériques standardisés, interopérables et fondés sur des données multi-sources. Ceci inclut des services de découverte, d'accès, de traitement, de visualisation et de croisement de données, pour répondre aux enjeux scientifiques et défis sociétaux interdisciplinaires. Data Terra s'appuie sur 5 pôles thématiques (AERIS/Atmosphère, FormaTerre/Terre solide, ODATIS/Océan, THEIA/Surfaces continentales, PNDB/Biodiversité) et sur  des dispositifs transversaux comme le réseau ART, DINAMIS. Ses services,  conçus selon les principes FAIR, intègrent traitements à la demande et approches multi-domaines, en s'appuyant sur des ressources informatiques en réseau et distribuées sur le territoire national.
+L'activité s'inscrit dans le cadre de la feuille de route des activités de l'IR Data Terra, dans le cadre du dispositif ART et du Pôle Surfaces Continentales THEIA.
+L'ingénieur (H/F) sera localisé à Montpellier et affecté au sein de l'UAR Data Terra, une des structure d'appui de l'IR Data Terra qui regroupe 40 personnes. Il/elle maintiendra un contact régulier avec les équipes de communication, les chercheurs et ingénieurs des différents pôles.
+Il/Elle organisera et animera régulièrement des ateliers et séminaires.
+La personne recrutée sera placée sous la responsabilité de la directrice du pôle THEIA, également directrice adjointe de l'UAR Data Terra. Plusieurs déplacements en France ou à l'étranger sont à prévoir. Possibilité de télétravail, conformément à la réglementation en vigueur au CNRS.

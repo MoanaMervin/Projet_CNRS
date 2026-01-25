@@ -1,0 +1,51 @@
++
+Liste des concours
+B : Sciences chimiques et science des matériaux
+Ingénieur d'études
+Concours N° 94
+Nbre de postes :
+1
+Emploi-type :
+Ingenieure ou ingenieur en synthèse chimique
+Affectation :
+Chimie Organique et Bioorganique : Réactivité et Analyse, MONT ST AIGNAN
+Groupe de fonction :
+Groupe 2
+Mission :
+Le/La candidat(e) participera à l'animation de la plate-forme technologique de synthèse en flux continu du laboratoire CARMeN (NFC NormandyFlowChem), plate-forme initialement mise en place en 2021 via le projet API « Autonomie Pharmaceutique Industrielle » visant à installer en Normandie une plate-forme de synthèse en flux continu unique en France pour un laboratoire académique.
+Cette plate-forme a pour ambition de permettre la mise au point de la synthèse en flux de principes actifs de médicaments mais aussi de développer l'expertise du laboratoire CARMeN dans ce domaine.
+Le/La candidat(e) aura pour missions :
+- d'assurer la maintenance préventive des différents équipements de la plate-forme,
+- mettre au point des approches expérimentales pour la synthèse en flux de principes actifs,
+- former les doctorants/post-doctorants, permanents de l'UMR CARMeN pour leurs activités en flux continu,
+- former des personnels d'entreprises du secteur privé dans le cadre d'action de formation continue,
+- participera au développement de projets de recherche de synthèse en flux continu.
+Activités :
+L'Ingénieur(e) recruté(e) sera intégré(e) au sein des équipes SynBio et MESOO dont les responsables sont en charge d'installer la plate-forme technologique de synthèse en flux continu dans le laboratoire CARMeN. Il (Elle) participera à la coordination de l'ensemble des activités de la plate-forme technologique que ce soit pour des activités de recherche internes au CARMeN ou des activités de prestation de recherche avec des partenaires privés ou d'autres structures publiques. Il (Elle) aura en charge le développement et la mise au point de synthèse de composés à haute valeur ajoutée, de transposer en flux continu des voies de synthèse de réactifs, des réactions qui ne sont que peu utilisées en milieu industriel actuellement pour des raisons de toxicité ou de dangerosité mais qui, efficacement adaptées en flux, pourraient le devenir. Ces développements méthodologiques se feront en concertation directe avec quatre permanents du laboratoire CARMeN. Par ailleurs, l'Ingénieur(e) sera le point de contact unique pour le laboratoire CARMeN pour les relations de service après-vente avec les fournisseurs d'appareils de synthèse en flux continu (4 appareils déjà acquis en 2021 puis un appareil de production pilote unique dans le paysage académique français acquis en 2023). L'ingénieur(e) sera également le point de contact initial pour la mise en place de partenariats académiques et industriels. Il (elle) devra participer à la conception et à la mise en place de protocoles expérimentaux qui permettront de réaliser des séquences réactionnelles originales en flux continu. Il aura aussi la charge de rédiger certains articles recherche, de participer au développement de projets de recherche et la rédaction de rapports pour les prestations de recherche externes.
+Par ailleurs,il (elle) aura à encadrer des techniciens et ingénieurs qui développeront des prestations de recherche contractualisées par l'Institut Carnot I2C.
+Compétences :
+Avec une formation de docteur en chimie organique, le/la candidate devra avoir une culture générale importante en synthèse organique. Des compétences en synthèse en flux continu seraient appréciées au travers de stages par exemple. Une expérience dans l'utilisation d'appareils automatisés de synthèse est fortement souhaitable.
+Le candidat devra démontrer une indépendance scientifique pour résoudre des problèmes de transpositions de synthèse en flux continu. Il devra aussi être capable d'interagir avec de nombreux interlocuteurs : étudiants en stage, doctorants, post-doctorants, enseignants-chercheurs et chercheurs mais également avec des fournisseurs d'équipement ou de consommables dédiés à la synthèse en flux et des partenaires du secteur privé.
+Savoir/Connaissances :
+- Connaissances approfondies en synthèse organique,
+- Connaissances approfondies en techniques d'analyse de composés de synthèse,
+- Connaissance approfondie en synthèse en flux continu,
+- Techniques de présentation écrite et orale,
+- Règles de sécurité dans un laboratoire de chimie,
+- Maîtrise de l'anglais.
+Savoir-faire/ Compétences opérationnelles
+- Maîtriser les techniques de synthèse organique,
+- Maitriser les techniques de synthèse en flux continu,
+- Utiliser les outils informatiques pour le pilotage des appareils automatisés de synthèse en flux continu,
+- Avoir de bonnes connaissances en techniques d'analyse de composés issus de réactions de synthèse
+organique.
+Savoir être/ Compétences comportementales :
+- Rigoureux, créatif, sens du travail collaboratif
+- Attiré par les techniques de synthèse en flux continu et la transposition des voies de synthèse en réacteurs classiques vers la synthèse en flux continu
+- Autonomie
+- Initiative
+- Pédagogie afin de mener des actions de formation
+- Organisation
+Contexte :
+La demande d'un poste d'ingénieur d'études en synthèse en flux continu se justifie par le développement d¿une plateforme technologique de synthèse en flux continu NormandyFlowChem (NFC) pour y développer des recherches internes au laboratoire CARMeN, ou pour mener des projets collaboratifs avec d'autres laboratoires publics ou des entreprises du secteur privé. Pour ces dernières, l'objectif est de permettre à des acteurs importants de la chimie pharmaceutique, mais également à des entreprises de taille moyenne de pouvoir permettre à leurs employés d'acquérir des compétences en synthèse en flux continu via CNRS Formation Entreprises. Lauréat du projet API « Autonomie Pharmaceutique Industrielle » (subvention de l'Etat et de la Région Normandie) le laboratoire CARMeN dispose du plus grand parc en France d'appareils de synthèse en flux continu avec l'acquisition notamment de trois appareils Vapourtec, deux appareils Corning, dont un pour l'échelle pilote, et des appareils de suivi en ligne (RMN, IR).
+La communication autour de cette plate-forme technologique a déjà porté ces fruits puisque de nouveaux acteurs industriels se sont rapprochés du laboratoire CARMeN pour lui confier des projets de recherche, notamment au travers du programme France-Relance du gouvernement, avec un lien fort et applicatif pour la synthèse en flux continu : Novalix, TFChem mais également ORIL avec qui nous entretenons des relations depuis de très nombreuses années. Plusieurs autres collaborations industrielles ont été initiées depuis 2020 notamment avec Axyntis, Zach systems du groupe Zambon et Interor. Cet engouement rapide et significatif souligne l'appétence de l'industrie chimique en France pour la synthèse en flux continu. Ces projets collaboratifs mettent également en exergue l'importance stratégique d'une telle plateforme au sein d'un laboratoire académique d'excellence en France pour stimuler le développement de cette technique d'avenir au sein de l'industrie chimique.

@@ -1,0 +1,92 @@
++
+Liste des concours
+B : Sciences chimiques et science des matériaux
+Ingénieur de recherche
+Concours N° 35
+Nbre de postes :
+1
+Emploi-type :
+Ingenieure ou ingenieur de recherche en analyse chimique
+Affectation :
+Observatoire Terre et Environnement de Lorraine, VANDOEUVRE LES NANCY
+Groupe de fonction :
+Groupe 2
+Mission :
+Assurer les missions de « Responsable du Pilotage et de l'Administration » de
+l'Infrastructure de Recherche RéGEF (www.regef.fr).
+Piloter la mise en œuvre des orientations stratégiques et opérationnelles de
+l'Infrastructure de Recherche RéGEF, en appui direct de la direction, des comités
+de gouvernance et des groupes de travail.
+Assurer le fonctionnement de l'infrastructure, coordonner les réseaux thématiques et leurs plateformes analytiques, assurer la production des livrables institutionnels, tout en incarnant la représentation de l'IR RéGEF et en garantissant sa communication interne et externe.
+Activités :
+- Piloter le fonctionnement opérationnel et stratégique de l'Infrastructure de
+Recherche RéGEF, en appui direct à sa direction, au Comité Exécutif (ComEx) et au
+Comité de Pilotage (CoPil)
+- Assurer l'articulation, et garantir la bonne circulation de l'information entre
+les instances de gouvernances
+- Élaborer, en lien avec la direction et les comités de gouvernance, le programme
+annuel d'activités, le budget prévisionnel et le bilan annuel scientifique et
+financier de l'infrastructure.
+- Gérer les procédures de financement, les appels d'offres internes, la
+ventilation budgétaire des subventions et les aspects administratifs transversaux.
+- Animer et accompagner les groupes de travail thématiques (gestion des données,
+catalogue de prestation, tarification, etc.), en assurer le bon déroulement et la
+mise en œuvre opérationnelle.
+- Structurer les relations avec les responsables de plateformes, les animateurs de
+réseaux et les UMRs/OSUs, afin d'assurer la cohérence des actions et orientations
+stratégiques de RéGEF au niveau des sites.
+- Superviser la collecte, l'analyse et l'exploitation des données issues des
+plateformes pour améliorer la connaissance du périmètre et du fonctionnement
+global de l'IR.
+- Mettre en place des indicateurs de pilotage à partir des données collectées pour
+établir les bilans annuels et aider aux décisions stratégiques.
+- Représenter l'Infrastructure dans ses interactions institutionnelles et
+scientifiques (audits, livrables, rapports, relations avec les tutelles et
+partenaires).
+- Conduire une politique de communication interne et externe, assurer la
+visibilité des actions de l'IR et contribuer à la valorisation de ses résultats.
+Compétences :
+Savoirs :
+- Connaissances approfondies en géosciences, géochimie et instrumentation
+analytique
+- Compréhension du fonctionnement de la recherche académique française et de
+l'écosystème ESR (tutelles, réseaux, financement...)
+- Bonne connaissance du fonctionnement opérationnel et scientifique d'une
+plateforme analytique en milieu universitaire/EPST. Une expérience en
+responsabilité technique/scientifique d'une plateforme en géochimie serait un
+atout apprécié
+- Expérience en management de projet au niveau institutionnel.
+- Maîtrise des enjeux liés à la production, la gestion et le partage des données
+en Sciences de la Terre et de l'Environnement
+- Connaissance approfondie des principes et bonnes pratiques de la science
+ouverte (FAIR, PGD, interopérabilité)
+- Pratique des outils numériques de suivi, de pilotage et de communication
+scientifique (PowerBi, Wordpress, ...)
+Savoir-faire :
+- Piloter, structurer et coordonner une organisation complexe, distribuée et
+multi-acteurs
+- Apprécier et savoir expertiser l'environnement et les besoins des équipes
+scientifiques opérant les plateformes analytiques
+- Organiser et animer des réunions stratégiques (CoPil, ComEx, groupes de
+travail), assurer leur déroulement, le suivi des décisions et la mise en œuvre
+des actions
+- Élaborer des feuilles de route, planifier des actions en lien avec les
+orientations stratégiques, en assurer le suivi et l'évaluation
+- Construire des budgets, suivre leur exécution, produire des bilans d'activité
+et financiers à destination des tutelles et partenaires institutionnels
+-Déployer une écoute et une communication claire, structurée et adaptée selon
+les interlocuteurs
+-Faciliter la coopération entre des équipes hétérogènes, faire émerger le
+consensus, et accompagner le changement dans un environnement en évolution
+Savoir-être :
+-Capacité de dialogue
+-Aisance relationnelle
+-Esprit d'équipe
+-Disponibilité
+-Capacités rédactionnelles en français et anglais (équivalant niveau B1)
+Contexte :
+L'agent effectuera ses missions dans le cadre et en appui du fonctionnement de l'Infrastructure de Recherche nationale RéGEF (https://www.regef.fr), dont l'hébergement est physiquement assuré par l'OSU OTELo à Nancy.
+L'Observatoire Terre et Environnement de Lorraine OTELo, est un Observatoire des Sciences de l'Univers (OSU). L'OSU et le pôle scientifique OTELo fédèrent 4 unités de recherche : 2 unités mixtes CNRS INSU (CRPG UMR 7358, GeoRessources UMR 7359), 1 unité mixte CNRS INSU-INEE (LIEC UMR 7360), et 1 unité mixte INRAE (LSE UMR 1120). Avec 98 enseignants-chercheurs et 32 chercheurs CNRS, INRAE et IRD, 112 personnels ITA/BIATSS dont 20 ingénieurs de recherche, une centaine de doctorants et une trentaine de post-doctorants, OTELO assure des missions d'animation et de coordination de la recherche, auxquelles s'ajoutent des missions d'observation et de formation en tant qu'OSU.
+RéGEF est une Infrastructure de Recherche portée par le CNRS-INSU, labellisée « en Projet » sur la feuille de route 2021 du ministère dans le domaine Système Terre et Environnement. Elle met en œuvre des moyens pour fournir des mesures aux programmes de recherche, aux Services Nationaux d'Observation et a d'autres Infrastructures de Recherche. RéGEF a pour missions de : (i) maintenir l'innovation et le développement technologique des plateformes analytiques, et (ii) organiser l'accès aux instruments et la production de données et la mise à disposition de données FAIR pour la communauté scientifique.
+Les missions auprès de l'IR RéGEF et de son écosystème national nécessiteront des déplacements sur les sites d'implantation des plateformes analytiques et expérimentales.
+Pour pouvoir assurer pleinement ses missions de pilotage auprès de l'IR RéGEF l'agent devra avoir un profil mixte constitué par une expérience forte à la fois en géochimie analytique et en compétences de management de la recherche.

@@ -1,0 +1,702 @@
+
+    <script language="JavaScript">
+
+      // Renvoyer la valeur du cookie dont le nom est passe en parametre
+      function getCookie(name) {
+        if (document.cookie.length == 0) {
+          return null;
+        }
+        var regSepCookie = new RegExp('(; )', 'g');
+        var cookies = document.cookie.split(regSepCookie);
+        for (var i = 0; i < cookies.length; i++) {
+          var regInfo = new RegExp('=', 'g');
+          var infos = cookies[i].split(regInfo);
+          if (infos[0] == name) {
+            return unescape(infos[1]);
+          }
+        }
+        return null;
+      }
+
+      // Generer un identifiant user temporaire a sauvegarder en cookie (si pas existant)
+      function getIdentifiantUserTemporaire() {
+        var tempUserId = getCookie("pde_temp_user_id");
+        if (tempUserId == null || tempUserId == "") {
+          var dateExpire = new Date();
+          dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+          tempUserId = Math.random().toString(16).slice(2);
+          document.cookie = "pde_temp_user_id=" + tempUserId + "; expires=" + dateExpire + "; path=/";
+        }
+        return tempUserId;
+      }
+
+      // Mettre a jour le badge compteur nombre de concours dans la page
+      function majBadgeCompteurConcours() {
+        var nbrConcours = getCookie("nbr_concours");
+        if (nbrConcours == null || nbrConcours == 0) {
+          document.getElementById("cptNbrConc").innerHTML = "+";
+        } else {
+          document.getElementById("cptNbrConc").innerHTML = nbrConcours;
+        }
+      }
+
+      // Ajouter un numero de concours a la liste des concours pre-selectionnes
+      function ajouterConcoursFavori(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours");
+        var nbrConcours = 0;
+        var dateExpire = new Date();
+        dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+
+        if (valCookieNumerosConcours == null || valCookieNumerosConcours == "") {
+          valCookieNumerosConcours = numero_concours;
+          nbrConcours = 1;
+        } else {
+          // Transformer la chaine en tableau
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau ne contient pas le numero de concours : Ajout en fin de liste
+          if (arrayCookieNumerosConcours.includes(numero_concours) == false) {
+            valCookieNumerosConcours = valCookieNumerosConcours + "|" + numero_concours;
+            nbrConcours = arrayCookieNumerosConcours.length + 1;
+          }
+        }
+        // Enregistrer la liste des numeros de concours et le nombre de concours en cookies
+        document.cookie = "numeros_concours=" + valCookieNumerosConcours + "; expires=" + dateExpire + "; path=/";
+        document.cookie = "nbr_concours=" + nbrConcours + "; expires=" + dateExpire + "; path=/";
+        majBadgeCompteurConcours();
+      }
+
+      // Supprimer un numero de concours de la liste des concours pre-selectionnes
+      function supprimerConcoursFavori(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours");
+        if (valCookieNumerosConcours != null && valCookieNumerosConcours != "") {
+          var nbrConcours = getCookie("nbr_concours");
+          var dateExpire = new Date();
+          dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+          // Transformer la chaine en tableau
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau contient le numero de concours : Reconstruction de la liste sans ce numero
+          if (arrayCookieNumerosConcours.includes(numero_concours) == true) {
+            valCookieNumerosConcours = "";
+            nbrConcours = 0;
+            for (var i = 0; i < arrayCookieNumerosConcours.length; i++) {
+              if (arrayCookieNumerosConcours[i] != numero_concours) {
+                if (valCookieNumerosConcours.length > 0) {
+                  valCookieNumerosConcours = valCookieNumerosConcours + "|";
+                }
+                valCookieNumerosConcours = valCookieNumerosConcours + arrayCookieNumerosConcours[i];
+                nbrConcours = nbrConcours + 1;
+              }
+            }
+          }
+
+          // Enregistrer la liste des numeros de concours et le nombre de concours en cookies
+          document.cookie = "numeros_concours=" + valCookieNumerosConcours + "; expires=" + dateExpire + "; path=/";
+          document.cookie = "nbr_concours=" + nbrConcours + "; expires=" + dateExpire + "; path=/";
+        }
+      }
+
+      // Gerer le numero de concours selon la liste des numeros de concours en cookie :
+      // - Si numero de concours absent de la liste => Clic pour ajouter le concours
+      // - Si numero de concours present dans la liste => Clic pour supprimer le concours
+      function gererConcoursFavori(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours");
+        if (valCookieNumerosConcours == null || valCookieNumerosConcours == "") {
+          // Si liste de concours vide : Ajout
+          ajouterConcoursFavori(numero_concours);
+          alert("Ajouté à ma sélection");
+        } else {
+          // Transformer la chaine en tableau
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau ne contient pas le numero de concours : Ajout
+          if (arrayCookieNumerosConcours.includes(numero_concours) == false) {
+            ajouterConcoursFavori(numero_concours);
+            alert("Ajouté à ma sélection");
+          }
+          else {
+            // Sinon : Suppression
+            supprimerConcoursFavori(numero_concours);
+            majBadgeCompteurConcours();
+            alert("Retiré de ma sélection");
+          }
+        }
+      }
+
+      // Fonction Ajax interrogation CEL : Existence candidature pour un concours
+      function ajaxRequeteCandidatConcoursCEL(cel_url_requete_candidat_concours) {
+        var tempUserId = getIdentifiantUserTemporaire();
+        cel_url_requete_candidat_concours = cel_url_requete_candidat_concours + "&pde_temp_user_id=" + tempUserId;
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', cel_url_requete_candidat_concours);
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState === 4) {
+            var reponseCEL = xhr.responseText;
+            if (reponseCEL == 1) {
+              // Si reponse = 1, candidature existe deja dans CEL sur ce concours par le candidat
+              // Desactiver le bouton "Postuler" de la fiche concours et l icone etoile favori
+              document.getElementById("btnPostuler").disabled = true;
+              document.getElementById("btnPostuler").title = "Vous avez déjà postulé à ce concours";
+              document.getElementById("iconefavori").style.visibility = "hidden";
+              document.getElementById("cptNbrConc").innerHTML = "";
+            }
+          }
+        };
+        xhr.send();
+      }
+
+      // Verifie si le concours a deja ete postule
+      function checkConcoursPostule(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours_postules");
+        if (valCookieNumerosConcours != null && valCookieNumerosConcours != "") {
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau contient le numero de concours :
+          // Desactiver le bouton "Postuler" de la fiche concours et l icone etoile favori
+          for (var i = 0; i < arrayCookieNumerosConcours.length; i++) {
+            if (arrayCookieNumerosConcours[i] == numero_concours) {
+              document.getElementById("btnPostuler").disabled = true;
+              document.getElementById("btnPostuler").title = "Vous avez déjà postulé à ce concours";
+              document.getElementById("iconefavori").style.visibility = "hidden";
+              document.getElementById("cptNbrConc").innerHTML = "";
+            }
+          }
+        }
+      }
+
+      // Ajouter un numero de concours a la liste des concours postules
+      function ajouterConcoursPostule(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours_postules");
+        var dateExpire = new Date();
+        dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+        if (valCookieNumerosConcours == null || valCookieNumerosConcours == "") {
+          valCookieNumerosConcours = numero_concours;
+        } else {
+          // Transformer la chaine en tableau
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau ne contient pas le numero de concours : Ajout en fin de liste
+          if (arrayCookieNumerosConcours.includes(numero_concours) == false) {
+            valCookieNumerosConcours = valCookieNumerosConcours + "|" + numero_concours;
+          }
+        }
+        // Enregistrer la liste des numeros de concours postules en cookie
+        document.cookie = "numeros_concours_postules=" + valCookieNumerosConcours + "; expires=" + dateExpire + "; path=/";
+      }
+
+      // Postuler au concours dans application CEL
+      function postulerCEL(numero_concours, detail_concours, cel_url_concours) {
+        if (confirm("Vous souhaitez postuler pour le concours " + detail_concours + ".\nConfirmez-vous ce choix ?")) {
+          // Supprimer le concours de la liste des concours pre-selectionnes
+          supprimerConcoursFavori(numero_concours);
+          majBadgeCompteurConcours();
+          // Ajouter le concours a la liste des concours postules
+          ajouterConcoursPostule(numero_concours);
+          // Desactiver le bouton "Postuler" de la fiche concours
+          document.getElementById("btnPostuler").disabled = true;
+          document.getElementById("btnPostuler").title = "Vous avez déjà postulé à ce concours";
+          // Desactiver l icone etoile favori
+          document.getElementById("iconefavori").style.visibility = "hidden";
+          document.getElementById("cptNbrConc").innerHTML = "";
+
+          // Transmettre identifiant user PDE temporaire a CEL
+          var tempUserId = getIdentifiantUserTemporaire();
+          cel_url_concours = cel_url_concours + "&pde_temp_user_id=" + tempUserId;
+
+          // Ouvrir application CEL dans une nouvelle fenetre
+          window.open(cel_url_concours, '_blank');
+        }
+      }
+
+      // Postuler dans application CEL a tous les concours pre-selectionnes
+      function postulerCELtous(cel_url_concours) {
+        var nbrConcours = getCookie("nbr_concours");
+        if (nbrConcours != null && nbrConcours > 0) {
+          if (confirm("Vous souhaitez postuler pour les " + nbrConcours + " concours pré-sélectionnés.\nConfirmez-vous ce choix ?")) {
+            var dateExpire = new Date();
+            dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+            // Ajouter tous les concours pre-selectionnes a la liste des concours postules
+            var valCookieNumerosConcours = getCookie("numeros_concours");
+            var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+            for (var i = 0; i < arrayCookieNumerosConcours.length; i++) {
+              ajouterConcoursPostule(arrayCookieNumerosConcours[i]);
+            }
+            // Vider la liste des concours pre-selectionnes
+            document.cookie = "numeros_concours=; expires=" + dateExpire + "; path=/";
+            // Reinitialiser le nombre de concours pre-selectionnes a 0
+            document.cookie = "nbr_concours=0; expires=" + dateExpire + "; path=/";
+
+            // Transmettre identifiant user PDE temporaire a CEL
+            var tempUserId = getIdentifiantUserTemporaire();
+            cel_url_concours = cel_url_concours + "&pde_temp_user_id=" + tempUserId;
+
+            // Ouvrir application CEL dans une nouvelle fenetre
+            window.open(cel_url_concours, '_blank');
+            // Recharger la page parente
+            window.opener.location.reload();
+            // Fermer la page
+            window.close();
+          }
+        }
+      }
+
+      // Supprimer un concours de la liste des concours pre-selectionnes, depuis icone corbeille
+      function supprimerConcoursListe(numero_concours) {
+        if (confirm("Vous souhaitez supprimer le concours n°" + numero_concours + ".\nConfirmez-vous ce choix ?")) {
+          supprimerConcoursFavori(numero_concours);
+          window.location.reload();
+          // Mettre a jour le badge compteur dans la fenetre parente
+          var nbrConcours = getCookie("nbr_concours");
+          if (nbrConcours == null || nbrConcours == 0) {
+            window.opener.document.getElementById("cptNbrConc").innerHTML = "+";
+          } else {
+            window.opener.document.getElementById("cptNbrConc").innerHTML = nbrConcours;
+          }
+        }
+      }
+
+      // Retour en haut de la page
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+
+    </script>
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src-elem 'self' *.cnrs.fr 'unsafe-inline'; script-src-attr 'self' *.cnrs.fr 'unsafe-inline'; frame-src 'self' *.cnrs.fr 'unsafe-inline'; connect-src 'self' *.cnrs.fr 'unsafe-inline'; font-src 'self' *.cnrs.fr 'unsafe-inline'; style-src 'self' *.cnrs.fr 'unsafe-inline'; img-src 'self' *.cnrs.fr data:; " />
+<link rel="stylesheet" href="/profil/css/autre.css" type="text/css">
+<link rel="stylesheet" href="/profil/css/backtotop.css" type="text/css">
+<title>fiche profil public</title>
+<SCRIPT LANGUAGE="JAVASCRIPT" SRC="/profil/js/comboliste.js"></SCRIPT>
+<SCRIPT LANGUAGE="JAVASCRIPT" SRC="/profil/js/jquery3.4.1.min.js"></SCRIPT>
+<SCRIPT LANGUAGE="JAVASCRIPT" SRC="/profil/js/jquery.textarea.js"></SCRIPT>
+
+      <script type="text/javascript">
+        function getXhr(){
+            var xhr = null;
+            try {
+                xhr = new XMLHttpRequest();
+            } catch(e){
+                xhr = new ActiveXObject("Microsoft.XMLHTTP" );
+            }
+            return xhr;
+          }
+
+          function updateElementByAjax (pUrl, pElementId, pAsynch){
+            updateElementWithFunctionByAjax(pUrl, pElementId, pAsynch, null, false);
+          }
+        /*
+        * Si utilisation de cette méthode, il faut définir la méthode "callBackMessagesErreur".
+        */
+        function updateMessagesErreur(pUrlCheckMessagesErreur) {
+            updateElementWithFunctionByAjax(pUrlCheckMessagesErreur, "erreur", true, callBackMessagesErreur, true);
+        }
+          function updateElementWithFunctionByAjax (pUrl, pElementId, pAsynch, pFunctionCall, pIsInnerHTML){
+            var xhr = getXhr();
+            xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4 && xhr.status  == 200 ){
+                var documentElement = document.getElementById(pElementId);
+                if (documentElement != null) {
+                  if (pIsInnerHTML) {
+                      $("#" + pElementId).html(xhr.responseText);
+                  } else {
+                    documentElement.outerHTML=xhr.responseText;
+                  }
+                  if(pFunctionCall != null) {
+                  pFunctionCall(xhr.responseText);
+                  }
+                }
+              }
+            };
+            xhr.open( "GET", pUrl,  pAsynch);
+            xhr.send(null);
+          }
+      </script>
+      
+<script>top.nbClick=0</script>
+</head>
+<body bgcolor="#FFFFFF"  onLoad=ajaxRequeteCandidatConcoursCEL('http://concoursexternesit.cnrs.fr/public/candidat/requete_get_candidat_concours.php?numero_concours=92'); >
+<div id="divglobale">
+<form name="formFiche" method="post" action="">
+           <script>top.boutonClique="";</script>
+<input type="hidden" name="hidFicheCourante" value="pg_profil_public_referens.pAfficheProfilPublic">
+<br>
+<table width="100%" border=0>
+<tr>
+<td align="left" width="5%"><input type="button" id="btnPostuler" name="btnPostuler" value="Postuler" onClick="postulerCEL('92', 'n°92 : IE - BAP Sciences chimiques et science des matériaux - Ingenieure ou ingenieur en analyse chimique - Laboratoire des sciences de l environnement marin, PLOUZANE', 'http://concoursexternesit.cnrs.fr/public/candidat/requete_postuler.php?numeros_concours=92');" ></td>
+<td align="left" width="3%">
+
+      <a id="iconefavori" onclick="gererConcoursFavori('92');"
+        title="Mes concours pr&eacute;-s&eacute;lectionn&eacute;s (favoris)"
+        style="text-decoration: none;">
+          <img src="/profil/images/icon_etoile_favori.png" width="60" height="60" border="0">
+          <span class="icon_etoile_favori_span" style="" id="cptNbrConc">+</span>
+      </a>
+</td>
+<td width="75%"></td>
+<td align="center">
+      <b>Liste des concours</b><br>
+      <a href="PG_PROFIL_PUBLIC_REFERENS.afficherListeConcoursPreselectionnes?destinationId=81"
+      onclick="window.open('PG_PROFIL_PUBLIC_REFERENS.afficherListeConcoursPreselectionnes?destinationId=81', 'newwindow', 'width=700,height=400'); return false;"
+      title="Consulter la liste de mes concours pr&eacute;-s&eacute;lectionn&eacute;s"><img src="/profil/images/icone_liste.png" width=40 height=40 border=0></a>
+      </td>
+</tr>
+</table>
+<center>
+    <table width="60%" border="2" cellspacing="0">
+    <tr>
+      <td class="enteteconcours" bordercolor="#CCCCCC"> 
+<p class="enteteconcours"><span class="enteteconcours">B : Sciences chimiques et science des matériaux</span></p>
+        
+<p class="enteteconcours"><span class="enteteconcours">Ingénieur d'études</span></p>
+        <p class="enteteconcours"><span class="enteteconcours">Concours N&deg; 92</span></p>
+      </td>
+    </tr>
+  </table>
+  </center>
+  
+<p>&nbsp;</p>
+
+<table width="100%" border="0" cellspacing="0">
+  <tr height="25">
+    <td width="20%"><b>Nbre de postes : </b></td>
+    <td width="80%">2</td>
+  </tr>
+
+      <tr height="25">
+          <td width="20%"><b>Emploi-type :</b></td>
+          <td width="80%">Ingenieure ou ingenieur en analyse chimique</td>
+      </tr>
+    
+</table>
+<br>
+<table width="100%" border="0" cellspacing="0">
+<tr>
+<td class="soustitreprincipal">1er poste du concours N&deg; 92</td>
+</tr>
+</table>
+<br>
+
+    <table width="100%" border="0">
+
+    <tr height="25">
+      <td width="20%"><b>Affectation :</b></td>
+      <td width="80%">Laboratoire des sciences de l'environnement marin, PLOUZANE</td>
+    </tr> 
+<tr height="25"><td width="20%"><b>Groupe de fonction :</b></td><td width="80%">
+Groupe 3
+</td></tr>
+</td>
+    </tr>
+ </table>
+      
+<br>
+
+  <p>&nbsp;</p>
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="mission"><b>Mission :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr width="100">
+	  <td colspan="2">
+	
+Mettre en œuvre et adapter les techniques d'analyses des éléments traces provenant de différentes matrices : eau de mer, sédiments, particules en suspension.<BR>
+
+</td>
+    </tr>
+  </table>
+  
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="activites"><b>Activit&eacute;s :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+- Assurer la mise en œuvre des techniques de mesure des éléments traces (métaux traces, germanium et silicium) en conditions ultra-propres par ICP-MS (HR et MC)<BR>
+- Définir et mettre au point les processus de traitement des échantillons : minéralisation des particules, purification et préconcentration de l'eau de mer sur colonne (SeaFAST ou manuellement)<BR>
+- Établir et optimiser les protocoles adaptés, depuis l'échantillonnage jusqu'à l'analyse, en fonction des éléments à analyser<BR>
+- Contrôler et régler quotidiennement les ICP-MS<BR>
+- Assurer le contrôle qualité des données acquises par ICP-MS<BR>
+- Rédiger les rapports d'analyse, les notes techniques et les protocoles de mise en œuvre des méthodes d'utilisation des appareils<BR>
+- Assurer une veille technique dans le domaine en actualisant ses connaissances par la recherche bibliographique et la participation à des formations professionnelles nationales<BR>
+- Diagnostiquer et traiter les anomalies de fonctionnement courantes de l'appareillage<BR>
+- Garantir les bonnes pratiques de laboratoire : se former et informer sur les risques liés aux techniques et aux produits utilisés ; faire appliquer les règles d'hygiène et de sécurité<BR>
+- Former, encadrer et transférer son savoir-faire<BR>
+- Participer aux missions océanographiques (ex. GEOTRACES, BIOGEOSCAPES), en gérer la partie technique et logistique, y compris les prélèvements à bord (rosette propre, GEOFISH, préleveur d'aérosols)<BR>
+- Appliquer et faire appliquer les règles en hygiène et sécurité et leur évolution<BR>
+<BR>
+
+</td>
+    </tr>
+  </table>
+  
+
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="competences"><b>Comp&eacute;tences :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+Savoirs / connaissances <BR>
+o Techniques de conditionnement et d'analyses d'échantillons en conditions ultra-propres (salles blanches)<BR>
+o Réglementation en matière d'hygiène et de sécurité<BR>
+o Outils mathématiques et informatiques nécessaires à l'exploitation des résultats<BR>
+o Organisation et fonctionnement de l'enseignement supérieur et de la recherche publique<BR>
+o Environnement et réseaux professionnels <BR>
+o Anglais scientifique et technique du domaine (B1)<BR>
+<BR>
+Savoir-faire <BR>
+o Maîtriser parfaitement la spectrométrie de masse à plasma à couplage inductif (SF-ICP-MS), 3 ans d'expérience minimum<BR>
+o Travailler en conditions ultra-propres (de l'échantillonnage à l'analyse)<BR>
+o Valoriser les résultats sous forme de rapports ou d'articles scientifiques<BR>
+o Appliquer les règles d'hygiène et de sécurité<BR>
+o Utiliser les outils de recherche bibliographique (maîtrise)<BR>
+o Appliquer les techniques de maintenance des matériels <BR>
+o Mettre en œuvre une démarche qualité<BR>
+<BR>
+Savoirs-être <BR>
+o Travail en équipe<BR>
+o Sens du relationnel<BR>
+o Sens de l'initiative<BR>
+
+</td>
+    </tr>
+  </table>
+  
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="contexte"><b>Contexte :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+Le LEMAR est un laboratoire qui vise à mieux comprendre le fonctionnement des écosystèmes marins et la dynamique des grands cycles biogéochimiques marins tels que le carbone, l'azote, le silicium et les métaux traces. <BR>
+La compréhension des cycles biogéochimiques et de l'évolution des écosystèmes constitue un enjeu majeur pour mieux appréhender les impacts des pressions anthropiques et les conséquences du changement climatique sur le fonctionnement des écosystèmes océaniques. <BR>
+Au sein de l'équipe CHIBIDO, l'étude des cycles biogéochimiques océaniques du silicium et des métaux traces constituent deux thématiques historiques pour lesquelles le LEMAR est largement reconnu par la communauté internationale. Ce groupe participe très activement aux grands programmes de recherche internationaux tels que GEOTRACES et BIOGEOSCAPES (~ une campagne d'envergure par an). Ces recherches sont au cœur de projets de recherche en cours (PPR LIFEDEEPER et ClimArctic), ANR (AWESOMESWINGS, SWINGS), JRP SIMSON, ou soumis (ANR ChoRhiSO, CASCADES). Elles nécessitent le prélèvement, le conditionnement et l'analyse exacte et précise des métaux traces et du silicium purifié qui seront assurés par l'ingénieur-e d'études recruté-e. <BR>
+
+</td>
+    </tr>
+  </table>
+  
+<br>
+<table width="100%" border="0" cellspacing="0">
+<tr>
+<td class="soustitreprincipal">2eme poste du concours N&deg; 92</td>
+</tr>
+</table>
+<br>
+
+    <table width="100%" border="0">
+
+    <tr height="25">
+      <td width="20%"><b>Affectation :</b></td>
+      <td width="80%">HydroSciences Montpellier, MONTPELLIER</td>
+    </tr> 
+<tr height="25"><td width="20%"><b>Groupe de fonction :</b></td><td width="80%">
+Groupe 3
+</td></tr>
+</td>
+    </tr>
+ </table>
+      
+<br>
+
+  <p>&nbsp;</p>
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="mission"><b>Mission :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr width="100">
+	  <td colspan="2">
+	
+Mettre en œuvre et développer des techniques de préparation et d'analyse des échantillons par des couplages chromatographie - spectrométrie de masses haute résolution pour identifier des contaminants émergents dans les matrices environnementales (eaux, sédiments, organismes). Coordonner les analyses de l'exposome et du métabolome.
+</td>
+    </tr>
+  </table>
+  
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="activites"><b>Activit&eacute;s :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+Activité 1 : <BR>
+-Gérer le parc instrumental (équipements de chromatographie couplée à la spectrométrie de masse haute résolution) de l'équipe ContEm accueillant les plateaux PONTEM (Biocampus) et ExposEm (HydroSciences) et garantir des conditions de travail en sécurité au laboratoire :<BR>
+-Maintenir les équipements fonctionnels (calibration instrumentale, gestion de l'entretien) en coordination avec les personnels du laboratoire et le SAV des équipements<BR>
+-Rédiger la documentation technique (protocoles d'analyses, fiche de vie des appareils) et les comptes rendus d'activité<BR>
+-Rédiger les appels d'offre pour l'achat de nouveaux instruments<BR>
+-Rédiger et suivre le plan de gestion de données<BR>
+-Assurer la fonction d'Assistant de Prévention<BR>
+ <BR>
+Activité 2 : <BR>
+-Participer aux projets de recherche de l'équipe ContEm<BR>
+-Assurer une veille bibliographique en chimie analytique dans le cadre des projets de recherche et en présenter la synthèse en réunion<BR>
+-Développer/Mettre au point de nouvelles méthodes de préparation des échantillons et d'analyses ciblées et non-ciblées spécifiques à l'équipe<BR>
+-Rédiger les parties méthodologiques/analytiques des projets de recherche et des articles scientifiques associés<BR>
+-Encadrer la partie analytique des travaux des stagiaires et doctorants, rédiger les livrables méthodologiques<BR>
+ <BR>
+Activité 3 : <BR>
+-Coordonner les analyses d'exposome et métabolome des plateaux ExposEm et PONTEM<BR>
+-Réaliser des analyses quantitatives/qualitatives de contaminants par chromatographie couplée à la spectrométrie de masse haute résolution : mise en place des contrôles qualité, validation des résultats, rédaction des rapports d'analyses<BR>
+-Développer des protocoles de préparation des échantillons et d'analyses selon des approches ciblées et non-ciblées pour répondre aux partenaires sollicitant les plateaux<BR>
+-Contribuer à piloter les demandes : établir les devis d'analyses, participer aux réunions d'avancement<BR>
+-Participer à des groupes de travail internes/externes à l'équipe<BR>
+ <BR>
+<BR>
+<BR>
+
+</td>
+    </tr>
+  </table>
+  
+
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="competences"><b>Comp&eacute;tences :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+- Posséder une solide formation en physico-chimie et chimie analytique<BR>
+- Maitriser les principes fondamentaux de la préparation d'échantillons environnementaux<BR>
+- Être autonome dans l'utilisation d'équipements de chromatographie couplée à la spectrométrie de masse haute résolution<BR>
+- Savoir développer et mettre en œuvre des méthodes d'analyse ciblées et non ciblées sur des matrices variées (eaux, sols, sédiments, matrices biologiques...)<BR>
+- Maîtriser les critères de validation analytiques (LOD, LOQ, linéarité, exactitude, taux de récupération...)<BR>
+- Être familier des logiciels de traitement de données scientifiques (ex : XCalibur, Compound Discoverer, R)<BR>
+- Disposer de notions en statistiques appliquées au traitement de données analytiques et environnementales<BR>
+- Connaître les fondements d'un système de management de la qualité et les exigences métrologiques associées (ex. : traçabilité, incertitudes, contrôle qualité)<BR>
+- Disposer d'un niveau d'anglais B2 (cadre européen commun de référence pour les langues)<BR>
+- Communiquer efficacement à l'écrit et à l'oral dans un registre scientifique et technique<BR>
+- Maîtriser les bases de la gestion de projet et les outils associés (planification, suivi d'avancement...)<BR>
+- Être à l'écoute et adopter une posture bienveillante<BR>
+- Faire preuve d'autonomie, de curiosité et de proactivité dans la résolution de problèmes techniques ou scientifiques<BR>
+- Faire preuve de rigueur, d'esprit d'analyse et de sens de l'organisation<BR>
+
+</td>
+    </tr>
+  </table>
+  
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="contexte"><b>Contexte :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+L'ingénieur (H/F) sera affecté au sein du laboratoire HydroSciences Montpellier (HSM), dans l'équipe ContEm située à l'UFR Pharmacie, en lien avec ses deux plateformes techniques : ExposEM (HSM, mesure de l'exposome et des contaminants à l'état d'ultra-traces dans des matrices environnementales complexes) et PONTEM (HSM et Biocampus, métabolomique environnementale non ciblée).<BR>
+L'équipe ContEm à l'UFR Pharmacie est composée de 5 enseignants-chercheurs (EC), 1 EC praticien hospitalier, 1 directeur de recherche IRD et 2 techniciens. Elle accueille en moyenne, par année, 5 à 6 stagiaires, doctorants et post-doctorants. Elle développe des travaux sur les contaminants émergents préoccupants dans les écosystèmes aquatiques. Elle s'appuie sur des approches d'exposomique et d'analyses omiques pour étudier à la fois le devenir de ces substances dans l'environnement et leurs effets biologiques sur les organismes aquatiques. Ces travaux reposent principalement sur l'utilisation de la chromatographie couplée à la spectrométrie de masse haute résolution (LC-HRMS).<BR>
+ <BR>
+L'ingénieur (H/F) contribuera à la pérennité, au bon fonctionnement et à l'évolution des deux plateaux techniques pilotés par l'équipe, assurera le pilotage des équipements lourds (3 HPLC-HRMS, 1 GC-Triple Quad), le développement de nouvelles approches analytiques dans le domaine environnement et environnement-santé, l'analyse des échantillons issus des projets de recherche et des demandes des plateaux techniques et le traitement de données. Il/elle participera à la formation et à l'accompagnement technique des utilisateurs (étudiants, chercheurs, personnels de l'unité).<BR>
+ <BR>
+L'ingénieur (H/F) travaillera sous la direction du responsable d'équipe et des plateaux, et en concertation avec la direction de l'UMR et ses assistants de prévention. Le travail se fera en collaboration avec les membres de l'équipe ContEm et avec les utilisateurs des techniques analytiques (étudiants et chercheurs internes ou externes à HSM).<BR>
+<BR>
+
+</td>
+    </tr>
+  </table>
+  
+<br>
+
+  <p>&nbsp;</p>
+
+  <table border="0" width="100%">
+    <tr align="center">
+      <td>
+	  	<script>
+		//ne pas afficher le bouton si login DS
+		//if (top.listeCourante!=""){
+		//   document.write("<input type='button' name='btnRetour' value='Retour &agrave; la liste' onClick='javascript:top.retourListe();'>");
+		//}
+		</script>
+		<input type="button" name="btnRetourConsult" value="Revenir &agrave; la liste des r&eacute;sultats" onClick="javascript:history.go(-1);">
+	  </td>
+    </tr>
+  </table>
+  
+</form>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+
+    <div class="container-top">
+      <a href="" class="top" id="scrollToTop"></a>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var containerTop = document.querySelector(".container-top");
+        var documentHeight = document.documentElement.scrollHeight;
+        var scrollTopBtn = document.querySelector("#scrollToTop");
+
+        function updateOpacity() {
+          var scrollPercentage = (window.scrollY / documentHeight) * 150;
+
+          var opacity = Math.min(1, Math.max(0, scrollPercentage / 75));
+
+          containerTop.style.opacity = opacity;
+        }
+
+        window.addEventListener("scroll", function () {
+          updateOpacity();
+        });
+
+        scrollTopBtn.addEventListener("click", function (event) {
+          event.preventDefault(); // Annule le comportement par défaut du lien
+          scrollToTop();
+        });
+
+        function scrollToTop() {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth" // Permet le défilement en douceur
+          });
+        }
+
+        updateOpacity();
+      });
+    </script>
+</body>
+
+			<head>
+  			  <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+  			  <META HTTP-EQUIV="Expires" CONTENT="-1">
+          <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src-elem 'self' *.cnrs.fr 'unsafe-inline'; script-src-attr 'self' *.cnrs.fr 'unsafe-inline'; frame-src 'self' *.cnrs.fr 'unsafe-inline'; connect-src 'self' *.cnrs.fr 'unsafe-inline'; font-src 'self' *.cnrs.fr 'unsafe-inline'; style-src 'self' *.cnrs.fr 'unsafe-inline'; img-src 'self' *.cnrs.fr data:; " />
+			</head>
+			
+</html>

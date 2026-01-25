@@ -1,0 +1,44 @@
++
+Liste des concours
+C : Sciences de l'ingénieur et instrumentation scientifique
+Ingénieur de recherche
+Concours N° 33
+Nbre de postes :
+1
+Emploi-type :
+Experte ou expert en développement d'instrument
+Affectation :
+Laboratoire Léon Brillouin, ST AUBIN
+Groupe de fonction :
+Groupe 3
+Mission :
+Le Laboratoire Léon Brillouin (LLB) a la charge de l'instrument de diffusion de neutrons aux petits angles « SAM », installé à l'Institut Laue-Langevin (ILL) à Grenoble, et opérationnel depuis février 2024. La personne recrutée aura pour missions principales, la responsabilité, la gestion et le développement de l'instrument de diffusion neutronique (SAM) localisé à Grenoble (diffusion des neutrons aux petits angles) ainsi que l'accueil d'utilisateurs extérieurs pour les expérimentations sur l'ensemble des thématiques de l'instrument (physico-chimie, biophysique, matière condensée).
+Activités :
+- Assurer la responsabilité de l'instrument SAM
+- Participer à l'exploitation, à la maintenance et aux améliorations de l'instrument SAM pour répondre aux besoins scientifiques.
+- Développement d'environnements échantillons en lien avec les demandes des utilisateurs.
+- Gérer le programme utilisateurs et accueillir les utilisateurs extérieurs venant réaliser des expériences sur l'ensemble des thématiques de l'instrument.
+- Participer au traitement des données expérimentales et les intégrer dans des outils informatiques en ce sens à la disposition des utilisateurs.
+- Développement d'une activité de recherche en collaboration avec le groupe Matière Molle et Biophysique (MMB) et/ou Nouvelles Frontières dans les Matériaux Quantiques (NFMQ) du LLB (https://www-llb.cea.fr/)
+- Assurer une veille technologique
+Compétences :
+Connaissances :
+- Expertise en diffusion aux petits angles des neutrons (et éventuellement des rayons X)
+- Physique générale et instrumentation neutronique
+- Expertise dans un des domaines suivants: matière molle, biophysique, matière condensée.
+Compétences :
+- Techniques de présentation écrite et orale
+-Travailler en équipe et à interagir avec des interlocuteurs de divers métiers.
+- Evoluer dans un milieu de travail international. Pratique courante de l'anglais (niveau B2 du CECRL au minimum).
+- Savoir gérer les priorités dans un cadre complexe
+- Savoir rédiger des documents techniques
+- Savoir faire preuve d'autonomie et de capacités d'adaptation
+- Appliquer les règles d'hygiène et de sécurité
+- Gérer un budget
+Contexte :
+Le Laboratoire Léon Brillouin (LLB) est une unité mixte de recherche CNRS - CEA. Les missions du LLB sont en particulier :
+- Développer et mettre des instruments de diffusion neutronique à disposition de la communauté française, et   européenne,
+- Conduire une recherche de pointe sur ses propres programmes,
+- Mener une prospective pour une stratégie à long terme de l'activité neutronique nationale.
+Le LLB regroupe plus de 90 personnels (dont 65 permanents CEA, CNRS et enseignants-chercheurs) et est structuré en un groupe administratif, un groupe technique INFRA (Infrastructure et développement), et deux groupes scientifiques MMB (Matière Molle et Biophysique) et NFMQ (Nouvelles frontières dans les matériaux quantiques). Il a en charge deux instruments de diffusion neutronique à Grenoble (SAM et SHARPER à l'ILL) et un instrument en Suisse (SANS-LLB au Paul Scherrer Institut). Il est également engagé dans la construction et la mise en place à l'horizon 2023-2027 de cinq instruments sur la future source européenne à spallation ESS à Lund (Suède). Enfin, le LLB est au cœur du nouveau projet de source nationale de neutron ICONE devant voir le jour dans les années à venir.
+La LLB se caractérise par deux implantations, une située sur le centre du CEA Saclay, l'autre sur le site de l'ILL (Grenoble). L'équipe grenobloise se compose de 5 techniciens, ingénieurs et chercheurs. Les liens entre les deux implantations sont permanents; la recherche se fait en collaboration entre les deux implantations. Pour le site de Grenoble, des astreintes sont mises en place pendant les périodes de fonctionnement du réacteur de l'ILL.

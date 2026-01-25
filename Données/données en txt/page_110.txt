@@ -1,0 +1,75 @@
++
+Liste des concours
+C : Sciences de l'ingénieur et instrumentation scientifique
+Ingénieur d'études
+Concours N° 112
+Nbre de postes :
+1
+Emploi-type :
+Ingenieure electronicienne ou ingenieur electronicien
+Affectation :
+Institut universitaire des systèmes thermiques industriels, MARSEILLE 13
+Groupe de fonction :
+Groupe 3
+Mission :
+Assurer la conception, le développement et la mise au point de dispositifs
+électroniques dédiés aux différents montages expérimentaux développés au sein du
+laboratoire IUSTI UMR 7343. Assurer la mise en service et la maintenance de ces
+dispositifs.
+Activités :
+-	Élaborer les spécifications techniques des besoins et rédiger les cahiers
+des charges fonctionnels ;
+-	Étudier des éléments des systèmes électroniques, prise en charge de la
+conception et le développement de cartes électroniques (Composants programmables,
+FPGA, microcontrôleurs, circuits intégrés) et mener les tests associés ;
+-	Réaliser l'interfaçage de capteurs ou d'actionneurs, intégrant
+l'informatique de pilotage et d'acquisition ;
+-	Transférer des connaissances et savoir-faire techniques en interne et en
+externe ; interagir avec les chercheurs et étudiants pour la définition des
+besoins et usages spécifiques de leurs dispositifs expérimentaux.
+-	Procéder aux diagnostics des pannes et gérer la maintenance des
+dispositifs électroniques existants ;
+-	Rédiger les documents techniques liés à la réalisation et les rapports
+d'essais des dispositifs ;
+-	Appliquer et faire appliquer les règles de sécurité et d'hygiène.
+Compétences :
+Savoirs:
+Connaissance générale de l'électronique, en particulier les principes de
+fonctionnement des capteurs et actionneurs, et les protocoles d'interfaçage.
+Connaissance générale des technologies des circuits programmables et des
+microcontrôleurs.
+Connaissance en programmation logiciel.
+Savoir élaborer des spécifications techniques des besoins en vue de la rédaction
+d'un cahier des charges fonctionnelles.
+Savoir-faire :
+Choisir les composants adaptés aux contraintes, mettre en œuvre des outils et des
+méthodes de traitement numérique ou analogique du signal,
+Mettre en œuvre les techniques de mesures électroniques,
+Piloter un projet.
+Savoir-être :
+Autonomie
+rigueur
+qualités relationnelles affirmées
+capacité à travailler en équipe
+capacités d'adaptation aux besoins
+savoir gérer les priorités
+sens du service à la recherche.
+Contexte :
+L'IUSTI est un laboratoire de 145 personnes réparties en 3 axes de recherche et 3
+services support à la recherche (Gestion-Administration - Support expérimental -
+Calcul scientifique). Situé sur le Campus Etoile - Technopole de Château-Gombert,
+ses tutelles sont le CNRS et AMU. Le service instrumentation scientifique (3
+personnes) associé au service Mécanique (3 personnes) constituent le service
+Support expérimental. Le laboratoire IUSTI comporte une forte composante
+expérimentale, avec des dispositifs allant de grandes installations (soufflerie
+supersonique, plateforme tubes à chocs, caisson à feux) à des expériences en salle
+portant sur des sujets et thématiques très variées (thermique, hydrodynamique,
+rhéologie, biomécanique¿). Une partie importante du temps de travail sera
+consacrée aux nombreux projets de recherche (ERC, ANR, Amidex...) portés par le
+laboratoire dans lesquels on souhaite développer des instruments originaux.
+La personne recrutée pourra bénéficier du réseau d¿électroniciens présents sur le
+site (Fédération CNRS et Institut IMI), du système de suivi de projet (RedMine)
+mis en place et des formations nécessaires. Une partie des activités peut être
+réalisée en télé-travail, celles-ci seront à définir avec le responsable de
+service. Le laboratoire est en zone à régime restrictif (ZRR). Le laboratoire est
+accessible en transports en communs.

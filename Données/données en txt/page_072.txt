@@ -1,0 +1,99 @@
++
+Liste des concours
+F : Culture, communication, production et diffusion des savoirs
+Ingénieur de recherche
+Concours N° 72
+Nbre de postes :
+1
+Emploi-type :
+Responsable des ressources et de l'ingénierie documentaire
+Affectation :
+AUSONIUS - Institut de recherche sur l'Antiquité et le Moyen Age, PESSAC
+Groupe de fonction :
+Groupe 2
+Poste avec  compétence(s) interdisciplinaire(s) :
+BAP de la seconde discipline :
+D : Sciences humaines et sociales
+Emploi-type de la seconde discipline :
+Ingenieure ou ingenieur de recherche en production, traitement et analyse de données
+Mission :
+L'ingénieur(e) travaillera à la conception, la réalisation (y compris par la
+programmation) et l'évolution d'outils numériques en lien avec les projets de
+recherche hébergés à Ausonius.
+Il ou elle travaillera à la plateforme numérique commune du laboratoire pour le
+traitement des données archéologiques et historiques.
+Il ou elle assurera un rôle de conseil, formation et innovation autour des
+systèmes d'information. Il ou elle sera acteur de la vie scientifique de l'unité
+et contribuera à son rayonnement au niveau national et international.
+Activités :
+- Définir et mettre en place les technologies, méthodes et outils de modélisation
+des données de recherche à traiter.
+- Réaliser l'analyse fonctionnelle des besoins et rédiger le cahier des charges
+technique, en collaboration étroite avec les porteurs de projet en SHS et sciences
+du numérique.
+- Superviser l'élaboration des plans de gestion des données (PGD) ; Assurer leur
+mise en place, maintien et développement.
+- Garantir l'interopérabilité, la cohérence et la qualité des données ; assurer la
+convergence des outils et des référentiels existants.
+- Déployer des méthodes d'intelligence artificielle appliquée aux SHS : NLP,
+apprentissage automatique, réseaux de neurones, IA explicable.
+- Assurer une veille active sur les technologies émergentes en traitement de la
+donnée, notamment en machine learning et deep learning.
+- Contribuer à la production scientifique du laboratoire et à son rayonnement
+national et international.
+- Concevoir, proposer et animer des activités de formation.
+Compétences :
+Savoirs :
+- Connaissance approfondie des méthodes de gestion de données
+- Connaissance approfondie en méthodologie de conduite de projet
+- Connaissance approfondie en génie logiciel - Langages de modélisation,
+d'exploration et de publication de données en sciences humaines
+- Développement d'applications utilisant l'Intelligence artificielle pour les
+SHS
+- Connaissances en Sciences de l'Antiquité et du Moyen Âge (dont notions de
+langues anciennes et en épigraphie)
+- Langue anglaise : B2 à C1 (cadre européen commun de référence pour les
+langues)
+Savoir-faire :
+- Maitriser les techniques d'analyse des données
+- Maitriser les systèmes de gestion de base de données native XML (par exemple
+eXist-db)
+- Maitriser les technologies web de données : standards et outils pour la
+recherche et l'accès à la donnée (ontologie, analyse sémantique, alignement de
+référentiels)
+- Connaitre les méthodes d'archivage pérenne des données de la recherche
+- Connaitre les langages de programmation pour le traitement et la visualisation
+des données
+- Gérer un projet à l'échelle nationale et internationale
+- Documenter de manière claire les processus, modèles et résultats produits
+- Jouer un rôle de conseil ou d'aide à la décision
+- Représenter l'unité dans les instances ou réseaux professionnels
+Savoir-être :
+- Faire preuve de curiosité intellectuelle et d'ouverture aux enjeux des SHS
+- S'intégrer au sein d'une équipe pluridisciplinaire avec pédagogie et écoute
+- Communiquer avec clarté à l'écrit comme à l'oral, en français et en anglais
+- S'adapter à des contextes de recherche variés et évolutifs
+- S'impliquer dans des dynamiques collaboratives et ouvertes (projets appliquant
+les principes de la science ouverte, reproductibilité)
+Contexte :
+L'UMR 5607 Ausonius est un institut de recherche sur l'Antiquité et le Moyen Âge
+et est l'un des laboratoires SHS les plus dynamiques en France, grâce à ses
+nombreux projets nationaux et européens.
+Ausonius a une longue tradition de production d'outils innovants dans le domaine
+des Humanités numériques, notamment avec PETRAE, développé à partir des années
+1990, qui a contribué à poser les bases de l'épigraphie numérique en France et à
+l'international.
+Cette tradition s'est poursuivie avec l'AdriAtlas et, plus récemment, avec les
+projets ERC PATRIMONIVM et GESHAEM ou les projets ANR ArchXant, GymnAsia, RIIG et
+ALEAM (cf. https://ausonius.huma-num).
+Tous ces projets partagent déjà un certain nombre de technologies, mais le
+laboratoire vise à accélérer significativement l'effort de convergence des outils
+pour répondre aux exigences des programmes de recherche les plus ambitieux et
+doter l'équipe d'un environnement numérique d'utilisation générale pour la
+recherche en histoire, archéologie, épigraphie et prosopographie. Il s'agit d'une
+initiative à haut potentiel, car elle vise à la création d'un outil polyvalent,
+facile à installer et donc capable de démocratiser l'accès aux outils numériques
+pour la recherche historique.
+Dans ce contexte, l'ingénieur de recherche sera capable d'apporter une
+contribution majeure sur le plan du développement et de la réflexion
+méthodologique.

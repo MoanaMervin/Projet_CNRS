@@ -1,0 +1,40 @@
++
+Liste des concours
+C : Sciences de l'ingénieur et instrumentation scientifique
+Ingénieur de recherche
+Concours N° 37
+Nbre de postes :
+1
+Emploi-type :
+Experte electronicienne ou expert electronicien
+Affectation :
+Institut matériaux microélectronique nanosciences de Provence, MARSEILLE 13
+Groupe de fonction :
+Groupe 3
+Mission :
+L'ingénieur-e de recherche est responsable de l'organisation et du support des moyens matériels de mesures et logiciels de CAO de la plateforme mutualisée de conception de circuits intégrés et de mesures électriques de composants et circuits (IO-Lab) du département ACSE de l'IM2NP. Il ou elle conduit, en amont et en aval, le développement de projets "phare" du savoir-faire du département.
+Activités :
+- Concevoir des circuits intégrés analogiques, numériques et mixtes en technologie MOS et réaliser des circuits imprimés et des systèmes électroniques à composants discrets.
+- Installer et mettre à jour les « Design Kit » et les logiciels (programmation instrumentale et conception de circuits).
+- Assurer des missions de support aux personnels du département pour des travaux en lien avec leur projet de recherche.
+- Assurer l'encadrement de personnels non permanents affectés à la plateforme.
+- Piloter des projets de microélectronique ou d'électronique.
+- Assurer une veille technologique afin d'adapter et de faire évoluer la plateforme aux besoins des équipes de recherche.
+- Gérer la maintenance (préventive et curative) des équipements scientifiques de la plateforme.
+- Faire respecter les procédures d'hygiène et de sécurité inhérentes au bon fonctionnement de la plateforme.
+Compétences :
+- Connaissance approfondie des techniques de conception de circuits intégrés
+- Connaissance des principes et règles de la compatibilité électromagnétique
+- Connaissance de la réglementation en matière d'hygiène et de sécurité
+- Connaissance des différents processus garantissant la qualité du produit, le contrôle et la mise en place de l'assurance produit,
+- Anglais Niveau B2 (cadre européen commun de référence en langue)
+- Parfaite maîtrise des outils de conception de circuits intégrés (Cadence, Siemens, Synopsys, ADS)
+- Capacité à programmer et utiliser des microcontrôleurs et des FPGAs
+- Parfaite connaissance des langages de programmation (Python, Perl, Java, C)
+- Parfaite connaissance des logiciels de conception de circuits imprimés (Eagle, Cadence Allégro)
+- Maitrise des techniques de mise en boitier, de câblage et de soudure de composants électroniques
+- Capacité à collaborer avec les équipes de recherche et être force de proposition ; sens critique
+- Capacité à transmettre des connaissances
+Contexte :
+L'IM2NP est une unité mixte de recherche (UMR 7334) du Centre National de la Recherche Scientifique, associée à deux universités (l'Université Aix-Marseille et l'Université de Toulon) ainsi qu'à une école d'ingénieurs (L'Institut Supérieur d'Électronique et du Numérique - ISEN). Il est rattaché à trois Instituts du CNRS : CNRS Physique, CNRS Chimie et CNRS Ingénierie.
+L'IM2NP dispose de plusieurs plateformes mutualisées et labellisées, en particulier, L'Intelligent Object Laboratory (IOLab) intégrée au département ACSE (https://www.im2np.fr/fr/departement-analyse-et-conception-de-systemes-electronique-acse). Le laboratoire développe de nombreux projets de recherches de conception de circuits intégrés mixtes et hétérogènes à différentes gammes de fréquence et de caractérisation électrique autour de cette plateforme. L'IOLab est situé à Marseille sur le site du Technopôle Château Gombert et est utilisée par une trentaine de permanents et autant de non permanents.

@@ -1,0 +1,108 @@
++
+Liste des concours
+E : Informatique, statistiques et calcul scientifique
+Ingénieur de recherche
+Concours N° 61
+Nbre de postes :
+1
+Emploi-type :
+Cheffe ou chef de projet / experte ou expert en Ingéniérie logicielle
+Affectation :
+Centre de Physique des Particules de Marseille, MARSEILLE 09
+Groupe de fonction :
+Groupe 3
+Mission :
+L'ingénieure ou l'ingénieur apportera son expertise en ingénierie logicielle pour
+soutenir les développements logiciels des projets du laboratoire, notamment
+l'expérience du Calorimètre Argon Liquide de l'expérience internationale ATLAS du
+CERN. Il ou elle sera responsable de la conception, du développement et de la
+maintenance :
+- de bancs d'acquisition pour tests faisceaux ou pour petites expériences
+- d'algorithmes innovants en intelligence artificielle pour la sélection en temps
+réel, le traitement massif et l'analyse des données du calorimètre
+- de logiciels d'acquisition, de supervision et de diagnostic des données.
+Il ou elle sera amené(e) à coordonner des projets informatiques complexes à
+l'international, en particulier dans le cadre de collaborations avec le CERN. Il
+ou elle assurera une veille technologique afin de renforcer les compétences du
+CPPM et d'apporter son expertise dans les domaines de l'intelligence artificielle
+et du traitement massif de données pour les projets futurs en physique des
+particules.
+Activités :
+Les activités principales se divisent en trois grandes thématiques :
+1. Pilotage de projets internationaux :
+- Organiser des réunions d'avancement avec les partenaires
+- Présenter aux instances de gouvernance du CERN l'avancement des travaux et les
+éventuelles difficultés
+- Mettre à jour périodiquement l'analyse de risques
+- Veiller au respect du planning et des budgets alloués
+2. Conception et développement de logiciels :
+- Concevoir et développer des algorithmes d'intelligence artificielle, embarqués
+ou non
+- Concevoir des logiciels de contrôle-commande pour cartes électroniques
+permettant l'acquisition, le traitement et l'analyse massifs de données
+- Déployer des logiciels sur différentes plateformes (FPGA, GPU, etc.) et
+développer des outils informatiques nécessaires à leur exécution embarquée
+- Mettre en œuvre de bancs de tests pour cartes électroniques d'acquisition de
+données à base de FPGA.
+3. Activités prospectives :
+- Évaluer le potentiel des algorithmes d'intelligence artificielle pour de futures
+expériences en physique des particules (traitement massif, systèmes de
+déclenchement, etc.)
+- Collaborer avec les chercheurs pour comprendre les enjeux des projets définis
+par le Conseil Scientifique et proposer des solutions adaptées
+- Spécifier et fournir aux partenaires des composants logiciels d'acquisition en
+temps réel ainsi que leurs systèmes de contrôle.
+Compétences :
+Connaissances :
+- Connaissance des outils de développement d'algorithmes d'intelligence
+artificielle (Keras/TensorFlow) et des principes algorithmiques associés (réseaux
+de neurones récurrents, etc.)
+- Des connaissances en électronique et programmation de micrologiciels embarqués
+(HLS, VHDL) ainsi que des connaissances d'outils de contrôle-commande de cartes
+électroniques serait un atout
+- Connaissance de l'anglais : niveau B2 minimum (cadre européen commun de
+référence pour les langues)
+- Une connaissance de base de la physique des détecteurs serait un atout
+Savoir-faire :
+- Maîtrise des langages de programmation (C, C++, Python, etc.) et des méthodes de
+développement
+- Maîtrise des outils du génie logiciel
+- Excellentes compétences en communication écrite et orale en français et en
+anglais
+- Capacité à évaluer la pertinence et la faisabilité des solutions techniques
+notamment dans le domaine de l'IA
+- Une expérience en gestion d'équipe et gestion de projet serait un plus
+Savoir-être :
+- Capacité à travailler en équipe et à consolider les besoins mutuels au sein d'un
+collectif
+- Capacité d'écoute et de collaboration avec des partenaires institutionnels
+- Aptitude à travailler de manière efficace et autonome dans un environnement
+international et pluridisciplinaire de haut niveau.
+Contexte :
+Situé au coeur du Parc National des Calanques, sur le campus de Luminy, le Centre
+de Physique des Particules de Marseille est une Unité Mixte de Recherche (UMR
+7346). Le laboratoire relève de l'Institut national de physique nucléaire et de
+physique des particules (IN2P3), sous la double tutelle du CNRS et d'Aix-Marseille
+Université. Les recherches conduites au CPPM sont à la croisée des deux infinis -
+l'infiniment petit et l'infiniment grand - de l'étude des composantes élémentaires
+de la matière à l'exploration du cosmos.
+Fort de son expertise technologique en électronique, mécanique et informatique, le
+laboratoire conçoit et réalise des systèmes de détection à la pointe de la
+technologie, opérant souvent dans des conditions extrêmes : sous la mer, dans
+l'espace ou sous la terre. La majeure partie des recherches se poursuivent au sein
+de collaborations internationales de premier plan, avec des contributions
+mondialement reconnues. Le personnel du laboratoire participe à la formation des
+jeunes à la recherche et par la recherche, à l'enseignement universitaire, et à la
+valorisation des résultats.
+Le poste se situe au sein du service Détecteurs et Données composé d'une vingtaine
+de personnes. Des déplacements sont à prévoir sur le site des expériences, en
+France et à l'étranger, sont à prévoir.
+Toutes les activités du CPPM reposent sur des valeurs éthiques, déontologiques et
+d'intégrité, avec la dimension science et société. Le CPPM s'engage à mener des
+recherches dans le cadre de la science ouverte, à promouvoir la diversité et
+l'inclusion sur le lieu de travail et à préserver l'environnement.
+Avantages :
+- Contribution à la recherche au sein d'une institution mondialement reconnue, sur
+un projet international phare
+- Un cadre de travail agréable et arboré
+- Soutien administratif et logistique aux nouveaux arrivants

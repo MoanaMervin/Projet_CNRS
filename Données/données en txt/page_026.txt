@@ -1,0 +1,107 @@
++
+Liste des concours
+C : Sciences de l'ingénieur et instrumentation scientifique
+Ingénieur de recherche
+Concours N° 26
+Nbre de postes :
+1
+Emploi-type :
+Experte ou expert en développement d'expérimentation
+Affectation :
+Centre de recherche Cerveau et Cognition, TOULOUSE
+Groupe de fonction :
+Groupe 3
+Mission :
+L'ingénieur de recherche en techniques expérimentales est chargé d'organiser
+l'activité au sein de la plateforme MEG-OPM (Magnétoencéphalographie basée sur les
+Magnétomètres à pompage optique). Dans un premier temps, en association avec
+l'ingénieure responsable du pilotage expérimental, il/elle devra participer à
+l'implantation de l'équipement MEG (Magnétoencéphalographie) nouvelle génération
+avec le fournisseur et avec un groupe d'utilisateurs de renommée internationale.
+Il/elle aura pour tâche de fédérer l'ensemble des acteurs autour du cahier des
+charges lié à l'installation de ce nouvel équipement en cours d'acquisition, ainsi
+qu'aux différents matériels annexes nécessaires aux expérimentations. De plus
+il/elle accompagnera les utilisateurs, dans la rédaction de leurs protocoles de
+recherche qui concernent soit des thématiques très applicatives telles que
+l'épilepsie, les comas jusqu'à des recherches très fondamentales sur le
+fonctionnement neuronal.
+Activités :
+ACTIVITES PRINCIPALES :
+- Coordonner l'acquisition, l'installation et l'utilisation des équipements
+nécessaires aux différentes expérimentations (vidéo-projecteur, eyetracker,
+boutons réponse, système de stimulation auditive,...) à venir et en cours, sous
+la responsabilité du responsable opérationnel des plateformes, et en lien direct
+avec les chercheurs et les étudiants;
+- Préparer et vérifier le bon fonctionnement des équipements (ordinateur,
+d'acquisition, systèmes logiciels) au sein de la plateforme;
+- Accompagner les chercheurs dans le choix de leur design expérimental
+(paradigme de stimulation, position des capteurs, nombre de répétitions,
+modalité de stimulation, contrôle des paramètres confondants, ...) pour
+optimiser le signal acquis;
+- Participer au recueil, à la mise en forme et à l'analyse des données
+enregistrées, en coordination avec les investigateurs, en vue de leur
+interprétation;
+- Proposer des évolutions dans l'acquisition et l'analyse des données en
+fonction des besoins (qualité du signal, nombre de capteurs, type de protocoles
+de stimulation,...)
+- Assurer la sauvegarde et l'organisation des données acquises (datamanagement);
+- Organiser et contrôler l'utilisation collective des appareils;
+- Assurer l'application des principes et des règles d'hygiène et de sécurité
+d'utilisation des appareils;
+- Participer à la mise en place d'une démarche qualité;
+- Superviser les plannings d'utilisation des ressources de la plateforme.
+ACTIVITES ASSOCIEES :
+- Structurer une veille technologique;
+- Valoriser les résultats de recherche par des publications et des
+communications scientifiques ou méthodologique.
+- Proposer de nouvelles approches et outils pour améliorer les expérimentations.
+- Encadrer et accompagner les doctorants, post-doctorants et étudiants de
+Master..
+Compétences :
+Savoir-faire :
+- Avoir une expérience en acquisitions de données de MEG
+(magnétoencéphalographie);
+- Posséder des compétences approfondies en développement logiciel
+(MATLAB®, PYTHON);
+- Savoir traduire une demande scientifique en spécifications techniques;
+- Maîtriser l'anglais technique, lu et écrit (niveau B2, selon le cadre Européen
+de référence).
+- Avoir mené un projet de recherche en autonomie serait apprécié
+Savoirs :
+- Formation supérieure dans le domaine de l'instrumentation des équipements liés
+aux enregistrements (électrophysiologie et/ou biomécanique) (niveau Master,);
+- Connaissances générales des instruments utilisés pour les enregistrements :
+MEG (magnétoencéphalographie, EEG électroencéphalographie, EMG
+électromyographie, TMS stimulation magnétique transcrânienne;
+- Connaissances en traitement du signal issu de la MEG si possible sinon du
+signal issu de l'EEG;
+- Connaissance de la réglementation de la recherche sur la personne humaine.
+Savoir-être :
+- Savoir s'intégrer dans une équipe dynamique et travailler en étroite
+relation avec le responsable du projet et d'autres chercheurs/personnels
+techniques, sous la responsabilité des responsables opérationnels/scientifiques;
+- Faire preuve d'une grande autonomie, d'un bon relationnel, ainsi que d'une
+bonne capacité d'interaction et de communication;
+- Faire preuve d'empathie pour la prise en charge de volontaires venant
+participer aux expérimentations potentiellement atteints de pathologies.
+Contexte :
+Le Centre de Recherche Cerveau & Cognition (CerCo) est une unité mixte du CNRS et
+de l'Université de Toulouse  située au CHU de Toulouse Purpan.
+Son effectif est de 80 personnes. Il est organisé autour de 5 équipes de recherche
+et des services généraux. Les objectifs scientifiques du CerCo sont centrés sur
+l'étude de différentes modalités sensorielles et de leur intégration, des
+fonctions cognitives telles que la mémoire, la reconnaissance de l'objet mais
+- aussi la conscience et les états mentaux.
+La recherche au CERCO porte sur la personne humaine et le candidat sera amené à
+être fréquemment en contact direct avec les sujets venant participer aux
+expérimentations (volontaires et patients atteints de pathologies
+neurologiques ou psychiatriques avec handicap).
+L'ingénieur de recherche sera le référent principal d'un équipement
+d'expérimentation à implanter dans le cadre de la création d'une
+nouvelle plateforme appartenant à l'infrastructure nationale biologie santé FRANCE
+LIFE IMAGING (FLI).
+L'expert.e en développement d'expérimentation MEG (Magnéto-EncéphaloGraphie)
+intégrera le Service Pilotage des Plateformes Expérimentales qui comprend une
+titulaire (IR CNRS responsable du service) et des contractuel.lles dont
+actuellement deux IR CNRS, un IR Université, un assistant CHU et, en recrutement
+un AI CNRS.

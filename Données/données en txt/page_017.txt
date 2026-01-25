@@ -1,0 +1,54 @@
++
+Liste des concours
+B : Sciences chimiques et science des matériaux
+Ingénieur de recherche
+Concours N° 17
+Nbre de postes :
+1
+Emploi-type :
+Ingenieure ou ingenieur de recherche en science  des matériaux / caractérisation
+Affectation :
+Conditions Extrêmes et Matériaux : Haute température et Irradiation, ORLEANS
+Groupe de fonction :
+Groupe 3
+Mission :
+L'ingénieur-e de recherche en sciences des matériaux aura pour mission de concevoir des procédés d'élaboration de nouveaux matériaux nanoporeux; de mettre en œuvre des techniques de caractérisation à haute résolution et de développer et optimiser de procédés d'évaluation de la performance.
+Activités :
+- Concevoir de nouvelles voies d'écoconception de matériaux nanoporeux (carbones, oxydes, hybrides) par des approches en phase gazeuse (CVD, pyrolyse) et en solution (sol-gel, solvothermale, impregnation), visant l'obtention de matériaux à propriétés améliorées en visant à réduire la production de déchets et les impacts environnementaux.
+- Adapter des dispositifs expérimentaux permettant la caractérisation des matériaux nanoporeux et/ou le couplage des techniques en collaboration avec les services techniques du laboratoire.
+- Coordonner et réaliser la caractérisation approfondie de la texture nanoporeuse, composition chimique et propriétés physico-chimiques des matériaux. Définir les expériences à réaliser et préparer les échantillons.
+- Réaliser l'interprétation des données de caractérisation en utilisant des modèles théoriques adaptés au type de matériaux nanoporeux et de la porosité (NLDFT, BJH, HK, t-plot, QSDFT, Monte-Carlo).
+- Prendre en charge une partie des équipements de caractérisation de matériaux nanoporeux du parc instrumental de l'équipe (analyseurs de gaz volumétriques, chimisorption de gaz et de vapeurs, analyseurs thermiques).
+- Adapter les instruments aux nouveaux besoins de la recherche.
+- Former les utilisateurs sur les principes et la mise en œuvre des techniques de caractérisation de matériaux nanoporeux.
+- Assurer la maintenance des moyens expérimentaux, le suivi régulier des performances des équipements en relation avec les constructeurs. Définir le cahier des charges des équipements à acquérir/mettre à jour.
+- Effectuer ou superviser la conduite des expériences, traiter les données expérimentales, interpréter les résultats.
+- Initier et/ou piloter tout ou partie d'un projet, d'une étude liée à l'accomplissement d'un projet de recherche.
+- Diffuser et valoriser ses résultats.
+- Participer aux réunions des groupes de travail/congrès du domaine et présenter les résultats obtenus.
+Compétences :
+Savoirs :
+- Connaissances approfondies en sciences des matériaux et en techniques de caractérisation texturale, structurale et chimique (physorption et chimisorption de gazes et vapeurs, diffraction de rayons X, spectroscopie Raman, XPS, entre autres).
+- Connaissances approfondies en synthèse et caractérisation de matériaux nanoporeux.
+- Niveau d'anglais souhaité B2 (cadre européen commun de référence pour les langues).
+- Connaissances en instrumentations et mesures.
+- Expertise d'adsorption, catalyse, électrochimie et/ou procédés de séparation.
+- Maîtriser les régles d'hygiène et de sécurité.
+Savoir-faire :
+- Capacité à travailler en interaction avec les chercheurs.
+- Capacité rédactionnelle : rapport, procédure, cahier des charges ou réponse à un appel d'offres.
+- Aptitude à la planification des expériences et à la maintenance des équipements.
+- Capacité à partager et vulgariser les connaissances scientifiques : interagir avec le grand public et les étudiants.
+- Maitriser la réglementation en matière d'hygiène, de sécurité, environnement liée au domaine.
+- Savoir diagnostiquer l'origine d'une panne et résoudre des dysfonctionnements.
+- Connaître les techniques d'encadrement (doctorants, stagiaires).
+Savoir-être :
+- Aptitude à travailler en équipe.
+- Sens du service.
+- Capacité d'adaptation et d'initiative.
+- Rigueur et méthode.
+Contexte :
+Le CEMHTI est une unité propre de recherche du CNRS, conventionnée avec l'université d'Orléans et compte environ 105 agents répartis entre deux sites géographiquement proches sur le campus Orléanais. Le laboratoire est constitué de 5 équipes de recherches. Son champ d'expertise, ciblé sur l'étude physico-chimique des matériaux en conditions extrêmes permet d'aborder une grande variété de matériaux grâce à un ensemble d'outils expérimentaux souvent uniques et à un savoir faire des équipes scientifiques et techniques.
+La thématique « matériaux nanoporeux » tourne autour de la conception et le développement de nouveaux procédés de synthèse de matériaux, la caractérisation multi-échelle de propriétés physicochimiques, texturales et structurales de matériaux, et des applications dans les domaines de l'énergie et l'environnement. Aujourd'hui, la thématique est devenue un axe transverse avec la participation de toute les équipes et les différentes plateformes du CEMHTI dans les projets de recherche dédiés à l'étude des interfaces solide/gaz ou solide/liquide de matériaux innovants synthétisés, et la caractérisation physico-chimique et les applications des matériaux nanoporeux.
+L'ingénieur-e de recherche intégrera l'équipe « NaFMAT : Nano and Functional Materials: from synthesis to Applications » du CEMHTI, composée de 5 permanents et 7 non permanents (dont 4 étudiants en thèse) et installée sur le site Haute Température du CEMHTI à Orléans. Il/elle sera sous la responsabilité de la responsable de l'équipe. L'équipe élabore une activité de synthèse et caractérisation avancée de nouveaux matériaux nanoporeux à propriétés texturales contrôlées.
+Il/Elle travaillera dans un cadre pluridisciplinaire en physico-chimique de matériaux nanoporeux, notamment en tirant profit du parc instrumental important de l'équipe dédié à la synthèse, la caractérisation et les applications des matériaux nanoporeux dans les domaines de l'énergie et l'environnement.

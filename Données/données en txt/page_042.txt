@@ -1,0 +1,58 @@
++
+Liste des concours
+D : Sciences humaines et sociales
+Ingénieur de recherche
+Concours N° 42
+Nbre de postes :
+1
+Emploi-type :
+Ingenieure ou ingenieur de recherche en production, traitement et analyse de données
+Affectation :
+Technologie et Ethnologie des Mondes PréhistoriqueS, NANTERRE
+Groupe de fonction :
+Groupe 3
+Mission :
+L'ingénieur.e de recherche conçoit, développe, modélise et exploite des bases de données archéologiques, iconographiques et géographiques à partir des travaux produits par les chercheurs de l'unité TEMPS et/ou de ses propres recherches. Il/elle développe des outils informatiques pour l'ensemble des membres du laboratoire. Il/elle conçoit, administre et exploite les bases de données archéologiques, propose des solutions d'exploitations et développe des outils d'analyses spatiales. Il/elle en assure l'accès et la diffusion sur le web et via la Très Grande Infrastructure de Recherche (TGIR) Huma-Num, en garantissant les principes FAIR (Findable, Accessible, Interoperable, Reusable).
+Activités :
+- Proposer des structures de Base De Données (BDD), élaborer le cahier des charges, assurer la maîtrise d'ouvrage, la documentation et la maintenance
+- Accompagner les chercheurs dans l'utilisation d'approches quantitatives et qualitatives pour répondre aux problématiques en lien avec les BDD (statistiques multivariées et spatiales)
+- Conseiller dans la mise en œuvre des méthodes et des outils de visualisation et d'analyse (spatiale, statistique) des données archéologiques
+- Développer et formaliser des outils d'acquisition et d'analyse spatiale (terrain et laboratoire) en privilégiant les outils libres et interopérables (QGis ; R)
+- Participe activement aux opérations de terrains des membres du laboratoire - en France et à l'étranger - pour l'acquisition et le traitement des données spatiales (2D et 3D)
+- Analyser les structures de BDD existantes et des corpus anciens afin de les remobiliser ; proposer des solutions techniques pour l'exploitation et l'analyse des données anciennes
+- Assurer une veille scientifique et technologique afin de maintenir les BDD (corrections, mises à jour) et les faire évoluer en fonction des avancées technologiques
+- Assurer les priorités d'administration des bases de données et de mise en conformité des données avec les licences de diffusion
+- Participer à la rédaction des rapports et des synthèses de présentation des résultats des analyses de données
+- Concevoir et animer des actions de formations et participer au tutorat d'étudiants (de la Licence au Doctorat) : BDD relationnelles, tests statistiques, analyses spatiales
+Compétences :
+Savoirs
+- Systèmes d'information géographiques (connaissance approfondie)
+- Connaissance de QGis ; R
+- Les compétences en programmation dans différents environnements informatiques sont un plus
+- Connaissance des outils d'acquisition 3D (laboratoire et terrain)
+- Connaissance de l'archéologie et des standards disciplinaires
+- Maîtrise de la gestion de projet
+- Environnement et réseaux professionnels
+- Connaissance des textes législatifs et règlementaires du domaine
+- Savoir transmettre
+- Langue anglaise : C1 (cadre européen commun de référence pour les langues)
+Savoir-faire
+- Être expert.e dans le développement et la formalisation des méthodes de production et d'analyse des données archéologiques
+- Être expert.e dans l'utilisation des outils d'analyses spatiales
+- Faire preuve d'autonomie et d'initiative, notamment en portant des projets financés
+- Initier et conduire des partenariats
+- Jouer un rôle de conseil et d'aide à la décision
+- Encadrer des stagiaires, contractuels, et prestataires
+- Rédiger des rapports, des articles et participer aux publications collectives de l'unité
+- Participer / coordonner des axes/thèmes de recherche du laboratoire
+Savoir-être
+- Autonomie
+- Témoigner d'aptitudes relationnelles
+- Savoir travailler en équipe
+- Faire preuve de pédagogie
+Contexte :
+L'Unité Mixte de Recherche (UMR) TEMPS (182 membres dont 119 membres permanents, 17 chercheurs et 3 administratifs du CNRS, 10 enseignants-chercheurs, 16 INRAP, 15 Ministère de la culture, 6 Service archéologique des collectivités territoriales,  ainsi que une cinquantaine de doctorants et de post-doctorants ) est une unité d'archéologie sous la triple tutelle du Centre National de la Recherche Scientifique (INSHS), de l'Université Paris 1 Panthéon-Sorbonne et de l'Université Paris Nanterre et en partenariat avec le Ministère de la Culture et l'INRAP.
+Elle est l'une des 7 UMR de la Maison des Sciences Humaines (MSH) Mondes, située sur le campus de l'université Paris Nanterre et la principale équipe d'accueil des étudiants en Préhistoire de Paris 1 et de Paris Nanterre. L'unité est engagée à tous les niveaux de la chaîne d'acquisition des données archéologiques : fouilles, terrains ethno-archéologiques, études de collections, exploitation des archives, en France et à l'étranger. L'ensemble fournit d'innombrables données archéologiques et données numériques brutes qui vont, de leur acquisition, jusqu'à leur traitement analytique et leur publication. Enfin, l'unité est pleinement investie dans l'enseignement et la formation théorique et pratique des futurs archéologues, tant à l'Université Paris 1 qu¿à Paris Nanterre.
+L'ingenieur.e sera accueilli.e dans les locaux de TEMPS à la MSH Mondes (Nanterre) et sera placé.e sous la responsabilité hiérarchique du Directeur d'Unité de TEMPS.
+Le télétravail sera possible en accord avec la direction d'unité et selon les règles en vigueur. Le poste de travail est situé dans un bureau partagé (deux bureaux).
+L'ingénieur.e sera à moyen terme amené.e à se déplacer en France et à l'étranger et aura la possibilité de suivre des formations dans le cadre de ses fonctions

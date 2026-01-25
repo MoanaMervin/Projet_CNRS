@@ -1,0 +1,765 @@
+
+    <script language="JavaScript">
+
+      // Renvoyer la valeur du cookie dont le nom est passe en parametre
+      function getCookie(name) {
+        if (document.cookie.length == 0) {
+          return null;
+        }
+        var regSepCookie = new RegExp('(; )', 'g');
+        var cookies = document.cookie.split(regSepCookie);
+        for (var i = 0; i < cookies.length; i++) {
+          var regInfo = new RegExp('=', 'g');
+          var infos = cookies[i].split(regInfo);
+          if (infos[0] == name) {
+            return unescape(infos[1]);
+          }
+        }
+        return null;
+      }
+
+      // Generer un identifiant user temporaire a sauvegarder en cookie (si pas existant)
+      function getIdentifiantUserTemporaire() {
+        var tempUserId = getCookie("pde_temp_user_id");
+        if (tempUserId == null || tempUserId == "") {
+          var dateExpire = new Date();
+          dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+          tempUserId = Math.random().toString(16).slice(2);
+          document.cookie = "pde_temp_user_id=" + tempUserId + "; expires=" + dateExpire + "; path=/";
+        }
+        return tempUserId;
+      }
+
+      // Mettre a jour le badge compteur nombre de concours dans la page
+      function majBadgeCompteurConcours() {
+        var nbrConcours = getCookie("nbr_concours");
+        if (nbrConcours == null || nbrConcours == 0) {
+          document.getElementById("cptNbrConc").innerHTML = "+";
+        } else {
+          document.getElementById("cptNbrConc").innerHTML = nbrConcours;
+        }
+      }
+
+      // Ajouter un numero de concours a la liste des concours pre-selectionnes
+      function ajouterConcoursFavori(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours");
+        var nbrConcours = 0;
+        var dateExpire = new Date();
+        dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+
+        if (valCookieNumerosConcours == null || valCookieNumerosConcours == "") {
+          valCookieNumerosConcours = numero_concours;
+          nbrConcours = 1;
+        } else {
+          // Transformer la chaine en tableau
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau ne contient pas le numero de concours : Ajout en fin de liste
+          if (arrayCookieNumerosConcours.includes(numero_concours) == false) {
+            valCookieNumerosConcours = valCookieNumerosConcours + "|" + numero_concours;
+            nbrConcours = arrayCookieNumerosConcours.length + 1;
+          }
+        }
+        // Enregistrer la liste des numeros de concours et le nombre de concours en cookies
+        document.cookie = "numeros_concours=" + valCookieNumerosConcours + "; expires=" + dateExpire + "; path=/";
+        document.cookie = "nbr_concours=" + nbrConcours + "; expires=" + dateExpire + "; path=/";
+        majBadgeCompteurConcours();
+      }
+
+      // Supprimer un numero de concours de la liste des concours pre-selectionnes
+      function supprimerConcoursFavori(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours");
+        if (valCookieNumerosConcours != null && valCookieNumerosConcours != "") {
+          var nbrConcours = getCookie("nbr_concours");
+          var dateExpire = new Date();
+          dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+          // Transformer la chaine en tableau
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau contient le numero de concours : Reconstruction de la liste sans ce numero
+          if (arrayCookieNumerosConcours.includes(numero_concours) == true) {
+            valCookieNumerosConcours = "";
+            nbrConcours = 0;
+            for (var i = 0; i < arrayCookieNumerosConcours.length; i++) {
+              if (arrayCookieNumerosConcours[i] != numero_concours) {
+                if (valCookieNumerosConcours.length > 0) {
+                  valCookieNumerosConcours = valCookieNumerosConcours + "|";
+                }
+                valCookieNumerosConcours = valCookieNumerosConcours + arrayCookieNumerosConcours[i];
+                nbrConcours = nbrConcours + 1;
+              }
+            }
+          }
+
+          // Enregistrer la liste des numeros de concours et le nombre de concours en cookies
+          document.cookie = "numeros_concours=" + valCookieNumerosConcours + "; expires=" + dateExpire + "; path=/";
+          document.cookie = "nbr_concours=" + nbrConcours + "; expires=" + dateExpire + "; path=/";
+        }
+      }
+
+      // Gerer le numero de concours selon la liste des numeros de concours en cookie :
+      // - Si numero de concours absent de la liste => Clic pour ajouter le concours
+      // - Si numero de concours present dans la liste => Clic pour supprimer le concours
+      function gererConcoursFavori(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours");
+        if (valCookieNumerosConcours == null || valCookieNumerosConcours == "") {
+          // Si liste de concours vide : Ajout
+          ajouterConcoursFavori(numero_concours);
+          alert("Ajouté à ma sélection");
+        } else {
+          // Transformer la chaine en tableau
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau ne contient pas le numero de concours : Ajout
+          if (arrayCookieNumerosConcours.includes(numero_concours) == false) {
+            ajouterConcoursFavori(numero_concours);
+            alert("Ajouté à ma sélection");
+          }
+          else {
+            // Sinon : Suppression
+            supprimerConcoursFavori(numero_concours);
+            majBadgeCompteurConcours();
+            alert("Retiré de ma sélection");
+          }
+        }
+      }
+
+      // Fonction Ajax interrogation CEL : Existence candidature pour un concours
+      function ajaxRequeteCandidatConcoursCEL(cel_url_requete_candidat_concours) {
+        var tempUserId = getIdentifiantUserTemporaire();
+        cel_url_requete_candidat_concours = cel_url_requete_candidat_concours + "&pde_temp_user_id=" + tempUserId;
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', cel_url_requete_candidat_concours);
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState === 4) {
+            var reponseCEL = xhr.responseText;
+            if (reponseCEL == 1) {
+              // Si reponse = 1, candidature existe deja dans CEL sur ce concours par le candidat
+              // Desactiver le bouton "Postuler" de la fiche concours et l icone etoile favori
+              document.getElementById("btnPostuler").disabled = true;
+              document.getElementById("btnPostuler").title = "Vous avez déjà postulé à ce concours";
+              document.getElementById("iconefavori").style.visibility = "hidden";
+              document.getElementById("cptNbrConc").innerHTML = "";
+            }
+          }
+        };
+        xhr.send();
+      }
+
+      // Verifie si le concours a deja ete postule
+      function checkConcoursPostule(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours_postules");
+        if (valCookieNumerosConcours != null && valCookieNumerosConcours != "") {
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau contient le numero de concours :
+          // Desactiver le bouton "Postuler" de la fiche concours et l icone etoile favori
+          for (var i = 0; i < arrayCookieNumerosConcours.length; i++) {
+            if (arrayCookieNumerosConcours[i] == numero_concours) {
+              document.getElementById("btnPostuler").disabled = true;
+              document.getElementById("btnPostuler").title = "Vous avez déjà postulé à ce concours";
+              document.getElementById("iconefavori").style.visibility = "hidden";
+              document.getElementById("cptNbrConc").innerHTML = "";
+            }
+          }
+        }
+      }
+
+      // Ajouter un numero de concours a la liste des concours postules
+      function ajouterConcoursPostule(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours_postules");
+        var dateExpire = new Date();
+        dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+        if (valCookieNumerosConcours == null || valCookieNumerosConcours == "") {
+          valCookieNumerosConcours = numero_concours;
+        } else {
+          // Transformer la chaine en tableau
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau ne contient pas le numero de concours : Ajout en fin de liste
+          if (arrayCookieNumerosConcours.includes(numero_concours) == false) {
+            valCookieNumerosConcours = valCookieNumerosConcours + "|" + numero_concours;
+          }
+        }
+        // Enregistrer la liste des numeros de concours postules en cookie
+        document.cookie = "numeros_concours_postules=" + valCookieNumerosConcours + "; expires=" + dateExpire + "; path=/";
+      }
+
+      // Postuler au concours dans application CEL
+      function postulerCEL(numero_concours, detail_concours, cel_url_concours) {
+        if (confirm("Vous souhaitez postuler pour le concours " + detail_concours + ".\nConfirmez-vous ce choix ?")) {
+          // Supprimer le concours de la liste des concours pre-selectionnes
+          supprimerConcoursFavori(numero_concours);
+          majBadgeCompteurConcours();
+          // Ajouter le concours a la liste des concours postules
+          ajouterConcoursPostule(numero_concours);
+          // Desactiver le bouton "Postuler" de la fiche concours
+          document.getElementById("btnPostuler").disabled = true;
+          document.getElementById("btnPostuler").title = "Vous avez déjà postulé à ce concours";
+          // Desactiver l icone etoile favori
+          document.getElementById("iconefavori").style.visibility = "hidden";
+          document.getElementById("cptNbrConc").innerHTML = "";
+
+          // Transmettre identifiant user PDE temporaire a CEL
+          var tempUserId = getIdentifiantUserTemporaire();
+          cel_url_concours = cel_url_concours + "&pde_temp_user_id=" + tempUserId;
+
+          // Ouvrir application CEL dans une nouvelle fenetre
+          window.open(cel_url_concours, '_blank');
+        }
+      }
+
+      // Postuler dans application CEL a tous les concours pre-selectionnes
+      function postulerCELtous(cel_url_concours) {
+        var nbrConcours = getCookie("nbr_concours");
+        if (nbrConcours != null && nbrConcours > 0) {
+          if (confirm("Vous souhaitez postuler pour les " + nbrConcours + " concours pré-sélectionnés.\nConfirmez-vous ce choix ?")) {
+            var dateExpire = new Date();
+            dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+            // Ajouter tous les concours pre-selectionnes a la liste des concours postules
+            var valCookieNumerosConcours = getCookie("numeros_concours");
+            var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+            for (var i = 0; i < arrayCookieNumerosConcours.length; i++) {
+              ajouterConcoursPostule(arrayCookieNumerosConcours[i]);
+            }
+            // Vider la liste des concours pre-selectionnes
+            document.cookie = "numeros_concours=; expires=" + dateExpire + "; path=/";
+            // Reinitialiser le nombre de concours pre-selectionnes a 0
+            document.cookie = "nbr_concours=0; expires=" + dateExpire + "; path=/";
+
+            // Transmettre identifiant user PDE temporaire a CEL
+            var tempUserId = getIdentifiantUserTemporaire();
+            cel_url_concours = cel_url_concours + "&pde_temp_user_id=" + tempUserId;
+
+            // Ouvrir application CEL dans une nouvelle fenetre
+            window.open(cel_url_concours, '_blank');
+            // Recharger la page parente
+            window.opener.location.reload();
+            // Fermer la page
+            window.close();
+          }
+        }
+      }
+
+      // Supprimer un concours de la liste des concours pre-selectionnes, depuis icone corbeille
+      function supprimerConcoursListe(numero_concours) {
+        if (confirm("Vous souhaitez supprimer le concours n°" + numero_concours + ".\nConfirmez-vous ce choix ?")) {
+          supprimerConcoursFavori(numero_concours);
+          window.location.reload();
+          // Mettre a jour le badge compteur dans la fenetre parente
+          var nbrConcours = getCookie("nbr_concours");
+          if (nbrConcours == null || nbrConcours == 0) {
+            window.opener.document.getElementById("cptNbrConc").innerHTML = "+";
+          } else {
+            window.opener.document.getElementById("cptNbrConc").innerHTML = nbrConcours;
+          }
+        }
+      }
+
+      // Retour en haut de la page
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+
+    </script>
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src-elem 'self' *.cnrs.fr 'unsafe-inline'; script-src-attr 'self' *.cnrs.fr 'unsafe-inline'; frame-src 'self' *.cnrs.fr 'unsafe-inline'; connect-src 'self' *.cnrs.fr 'unsafe-inline'; font-src 'self' *.cnrs.fr 'unsafe-inline'; style-src 'self' *.cnrs.fr 'unsafe-inline'; img-src 'self' *.cnrs.fr data:; " />
+<link rel="stylesheet" href="/profil/css/autre.css" type="text/css">
+<link rel="stylesheet" href="/profil/css/backtotop.css" type="text/css">
+<title>fiche profil public</title>
+<SCRIPT LANGUAGE="JAVASCRIPT" SRC="/profil/js/comboliste.js"></SCRIPT>
+<SCRIPT LANGUAGE="JAVASCRIPT" SRC="/profil/js/jquery3.4.1.min.js"></SCRIPT>
+<SCRIPT LANGUAGE="JAVASCRIPT" SRC="/profil/js/jquery.textarea.js"></SCRIPT>
+
+      <script type="text/javascript">
+        function getXhr(){
+            var xhr = null;
+            try {
+                xhr = new XMLHttpRequest();
+            } catch(e){
+                xhr = new ActiveXObject("Microsoft.XMLHTTP" );
+            }
+            return xhr;
+          }
+
+          function updateElementByAjax (pUrl, pElementId, pAsynch){
+            updateElementWithFunctionByAjax(pUrl, pElementId, pAsynch, null, false);
+          }
+        /*
+        * Si utilisation de cette méthode, il faut définir la méthode "callBackMessagesErreur".
+        */
+        function updateMessagesErreur(pUrlCheckMessagesErreur) {
+            updateElementWithFunctionByAjax(pUrlCheckMessagesErreur, "erreur", true, callBackMessagesErreur, true);
+        }
+          function updateElementWithFunctionByAjax (pUrl, pElementId, pAsynch, pFunctionCall, pIsInnerHTML){
+            var xhr = getXhr();
+            xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4 && xhr.status  == 200 ){
+                var documentElement = document.getElementById(pElementId);
+                if (documentElement != null) {
+                  if (pIsInnerHTML) {
+                      $("#" + pElementId).html(xhr.responseText);
+                  } else {
+                    documentElement.outerHTML=xhr.responseText;
+                  }
+                  if(pFunctionCall != null) {
+                  pFunctionCall(xhr.responseText);
+                  }
+                }
+              }
+            };
+            xhr.open( "GET", pUrl,  pAsynch);
+            xhr.send(null);
+          }
+      </script>
+      
+<script>top.nbClick=0</script>
+</head>
+<body bgcolor="#FFFFFF"  onLoad=ajaxRequeteCandidatConcoursCEL('http://concoursexternesit.cnrs.fr/public/candidat/requete_get_candidat_concours.php?numero_concours=130'); >
+<div id="divglobale">
+<form name="formFiche" method="post" action="">
+           <script>top.boutonClique="";</script>
+<input type="hidden" name="hidFicheCourante" value="pg_profil_public_referens.pAfficheProfilPublic">
+<br>
+<table width="100%" border=0>
+<tr>
+<td align="left" width="5%"><input type="button" id="btnPostuler" name="btnPostuler" value="Postuler" onClick="postulerCEL('130', 'n°130 : IE - BAP Informatique, statistiques et calcul scientifique - Ingenieure ou ingenieur en ingénierie logicielle - Observatoire des sciences de l univers de Grenoble, ST MARTIN D HERES', 'http://concoursexternesit.cnrs.fr/public/candidat/requete_postuler.php?numeros_concours=130');" ></td>
+<td align="left" width="3%">
+
+      <a id="iconefavori" onclick="gererConcoursFavori('130');"
+        title="Mes concours pr&eacute;-s&eacute;lectionn&eacute;s (favoris)"
+        style="text-decoration: none;">
+          <img src="/profil/images/icon_etoile_favori.png" width="60" height="60" border="0">
+          <span class="icon_etoile_favori_span" style="" id="cptNbrConc">+</span>
+      </a>
+</td>
+<td width="75%"></td>
+<td align="center">
+      <b>Liste des concours</b><br>
+      <a href="PG_PROFIL_PUBLIC_REFERENS.afficherListeConcoursPreselectionnes?destinationId=81"
+      onclick="window.open('PG_PROFIL_PUBLIC_REFERENS.afficherListeConcoursPreselectionnes?destinationId=81', 'newwindow', 'width=700,height=400'); return false;"
+      title="Consulter la liste de mes concours pr&eacute;-s&eacute;lectionn&eacute;s"><img src="/profil/images/icone_liste.png" width=40 height=40 border=0></a>
+      </td>
+</tr>
+</table>
+<center>
+    <table width="60%" border="2" cellspacing="0">
+    <tr>
+      <td class="enteteconcours" bordercolor="#CCCCCC"> 
+<p class="enteteconcours"><span class="enteteconcours">E : Informatique, statistiques et calcul scientifique</span></p>
+        
+<p class="enteteconcours"><span class="enteteconcours">Ingénieur d'études</span></p>
+        <p class="enteteconcours"><span class="enteteconcours">Concours N&deg; 130</span></p>
+      </td>
+    </tr>
+  </table>
+  </center>
+  
+<p>&nbsp;</p>
+
+<table width="100%" border="0" cellspacing="0">
+  <tr height="25">
+    <td width="20%"><b>Nbre de postes : </b></td>
+    <td width="80%">2</td>
+  </tr>
+
+      <tr height="25">
+          <td width="20%"><b>Emploi-type :</b></td>
+          <td width="80%">Ingenieure ou ingenieur en ingénierie logicielle</td>
+      </tr>
+    
+</table>
+<br>
+<table width="100%" border="0" cellspacing="0">
+<tr>
+<td class="soustitreprincipal">1er poste du concours N&deg; 130</td>
+</tr>
+</table>
+<br>
+
+    <table width="100%" border="0">
+
+    <tr height="25">
+      <td width="20%"><b>Affectation :</b></td>
+      <td width="80%">Observatoire des sciences de l'univers de Grenoble, ST MARTIN D HERES</td>
+    </tr> 
+<tr height="25"><td width="20%"><b>Groupe de fonction :</b></td><td width="80%">
+Groupe 3
+</td></tr>
+</td>
+    </tr>
+ </table>
+      
+<br>
+
+  <p>&nbsp;</p>
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="mission"><b>Mission :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr width="100">
+	  <td colspan="2">
+	
+L'ingénieur-e en ingénierie logicielle aura pour mission de concevoir, développer <BR>
+et maintenir actifs les logiciels au sein du pôle numérique de l'OSUG. Il/elle <BR>
+interviendra dans toutes les phases du cycle de vie des logiciels (analyse, <BR>
+développement, qualification, intégration, déploiement, maintenance) dans le <BR>
+respect du cahier des charges, des normes et des règles de sécurité. Il/elle <BR>
+assumera la mise en œuvre des projets pris en charge.<BR>
+Le projet central sera dédié à l'infrastructure internationale de bases de données <BR>
+de spectroscopie de solides SSHADE.<BR>
+
+</td>
+    </tr>
+  </table>
+  
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="activites"><b>Activit&eacute;s :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+-Implémenter des évolutions du modèle de données scientifiques de SSHADE et <BR>
+adaptation de la structure de sa base de données.<BR>
+-Concevoir, développer et/ou améliorer de nouvelles fonctionnalités par exemple <BR>
+d'import, de recherche, de visualisation de données complexes et d'export pour les <BR>
+différents volets des projets sur lesquelles l'ingénieur-e interviendra.<BR>
+-Concevoir et implémenter des outils graphiques, de traitement numérique et <BR>
+d'analyse spectroscopique en ligne pour étendre les potentialités d'utilisation de <BR>
+l'infrastructure de données par la communauté pour l'analyse des observations <BR>
+astronomiques et des missions spatiales.<BR>
+-Participer et présenter oralement des développements techniques à des réunions <BR>
+spécifiques du projet ou à tout autre réseau au sein de la communauté <BR>
+d'utilisateurs de l'infrastructure de données.<BR>
+-A terme, développer de nouvelles infrastructures dans le domaine (repository <BR>
+public de spectroscopie en support aux plans de gestion des données RéGEF / INSU <BR>
+(institut national des sciences de l'univers).<BR>
+-Contribuer pour 10% de son temps aux activités transversales du pôle numérique de <BR>
+l'OSUG sur son domaine de compétence (activité de conseil technique pour l'étude <BR>
+des demandes instruites par le pôle numérique, participation à des groupes de <BR>
+travail, par exemple).<BR>
+
+</td>
+    </tr>
+  </table>
+  
+
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="competences"><b>Comp&eacute;tences :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+Savoirs :<BR>
+-Maîtrise de langages de programmation orientée objet, utilisés en contexte Web <BR>
+: d'une part le langage Python et son écosystème (bonnes pratiques, packaging, <BR>
+outils de tests et de validation, au moins une librairie de visualisation <BR>
+dynamique de données souhaitée), d'autre part le langage Javascript.<BR>
+-Expertise en développement d'infrastructure Web autour d'un framework full-<BR>
+stack (Pyramid, Django...)<BR>
+-Maîtrise d'un système de base de données relationnelles (idéalement PostgreSQL)<BR>
+-Maîtrise de la forge logicielle GitLab, des bonnes pratiques de gestion des <BR>
+versions, et des fonctionnalités d'intégration et de déploiement continus.<BR>
+-Maîtrise des technologies de containers (Docker) de déploiement d'applications, <BR>
+pratique de l'utilisation des plateformes de déploiement (Kubernetes).<BR>
+-Anglais technique, au minimum B2 (cadre européen commun de référence pour les <BR>
+langues)<BR>
+-Maîtrise de XML et XML Schema, Standards du Web : HTML5 et CSS3, des méthodes <BR>
+de modélisation et Design Patterns<BR>
+-Pratique avancée de GNU/Linux pour le travail et le déploiement souhaitée <BR>
+-La connaissance du cycle de vie des données scientifiques serait un plus <BR>
+(typologies de données de spectroscopie des solides de l'ensemble du spectre <BR>
+électro-magnétique)<BR>
+<BR>
+Savoir-faire :<BR>
+Dans le domaine du génie logiciel : <BR>
+-Recueillir les besoins des utilisateurs<BR>
+-Prendre en charge l'activité de gestion de projet logiciel <BR>
+-Contribuer à la mise en place et au respect des dispositions qualité et des <BR>
+normes<BR>
+-Gérer les documentations techniques et fonctionnelles<BR>
+-Modéliser, concevoir et/ou paramétrer une solution logicielle, ses services et <BR>
+ses fonctionnalités<BR>
+-Assurer la maintenance évolutive et curative<BR>
+-Concevoir, spécifier et exécuter des tests fonctionnels et/ou techniques<BR>
+-Assurer une assistance fonctionnelle et/ou technique aux exploitants et aux <BR>
+utilisateurs<BR>
+<BR>
+Savoir-être :<BR>
+-Goût pour le travail en équipe et la collaboration (code review, pair <BR>
+programming ...)<BR>
+-Gérer les priorités
+</td>
+    </tr>
+  </table>
+  
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="contexte"><b>Contexte :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+L'Observatoire des Sciences de l'Univers de Grenoble (OSUG) est une Unité d'Appui <BR>
+et de Recherche (UAR) (40 personnes) et une structure fédérative (1400 personnes) <BR>
+assurant des missions d'observation, de recherche, de formation et de diffusion <BR>
+des savoirs dans tous les domaines des Sciences de l'Univers, de la Terre et de <BR>
+l'Environnement. Il coordonne les activités mutualisées et les services <BR>
+d'observation menés dans les laboratoires et équipes de sa fédération. L'UAR OSUG <BR>
+est située sur le campus universitaire à Saint-Martin d'Hères.<BR>
+<BR>
+Le poste sera rattaché au pôle numérique de l'OSUG (25 personnes) et dédié à <BR>
+l'ingénierie logicielle. Le projet central portera sur l'infrastructure SSHADE qui <BR>
+met actuellement à disposition 30 bases de données sur les propriétés <BR>
+spectroscopiques des solides d'intérêt planétologique et astrophysique, <BR>
+indispensables à l'analyse des observations télescopiques et des missions <BR>
+spatiales. SSHADE et les bases françaises constituent le Service National <BR>
+Observation SSHADE-F. SSHADE regroupe une communauté de plus de 1000 chercheurs <BR>
+européens et internationaux en astrophysique et sciences de la Terre.  Ce service <BR>
+est actuellement en très forte expansion en termes de contenu et d'utilisation. <BR>
+Dans cette dynamique, plusieurs évolutions majeures sont prévues à court et moyen <BR>
+terme. L'ingénieur-e contribuera à la conception et au développement logiciel du <BR>
+service en coordination avec le responsable technique et le responsable <BR>
+scientifique du projet.<BR>
+<BR>
+L'agent recruté sera placé sous l'autorité hiérarchique de la directrice technique <BR>
+du numérique de l'OSUG et sous la responsabilité fonctionnelle du responsable <BR>
+scientifique de SSHADE. Il/elle pourra aussi intervenir sur des activités en <BR>
+synergie avec d'autres unités de l'OSUG, sur des sujets transverses. <BR>
+<BR>
+Il/elle sera amené-e, suivant les besoins, à suivre des formations nécessaires à <BR>
+la prise de poste ou au développement et au renforcement de ses compétences. <BR>
+
+</td>
+    </tr>
+  </table>
+  
+<br>
+<table width="100%" border="0" cellspacing="0">
+<tr>
+<td class="soustitreprincipal">2eme poste du concours N&deg; 130</td>
+</tr>
+</table>
+<br>
+
+    <table width="100%" border="0">
+
+    <tr height="25">
+      <td width="20%"><b>Affectation :</b></td>
+      <td width="80%">UAR Institut Pierre Simon Laplace, GUYANCOURT</td>
+    </tr> 
+<tr height="25"><td width="20%"><b>Groupe de fonction :</b></td><td width="80%">
+Groupe 3
+</td></tr>
+</td>
+    </tr>
+ </table>
+      
+<br>
+
+  <p>&nbsp;</p>
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="mission"><b>Mission :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr width="100">
+	  <td colspan="2">
+	
+Au sein du centre de calcul et données ESPRI de l'Institut Pierre-Simon Laplace (IPSL), l'agent aura la charge de spécifier, de développer et de maintenir différentes applications et services web au service de la communauté scientifique de l'IPSL, et plus largement au niveau national dans le cadre des infrastructures de recherche DATA TERRA et CLIMERI. Ces applications et services web concernent des systèmes de visualisation et de valorisation des données ou encore de catalogage et de distribution de données mais aussi des développements de sites web destinés à présenter les projets scientifiques. <BR>
+<BR>
+
+</td>
+    </tr>
+  </table>
+  
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="activites"><b>Activit&eacute;s :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+- Concevoir et développer des interfaces et composants web avec des technologies FrontEnd <BR>
+- Développer des services web de type API REST en utilisant  des frameworks Backend<BR>
+- Implémenter des clients de visualisation et de traitement en ligne conformément aux normes du domaine d¿application<BR>
+- Apporter une expertise technique et graphique pour la réalisation de sites web<BR>
+- Prescrire des solutions et bonnes pratiques en matière de développement web (choix de langage, CMS, sécurisation) tout en veillant à la sécurisation des sites en collaboration avec les ingénieurs sécurité<BR>
+- Participer à l'administration système pour l'hébergement web<BR>
+- Assurer les documentations techniques et fonctionnelles et la formation des utilisateurs sur les outils<BR>
+- Maintenir et faire évoluer les applications (diagnostic et correction des défauts)<BR>
+<BR>
+Activités secondaires: <BR>
+<BR>
+- Développer et gérer des bases de données<BR>
+- Traiter et gérer des données<BR>
+- Participer aux activités techniques transversales du service<BR>
+
+</td>
+    </tr>
+  </table>
+  
+
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="competences"><b>Comp&eacute;tences :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+- Expertise en développement d'infrastructure web autour d'un framework full-stack <BR>
+- Maîtrise de langages de programmation (script et web)<BR>
+- Maîtrise d'un système de base de données relationnelles<BR>
+- Maîtrise des bonnes pratiques de gestion des versions<BR>
+- Maîtrise des technologies de containers<BR>
+- Capacité à analyser les besoins des utilisateurs et à les traduire en spécifications techniques<BR>
+- Capacité à travailler en interaction avec une équipe constituée de divers corps de métier (ingénieurs, chercheurs)<BR>
+<BR>
+Savoir-faire :<BR>
+<BR>
+- Développement Web : Maîtrise de JavaScript (frameworks VueJS, Angular), Python (framework Django), Java (Spring Boot), HTML et CSS<BR>
+- Conteneurisation : Utilisation de services de conteneurisation (Kubernetes, Docker)<BR>
+- Scripting : Connaissance des langages de script (Python, Bash)<BR>
+- Maîtrise du gestionnaire de version Git et des plateformes associées (GitHub, GitLab)<BR>
+- Connaissance des bases de données (ex. PostgreSQL) et maîtrise des langages de requêtes (SQL)<BR>
+- Environnement : Expérience de l'environnement Linux<BR>
+- Rédaction et mise à jour de la documentation fonctionnelle et technique (wiki, Markdown, ..)<BR>
+- Anglais scientifique et technique B2 (cadre européen commun de référence pour les langues)<BR>
+<BR>
+Atouts Supplémentaires :<BR>
+<BR>
+- Connaissance des normes d'interopérabilité européennes et internationales (directive INSPIRE, OGC, ISO 191xx)<BR>
+- Connaissance des outils Geoserver, Geonetwork, Thredds Data Server, services WMS, WCS, WFS<BR>
+- Connaissance des principes FAIR appliqués aux données et des principes de standardisation<BR>
+- Connaissance des données du domaine des sciences du climat et de l'environnement<BR>
+<BR>
+ Savoir-être :<BR>
+<BR>
+-Bon relationnel et sens du travail en équipe<BR>
+-Savoir communiquer avec des informaticiens, des chercheurs<BR>
+-Disponibilité et réactivité<BR>
+-Organisation et rigueur<BR>
+
+</td>
+    </tr>
+  </table>
+  
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="contexte"><b>Contexte :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+L'IPSL fédère 8 laboratoires en Ile de France dont les thématiques de recherche concernent le climat, l'environnement régional ou global. L'IPSL est notamment un des centres majeurs de modélisation du climat dans le monde contribuant aux travaux du GIEC (Groupe d'experts intergouvernemental sur l'évolution du climat). L'IPSL joue également un rôle essentiel au niveau national concernant l'acquisition et l'analyse d'observations de nature variée (par satellites, observatoires sol, campagnes de mesures) pour comprendre l'évolution du climat.. <BR>
+Au sein de l'IPSL, le centre de calcul et de données ESPRI a la mission essentielle de mettre à disposition et de distribuer les données scientifiques tout en offrant un environnement d'analyse performant et adapté pour la communauté de recherche IPSL ainsi que pour la communauté nationale. ESPRI est en effet également l'un des centres de données et service (CDS) du pôle de données national atmosphère AERIS de l'infrastructure de recherche DATA TERRA et est la plateforme sur laquelle se base l'Infrastructure de recherche CLIMERI pour les simulations climatiques. <BR>
+L'agent recruté rejoindra l'équipe ESPRI, composée d'une trentaine d'ingénieurs,. Il évoluera au sein d'une équipe dotée d'un périmètre technologique à la pointe et en charge d'applications critiques pour la gestion et le traitement de données. Le travail s'effectuera sous la responsabilité d'un ingénieur expert en services web et d'un chef de service, en interaction avec les équipes scientifiques au sein de l'IPSL ou au niveau national, dans le cadre des projets portés par les infrastructures de recherche DATA TERRA et CLIMERI.<BR>
+Le lieu de travail principal sera sur le site de l'Ecole Polytechnique à Palaiseau. Le lieu de travail secondaire sera sur le site de Sorbonne Université à Paris 5e arrondissement. Possibilité de télétravail partiel.<BR>
+
+</td>
+    </tr>
+  </table>
+  
+<br>
+
+  <p>&nbsp;</p>
+
+  <table border="0" width="100%">
+    <tr align="center">
+      <td>
+	  	<script>
+		//ne pas afficher le bouton si login DS
+		//if (top.listeCourante!=""){
+		//   document.write("<input type='button' name='btnRetour' value='Retour &agrave; la liste' onClick='javascript:top.retourListe();'>");
+		//}
+		</script>
+		<input type="button" name="btnRetourConsult" value="Revenir &agrave; la liste des r&eacute;sultats" onClick="javascript:history.go(-1);">
+	  </td>
+    </tr>
+  </table>
+  
+</form>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+
+    <div class="container-top">
+      <a href="" class="top" id="scrollToTop"></a>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var containerTop = document.querySelector(".container-top");
+        var documentHeight = document.documentElement.scrollHeight;
+        var scrollTopBtn = document.querySelector("#scrollToTop");
+
+        function updateOpacity() {
+          var scrollPercentage = (window.scrollY / documentHeight) * 150;
+
+          var opacity = Math.min(1, Math.max(0, scrollPercentage / 75));
+
+          containerTop.style.opacity = opacity;
+        }
+
+        window.addEventListener("scroll", function () {
+          updateOpacity();
+        });
+
+        scrollTopBtn.addEventListener("click", function (event) {
+          event.preventDefault(); // Annule le comportement par défaut du lien
+          scrollToTop();
+        });
+
+        function scrollToTop() {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth" // Permet le défilement en douceur
+          });
+        }
+
+        updateOpacity();
+      });
+    </script>
+</body>
+
+			<head>
+  			  <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+  			  <META HTTP-EQUIV="Expires" CONTENT="-1">
+          <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src-elem 'self' *.cnrs.fr 'unsafe-inline'; script-src-attr 'self' *.cnrs.fr 'unsafe-inline'; frame-src 'self' *.cnrs.fr 'unsafe-inline'; connect-src 'self' *.cnrs.fr 'unsafe-inline'; font-src 'self' *.cnrs.fr 'unsafe-inline'; style-src 'self' *.cnrs.fr 'unsafe-inline'; img-src 'self' *.cnrs.fr data:; " />
+			</head>
+			
+</html>

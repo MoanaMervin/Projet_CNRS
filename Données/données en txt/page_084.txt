@@ -1,0 +1,91 @@
++
+Liste des concours
+E : Informatique, statistiques et calcul scientifique
+Ingénieur d'études
+Concours N° 125
+Nbre de postes :
+1
+Emploi-type :
+Administratrice ou administrateur systèmes et réseaux
+Affectation :
+Institut de Mathématiques de Toulouse, TOULOUSE
+Groupe de fonction :
+Groupe 3
+Mission :
+L'administratrice ou l'administrateur systèmes et réseaux aura pour mission
+d'exploiter les infrastructures informatiques de l'Institut de Mathématiques de
+Toulouse (IMT), et d'une partie des ressources de la Plateforme en Ligne pour
+les Mathématiques (PLM) opérées par l'équipe technique nationale (PLM-team). Elle
+ou il devra définir les procédures de gestion et administrer les composants
+système, d'infrastructures logicielles, de réseaux et de sites des systèmes
+d'information pour en assurer le fonctionnement, la cohérence, la qualité et la
+sécurité.
+Activités :
+Les activités principales de l'administratrice ou de l'administrateur consisteront
+à :
+- Installer des services et les exploiter
+- Automatiser, superviser et améliorer/rationaliser les processus de
+production
+- Exploiter des services déployés, les sécuriser et les maintenir en
+condition opérationnelle
+- Dans un contexte DevOps, développer des codes pour réaliser des ponts
+entre des services existants
+- Sécuriser la production (PRA, PCA) et appliquer la politique de sécurité
+de l'établissement
+- Référencer et documenter les composants liés à l'infrastructure, aux
+logiciels et leurs liens avec la couche applicative
+- Assurer la veille technologique sur les différents aspects de
+l'infrastructure
+- Assister les utilisateurs dans le déploiement d'une application métier
+spécifique rédiger et mettre à jour la documentation fonctionnelle et technique
+Compétences :
+Savoirs :
+- Connaissance approfondie de l'administration système Linux (essentiellement
+Debian/Ubuntu)
+- Connaissance approfondie des techniques de
+virtualisation(Proxmox/KVM/Lxc/Docker/Kubernetes)
+- Connaissance de la technologie de stockage distribué Ceph d dans un
+environnement virtualisé
+Connaître les infrastructures pour les applications web (proxy, backend,
+base de données)
+- Connaitre les briques réseau classiques (matériel, adressage IP, DNS, DHCP)
+Savoir-faire :
+- Savoir utiliser les infrastructures pour l'authentification (LDAP,
+Kerberos, SSO)
+- Savoir administrer une infrastructure virtualisée
+(Proxmox/KVM/Lxc/Docker/Kubernetes) avec un stockage distribué (Ceph)
+- Utiliser un langage de programmation (bash, go, python, ruby...)
+- Utiliser un système de gestion de configuration type ansible/puppet/nix
+- Anglais niveau B1 selon le cadre européen commun de référence
+Savoir être :
+- Savoir s'organiser et prioritiser
+- Travailler en équipe
+- Avoir le sens du service
+- Savoir communiquer et adapter sa communication à ses interlocuteurs
+Contexte :
+L'Institut de Mathématiques de Toulouse (IMT), Unité Mixte de Recherche CNRS,
+fédère l'ensemble de la communauté mathématique sur le site toulousain et relève
+de six tutelles (Université de Toulouse, CNRS, INSA de Toulouse, Université
+Toulouse Capitole, Université Toulouse Jean Jaurès et l'Institut National Uni-
+versitaire Champollion).
+Principalement situé sur le Campus scientifique de Rangueil de l'Université de
+Toulouse (Lieu du poste), l'IMT regroupe environ 400 personnes et se structure
+autour de 6 équipes scientifiques. Le budget s'élève à environ 3M euros/an. L'IMT
+gère un LabEx (CIMI) et une EUR (MINT). Le service informatique de l'IMT comprend
+actuellement 4 agents (un IR ; un AI pour la partie système ; un AI et un T pour
+la gestion du poste de travail et du réseau).
+La Plateforme en Ligne pour les Mathématiques est gérée dans le cadre du réseau
+thématique Mathrice. L'équipe technique nationale PLMTeam comporte 17 membres
+répartis sur toute la France, et s'occupe de la mise en place et de l'exploitation
+des services nationaux pour tous les laboratoires de l'Institut National des
+Sciences Mathématiques et de leurs Interactions INSMI - CNRS Mathématiques
+Le temps de travail sera équitablement réparti entre le service informatique de
+l'IMT et l'équipe de la PLM (50/50). La personne sera installée physiquement à
+l'IMT, et exercera ses fonctions sous la responsabilité hiérarchique du
+responsable du service informatique de l'IMT. Elle travaillera à distance avec
+l'équipe de la PLM sur des plages horaires réservées ; dans ce cadre, le
+télétravail à domicile est envisageable après 6 mois d'ancienneté sur le poste
+Dans une première phase d'intégration, la personne recrutée travaillera en tandem
+avec le responsable du service informatique de l'IMT et intègrera des projets
+existants de la PLM pour prendre en main l'environnement technique
+progressivement.

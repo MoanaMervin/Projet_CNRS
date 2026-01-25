@@ -1,0 +1,49 @@
++
+Liste des concours
+C : Sciences de l'ingénieur et instrumentation scientifique
+Ingénieur de recherche
+Concours N° 31
+Nbre de postes :
+1
+Emploi-type :
+Experte ou expert en développement d'expérimentation
+Affectation :
+Laboratoire de physique des 2 infinis - Irène Joliot-Curie, ORSAY
+Groupe de fonction :
+Groupe 3
+Mission :
+L'ingénieur-e assure la conception et la simulation de chaines de détection mettant en œuvre des détecteurs, en particulier des détecteurs à semi-conducteur ainsi que des dispositifs de test permettant la caractérisation de ceux-ci dans les domaines de la physique des particules, l'astrophysique, la physique nucléaire ou la physique santé.
+Activités :
+Tâches principales
+- Analyser les besoins des expériences de physique des particules, d'astrophysique, de physique nucléaire ou de la physique santé et rédiger le cahier des charges techniques correspondant aux besoins des chercheurs
+- Concevoir et simuler des systèmes de détection mettant en œuvre des détecteurs semiconducteurs répondant aux besoins des équipes de recherche
+- Concevoir, monter et utiliser des bancs de mesure pour caractériser des détecteurs notamment avec le plateau technique PSI  (Plateforme Semi-conducteur IJCLab) du laboratoire
+- Mettre en œuvre la réalisation des tests dans le respect des règles de sécurité et analyser les données expérimentales
+- Gérer tout ou une partie d'un projet technique
+- Effectuer des présentations en anglais des travaux lors de réunions ou conférences internationales
+- Rédiger des rapports en français et en anglais
+Tâches secondaires
+- Conseiller dans son domaine d'expertise
+- Participer à la rédaction de dossiers de demandes de financement auprès des Universités, ANR (Agence Nationale de la Recherche), Laboratoires d'excellence, ...
+- Encadrer des stagiaires (de L2 à M2)
+Compétences :
+- Connaissance théorique approfondie dans le domaine de l'interaction rayonnement/matière
+- Connaissance générale des sciences de l'ingénieur (mécanique, optique, électronique analogique, acquisition de données)
+- Connaissance approfondie de la détection de rayonnements ionisants
+- Connaissance approfondie de physique des détecteurs, notamment dans le domaine des semi-conducteurs
+Savoir-Faire:
+- Maitrise des pratiques de techniques de mesure et de mise en œuvre de chaîne de mesure
+- Maitrise des règles du travail en salle blanche
+- Maîtrise des méthodes de calcul scientifique et d'utilisation d'outils de simulation (ex : Silvaco, ...) et de traitement des données (ex : ROOT, Mathlab, ...)
+- Maîtrise de l'anglais technique oral et écrit : niveau C1-C2 CECRL  (Cadre Européen Commune de Référence pour les Langues)
+- Aptitude à la rédaction de publications techniques et scientifique et de dossiers de demandes de financement en français et en anglais
+Savoir Etre:
+- Bonne aptitude au travail en équipe
+- Rigueur dans l'organisation des activités
+- Partage et transmission des connaissances
+- Application des règles de sécurité
+Contexte :
+Le laboratoire de Physique des 2 Infinis Irène Joliot-Curie est un laboratoire sous tutelle du CNRS, de l'université Paris-Saclay et de l'université de Paris, né en 2020 de la fusion de cinq UMR situées sur le campus universitaire d'Orsay. Le personnel est constitué de près de 500 permanents (320 ingénieurs, techniciens et administratifs et 180 chercheurs et enseignants-chercheurs) et environ 180 non-permanents dont 115 doctorants.
+Les thèmes de recherche du laboratoire sont la physique nucléaire, la physique des hautes énergies, les astroparticules et la cosmologie, la physique théorique, les accélérateurs et les détecteurs de particules ainsi que les recherches et développements techniques et applications associées pour l'énergie, la santé et l'environnement.
+L'ingénieur-e est affecté-e au Service Detecteurs de Particules et Instrumentation Associée du Département Détecteurs (20 personnes) du Pôle Ingénierie . Ce département a pour missions la recherche et le développement en détection, la gestion de projets instrumentaux et le développement et la gestion de plateformes de tests et de production de détecteurs. Les détecteurs développés ont de nombreux domaines d'application comme la calorimétrie ou la trajectographie dans un fort environnement radiatif, l'instrumentation des détecteurs sur accélérateurs de futures générations, l'imagerie gamma ou encore la détection de matière noire.
+La stratégie du département concernant les dispositifs semi-conducteurs se dirige vers une activité de R&D pour le développement de nouveaux senseurs capables de satisfaire les spécifications requises dans les futurs collisionneurs (Electron-Ion Collider, Future Circular Collider). Cette activité sera articulée en collaboration avec d'autres instituts de recherche dans le cadre des efforts de recherche et développement technologique pour les détecteurs de particules (DRD) du CERN .

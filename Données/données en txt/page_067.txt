@@ -1,0 +1,49 @@
++
+Liste des concours
+E : Informatique, statistiques et calcul scientifique
+Ingénieur de recherche
+Concours N° 67
+Nbre de postes :
+1
+Emploi-type :
+Experte ou expert en calcul scientifique
+Affectation :
+Pluridisciplinarité au service de l'observation et de la recherche en environnement et astronomie, PESSAC
+Groupe de fonction :
+Groupe 3
+Mission :
+L'expert-e en calcul scientifique sera responsable au sein de UAR2567 - Pluridisciplinarité au service de l'Observation et de la Recherche en Environnement et Astronomie (POREA) des tâches de traitement de données et de calcul scientifique associées prioritairement aux Services Nationaux d'Observation (SNO).
+Ces besoins concernent la mise en place de chaînes de traitements de données in situ, l'application de méthodes de traitement de données massives (statistiques avancées, IA, BigData), et l'optimisation et couplage de codes de calcul.
+Activités :
+- Développer des outils numériques et statistiques de surveillance, de traitement, et de contrôle qualité des données acquises dans le cadre des SNO DYNALIT et SONEL (mesures hydro-sédimentaires, bathymétrie/topographie, télédétection vidéo et satellite, photogrammétrie...)
+- Développer le traitement de données avancés, analyses statistiques, intelligence artificielle (machine learning), apprentissage profond (deep learning) et traitement de gros volumes de données (big data)
+- Développer, optimiser et coupler des codes de calcul, en particulier en hydrodynamique, et transport sédimentaire (e.g. modèles WWIII, SCHISM, OpenTelemac, LX-Shore...)
+- Développer et optimiser des modèles de dynamique du trait de côte : hybrides (modèles à complexité réduite) et approche par Machine Learning
+- Développer et animer la commission de Calcul Scientifique sur le périmètre OASU en lien avec les ingénieurs Calcul Scientifique des unités
+- Développer des outils numériques et statistiques en appui aux autres SNO relevant du périmètre de l'OASU voire à des projets de recherche structurant dans ce même périmètre.
+- Support le support à l'installation de programmes et soumission de job sur les serveurs de calcul locaux, mésocentres et centres nationaux
+- Former des personnels étudiants et chercheurs aux outils numériques développés et à leur utilisation sur les serveurs et centres de calculs
+Compétences :
+Savoirs :
+- Niveau en mathématiques appliquées permettant la mise en œuvre de méthodes numériques, de statistiques et d'intelligence artificielle de haut niveau
+- Maîtrise de techniques de traitement du signal et de l'image (analyse spectrale, ondelettes, ...)
+- Maîtrise d'outils de statistiques avancée et d'intelligence artificielle (ex. Scikit-learn, TensorFlow, PyTorch, ...)
+- Maîtrise avancée de langages de programmation interprétés (Python, Matlab, R...) et compilés (Fortan, C)
+- Connaissance des environnements de calcul sous Linux et du calcul haute performance (HPC)
+- Connaissances du calcul parallèle et des bibliothèques MPI et OpenMP
+- Anglais technique et scientifique des domaines de l'informatique, calcul scientifique et statistique (niveau B2 souhaitable)
+Savoirs-faire :
+- Coordination et planification des différentes phases d'un projet
+- Travail en interaction avec une ou plusieurs équipes techniques et scientifiques
+- Veille technologique
+Savoir-être :
+- Autonomie
+- Rigueur
+- Réactivité
+Contexte :
+Les recherches en domaine littoral constituent un domaine structurant au sein de l'OASU. Celles-ci s'appuient sur des services d'observation, dont SNO DYNALIT et SONEL et le développement d'outils mathématiques et de modélisation numérique. Elles visent à contraindre les processus physiques contrôlant les aléas littoraux et l'évolution morpho-sédimentaire des systèmes côtiers et à simplifier le traitement des données souvent de gros volumes de sources diverses.
+L'expertise en calcul scientifique, associant ingénierie mathématique et informatique constitue une priorité de recrutement pour l'OASU. L'agent déclinera son activité au sein du Centre de Données pour l'Observation en Nouvelle Aquitaine (CeDONA), service mutualisé de l'OASU, PF d'excellence de l'Université de Bordeaux, et brique de l'équipe « Données et développements logiciels » du pôle informatique de POREA.
+L'agent s'appuiera sur les ressources présentes à l'UAR dont les expertises en administration système et réseaux, les serveurs de calculs locaux gérés par l'OASU, et la future infrastructure régionale INFRANUM dotée d'un nouveau mésocentre de calcul (DOREMI).
+À moyen terme, l'agent sera amené à développer et animer une commission en Calcul Scientifique en lien avec les Ingénieurs Calcul Scientifique présents dans les différentes Unités. Son activité pourra alors progressivement s'élargir à d'autres SNO de l'IR ILICO, et à plus long terme aux SNO relevant de l'ensemble des domaines de l'INSU voire à des projets de recherche structurant dans le périmètre OASU.
+L'unité est localisée sur le campus universitaire de Pessac. Cette fonction ouvre droit à la perception de l'Indemnité de Référence pour les Informaticiens (IRI).
+Le poste sur lequel vous candidatez se situe dans un secteur relevant de la protection du potentiel scientifique et technique (PPST) et nécessite donc, conformément à la réglementation, que votre arrivée soit autorisée par l'autorité compétente du MESR.

@@ -1,0 +1,42 @@
++
+Liste des concours
+D : Sciences humaines et sociales
+Ingénieur de recherche
+Concours N° 48
+Nbre de postes :
+1
+Emploi-type :
+Ingenieure ou ingenieur de recherche en analyses des sources historiques et culturelles
+Affectation :
+Centre Léon Robin de recherche sur la pensée antique, PARIS 05
+Groupe de fonction :
+Groupe 3
+Mission :
+L'ingénieur-e de recherche aura pour mission de participer à l'élaboration et à l'exploitation d'un corpus de sources et de données à l'aide de techniques d'imagerie multispectrale appliquées aux manuscrits anciens. Il ou elle participera ainsi aux projets de recherche de l'unité en humanités numériques et en éditions de textes anciens.
+Activités :
+-	Déchiffrer et interpréter des textes anciens (techniques d'imagerie) ;
+-	Coordonner des projets avec les institutions partenaires de l'UMR (BnF et le Centre international pour l'étude des Papyri d'Herculanum (CISPE)) ;
+-	Participer aux missions sur le terrain dans les bibliothèques françaises et étrangères pour des campagnes d'imagerie.
+- Organiser des colloques et des journées d'étude en lien avec les travaux de l'UMR.
+- Publier en ligne des données produites par l'UMR.
+-	Participer au développement de projets de recherche et aux réponses à appels à projet
+Compétences :
+Savoirs
+-	Maîtrise du grec ancien et du latin, éventuellement aussi d'autres langues anciennes.
+-	Connaissance de la philosophie et des sciences dans l'Antiquité grecque et romaine,
+-	 Maîtrise approfondie de la paléographie grecque et latine.
+-	Maîtrise de l'anglais de niveau B1 (cadre européen commun de référence pour les langues).
+Savoir-faire
+-	Déchiffrer des manuscrits anciens endommagés et/ou des palimpsestes,
+-	Maîtriser un logiciel de dessin assisté par ordinateur (par exemple GIMP ou Adobe Illustrator) ;
+-	Maîtriser un ou plusieurs équipements d'imagerie appliquée aux manuscrits anciens ;
+-	Maîtriser un logiciel de traitement d'images multispectrales (par exemple ENVI ou Hoku) : de la programmation informatique.
+Savoir être
+-	Rigueur et fiabilité
+-	Sens de l'organisation
+-	Capacité à travailler en équipe
+-	Aisance relationnelle
+-	Créativité et sens de l'innovation
+-	Sens critique
+Contexte :
+Le Centre de recherches sur la pensée antique, plus connu sous le nom de Centre Léon-Robin, est une unité placée sous la tutelle de Sorbonne-Université et du CNRS. Le Centre, dont le directeur actuel est Marwan Rashed (SU), a pour mission de susciter et coordonner les recherches concernant la pensée antique et son histoire, plus particulièrement la philosophie. Depuis quelques années, le centre développe des recherches dans le domaine de l'imagerie multispectrale appliquée aux textes anciens (papyri, palimpsestes) et des humanités numériques (lexique philosophique latin-grec en ligne). Placé sous la responsabilité du directeur de l'unité, l'ingénieur-e de recherche en analyse de sources antique aura pour mission de participer aux projets en cours ainsi qu'à l'élaboration et au développement de nouveaux projets.

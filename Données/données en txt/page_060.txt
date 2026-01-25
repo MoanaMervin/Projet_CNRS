@@ -1,0 +1,49 @@
++
+Liste des concours
+E : Informatique, statistiques et calcul scientifique
+Ingénieur de recherche
+Concours N° 60
+Nbre de postes :
+1
+Emploi-type :
+Cheffe ou chef de projet / experte ou expert en Ingéniérie logicielle
+Affectation :
+Observatoire des sciences de l'univers terre homme environnement temps astronomie Franche-Comté-Bourgogne, BESANCON
+Groupe de fonction :
+Groupe 3
+Mission :
+Le chef de projet des services numérique devra définir, conduire et mettre en œuvre la gestion à long terme des jeux de données issus des différentes activités de l'OSU THETA (observation, recherche, plateformes, ressources patrimoniales). Il s'agira, autant que possible, d'homogénéiser les procédures et outils mis en œuvre au sein des Services Nationaux d'Observations (SNO) dans lesquels est impliqué l'OSU, en particulier ceux en Terre Solide (TS)  et en Surfaces et Interfaces Continentales (SIC), et des autres dispositifs adossés aux entrepôts de données de l'OSU.
+Il-elle agira comme référent « Science ouverte » de l'OSU, en lien avec l'Atelier de la Donnée dat@UBFC. Il-elle contribuera ainsi à la formalisation des procédures de gestion de données en interne et au sein des entrepôts de données associés ou gérés à l'OSU, en cohérence avec les recommandations des initiatives et infrastructures nationales (dont les infrastructures de recherche (IR) Data Terra, EPOS-France, OZCAR et RecolNat). Il-elle contribuera, et à terme cordonnera, les activités d'un futur Centre de Données et de Services (CDS) THEIA-THETA que l'OSU souhaite mettre en place.
+Activités :
+1) Piloter le développement et la mise en œuvre des services aux données de l'OSU THETA :
+- Organiser et documenter (plan de gestion de données, descriptions des workflows) le cycle de vie des structures productrices des jeux de données au sein de l'OSU.
+- Analyser les besoins techniques, définir les spécifications nécessaires des applications logicielles de curation des données, et contribuer à leur développement et mise en œuvre, en adéquation avec les standards et outils déployés au niveau national par les infrastructures de recherche du domaine, et en sappuyant sur les infrastructures numériques locales.
+2) Participer à la FAIRisation des données de l'OSU THETA, en termes :
+- De développement et mise en œuvre d'outils de contrôle-qualité, d'archivage et de diffusion de données de l'OSU.
+- D'intégration, en routine, des données et produits de données dans les entrepôts de l'OSU sous des formats standards, ouverts et libres, recommandés par les infrastructures de recherche.
+- De curation, en routine, des données et produits de données nécessitant la mise à jour de leurs méta-données vers des versions enrichies et interopérables.
+3) Piloter les missions de l'OSU, et représenter l'OSU, d'un point de vue technique, dans les infrastructures locales (Atelier de la Donnée dat@UBFC) et nationales (Data Terra, RecolNat) de services numériques aux données.
+Compétences :
+Savoirs :
+- Maîtrise de l'environnement Linux
+- Maitrise des langages Python et scripts
+- Maîtrise utilisateur des plateformes de systèmes de contrôle de version (Github, Gitlab, ...)
+- Connaissances approfondies des systèmes de gestion de BDD (notamment relationnels ; Postgresql...) et des services Web (ex : API Rest)
+- Connaissances approfondies d'outils de gestion de données géoréférencées (SIG)
+- Connaissances approfondies des types de données géophysiques (séries temporelles, imagerie satellitaire, ...)
+- Connaissance des normes, procédures et référentiels en vigueur en Science Ouverte au niveau national et Européen
+- Maîtrise de l'anglais scientifique et technique
+Savoir-faire :
+- Savoir collaborer au sein d'équipes pluridisciplinaires et en mode projet
+- Savoir organiser son propre travail pour piloter en parallèle plusieurs projets
+- Savoir piloter une équipe
+- Savoir communiquer et faire preuve de pédagogie et avoir la capacité à synthétiser/vulgariser dans un rôle de conseil et d'aide à la décision
+Savoir-être :
+- Disposer d'une appétence à apprendre
+- Aisance relationnelle
+- Sens de l'organisation
+- Rigueur / Fiabilité
+Contexte :
+L'Observatoire des Sciences de l'Univers (OSU) THETA, à travers les différents laboratoires de recherche (Chrono-environnement, Biogéosciences, UTINAM, départements temps-fréquence de l'institut FEMTO-ST et deux équipes de l'ICB) et son Unité d'Appui et de Recherche (UAR 3245), regroupe environ 600 personnes qui mènent des activités de recherche liées aux 4 domaines du CNRS Terre & Univers. L'OSU participe au fonctionnement de 11 SNO ainsi qu'à la gestion d'une collection patrimoniale importante (paléontologique et géologique, avec implication forte dans l'IR RéColNat). L'ensemble de ces activités nécessitent une gestion organisée et optimisée des données et produits générés durant tout leur cycle de vie et suivant les principes FAIR, en cohérence avec les politiques nationales du domaine.
+Ce poste est basé dans les locaux de l'UAR THETA, situés sur le campus de Besançon (locaux de l'observatoire), qui comporte actuellement 17 personnes. L'agent-e sera intégré-e dans l'équipe d'informaticiens de l'UAR (qui comprend actuellement 1 IE CNRS et 1 IE université), dont il assurera l'encadrement, et il-elle travaillera en étroite collaboration avec le personnel des unités fédérées par l'OSU, sur le campus de Besançon et sur le campus de Dijon. Des déplacements seront à prévoir à Dijon, ainsi qu'au niveau national (voire, ponctuellement, international) pour échanger avec les acteurs des infrastructures de recherche impliquées dans la gestion des données.
+Après 6 mois d'ancienneté sur le poste, une partie des activités sont télé-travaillables et seront à définir avec la direction de l'UAR, sous réserve de respecter la réglementation en vigueur au CNRS. D'un point de vue hiérarchique, l'agent dépendra du directeur de l'UAR THETA.

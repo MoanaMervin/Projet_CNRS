@@ -1,0 +1,83 @@
++
+Liste des concours
+E : Informatique, statistiques et calcul scientifique
+Ingénieur de recherche
+Concours N° 55
+Nbre de postes :
+1
+Emploi-type :
+Cheffe ou chef de projet / experte ou expert en Ingéniérie logicielle
+Affectation :
+Laboratoire d'Imagerie Biomédicale, PARIS 06
+Groupe de fonction :
+Groupe 3
+Mission :
+Ingénieur-e expert-e en conception et développement de logiciels d'analyse des
+images et des signaux médicaux dans le respect de la sécurité, de l'accessibilité
+et des référentiels en vigueur : analyse, développement, qualification,
+intégration, déploiement. L'Ingénieur-e sera responsable des aspects logiciels en
+interaction avec les membres de l'équipe ainsi qu'avec les collaborateurs
+externes clinique et recherche.
+Activités :
+-	Analyser les besoins et assurer la réalisation du cahier des charges
+fonctionnel des logiciels émanant du laboratoire
+-	Développement de logiciels et traitement d'image et des signaux
+-	Assurer une veille scientifique et technologique en lien avec les experts
+du domaine
+-	Définir l'architecture logicielle et/ou matérielle
+-	Maintenir les documentations techniques et/ou guide utilisateur à jour
+-	Assurer un rôle de conseil et concevoir les plans de formation
+-	Piloter le déploiement, la maintenance et le suivi des outils logiciels,
+avec notamment la gestion de leur applicabilité à des données multi-constructeurs
+et multicentriques
+-	Organiser et suivre les activités de packaging applicatif destinées à
+être déployées sur un ou plusieurs sites d'exploitation
+-	Participer à des procédures d'appel à projets et à la valorisation
+scientifique (publications, communications) et technologique (dépôts logiciel,
+démarches open-access, brevets)
+-	Assurer une veille technologique en lien avec les experts du domaine
+-	Assurer le suivi en termes de sécurité logicielle et contrôle qualité
+Compétences :
+-	Méthodologie de conduite de projet (connaissance approfondie)
+-	Génie logiciel (connaissance approfondie)
+-	Traitement des images et des signaux médicauxet de préférence en
+cardiologie
+- 	Connaissance des logiciels commerciaux ou académiques majeurs en imagerie
+cardiaque (Medis, Circle CVI, Segment)
+- 	Connaissance de la physiopathologie cardiaque et vasculaire, serait un
+plus
+-	Langages de programmation (connaissance approfondie des langages Python,
+Matlab, C/C++)
+-
+-	Méthodes, outils, normes et procédures de la qualité seraient un plus
+-	Capacité à échanger avec un public hétérogène (chercheurs, ingénieurs,
+cliniciens)
+-	La maîtrise des outils d'intelligence artificielle serait un plus
+-	Expérience d'encadrement d'ingénieurs et cliniciens
+-	Anglais technique et scientifique
+Contexte :
+Le laboratoire d'Imagerie Biomédicale (LIB) est sous la triple tutelle du CNRS,
+de l'INSERM et de Sorbonne université à Paris. Le LIB est spécialisé dans le
+développement de logiciels d'aide au diagnostic qui consiste à concevoir des
+algorithmes performants de traitement d'images permettant, lorsqu'ils sont
+utilisés sur des images de patients, de déchiffrer les signes de plusieurs
+pathologies sur les organes d'intérêt, à savoir : le cœur, l'aorte, le cerveau,
+etc.
+Plusieurs de ces logiciels, déposés à la SATT Lutech pour leur innovation
+technologique ; sont aujourd'hui sollicités dans des projets d'envergure :  PSPC
+PACIFIC, H2020 Maestria, Quorum financé par Quantum Genetics, PHRC national OPTIM
+(plus de 4000 patients au total).
+Ils sont également mis à la disposition d'équipes nationales et internationales
+dans le cadre de projets spécifiques (CRMBM, PARCC-HEGP, Johns Hopkins, King's
+College, Linköping University).
+L'ingénieur-e recruté-e travaillera en relation avec l'équipe d'imagerie
+Cardiovasculaire du LIB avec une stratégie de valorisation consistant à partager
+les logiciels émanant de l'équipe auprès de la communauté scientifique menant une
+recherche chez l'homme ou le petit animal. L'ingénieur-e pourra être amené-e à
+effectuer des déplacements ponctuels chez les collaborateurs/utilisateurs en
+France.
+Par ailleurs, après 6 mois d'ancienneté sur le poste, une partie des activités
+sont télétravaillables selon un accord avec le-la responsable hiérarchique, sous
+réserve de respecter la réglementation en vigueur au CNRS. Enfin, L'ingénieur-e
+aura la possibilité de se former à: la physique et l'imagerie médicale,
+l'intelligence artificielle, l'anatomie et physiopathologie cardiaque.

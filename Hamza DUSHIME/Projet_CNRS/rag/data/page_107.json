@@ -1,0 +1,21 @@
+{
+  "source_file": "page_107.html",
+  "bap": "C : Sciences de l'ingénieur et instrumentation scientifique",
+  "grade": "Ingénieur d'études",
+  "concours_label": "Concours N° 109",
+  "concours_num": "109",
+  "nb_postes": "1",
+  "emploi_type": "Ingenieure ou ingenieur en conception instrumentale",
+  "nb_postes_detectes": 1,
+  "postes": [
+    {
+      "poste_num": 1,
+      "affectation": "Institut de Physique des deux Infinis de Lyon, VILLEURBANNE",
+      "groupe_fonction": "Groupe 3",
+      "mission": "La personne recrutée aura pour mission de :\n- Concevoir tout ou partie d'instruments associant plusieurs techniques (notamment la mécanique, la thermique et la cryogénie).\n- Suivre et coordonner les développements instrumentaux jusqu'à la mise en fonction et l'intégration sur l'expérience proprement dite.\nLa personne recrutée rejoindra les activités d'une plateforme technique spécialisée sur des expériences de détection.",
+      "activites": "- Concevoir tout ou partie d'un instrument pour répondre aux besoins du laboratoire ou d'un projet dans les domaines de la mécanique, de la cryogénie, de l'électronique et du contrôle commande.\n- Élaborer les clauses techniques des cahiers des charges pour la sous-traitance dans le domaine.\n- Interagir et planifier l'intervention des spécialistes de différents domaines technologiques.\n- Consulter les fournisseurs pour orienter le choix des matériaux et des procédés, négocier les coûts et les délais, élaborer les demandes d'achat.\n- Coordonner et contrôler, jusqu'à la recette, les études, réalisations et intégrations des services et des entreprises.\n- Procéder à l'intégration, à la qualification et aux essais.\n- Écrire des procédures d'utilisation et rédiger des rapports d'études et d'essais ainsi que la documentation technique associée.\n- Contrôler le respect des plans et du dispositif qualité des intervenants.\n- Présenter, diffuser et valoriser les développements, les technologies et les innovations du laboratoire.",
+      "competences": "- Maitriser les méthodes de conception dans le domaine de la mécanique et la micromécanique\n- Connaitre les techniques et sciences de l'ingénieur a minima dans deux des domaines suivants : mécanique, électronique, thermique, ou cryogénique\n- Avoir des compétences dans les techniques de mesures et de contrôles\n- Savoir conduire une analyse fonctionnelle\n- Avoir des connaissances en métrologie\n- Avoir des connaissances générales en sciences physiques\n- Avoir des connaissances sur la plateforme de conception LabVIEW\n- Langue anglaise : B1 à B2 (cadre européen commun de référence pour les langues)\n- Savoir utiliser les logiciels spécifiques au domaine, principalement les outils CAO\n- Savoir rédiger des rapports ou des documents techniques\n- Être capable d'animer une réunion\n- Connaitre et savoir appliquer des procédures d'assurance qualité",
+      "contexte": "L'Institut de Physique des 2 Infinis de Lyon est une Unité Mixte de Recherche dont les tutelles sont le CNRS/IN2P3 et l'Université Claude Bernard Lyon 1. L'IP2I est composé d'environ 250 personnes, dont environ 170 permanents. Ses locaux sont localisés sur le campus de la Doua à Villeurbanne (69).\nL'IP2I est impliqué dans de grandes collaborations au travers de ses thématiques de recherche, en particulier au CERN, au GANIL, et autres sites internationaux.\nLa personne rejoindra le service instrumentation composé de 12 agents (5 IR, 5 IE, 2AI) qui participent au développement de plusieurs instruments scientifiques pour différentes équipes de recherche de l'IP2I.\nLe service prend en charge l'étude technique et la réalisation d'instruments scientifiques ou de détecteurs de particules proposés par les groupes scientifiques de l'IP2I.\nLa personne recrutée apportera ses compétences techniques dans les designs et les intégrations d'ensembles, mécaniques, électroniques ou encore cryogéniques. Il/elle travaillera principalement sur le plateau technique cryogénique en cours de mise en œuvre à l'IP2I.\nDes déplacements seront possibles dans les laboratoires, travail en salle blanche."
+    }
+  ]
+}

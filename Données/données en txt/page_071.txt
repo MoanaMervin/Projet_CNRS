@@ -1,0 +1,52 @@
++
+Liste des concours
+E : Informatique, statistiques et calcul scientifique
+Ingénieur de recherche
+Concours N° 71
+Nbre de postes :
+1
+Emploi-type :
+Experte ou expert en calcul scientifique
+Affectation :
+Laboratoire de physique subatomique et de cosmologie, GRENOBLE
+Groupe de fonction :
+Groupe 3
+Mission :
+L'expert ou l'experte en calcul scientifique aura pour mission d'apporter son expertise aux équipes de recherche de physique du laboratoire.
+Il ou elle la mettra à profit pour soutenir nos équipes de recherche dans leurs développements logiciels, leurs optimisations de code et l'utilisation de ceux-ci dans les domaines de la physique des hautes énergies et de la cosmologie. Son expertise en calcul scientifique pourra l'amener à développer des thématiques d'intelligence artificielle pour répondre aux besoins des physiciens.
+Activités :
+- Mettre en œuvre des méthodes d'analyse mathématiques et de calcul intensif pour répondre à un besoin de recherche et exploiter les données issues d'expériences ou d'observations
+- Recenser et analyser les besoins, constituer le cahier des charges fonctionnel, assurer la conception de la solution
+- Effectuer le développement logiciel de la solution au moyen d'expertises approfondies, en effectuer l'intégration ainsi que le déploiement
+- Optimiser des algorithmes de traitements de données et les codes de calculs
+- Définir et s'assurer du suivi d'un plan d'assurance et contrôle qualité
+- Assurer la documentation, la maintenance et la publication des méthodes et outils développés
+- Concevoir et animer des actions de formation pour les utilisateurs
+- Animer un groupe de travail local et participer à des groupes de travail nationaux
+- Participer ponctuellement aux missions de support du service informatique
+Compétences :
+Savoirs :
+Connaissances approfondies :
+- en architecture et génie logiciel
+- d'une méthode de spécification et de conception
+- en algorithmique et méthodes numériques (des connaissances en Machine Learning et calcul sur GPU seraient un plus)
+- en outil de calcul scientifique
+- en modélisation et simulation numérique
+- de méthodes de conduite de projet
+- Compétences linguistiques : maitrise de la langue anglaise technique écrite et parlée, au minimum B2 (cadre européen commun de référence pour les langues)
+Savoir-faire :
+- Analyser et formaliser les processus du domaine d'application en relation avec les utilisateurs
+- Assimiler le schéma logique d'un progiciel, l'intégrer dans sa pratique de développement
+- Analyser les besoins des utilisateurs, les traduire en spécifications techniques
+- Élaborer un cahier des charges
+- Structurer et rédiger un document technique adapté aux différents utilisateurs (leurs usages et leur langage)
+- Animer un groupe / encadrer une équipe
+Savoir-être :
+- Facultés d'adaptation et de travail en équipe, notamment au sein de grandes collaborations internationales
+- Autonomie, rigueur et sens de l'organisation.
+Contexte :
+Le Laboratoire de Physique Subatomique et de Cosmologie (env. 230 personnes) est une unité mixte de recherche placée sous la tutelle du CNRS (institut Nucléaire et particules), de l'Université Grenoble Alpes et de l'institut d'ingénierie et de management Grenoble INP. Il est localisé sur deux sites : sur le polygone scientifique de Grenoble où est situé le site principal et à Modane où est située la plateforme nationale souterraine LSM.
+Le poste est basé sur le site de Grenoble. La personne recrutée sera rattachée au service informatique (12 agents), sous l'autorité directe du chef du service informatique.
+Pour 80 pour 100 de son temps, l'expert-e en calcul scientifique intégrera des projets gérés par nos équipes de recherche. Il ou elle participera, entre autres, aux projets internationaux LSST (Legacy Survey of Space and Time) et Euclid (détermination de l'origine de l'expansion de l'univers), très demandeurs de compétences dans le domaine du traitement efficace de données à grande échelle.
+Pour 20 pour 100 de son temps, il ou elle animera un groupe de travail local afin de transmettre et pérenniser ses compétences au sein du laboratoire. Il ou elle devra également s'investir dans les groupes de travail nationaux touchant à son domaine.
+Des missions en France et à l'étranger sont à prévoir ponctuellement. L'ingénieur ou l'Ingénieure de recherche pourra bénéficier jusqu'à 2 jours de télétravail par semaine. Aucune astreinte n'est à prévoir. La personne recrutée pourra bénéficier de formations et d'un accompagnement pour parfaire ses compétences.

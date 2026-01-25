@@ -1,0 +1,112 @@
++
+Liste des concours
+E : Informatique, statistiques et calcul scientifique
+Ingénieur d'études
+Concours N° 135
+Nbre de postes :
+1
+Emploi-type :
+Ingenieure ou ingenieur en calcul scientifique
+Affectation :
+Département de Chimie Moléculaire, ST MARTIN D HERES
+Groupe de fonction :
+Groupe 2
+Mission :
+L'ingénieur-e en calcul scientifique accompagne des projets de recherche en
+assurant le déploiement et le développement de logiciels de chimie théorique et
+il/elle participe aux activités scientifiques du laboratoire.
+Il/elle assurera l'interface avec l'Unité d'Appui et de Recherche (UAR) GRICAD en
+participant à son comité technique chargé de l'exploitation des infrastructures
+mutualisées de calcul. Il/elle représentera la communauté des chimistes en tant
+que responsable technique du pôle « CBS Chimie » de cette UAR dont le rôle est de
+valider et d'assurer le suivi des projets de calcul des chimistes.
+Activités :
+Mise en œuvre de projets techniques autour du calcul scientifique, de l'analyse
+de données ou de l'Intelligence Artificielle
+-Concevoir et mettre en œuvre un projet de développement dans le respect de
+l'ingénierie logicielle
+-Assurer le développement, la maintenance et la mise à jour des workflows
+-Intégrer des approches d'intelligence artificielle dans les outils de
+simulation chimique
+-Optimiser les codes de calcul en fonction des architectures
+-Rédiger la documentation
+Support technique et méthodologique
+-Accompagner les chercheurs dans l'utilisation des codes de calcul
+-Déployer et mettre à jour les logiciels de chimie calculatoire sur les
+infrastructures de calcul
+-Contribuer à la formation des chercheurs et leurs étudiants aux nouvelles
+techniques développées en matière de gestion de calculs, des notebooks
+Réalisation de simulations numériques
+-Mettre en œuvre des simulations numériques pour des projets de recherche en
+collaboration avec les chimistes théoriciens
+-Contribuer à l'analyse et à l'interprétation des résultats en lien avec les
+problématiques chimiques étudiées
+Responsabilité technique des projets de calcul scientifique de la communauté des
+chimistes auprès des autres structures du site (Direction des Systèmes
+d'Information de l'Université Grenoble Alpes, UAR GRICAD et Institut de Chimie
+Moléculaire de Grenoble)
+-Définir et déployer les solutions techniques apportées aux chimistes en
+collaboration avec les ingénieurs de ces structures
+-Participer au choix, à l'acquisition, à l'exploitation des calculateurs de
+haute performance
+-Représenter et défendre les intérêts des chimistes auprès des structures
+Veille technologique et scientifique
+-Rester à la pointe des développements dans les domaines du calcul scientifique
+en chimie théorique, et de l'intelligence artificielle
+-Proposer des innovations méthodologiques pour améliorer la gestion,
+l'efficacité et la précision des simulations
+Compétences :
+Savoirs :
+-Connaissance en calcul scientifique, calcul intensif, traitements de
+données
+-Connaissance en développement logiciel (Forges, codes collaboratifs,
+etc.)
+-Connaissance en programmation (Python, C++, Fortran)
+-Connaissance générale en infrastructures des clusters de calcul et cloud
+computing
+-Connaissances générales en Intelligence Artificielle (IA): Machine-
+Learning, Deep-Learning
+-Connaissance générale du système d'exploitation Linux
+-Appétence pour le domaine de la chimie serait un plus avec si possible
+une connaissance des méthodes numériques appliquées à la chimie (Density
+Functional Theory, dynamique moléculaire)
+-Langue anglaise : niveau B2 ou supérieur apprécié (selon le cadre
+européen commun de référence pour les langues)
+Savoirs faire opérationnels :
+-Apporter des réponses à des besoins spécifiques
+-Programmer dans différents environnements informatiques
+-Rédiger la documentation pour les utilisateurs
+-Accompagner et conseiller
+-Gérer un référentiel technique
+-Savoir communiquer (rédiger clairement, préparer des supports de
+communication adaptés, prendre la parole en public, communiquer en français et
+en anglais)
+-Assurer une veille technologique
+Savoirs être :
+-Capacité d'écoute et faire preuve de pédagogie
+-Savoir accompagner et conseiller
+-Aptitude à travailler en équipe et à communiquer efficacement avec des
+chercheurs et des étudiants issus de différentes disciplines
+-Sens des responsabilités et esprit d'initiative bienvenus
+-Curiosité scientifique et motivation pour contribuer à des projets de
+recherche ambitieux et multidisciplinaires
+Contexte :
+Le Département de Chimie Moléculaire (DCM) est une unité mixte de recherche CNRS
+et Université Grenoble Alpes située sur le campus Saint Martin d'Hères
+:https://dcm.univ-grenoble-alpes.fr/. Structuré en 6 équipes de recherche et 12
+plateaux techniques, il est composé à ce jour de 35 enseignants-chercheurs, 24
+chercheurs, 15 personnels BIATS, 9 ITA et une cinquantaine de non-permanents.
+La personne recrutée intègrera l'équipe SITh (Spectrométrie, Interactions, Chimie
+Théorique) , composée de 7 personnes et reconnue pour ses contributions en chimie
+théorique. Il/elle travaillera sous la responsabilité de la responsable d'équipe.
+Avec l'essor rapide de l'intelligence artificielle, de nouvelles perspectives
+s'ouvrent pour la modélisation et la compréhension des phénomènes réactifs à
+l'échelle moléculaire. Pour tirer parti de ces avancées et de cette dynamique, une
+Chaire Professeur Junior CNRS, spécialisée dans l'IA appliquée à la réactivité
+chimique, a rejoint l'équipe à l'automne 2024. Dans ce contexte ambitieux, le rôle
+d'un-e ingénieur-e sera d'orchestrer les synergies entre la chimie théorique, les
+méthodologies de calcul avancées et les nouvelles approches basées sur l'IA.
+Il/elle participera activement à l'intégration et au déploiement de technologies
+computationnelles de pointe, renforçant ainsi les capacités de recherche et
+l'impact des projets de l'ensemble de l'équipe.
+Des formations spécifiques pourront être proposées à la prise de poste de l'agent.

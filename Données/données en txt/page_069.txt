@@ -1,0 +1,99 @@
++
+Liste des concours
+E : Informatique, statistiques et calcul scientifique
+Ingénieur de recherche
+Concours N° 69
+Nbre de postes :
+1
+Emploi-type :
+Cheffe ou chef de projet / experte ou expert en ingénierie des systèmes d'information
+Affectation :
+Heuristique et Diagnostic des Systèmes Complexes, COMPIEGNE
+Groupe de fonction :
+Groupe 3
+Mission :
+La mission principale de l'ingénieur·e recruté·e sera de faire évoluer l'actuelle
+plateforme « drone et robots aériens » vers une plateforme de robotique terrestre
+et aérienne et d'en prendre la responsabilité.
+Par ailleurs, l'ingénieur·e recruté·e interviendra en tant qu'expert technique
+dans cette nouvelle plateforme ainsi que dans la plateforme « Véhicules
+Intelligents ».
+Activités :
+Au titre de la responsabilité de la plateforme « robotique terrestre et aérienne
+» :
+- Définir, concevoir, planifier, implémenter et réaliser des expériences afin de
+valider les recherches des chercheurs, doctorants, stagiaires et projets
+étudiants de second cycle.
+- Superviser des ingénieur·e·s projets recruté·e·s spécifiquement pour ces
+expériences.
+- Contribuer à la diffusion des recherches en participant aux démonstrations
+publiques.
+- Participer à la formation des utilisateurs des plateformes pour les aider à
+acquérir une autonomie dans leurs développements expérimentaux.
+- Contribuer à la pérennité des expérimentations par la capitalisation des
+artefacts expérimentaux (tant logiciels et matériels), des jeux de données
+afférents et de leurs documentations dans une optique de science ouverte.
+Au titre de l'expertise technique, les activités seront les suivantes :
+- Développer des logiciels sur les plateformes « Véhicules intelligents » et «
+Drones » : logiciels de contrôle/commande, de traitement de données et de
+gestion des capteurs/actionneurs (drivers).
+- Tester des logiciels et déverminage : mise en place de politiques de tests,
+améliorer les systèmes de test automatique existants (intégration continue en
+particulier) et les déployer sur les différents robots et véhicules.
+- Valider des travaux réalisés par les ingénieurs projets et étudiants : suivi
+des tickets, des requêtes de fusion et revues de code.
+- Analyser, concevoir et mettre en œuvre des évolutions systèmes des plateformes
+: mise à jour et évolution des systèmes d'exploitation des robots, évolution des
+plateformes embarquées
+- Savoir maintenir et faire évoluer des systèmes de gestion des logiciels et de
+leur documentation. En particulier, évolutions des groupes dédiés aux
+plateformes sur la forge logicielle Gitlab.
+Activités complémentaires :
+- Participer aux réunions de pilotage des plateformes et aux réunions de
+service.
+- Réaliser et animer des visites et des démonstrations
+Compétences :
+Savoir (connaissances)
+- Connaissance de l'interaction avec le matériel : protocoles de communication
+(réseau Ethernet filaire, I2C, Série, CAN, etc), technologie des capteurs et des
+actionneurs, des plateformes d'exécution ;
+- Maîtrise avérée de la robotique mobile sous tous ses aspects : capteurs,
+traitement de données, algorithmes de perception, de localisation, de
+planification, de contrôle.
+Savoir-faire (compétences opérationnelles)
+- Maîtrise avérée de leur implémentation sur des robots réels
+- Maîtrise des frameworks de robotique mobile ROS 1.0 et ROS 2.0
+- Maîtrise du génie logiciel : analyse des délais et de la faisabilité, analyse
+des exigences, conception des architectures, pilotage et réalisation de
+l'implémentation, définition des phases de test, d'intégration, de déploiement et
+de validation.
+- Maîtrise avancée des langages de programmation C, C++ et Python
+- Maîtrise avancée du système d'exploitation Linux sur PC et de ses versions
+embarquées telles que Poky.
+- Maîtrise de la forge logicielle Gitlab ou similaires (Github, Sourceforge, etc.)
+- Savoir conduire un processus d'achat et élaborer un cahier des charges technique
+- Gestion de projets
+- Maîtrise de la rédaction de documentations techniques en français et en anglais
+Savoir-être (compétences comportementales)
+- Bonnes capacités d'analyse organisationnelle
+- Bonnes capacités de communication orale et écrite
+- Bonnes capacités d'autonomie et de travail en équipe
+Contexte :
+La recherche technologique effectuée dans l'unité Heudiasyc s'appuie sur des
+plateformes expérimentales, situées au sein de l'université de technologie de
+Compiègne : véhicules intelligents et autonomes (Equipex+ Tirrex, laboratoire
+commun Sivalab avec Renault), drones aériens, ferroviaire et réalité virtuelle
+(Equipex+ Continuum).
+L'unité Heudiasyc est structurée en trois équipes de recherche et deux services
+supports (effectif du laboratoire : 130 personnes), dont le service plateformes
+technologiques auquel sera rattaché l'ingénieur·e. Ce service gère les plateformes
+de l'unité ainsi que les moyens informatiques communs de l'unité. L'ingénieur·e
+dépendra hiérarchiquement du responsable du service plateformes technologiques de
+l'unité.
+Remarque SRH : Suite aux échanges avec le laboratoire sur le profil de poste
+ouvert au concours externe, je tenais à vous informer d'une modification de
+l'emploi-type qui est le E1A41 et non le E1A45.
+Le laboratoire m'a informée d'une erreur dans la complétude de DIALOG, l'emploi
+type sollicité par le laboratoire est donc bien E1A41 Chef -fe de projet/expert-e
+en ingénierie des systèmes d'information. Nous avons informé l'institut et sommes
+en attente de leur retour.

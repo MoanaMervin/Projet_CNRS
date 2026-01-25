@@ -1,0 +1,890 @@
+
+    <script language="JavaScript">
+
+      // Renvoyer la valeur du cookie dont le nom est passe en parametre
+      function getCookie(name) {
+        if (document.cookie.length == 0) {
+          return null;
+        }
+        var regSepCookie = new RegExp('(; )', 'g');
+        var cookies = document.cookie.split(regSepCookie);
+        for (var i = 0; i < cookies.length; i++) {
+          var regInfo = new RegExp('=', 'g');
+          var infos = cookies[i].split(regInfo);
+          if (infos[0] == name) {
+            return unescape(infos[1]);
+          }
+        }
+        return null;
+      }
+
+      // Generer un identifiant user temporaire a sauvegarder en cookie (si pas existant)
+      function getIdentifiantUserTemporaire() {
+        var tempUserId = getCookie("pde_temp_user_id");
+        if (tempUserId == null || tempUserId == "") {
+          var dateExpire = new Date();
+          dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+          tempUserId = Math.random().toString(16).slice(2);
+          document.cookie = "pde_temp_user_id=" + tempUserId + "; expires=" + dateExpire + "; path=/";
+        }
+        return tempUserId;
+      }
+
+      // Mettre a jour le badge compteur nombre de concours dans la page
+      function majBadgeCompteurConcours() {
+        var nbrConcours = getCookie("nbr_concours");
+        if (nbrConcours == null || nbrConcours == 0) {
+          document.getElementById("cptNbrConc").innerHTML = "+";
+        } else {
+          document.getElementById("cptNbrConc").innerHTML = nbrConcours;
+        }
+      }
+
+      // Ajouter un numero de concours a la liste des concours pre-selectionnes
+      function ajouterConcoursFavori(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours");
+        var nbrConcours = 0;
+        var dateExpire = new Date();
+        dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+
+        if (valCookieNumerosConcours == null || valCookieNumerosConcours == "") {
+          valCookieNumerosConcours = numero_concours;
+          nbrConcours = 1;
+        } else {
+          // Transformer la chaine en tableau
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau ne contient pas le numero de concours : Ajout en fin de liste
+          if (arrayCookieNumerosConcours.includes(numero_concours) == false) {
+            valCookieNumerosConcours = valCookieNumerosConcours + "|" + numero_concours;
+            nbrConcours = arrayCookieNumerosConcours.length + 1;
+          }
+        }
+        // Enregistrer la liste des numeros de concours et le nombre de concours en cookies
+        document.cookie = "numeros_concours=" + valCookieNumerosConcours + "; expires=" + dateExpire + "; path=/";
+        document.cookie = "nbr_concours=" + nbrConcours + "; expires=" + dateExpire + "; path=/";
+        majBadgeCompteurConcours();
+      }
+
+      // Supprimer un numero de concours de la liste des concours pre-selectionnes
+      function supprimerConcoursFavori(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours");
+        if (valCookieNumerosConcours != null && valCookieNumerosConcours != "") {
+          var nbrConcours = getCookie("nbr_concours");
+          var dateExpire = new Date();
+          dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+          // Transformer la chaine en tableau
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau contient le numero de concours : Reconstruction de la liste sans ce numero
+          if (arrayCookieNumerosConcours.includes(numero_concours) == true) {
+            valCookieNumerosConcours = "";
+            nbrConcours = 0;
+            for (var i = 0; i < arrayCookieNumerosConcours.length; i++) {
+              if (arrayCookieNumerosConcours[i] != numero_concours) {
+                if (valCookieNumerosConcours.length > 0) {
+                  valCookieNumerosConcours = valCookieNumerosConcours + "|";
+                }
+                valCookieNumerosConcours = valCookieNumerosConcours + arrayCookieNumerosConcours[i];
+                nbrConcours = nbrConcours + 1;
+              }
+            }
+          }
+
+          // Enregistrer la liste des numeros de concours et le nombre de concours en cookies
+          document.cookie = "numeros_concours=" + valCookieNumerosConcours + "; expires=" + dateExpire + "; path=/";
+          document.cookie = "nbr_concours=" + nbrConcours + "; expires=" + dateExpire + "; path=/";
+        }
+      }
+
+      // Gerer le numero de concours selon la liste des numeros de concours en cookie :
+      // - Si numero de concours absent de la liste => Clic pour ajouter le concours
+      // - Si numero de concours present dans la liste => Clic pour supprimer le concours
+      function gererConcoursFavori(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours");
+        if (valCookieNumerosConcours == null || valCookieNumerosConcours == "") {
+          // Si liste de concours vide : Ajout
+          ajouterConcoursFavori(numero_concours);
+          alert("Ajouté à ma sélection");
+        } else {
+          // Transformer la chaine en tableau
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau ne contient pas le numero de concours : Ajout
+          if (arrayCookieNumerosConcours.includes(numero_concours) == false) {
+            ajouterConcoursFavori(numero_concours);
+            alert("Ajouté à ma sélection");
+          }
+          else {
+            // Sinon : Suppression
+            supprimerConcoursFavori(numero_concours);
+            majBadgeCompteurConcours();
+            alert("Retiré de ma sélection");
+          }
+        }
+      }
+
+      // Fonction Ajax interrogation CEL : Existence candidature pour un concours
+      function ajaxRequeteCandidatConcoursCEL(cel_url_requete_candidat_concours) {
+        var tempUserId = getIdentifiantUserTemporaire();
+        cel_url_requete_candidat_concours = cel_url_requete_candidat_concours + "&pde_temp_user_id=" + tempUserId;
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', cel_url_requete_candidat_concours);
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState === 4) {
+            var reponseCEL = xhr.responseText;
+            if (reponseCEL == 1) {
+              // Si reponse = 1, candidature existe deja dans CEL sur ce concours par le candidat
+              // Desactiver le bouton "Postuler" de la fiche concours et l icone etoile favori
+              document.getElementById("btnPostuler").disabled = true;
+              document.getElementById("btnPostuler").title = "Vous avez déjà postulé à ce concours";
+              document.getElementById("iconefavori").style.visibility = "hidden";
+              document.getElementById("cptNbrConc").innerHTML = "";
+            }
+          }
+        };
+        xhr.send();
+      }
+
+      // Verifie si le concours a deja ete postule
+      function checkConcoursPostule(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours_postules");
+        if (valCookieNumerosConcours != null && valCookieNumerosConcours != "") {
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau contient le numero de concours :
+          // Desactiver le bouton "Postuler" de la fiche concours et l icone etoile favori
+          for (var i = 0; i < arrayCookieNumerosConcours.length; i++) {
+            if (arrayCookieNumerosConcours[i] == numero_concours) {
+              document.getElementById("btnPostuler").disabled = true;
+              document.getElementById("btnPostuler").title = "Vous avez déjà postulé à ce concours";
+              document.getElementById("iconefavori").style.visibility = "hidden";
+              document.getElementById("cptNbrConc").innerHTML = "";
+            }
+          }
+        }
+      }
+
+      // Ajouter un numero de concours a la liste des concours postules
+      function ajouterConcoursPostule(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours_postules");
+        var dateExpire = new Date();
+        dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+        if (valCookieNumerosConcours == null || valCookieNumerosConcours == "") {
+          valCookieNumerosConcours = numero_concours;
+        } else {
+          // Transformer la chaine en tableau
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau ne contient pas le numero de concours : Ajout en fin de liste
+          if (arrayCookieNumerosConcours.includes(numero_concours) == false) {
+            valCookieNumerosConcours = valCookieNumerosConcours + "|" + numero_concours;
+          }
+        }
+        // Enregistrer la liste des numeros de concours postules en cookie
+        document.cookie = "numeros_concours_postules=" + valCookieNumerosConcours + "; expires=" + dateExpire + "; path=/";
+      }
+
+      // Postuler au concours dans application CEL
+      function postulerCEL(numero_concours, detail_concours, cel_url_concours) {
+        if (confirm("Vous souhaitez postuler pour le concours " + detail_concours + ".\nConfirmez-vous ce choix ?")) {
+          // Supprimer le concours de la liste des concours pre-selectionnes
+          supprimerConcoursFavori(numero_concours);
+          majBadgeCompteurConcours();
+          // Ajouter le concours a la liste des concours postules
+          ajouterConcoursPostule(numero_concours);
+          // Desactiver le bouton "Postuler" de la fiche concours
+          document.getElementById("btnPostuler").disabled = true;
+          document.getElementById("btnPostuler").title = "Vous avez déjà postulé à ce concours";
+          // Desactiver l icone etoile favori
+          document.getElementById("iconefavori").style.visibility = "hidden";
+          document.getElementById("cptNbrConc").innerHTML = "";
+
+          // Transmettre identifiant user PDE temporaire a CEL
+          var tempUserId = getIdentifiantUserTemporaire();
+          cel_url_concours = cel_url_concours + "&pde_temp_user_id=" + tempUserId;
+
+          // Ouvrir application CEL dans une nouvelle fenetre
+          window.open(cel_url_concours, '_blank');
+        }
+      }
+
+      // Postuler dans application CEL a tous les concours pre-selectionnes
+      function postulerCELtous(cel_url_concours) {
+        var nbrConcours = getCookie("nbr_concours");
+        if (nbrConcours != null && nbrConcours > 0) {
+          if (confirm("Vous souhaitez postuler pour les " + nbrConcours + " concours pré-sélectionnés.\nConfirmez-vous ce choix ?")) {
+            var dateExpire = new Date();
+            dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+            // Ajouter tous les concours pre-selectionnes a la liste des concours postules
+            var valCookieNumerosConcours = getCookie("numeros_concours");
+            var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+            for (var i = 0; i < arrayCookieNumerosConcours.length; i++) {
+              ajouterConcoursPostule(arrayCookieNumerosConcours[i]);
+            }
+            // Vider la liste des concours pre-selectionnes
+            document.cookie = "numeros_concours=; expires=" + dateExpire + "; path=/";
+            // Reinitialiser le nombre de concours pre-selectionnes a 0
+            document.cookie = "nbr_concours=0; expires=" + dateExpire + "; path=/";
+
+            // Transmettre identifiant user PDE temporaire a CEL
+            var tempUserId = getIdentifiantUserTemporaire();
+            cel_url_concours = cel_url_concours + "&pde_temp_user_id=" + tempUserId;
+
+            // Ouvrir application CEL dans une nouvelle fenetre
+            window.open(cel_url_concours, '_blank');
+            // Recharger la page parente
+            window.opener.location.reload();
+            // Fermer la page
+            window.close();
+          }
+        }
+      }
+
+      // Supprimer un concours de la liste des concours pre-selectionnes, depuis icone corbeille
+      function supprimerConcoursListe(numero_concours) {
+        if (confirm("Vous souhaitez supprimer le concours n°" + numero_concours + ".\nConfirmez-vous ce choix ?")) {
+          supprimerConcoursFavori(numero_concours);
+          window.location.reload();
+          // Mettre a jour le badge compteur dans la fenetre parente
+          var nbrConcours = getCookie("nbr_concours");
+          if (nbrConcours == null || nbrConcours == 0) {
+            window.opener.document.getElementById("cptNbrConc").innerHTML = "+";
+          } else {
+            window.opener.document.getElementById("cptNbrConc").innerHTML = nbrConcours;
+          }
+        }
+      }
+
+      // Retour en haut de la page
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+
+    </script>
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src-elem 'self' *.cnrs.fr 'unsafe-inline'; script-src-attr 'self' *.cnrs.fr 'unsafe-inline'; frame-src 'self' *.cnrs.fr 'unsafe-inline'; connect-src 'self' *.cnrs.fr 'unsafe-inline'; font-src 'self' *.cnrs.fr 'unsafe-inline'; style-src 'self' *.cnrs.fr 'unsafe-inline'; img-src 'self' *.cnrs.fr data:; " />
+<link rel="stylesheet" href="/profil/css/autre.css" type="text/css">
+<link rel="stylesheet" href="/profil/css/backtotop.css" type="text/css">
+<title>fiche profil public</title>
+<SCRIPT LANGUAGE="JAVASCRIPT" SRC="/profil/js/comboliste.js"></SCRIPT>
+<SCRIPT LANGUAGE="JAVASCRIPT" SRC="/profil/js/jquery3.4.1.min.js"></SCRIPT>
+<SCRIPT LANGUAGE="JAVASCRIPT" SRC="/profil/js/jquery.textarea.js"></SCRIPT>
+
+      <script type="text/javascript">
+        function getXhr(){
+            var xhr = null;
+            try {
+                xhr = new XMLHttpRequest();
+            } catch(e){
+                xhr = new ActiveXObject("Microsoft.XMLHTTP" );
+            }
+            return xhr;
+          }
+
+          function updateElementByAjax (pUrl, pElementId, pAsynch){
+            updateElementWithFunctionByAjax(pUrl, pElementId, pAsynch, null, false);
+          }
+        /*
+        * Si utilisation de cette méthode, il faut définir la méthode "callBackMessagesErreur".
+        */
+        function updateMessagesErreur(pUrlCheckMessagesErreur) {
+            updateElementWithFunctionByAjax(pUrlCheckMessagesErreur, "erreur", true, callBackMessagesErreur, true);
+        }
+          function updateElementWithFunctionByAjax (pUrl, pElementId, pAsynch, pFunctionCall, pIsInnerHTML){
+            var xhr = getXhr();
+            xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4 && xhr.status  == 200 ){
+                var documentElement = document.getElementById(pElementId);
+                if (documentElement != null) {
+                  if (pIsInnerHTML) {
+                      $("#" + pElementId).html(xhr.responseText);
+                  } else {
+                    documentElement.outerHTML=xhr.responseText;
+                  }
+                  if(pFunctionCall != null) {
+                  pFunctionCall(xhr.responseText);
+                  }
+                }
+              }
+            };
+            xhr.open( "GET", pUrl,  pAsynch);
+            xhr.send(null);
+          }
+      </script>
+      
+<script>top.nbClick=0</script>
+</head>
+<body bgcolor="#FFFFFF"  onLoad=ajaxRequeteCandidatConcoursCEL('http://concoursexternesit.cnrs.fr/public/candidat/requete_get_candidat_concours.php?numero_concours=21'); >
+<div id="divglobale">
+<form name="formFiche" method="post" action="">
+           <script>top.boutonClique="";</script>
+<input type="hidden" name="hidFicheCourante" value="pg_profil_public_referens.pAfficheProfilPublic">
+<br>
+<table width="100%" border=0>
+<tr>
+<td align="left" width="5%"><input type="button" id="btnPostuler" name="btnPostuler" value="Postuler" onClick="postulerCEL('21', 'n°21 : IR - BAP Sciences chimiques et science des matériaux - Ingenieure ou ingenieur de recherche en science des matériaux / élaboration - Institut NEEL, GRENOBLE', 'http://concoursexternesit.cnrs.fr/public/candidat/requete_postuler.php?numeros_concours=21');" ></td>
+<td align="left" width="3%">
+
+      <a id="iconefavori" onclick="gererConcoursFavori('21');"
+        title="Mes concours pr&eacute;-s&eacute;lectionn&eacute;s (favoris)"
+        style="text-decoration: none;">
+          <img src="/profil/images/icon_etoile_favori.png" width="60" height="60" border="0">
+          <span class="icon_etoile_favori_span" style="" id="cptNbrConc">+</span>
+      </a>
+</td>
+<td width="75%"></td>
+<td align="center">
+      <b>Liste des concours</b><br>
+      <a href="PG_PROFIL_PUBLIC_REFERENS.afficherListeConcoursPreselectionnes?destinationId=81"
+      onclick="window.open('PG_PROFIL_PUBLIC_REFERENS.afficherListeConcoursPreselectionnes?destinationId=81', 'newwindow', 'width=700,height=400'); return false;"
+      title="Consulter la liste de mes concours pr&eacute;-s&eacute;lectionn&eacute;s"><img src="/profil/images/icone_liste.png" width=40 height=40 border=0></a>
+      </td>
+</tr>
+</table>
+<center>
+    <table width="60%" border="2" cellspacing="0">
+    <tr>
+      <td class="enteteconcours" bordercolor="#CCCCCC"> 
+<p class="enteteconcours"><span class="enteteconcours">B : Sciences chimiques et science des matériaux</span></p>
+        
+<p class="enteteconcours"><span class="enteteconcours">Ingénieur de recherche</span></p>
+        <p class="enteteconcours"><span class="enteteconcours">Concours N&deg; 21</span></p>
+      </td>
+    </tr>
+  </table>
+  </center>
+  
+<p>&nbsp;</p>
+
+<table width="100%" border="0" cellspacing="0">
+  <tr height="25">
+    <td width="20%"><b>Nbre de postes : </b></td>
+    <td width="80%">3</td>
+  </tr>
+
+      <tr height="25">
+          <td width="20%"><b>Emploi-type :</b></td>
+          <td width="80%">Ingenieure ou ingenieur de recherche en science des matériaux / élaboration</td>
+      </tr>
+    
+</table>
+<br>
+<table width="100%" border="0" cellspacing="0">
+<tr>
+<td class="soustitreprincipal">1er poste du concours N&deg; 21</td>
+</tr>
+</table>
+<br>
+
+    <table width="100%" border="0">
+
+    <tr height="25">
+      <td width="20%"><b>Affectation :</b></td>
+      <td width="80%">Institut NEEL, GRENOBLE</td>
+    </tr> 
+<tr height="25"><td width="20%"><b>Groupe de fonction :</b></td><td width="80%">
+Groupe 3
+</td></tr>
+</td>
+    </tr>
+ </table>
+      
+<br>
+
+  <p>&nbsp;</p>
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="mission"><b>Mission :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr width="100">
+	  <td colspan="2">
+	
+Concevoir et développer des procédés de nano/micro fabrication en salle blanche <BR>
+intégrant des étapes de gravures, de dépôts et de lithographies optiques et/ou <BR>
+électronique.<BR>
+Accompagner des chercheurs non utilisateurs réguliers de salle blanche dans la <BR>
+définition et la mise en place de leurs projets de micro/nano fabrication.<BR>
+S'impliquer dans des projets de recherche personnels.<BR>
+
+</td>
+    </tr>
+  </table>
+  
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="activites"><b>Activit&eacute;s :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+- Gestion de projet : Conduire et/ou participer à des projets de recherche, <BR>
+faire le lien avec les chercheurs, épauler ceux qui ne sont pas des utilisateurs <BR>
+réguliers de la salle blanche.<BR>
+- Concevoir de nouveaux procédés technologiques de nanofabrication et <BR>
+maintenir le savoir-faire développé existant.<BR>
+- Concevoir et développer des filières technologiques intégrant des étapes de <BR>
+gravures, de dépôts et de lithographies optiques et/ou électronique adaptées aux <BR>
+programmes de recherche.<BR>
+- Participer au fonctionnement quotidien de la salle blanche de NanoFab <BR>
+(commandes et approvisionnement consommables, rangement et nettoyage des hottes <BR>
+d'étalements et de produit chimique chimie) <BR>
+- Assurer, avec les autres agents du pôle, la formation des nouveaux <BR>
+utilisateurs et la maintenance des équipements prise en charge par l'équipe.<BR>
+- Informer sur les risques liés à l'utilisation des techniques et des équipements, <BR>
+faire respecter les consignes de sécurité et les bonnes pratiques en salle <BR>
+blanche.  <BR>
+- Conseiller les utilisateurs des salles blanches sur les choix technologiques.<BR>
+- Déterminer, coordonner, mettre en œuvre les techniques de caractérisation  <BR>
+physique, chimique, optique, structurale et autres pour le contrôle et la <BR>
+validation des matériaux et des process.<BR>
+- Diffuser et valoriser les résultats de la recherche.<BR>
+- Assurer une veille scientifique et technologique. Participer aux réseaux <BR>
+technologiques.<BR>
+<BR>
+<BR>
+
+</td>
+    </tr>
+  </table>
+  
+
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="competences"><b>Comp&eacute;tences :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+Savoirs fondamentaux :<BR>
+- Expertise en techniques de micro-nano fabrication<BR>
+- Maitrise en science des matériaux <BR>
+- Maitrise en techniques de caractérisation de matériaux (connaissances <BR>
+approfondies)<BR>
+- Expertise de l'environnement de salle blanche de classe iso 7<BR>
+- Gestion de projet<BR>
+<BR>
+Savoir-faire opérationnels :<BR>
+- Maitrise de la technique de lithographie électronique et optique<BR>
+- Maitrise de procédés de fabrication top-down et/ou bottom-up<BR>
+- Connaissances dans les techniques de dépôt sous vide (PVD)<BR>
+- Connaissances dans les techniques de gravures chimiques (humides et sèches)<BR>
+- Anglais : B2 minimum<BR>
+<BR>
+Savoir être :<BR>
+- S'intégrer dans l'équipe technologique du laboratoire en charge des technologies <BR>
+de nanofabrication et de la salle blanche<BR>
+- Bonnes capacités relationnelles<BR>
+- Savoir interagir avec différents utilisateurs (étudiants stagiaires, chercheurs, <BR>
+doctorants...) nationaux et internationaux<BR>
+
+</td>
+    </tr>
+  </table>
+  
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="contexte"><b>Contexte :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+L'ingénieur-e de recherche en sciences des matériaux intégrera le pôle <BR>
+technologique NanoFab, composée de 2 ingénieurs de recherche, 1 ingénieur d'études <BR>
+et 2 assistants ingénieurs. Le pôle a pour objectif de développer et accompagner <BR>
+des projets de recherche et de fournir un équipement et une expertise de haute <BR>
+technologie en nanofabrication aux différents personnels de l'Institut Néel.<BR>
+La lithographie électronique est un exemple de technique particulièrement cruciale <BR>
+pour nos recherches et l'acquisition d'un masqueur a permis un accroissement des <BR>
+capacités de réalisation de nano-structures complexes (nanophotonique, circuits <BR>
+quantiques, détecteurs ...). L'ingénieur-e recruté-e devra fortement contribuer au <BR>
+développement futur de cette technique au sein de l'Institut Néel sur un nouvel <BR>
+équipement dernière génération en cours d'achat. <BR>
+<BR>
+La nanofabrication est à la base de nombreuses thématiques de recherche très <BR>
+dynamiques dans le laboratoire. Nous disposons de plusieurs salles blanches dont <BR>
+une de 220 m² qui propose différentes techniques : dépôt, gravure, lithographie <BR>
+électronique et optique, aux utilisateurs de l'Institut Néel mais aussi d'autres <BR>
+laboratoires grenoblois.<BR>
+<BR>
+Qu'elles soient faites à NanoFab (Institut Néel), ou à la Plateforme Technologique <BR>
+Amont (PTA, sur le site du CEA Grenoble), les réalisations actuelles demandent <BR>
+souvent la mise au point de procédés complexes incluant de nombreuses étapes <BR>
+utilisant des équipements et des techniques très variées.<BR>
+<BR>
+<BR>
+<BR>
+
+</td>
+    </tr>
+  </table>
+  
+<br>
+<table width="100%" border="0" cellspacing="0">
+<tr>
+<td class="soustitreprincipal">2eme poste du concours N&deg; 21</td>
+</tr>
+</table>
+<br>
+
+    <table width="100%" border="0">
+
+    <tr height="25">
+      <td width="20%"><b>Affectation :</b></td>
+      <td width="80%">Spintronique et technologie des composants, GRENOBLE</td>
+    </tr> 
+<tr height="25"><td width="20%"><b>Groupe de fonction :</b></td><td width="80%">
+Groupe 3
+</td></tr>
+</td>
+    </tr>
+ </table>
+      
+<br>
+
+  <p>&nbsp;</p>
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="mission"><b>Mission :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr width="100">
+	  <td colspan="2">
+	
+L'ingénieur-e en élaboration, traitement et contrôle structural/magnétique/<BR>
+électrique de matériaux pilotera et contribuera au développement de nouveaux <BR>
+matériaux et hétérostructures avancés en couches minces sur l'équipement <BR>
+industriel de dépôt 200mm, en collaboration étroite avec les chercheurs. 
+</td>
+    </tr>
+  </table>
+  
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="activites"><b>Activit&eacute;s :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+- Coordonner et animer la démarche de développement : définition des objectifs, <BR>
+stratégie à suivre, réalisation des dépôts et des analyses, et bouclage vers les <BR>
+objectifs.<BR>
+- Réaliser et piloter la réalisation des dépôts de nouveaux matériaux et de <BR>
+nouveaux empilements spintroniques par pulvérisation cathodique.<BR>
+- Mettre en œuvre les techniques de caractérisations magnétique, électrique et <BR>
+structurale nécessaires à la compréhension du matériau.<BR>
+- Effectuer une veille technologique sur les matériaux pour la spintronique en <BR>
+coordination avec les chercheurs, (publications récentes, participation à des <BR>
+conférences).<BR>
+- Développer et adapter les appareillages en fonction des besoins et des <BR>
+évolutions des techniques.<BR>
+- Co-encadrer des travaux (stage, thèse) et assurer ou déléguer la formation sur <BR>
+les équipements (dépôt et caractérisation).<BR>
+- Prendre part à et/ou piloter la rédaction et la gestion de contrats de recherche <BR>
+(Université, région, ANR, Europe, industrie).<BR>
+- Interagir avec d'autres ingénieurs et techniciens ou des équipementiers, en <BR>
+charge de la maintenance des bâtis de dépôt.<BR>
+- Coordonner la réflexion du laboratoire dans les cas d'acquisition de nouveaux <BR>
+équipements de dépôt ou de caractérisations : établissement du cahier des charges, <BR>
+sélection des offres, mise en place et qualification de l'équipement.<BR>
+- Répondre aux sollicitations de partenaires ou clients industriels : mission <BR>
+d'expertise avec mise en place de collaborations ou de prestations.<BR>
+
+</td>
+    </tr>
+  </table>
+  
+
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="competences"><b>Comp&eacute;tences :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+Savoirs fondamentaux :<BR>
+- Connaissance et pratique approfondies de la structure et microstructure des <BR>
+matériaux (couches minces, magnétisme de couches minces et hétérostructures pour <BR>
+l'électronique de spin)<BR>
+- Connaissance et savoir-faire approfondis en processus de croissance par <BR>
+pulvérisation cathodique.<BR>
+- Connaissance des techniques de caractérisation structurale, électrique et <BR>
+magnétique, avec une expérience attestée en recherche ou recherche / <BR>
+développement.<BR>
+- Connaissance de base des procédés de salle blanche.<BR>
+<BR>
+Savoir-faire opérationnels :<BR>
+- Connaissance générale des techniques du vide (primaire, secondaire), de <BR>
+l'informatique (système, utilisation de logiciels bureautiques, de pilotage et de <BR>
+simulation), du contrôle des appareils (programmation, interfaçage).<BR>
+- Connaissance du monde industriel et de ses spécificités (confidentialité, <BR>
+réactivité, faisabilité et atteinte des objectifs, démarche qualité).<BR>
+- Bonne maîtrise de l'anglais, à l'écrit et oral, tant en compréhension qu'en <BR>
+expression.<BR>
+<BR>
+Savoir être :<BR>
+- Savoir travailler en équipe (communication, esprit d'équipe, engagement)<BR>
+- Faire preuve d'autonomie, prendre des initiatives et être force de proposition, <BR>
+planification des tâches<BR>
+- Faire preuve de rigueur et de précision<BR>
+
+</td>
+    </tr>
+  </table>
+  
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="contexte"><b>Contexte :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+SPINTEC (Spintronique et technologie des composants) est un laboratoire conjoint <BR>
+du CEA-Grenoble, du CNRS et de l'Université Grenoble Alpes. Il a une activité de <BR>
+recherche en spintronique, travaillant à l'interface entre des activités <BR>
+fondamentales et d'autres plus applicatives, souvent en lien avec des partenaires <BR>
+industriels. Ainsi, la mission de SPINTEC est de produire des connaissances <BR>
+nouvelles, valorisées sous forme de publications, mais également de contribuer à <BR>
+convertir ces connaissances en innovation, impliquant dépôt de brevets et actions <BR>
+de valorisation. Ses projets sont organisés autour d'environ 35 chercheurs, pour <BR>
+un total de 120 personnes (dont personnels ingénieurs et techniques, doctorants et <BR>
+non permanents). Le laboratoire est impliqué dans de nombreuses collaborations <BR>
+internationales, dont des projets européens.<BR>
+<BR>
+La maîtrise de matériaux avancés en hétérostructures de couches minces et aux <BR>
+interfaces contrôlées est progressivement devenu un enjeu majeur pour développer <BR>
+une spintronique à l'état de l'art. Intégré-e dans le groupe technique de SPINTEC <BR>
+qui comprend 3 équipes (Matériaux / Instrumentation / Nanofabrication) de 11 <BR>
+agents au total, et référant directement au responsable de l'équipe Matériaux, <BR>
+l'ingénieur-e en élaboration et science des matériaux sera en charge du pilotage, <BR>
+du développement des nouveaux matériaux ou empilements du laboratoire sur <BR>
+l'équipement industriel 200mm récemment acquis.
+</td>
+    </tr>
+  </table>
+  
+<br>
+<table width="100%" border="0" cellspacing="0">
+<tr>
+<td class="soustitreprincipal">3eme poste du concours N&deg; 21</td>
+</tr>
+</table>
+<br>
+
+    <table width="100%" border="0">
+
+    <tr height="25">
+      <td width="20%"><b>Affectation :</b></td>
+      <td width="80%">Laboratoire de physique de l'ENS, PARIS 05</td>
+    </tr> 
+<tr height="25"><td width="20%"><b>Groupe de fonction :</b></td><td width="80%">
+Groupe 2
+</td></tr>
+</td>
+    </tr>
+ </table>
+      
+<br>
+
+  <p>&nbsp;</p>
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="mission"><b>Mission :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr width="100">
+	  <td colspan="2">
+	
+L'ingénieur(e)  de recherche recruté prendra la responsabilité de la salle blanche du Laboratoire de Physique de l'Ecole normale supérieure (LPENS,UMR 8023).. Il/Elle veillera  à son bon fonctionnement et à son développement, tout en s'impliquant dans les activités de recherche et de formation qui s'y rapportent. Il/Elle assurera l'encadrement hierarchique d'une Ingénieure de Recherche et d'un Assistant Ingénieur.
+</td>
+    </tr>
+  </table>
+  
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="activites"><b>Activit&eacute;s :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+- L'ingénieur.e gèrera le budget de la plateforme (environ 120 k€), assurera son maintien à l'état de l'art et son adéquation avec les besoins des équipes de recherche l'utilisant.<BR>
+- Il/elle pilotera pilotera et encadrera l'équipe technique.<BR>
+- L'ingénieur.e mènera de nouveaux projets scientifiques et technologiques utiles aux thématiques du département faisant appel à l'ensemble des technologies présentes dans la salle blanche, telles que la lithographie (électronique, optique, laser), la gravure (ionique, chimique), le dépôt de couches minces et le transfert de matériaux bidimensionnels.<BR>
+- Il/elle formera les utilisateurs novices aux procédés technologiques de la salle blanche; il/elle les conseillera pour la mise en œuvre de ces procédés dans le respect des normes d'utilisation des appareils et des règles d'hygiène et de sécurité.<BR>
+- Il/elle co-pilotera avec le responsable de l'équipement, la montée en charge et le développement des procédés du masqueur électronique 100keV.<BR>
+- Il/elle participera aux maintenances des équipements de la salle blanche dont il aura la charge.<BR>
+- Il/elle assurera une veille scientifique et technologique et proposera le développement de nouvelles techniques et compétences en anticipant les évolutions. A cet effet, il mènera les demandes de financement.<BR>
+- Il/elle sera un acteur de la communauté scientifique de nanofabrication au niveau local et national via le réseau Renatech. A cet effet, il sera co-responsable du Groupement des Plateformes de micro- et Nanotechnologies de Paris (GPNP).<BR>
+ <BR>
+Le travail de l'ingénieur.e s'effectuera principalement en salle blanche et il ou elle pourra bénéficier de formations internes et/ou externes.<BR>
+<BR>
+
+</td>
+    </tr>
+  </table>
+  
+
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="competences"><b>Comp&eacute;tences :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+Connaissances :<BR>
+-  Connaissance approfondie des sciences et techniques de l'ingénieur en salle blanche (techniques de salle blanche, techniques du vide, électronique, optique.<BR>
+-  Connaissance approfondie des sciences physiques, en particulier celles en lien avec les activités de recherche du laboratoire. La connaissance de la physique des matériaux bidimensionnels et/ou des semi- et supraconducteurs est un plus.<BR>
+-  Notions de base de chimie.<BR>
+ <BR>
+Compétences opérationnelles :<BR>
+- Savoir informer sur les risques liés à l'utilisation des techniques et des produits et fera appliquer les règles de sécurité ;<BR>
+- Savoir encadrer les travaux pratiques en salle blanche (niveau L3 à M2), en proposant par exemple de nouveaux sujets.<BR>
+-  Bon niveau de langue anglaise (niveau B2 minimum);<BR>
+ <BR>
+Savoirs être :<BR>
+-  Sens de l'organisation, des responsabilités, de l'encadrement ;<BR>
+-  Goût du travail en équipe et de la transmission du savoir-faire, sens du service pour le bien commun.<BR>
+
+</td>
+    </tr>
+  </table>
+  
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="contexte"><b>Contexte :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+Le LPENS est lun des 2 laboratoires de recherche du Département de Physique de lEcole normale supérieure, l'autre étant le Laboratoire Kastler Brossel. Le LPENS est composé de 90 chercheur.e.s et enseignants-chercheur.e.s, 60 ITA et 180 doctorants et postdoctorants. C'est un laboratoire avec une forte activité expérimentale en  physique de la matière condensée, physique quantique, (micro et nano)-fluidique et biophysique.<BR>
+ <BR>
+La salle blanche du LPENS accueille également les équipes de recherche du LKB, spécialisées en physique quantique, les 2 laboratoires ayant organisé leurs services techniques en plateformes communes.<BR>
+La salle blanche du LPENS fait par ailleurs partie du Groupement des Plateformes de micro- et Nanotechnologies de Paris (GPNP), labellisé centrale de proximité au sein du réseau Renatech+ (les autres acteurs de cette centrale sont à l'Institut des Nano-Sciences de Paris (INSP) à Sorbonne Université, le laboratoire Matériaux et Phénomènes Quantiques (MPQ) à  l'Université Paris Cité, l'Institut Pierre Gilles de Gennes et l'Observatoire de Paris).<BR>
+ <BR>
+La salle blanche, d'une surface de 120m2  et  avec  un parc d'équipements d'un montant de 4 millions d'euros, accueille une cinquantaine d'utilisateurs par an, principalement des doctorant.e.s ou post-doctorant.e.s. La plateforme a développé un savoir-faire reconnu dans la nanostructuration de matériaux bidimensionnels (graphène, hBN, TMDC) et dans la fabrication de dispositifs quantiques à base de matériaux supra- et semiconducteurs.<BR>
+ <BR>
+La salle blanche du LPENS est dans une phase d'expansion, avec une première étape en cours consistant en l'acquisition d'un masqueur 100keV à l'état de l'art, et une deuxième étape visant à doubler sa surface et à acquérir de nouveaux équipements d'ici à 5 ans. Le masqueur sera ouvert à la communauté scientifique parisienne.<BR>
+ <BR>
+L'ingénieur.e sera placé.e sous la responsabilité du directeur technique du  LPENS.<BR>
+
+</td>
+    </tr>
+  </table>
+  
+<br>
+
+  <p>&nbsp;</p>
+
+  <table border="0" width="100%">
+    <tr align="center">
+      <td>
+	  	<script>
+		//ne pas afficher le bouton si login DS
+		//if (top.listeCourante!=""){
+		//   document.write("<input type='button' name='btnRetour' value='Retour &agrave; la liste' onClick='javascript:top.retourListe();'>");
+		//}
+		</script>
+		<input type="button" name="btnRetourConsult" value="Revenir &agrave; la liste des r&eacute;sultats" onClick="javascript:history.go(-1);">
+	  </td>
+    </tr>
+  </table>
+  
+</form>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+
+    <div class="container-top">
+      <a href="" class="top" id="scrollToTop"></a>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var containerTop = document.querySelector(".container-top");
+        var documentHeight = document.documentElement.scrollHeight;
+        var scrollTopBtn = document.querySelector("#scrollToTop");
+
+        function updateOpacity() {
+          var scrollPercentage = (window.scrollY / documentHeight) * 150;
+
+          var opacity = Math.min(1, Math.max(0, scrollPercentage / 75));
+
+          containerTop.style.opacity = opacity;
+        }
+
+        window.addEventListener("scroll", function () {
+          updateOpacity();
+        });
+
+        scrollTopBtn.addEventListener("click", function (event) {
+          event.preventDefault(); // Annule le comportement par défaut du lien
+          scrollToTop();
+        });
+
+        function scrollToTop() {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth" // Permet le défilement en douceur
+          });
+        }
+
+        updateOpacity();
+      });
+    </script>
+</body>
+
+			<head>
+  			  <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+  			  <META HTTP-EQUIV="Expires" CONTENT="-1">
+          <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src-elem 'self' *.cnrs.fr 'unsafe-inline'; script-src-attr 'self' *.cnrs.fr 'unsafe-inline'; frame-src 'self' *.cnrs.fr 'unsafe-inline'; connect-src 'self' *.cnrs.fr 'unsafe-inline'; font-src 'self' *.cnrs.fr 'unsafe-inline'; style-src 'self' *.cnrs.fr 'unsafe-inline'; img-src 'self' *.cnrs.fr data:; " />
+			</head>
+			
+</html>

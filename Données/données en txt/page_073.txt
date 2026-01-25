@@ -1,0 +1,71 @@
++
+Liste des concours
+F : Culture, communication, production et diffusion des savoirs
+Ingénieur de recherche
+Concours N° 73
+Nbre de postes :
+1
+Emploi-type :
+Responsable des ressources et de l'ingénierie documentaire
+Affectation :
+Institut universitaire européen de la mer, PLOUZANE
+Groupe de fonction :
+Groupe 3
+Mission :
+L'ingénieur-e sera en charge de la mise en place et du suivi du plan de gestion des données de la recherche et de l'observation en sciences de la mer et du littoral de l'Institut Universitaire Européen de la Mer (IUEM), qui est un Observatoire des Sciences de l'Univers (OSU) du CNRS, en interaction avec les personnels scientifiques de l'IUEM et dans le contexte actuel des sciences ouvertes.
+Activités :
+1 : Concevoir et Coordonner les opérations nécessaires à la production de données FAIR
+o Valoriser et tenir à jour un inventaire des données existantes et leurs modalités de gestion au sein de l'IUEM
+o Concevoir et mettre en œuvre la politique de gestion des données
+o Faire appliquer la stratégie de gestion des données à l'échelle de l'institut en tenant compte des chartes des tutelles
+o Participer à la mise en place de méthodologies de recueil et de traitement des données scientifiques adaptées à la discipline
+o Coordonner les activités avec les partenaires externes en lien direct avec l'institut.
+2 : Sensibiliser et accompagner à la culture de la gestion des données
+o Réaliser des conférences et ateliers de sensibilisation
+o Animer des formations sur les données de la recherche (cycle de vie, bonnes pratiques, plan de gestion des données, FAIRisation, identifiants pérennes, entrepôts)
+o Accompagner les équipes de recherche dans l'élaboration de leur plan de gestion des données (PGD)
+o Accompagner le personnel de recherche dans la publication de leurs jeux de données
+o Maintenir à jour les actualités du domaine sur l'intranet.
+3 : Définir et organiser une veille métier, scientifique et technologique
+o Diffuser l'information sur les ressources (outils et méthodologies) existantes au niveau national et international
+o Suivre les actualités des réseaux métiers du domaine des différentes tutelles
+o Informer des appels à manifestations et à projets
+o Assurer une veille sur les réglementations en vigueur en termes de science ouverte, RGPD et propriété intellectuelle.
+Activité spécifique ou transverse :
+o Participer aux collaborations avec différents acteurs dans le domaine des données scientifiques au niveau national et international
+o Être le référent « données » pour le réseau de l'IRD et pour l'Université de Brest
+o Assurer le rôle de responsable de la gestion des données bio-informatiques de l'IUEM auprès de certains services de nos partenaires notamment Ifremer.
+Compétences :
+Savoirs / connaissances
+o Maîtrise des méthodes, principes et procédures de gestion des données scientifiques (cycle de vie de la donnée, FAIR, CARE,...).
+o Connaissance approfondie des normes et formats des données et métadonnées (directive INSPIRE, eml, CF, DarwinCore, ISO 19115, ISO 8601, netcdf...).
+o Connaissance des textes législatifs et règlementaires du domaine (RGPD, propriété intellectuelle,...).
+o Connaissance des outils et des méthodes de publications/diffusions dans le contexte de la science ouverte (Identifiants pérennes, data paper, revues « diamant »).
+o Environnement et réseaux professionnels du domaine
+o Connaissance souhaitée de certains langages de programmation (Python, R, matlab, ...)
+o Capacité à s'exprimer à l'oral en anglais : Niveau B2 (cadre européen commun de référence pour les langues).
+Savoir-faire
+o Publier un jeu de donnée
+o Jouer un rôle de conseil ou d'aide à la décision
+o Animer des équipes en mode projet
+o Accompagner les changements
+o Capacité à dispenser des formations dans le domaine
+o Initier et conduire des partenariats
+o Savoir informer et rendre compte
+o Rédiger des rapports, documentations et articles web
+Savoirs-être
+o Curiosité intellectuelle
+o Sens de la pédagogie
+o Aptitude au travail en équipe et en réseau
+o Capacité de décision / Autonomie
+o Aisance relationnelle
+Compétences managériales
+o Partager les valeurs et les incarner
+o Encourager les expérimentations et les transformations
+o Animer le collectif
+o Faciliter la coopération
+o Faire preuve de maitrise de soi
+Contexte :
+L'IUEM est l'OSU de référence au niveau national pour l'étude des océans et des littoraux; il fédère 7 unités de recherche et une unité d'appui et de recherche, l'UAR 3113. Cette unité, qui comprend environ soixante-dix agents, organise les services mutualisés en soutien aux UMR, dont le service informatique mutualisé (SIMI).
+Le SIMI met en œuvre des prestations complémentaires à celles des tutelles ou partenaires de l'IUEM (CNRS, UBO, IRD, Ifremer...) en soutien à la recherche et assure un support de proximité aux 760 usagers (scientifiques, techniciens, administratifs et doctorants). Il est composé de 9 agents répartis en 4 pôles: Calcul scientifique, Gestion données scientifiques, Support informatique et Administration des systèmes.
+L'agent recruté intégrera le pôle Gestion des données scientifiques, composé de 2 agents CNRS, dont le poste à pourvoir. Placé sous la responsabilité directe de la responsable du SIMI, l'agent travaillera en appui aux personnels de recherche de l'IUEM, en collaboration avec la responsable du pôle données du SIMI, avec le service central de documentation et la direction Recherche Innovation et Valorisation Economique de l'Université de Brest, tutelle hébergeant l'OSU-IUEM. L'agent travaillera avec les différentes instances et structures des tutelles et partenaires nationaux et internationaux dans le domaine de la gestion de la donnée.

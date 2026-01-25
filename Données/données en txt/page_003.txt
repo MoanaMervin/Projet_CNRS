@@ -1,0 +1,80 @@
++
+Liste des concours
+A : Sciences du vivant, de la terre et de l'environnement
+Ingénieur de recherche
+Concours N° 3
+Nbre de postes :
+2
+Emploi-type :
+Ingenieure ou ingenieur biologiste en analyse de données
+1er poste du concours N° 3
+Affectation :
+Santé Lyon-Est - Louis Léopold Ollier, LYON 08
+Groupe de fonction :
+Groupe 3
+Mission :
+L'ingénieur.e de recherche aura pour mission de structurer et développer l'analyse d'image au sein de la plateforme de microscopie du CIQLE. Il/Elle sera également en charge d'effectuer des missions de conseil et de formation au sein du réseau France BioImaging (FBI).
+Les principales missions seront :
+1. Offrir une assistance sur site pour les problèmes liés à l'analyse d'images.
+2. Maintenir une infrastructure pour l'analyse d'images autonome. Faire face au déploiement de nouveaux outils complexes.
+3. Créer, déployer et généraliser des outils d'analyse avancés pour les projets des scientifiques du campus. En particulier, développer des pipelines d'analyses permettant de quantifier le signal fluorescent dans des images "gros volumes" acquises sur des microscopes à feuilles de lumière.
+4. Formations et organisations de journées scientifiques du site.
+5. Participer aux travaux du réseau France BioImaging (FBI)
+Activités :
+- Définition des objectifs du projet et des stratégies à mettre en œuvre, en interaction avec les chercheurs
+- Mise en place de pipelines d'analyse
+- Développement d'algorithmes dédiés
+- Gestion de l'infrastructure
+- Conseil aux utilisateurs
+- Dissémination des ressources
+- Coanimer et donner des formations au club d'analyse d'images du nœud Rhônalpin de FBI.
+- Coanimer, donner des formations et effectue une veille technologique au sein du réseau France Bioimaging Analyst Specialists (FBIAS)
+- Référent(e) au niveau Rhônalpin du réseau FBI-Data (gestion de données de microscopie)
+- Participer au bureau exécutif du nœud Rhônalpin de FBI
+Compétences :
+- Connaissances approfondies en "Deep Learning"
+- Connaissances approfondies sur les méthodes de recalage et segmentation d'objets de grandes dimensions
+- capacité à travailler en autonomie
+- Savoir faire preuve d'organisation
+- Domaine de formation souhaité : électronique, instrumentation et biosciences, un PhD en analyse d'image serait un plus
+- la connaissance  des techniques de microscopie de fluorescence serait un plus
+- une expertise sur les logiciels d'analyse de type AMIRA-AVISO, ARIVIS ou IMARIS serait un plus
+- Expérience souhaitée dans la gestion des gros fichiers (>20 Go, photonique, IRM, scanner ou autre)
+Contexte :
+La plateforme Lyon Multiscale Imaging Centre (LyMIC) coordonnée par l'Université Claude Bernard Lyon 1 est une plateforme de microscopie pluridisciplinaire dédiée à l'imagerie multi-échelle. Guichet unique, le LyMIC fédère trois centres spécifiques offrant des outils, des services, des compétences et des formations portant sur la microscopie photonique, la microscopie électronique ainsi que la microscopie à force atomique. Le Centre d'Imagerie Quantitative Lyon-Est (CIQLE), dépendant de la SFR Santé Lyon Est est localisé sur le Campus Rockfeller, le Centre Technologique des Microstructures (CTµ) est localisé sur le Campus LyonTech La Doua, et le Plateau Technique d'Imagerie / Microscopie (PLATIM), dépendant de la SFR Biosciences est localisé sur le Campus de l'ENS Lyon à Gerland. Ces trois centres offrent un accès à des microscopes performants ainsi qu'à de nombreuses techniques de préparation d'échantillon.
+L'ingénieur(e) de recherche recruté(e) sera basé(e) au CIQLE et placé(e) sous la responsabilité du directeur de la SFR Santé Lyon Est (Stéphane Marinesco) afin de développer l'analyse d'image au sein de LyMIC et du nœud Rhône-Alpes de France Bio-Imaging. Le poste pourra être mutualisé sur la SFR Santé-Lyon Est et sur FBI à hauteur de 80%-20%. Il/elle sera chargé(e) de structurer et développer l'analyse d'image au sein de la plateforme de microscopie du CIQLE. L'ingénieur devra être moteur dans l'élaboration de la stratégie, dans la réalisation et la bonne conduite des projets. L'ingénieur(e) effectuera des missions de conseil et de formation au sein du réseau France BioImaging (FBI).
+2eme poste du concours N° 3
+Affectation :
+Multi-ingénierie pour les systèmes vivants, MARSEILLE 09
+Groupe de fonction :
+Groupe 3
+Mission :
+L'ingénieur.e sera chargé.e de développer et de mettre en œuvre des techniques avancées d'analyse de données et d'apprentissage automatique, adaptées au traitement des images de systèmes vivants.
+Activités :
+- Analyser et traiter des données d'imagerie, tout en accompagnant les chercheurs dans leur exploitation. Cela inclut la mise en œuvre de techniques avancées (analyse de grands jeux de données, apprentissage supervisé/non supervisé, réduction de dimension, statistiques multivariées et deep learning), la proposition de solutions adaptées à leurs problématiques de recherche et l'interprétation critique des résultats obtenus
+- Développer des workflows d'analyse d'images ainsi que des scripts, macros et plugins sur mesure
+- Assurer une veille scientifique et technique en effectuant des recherches bibliographiques sur les méthodes et technologies avancées dans le domaine de l'analyse des images
+- Participer à la mise en place d'outils pour le partage de données et de transfert de code, en utilisant des solutions comme OMERO pour les données images, ainsi que GitHub et GitLab
+- Contribuer au transfert de connaissances entre les différentes équipes de recherche
+- Organiser et animer des cours sur l'analyse des données d'imagerie destinés à la communauté scientifique, notamment aux étudiants en doctorat, aux post-doctorants et aux chercheurs
+Compétences :
+Savoirs :
+- Maîtrise de Python, Java ou MATLAB ; une connaissance de R serait un atout
+- Solides compétences en machine learning et deep learning, avec une expérience des framework Tensorflow/PyTorch et dans l'exploitation des capacités GPU (CUDA)
+- Maîtrise des techniques avancées d'analyse statistique de données et capacité à traiter des données multimodales
+- Compétences dans le développement de pipelines de traitement et d'analyse d'images, avec un accent sur les algorithmes de suivi
+- Maîtrise de l'anglais ; connaissance du français appréciée
+Savoir-faire :
+- Expérience avec des outils de science des données tels que Python, numpy, scipy, scikit-learn, matplotlib et Jupyter Notebook
+- Expérience en ingénierie logicielle professionnelle, développement de logiciels et stratégies de partage de données sont des atouts
+- Expérience en infrastructure et informatique haute performance liée à l'analyse d'images, y compris la gestion de serveurs/bases de données avec Docker et Singularity sur des services de calcul haute performance avec GPU, serait un plus
+Savoir-être :
+- Excellentes compétences en travail d'équipe et capacité à interagir avec des chercheurs de divers domaines, notamment la biologie, la physique, les mathématiques et l'informatique
+- Bonnes capacités relationnelles, compétences en communication
+- Capacité à travailler de manière autonome
+Contexte :
+L'ingénieur.e rejoindra la plateforme multi-ingénierie pour les systèmes vivants (MEP CENTURI), située sur le campus de Luminy à Marseille.
+CENTURI est un projet interdisciplinaire qui rassemble des chercheurs issus de diverses disciplines : biologie, physique, mathématiques, informatique et ingénierie. Son objectif est de mieux comprendre comment les systèmes vivants fonctionnent en étudiant leur organisation et leur dynamique.
+La MEP CENTURI a pour mission d'apporter une expertise supplémentaire dans des domaines clés tels que le traitement d'images, la bioinformatique, l'apprentissage automatique, le développement de logiciels et la mécatronique. Les ingénieurs de la plateforme accompagnent et conseillent la communauté scientifique, pour des questions de recherche ponctuelles ou pour des projets de plus longue durée.
+CENTURI regroupe une centaine d'équipes de recherche provenant de 21 laboratoires. La plateforme aide les chercheurs à relever les défis liés aux grandes quantités de données en biologie moderne, notamment pour l'acquisition, la gestion et l'analyse des données biologiques.
+La MEP CENTURI offre un environnement de travail collaboratif et stimulant, avec de nombreuses opportunités d'échanges entre disciplines et d'innovation scientifique.

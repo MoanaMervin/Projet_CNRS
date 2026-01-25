@@ -1,0 +1,183 @@
++
+Liste des concours
+E : Informatique, statistiques et calcul scientifique
+Ingénieur d'études
+Concours N° 127
+Nbre de postes :
+3
+Emploi-type :
+Ingenieure ou ingenieur en ingénierie logicielle
+1er poste du concours N° 127
+Affectation :
+CNRS Nucléaire & Particules, PARIS 16
+Groupe de fonction :
+Groupe 2
+Mission :
+Au sein de l'institut CNRS Nucléaire & Particules, l'ingénieur.e assurera
+principalement l'administration, la maintenance, la sécurité et l'évolution du SI
+projets de l'Institut ainsi que des applications/sites web internes en lien avec
+les directions scientifiques, technique et administrative de l'Institut et ses
+laboratoires. Il/Elle participera activement au cycle de vie des projets
+informatiques : compréhension et analyse des besoins, élaboration de solutions
+numériques, planification, réalisation, intégration, paramétrage, tests,
+déploiement, maintenance dans le respect des normes et règles de sécurité et
+assistance aux utilisateurs et assumera des responsabilités de gestion de projet
+Activités :
+Les activités sont déclinées selon 2 axes principaux :
+Ingénierie logicielle :
+Administrer, assurer le fonctionnement et l'évolution des systèmes d'information existants et veiller à la cohérence, à l'accessibilité et à la sécurité des données ;
+Apporter un support technique, applicatif et de développement pour les applications/sites web des services de l'Institut en étroite collaboration avec l'équipe « Applications » du Centre de Calcul de l'IN2P3 ;
+Contribuer à la recherche et à la définition des solutions possibles répondant aux besoins clients ;
+Rechercher, conseiller et proposer des solutions applicatives en lien avec les besoins exprimés par la direction de l'institut : rédaction de cahiers des charges, développement, tests, rédaction de documentation, déploiement en autonomie et support applicatifs, formation et information des utilisateurs ;
+Élaborer des outils de consultation, de contrôle et de gestion (scripts, reportings, procédures). A titre d'exemple des outils d'aide à la décision à destination des directeurs/trices adjoint.e.s pour le suivi des projets et des moyens ;
+Représentation et participation à des activités transverses :
+Assurer les fonctions de correspondant.e de protection de données pour l'institut (en conformité avec le RGPD) ;
+Participer au réseau des informaticiens de l'Institut (RI3) et du CNRS.
+Compétences :
+L'ingénieur-e détiendra les compétences suivantes (ou disposera des aptitudes lui permettant de les acquérir) :
+Savoirs :
+Méthodologie de conduite de projet
+Compréhension approfondie des systèmes d'information et de communication, ainsi que des architectures sous-jacentes
+Génie Logiciel : maîtrise des principes et des techniques de développement logiciel, incluant la conception, l'implémentation et la maintenance de systèmes logiciels
+Les langages de conception de sites web
+Les outils de gestion de version
+Les pratiques et des outils DevOps (CI/CD)
+Conception, développement et utilisation de services web
+Connaissance des meilleures pratiques en matière de sécurité informatique pour protéger les systèmes et les données
+Connaissance de protocoles d'authentification centralisée
+Savoir-faire  :
+Maitrise d'outils de conduite de projet
+Maitrise d'outils de versionning : GIT / GitLab
+Maitrise d'outils de conteneurisation (Docker) et d'orchestration (Kubernetes)
+Maitrise d'outils permettant la réalisation de tests unitaires, d'intégration et fonctionnels
+Maitrise des langages de programation : Javascript et PHP
+Maîtrise des langages de balisage : HTML, CSS
+Maitrise de frameworks de développement PHP (Symfony serait un plus)
+Capacité à concevoir, développer et utiliser des services web (API REST, SOAP, etc.)
+Connaissance des concepts de sécurité informatique
+Connaissance des protocoles Oauth, OpenID
+Anglais technique niveau B2
+Savoir-être :
+Bon relationnel et sens du travail en équipe
+Capacité à communiquer efficacement avec des informaticiens et des personnels administratifs
+Capacité à organiser le travail de manière méthodique et rigoureuse
+Contexte :
+CNRS Nucléaire & Particules (IN2P3) est l'un des 10 Instituts du CNRS qui a pour
+mission de promouvoir et fédérer les activités de recherche dans les domaines de
+la physique nucléaire, de la physique des particules et des astroparticules ainsi
+que des applications associées (santé, énergie, environnement). Il s'appuie sur 31
+laboratoires, infrastructures et plateformes nationales/internationales regroupant
+près de 3300 personnels.
+Le poste est localisé au siège du CNRS (75016 PARIS).
+L'agent exercera ses fonctions sous la responsabilité hiérarchique du Directeur
+Adjoint Administratif de CNRS Nucléaire & Particules.
+L'équipe administrative comporte 24 personnes contribuant aux activités des
+services (administratifs, budget et finances, emploi et suivi des structures,
+Europe et international, communication, information scientifique et technique, SI
+projets).
+L'agent sera amené à interagir très régulièrement avec des ingénieur-es de
+l'équipe « Applications » du Centre de Calcul de l'IN2P3 (CC-IN2P3). Classé parmi
+les grandes infrastructures françaises de recherche, le CC-IN2P3 a pour vocation
+de fournir des moyens de calcul et de stockage de données aux chercheurs impliqués
+dans les expériences de physique nucléaire, de physique des particules et des
+astroparticules.
+2eme poste du concours N° 127
+Affectation :
+Groupe de recherche en Informatique, Image, Automatique et Instrumentation de Caen, CAEN
+Groupe de fonction :
+Groupe 2
+Mission :
+L'ingénieur-e sera chargé-e de conduire et mettre en place des développements logiciels des projets de recherche de l'unité.
+Activités :
+Analyser les besoins et rédiger le cahier des charges de
+projets
+- Définir l'architecture logicielle en fonction du contexte
+- Piloter des projets
+- Développer et finaliser des logiciels
+- Superviser le déploiement de projet
+- Réaliser la maintenance corrective et évolutive des
+applications dans leur phase de déploiement
+- Rédiger et mettre à jour les documentations techniques et les
+aides en ligne pour les applications développées
+- Diffuser les bonnes pratiques en développement logiciel et
+apporter son expertise dans le domaine
+- Proposer une assistance technique et des séminaires
+internes
+- Encadrement de personnels contractuels et de stagiaires
+Compétences :
+Savoirs :
+- Piloter un projet
+- Maitriser les concepts et architectures des systèmes d'informations
+- Maitriser les différents aspects du génie logiciel
+- Analyser des besoins et les traduire en spécifications techniques
+- Appliquer les normes, procédures et règles en lien avec l'activité
+- Installer, développer et maintenir des sites internet sécurisés
+- Concevoir des actions de formation techniques et fonctionnelles
+- Animer une réunion
+Savoir-faire :
+- Méthodologie de conduite de projet, de planification et d¿organisation
+- Gestionnaires de version (GitHub, GitLab)
+- Systèmes d'exploitation Windows et Linux
+- Langages de programmation (java, python, C++, ...)
+- Langages de développement Web (HTML/CSS/JS/PHP)
+- Sécurité des systèmes d'information et de communication
+- Anglais technique niveau B2
+- Techniques de communication et de management
+Savoir-être :
+Sens de l'organisation et des priorités
+Être force de proposition
+Capacité à travailler en équipe et de manière autonome
+Faire preuve de rigueur et de méthodologie
+Contexte :
+Le GREYC est un laboratoire de 200 personnes environ, situé principalement sur deux bâtiments (Bât. F. de l'ENSICAEN et Bât. Sciences.3 de l'UFR des Sciences), sur le Campus Côte de Nacre de l'Université de Caen Normandie. La personne recrutée intégrera le service Développement et Déploiement d'Applications de l'unité, situé sur le site UNICAEN-UFR des Sciences. Elle viendra renforcer ce service, actuellement composé d'un IE CNRS permanent et de personnels en CDD ou d'étudiants en alternance. Pour ces derniers, elle sera amenée à les superviser. Elle travaillera en collaboration avec le service Administration Systèmes et Réseaux du GREYC et la DSI de l'Université de Caen Normandie. Elle sera en contact étroit avec les chercheurs et enseignants-chercheurs pour l'élaboration et le suivi des projets des différentes équipes. Elle sera amenée à organiser le travail avec ses collaborateurs afin de répondre aux besoins des équipes.
+Possibilité de télétravailler selon les contraintes du service et la réglementation en vigueur au CNRS
+3eme poste du concours N° 127
+Affectation :
+Institut de Biologie Intégrative de la Cellule, GIF SUR YVETTE
+Groupe de fonction :
+Groupe 3
+Mission :
+L'ingénieur-e prendra en charge l'ensemble des phases du cycle de vie d'applications répondant aux besoins des chercheurs, des personnels administratifs et des plateformes techniques. Il/elle sera responsable de l'analyse des besoins, du développement logiciel, de la qualification, de l'ntégration et du déploiement des développements dans le respect du cahier des charges, des normes et des règles de sécurité. Il/elle assumera les responsabilités de gestion de projet pour la ou les phases prises en charge.
+Activités :
+Descriptif des activités à effectuer par l'agent pour remplir la mission, en précisant le degré de responsabilité.
+- Prendre en charge l'activité de gestion de projet (estimer, planifier, suivre) au sein d'un laboratoire de recherche
+- Modéliser, concevoir et/ou paramétrer la solution logicielle
+- Développer et tester les objets et composants
+- Élaborer la stratégie de test, concevoir, spécifier et exécuter des tests fonctionnels et/ou techniques
+- Déployer les nouveaux objets et assurer leur intégration
+- Assurer la maintenance évolutive et curative des développements réalisés
+- Assurer la reprise, modification et amélioration d'applications existantes relatives à l'administration du laboratoires (applications internes ainsi que d'applications scientifiques
+- Assurer une assistance fonctionnelle et/ou technique aux exploitants et aux utilisateurs
+- Concevoir les actions de formation techniques et fonctionnelles
+Compétences :
+Descriptif des compétences techniques, des connaissances à mettre en œuvre, des savoir-faire et des savoir-être en précisant le degré de maîtrise attendu.
+Présentation éventuelle des formations internes possibles pour l'adaptation au poste.
+Savoir-faire :
+- Maîtriser les technologies utilisées dans les applications Web existantes (PHP, Django, Microsoft .NET, Bases de données MySQL/PostgreSQL, JavaScript, RabbitMQ, ...)
+- Maîtriser le packaging d'applications
+- Maîtriser l'analyse des besoins et le pilotage d'un projet
+- Savoir élaborer et mettre en œuvre d'un plan de test.
+- Maîtriser des méthodes et techniques de programmation
+- Animer un réseau d'utilisateurs
+- Sécurisation d'applications
+- Gérer des situations d'urgences et hiérarchiser les priorités
+- Avoir de bonnes capacités rédactionnelles et de synthèse
+- Reformuler une demande d'utilisateur en termes techniques
+- Des connaissances en biologie seraient un plus (mais non obligatoire)
+- Anglais technique ou Langue anglaise : B2 à C1 (cadre européen commun de référence pour les langues)
+- Connaissance système & réseau sous linux
+Savoir-être :
+- Posséder des qualités relationnelles, d'écoute, de communication et de compréhension pour répondre aux besoins des chercheurs
+- Sens de l'organisation
+- Autonomie
+- Capacité d'adaptation
+- Curiosité scientifique
+Contexte :
+Présentation de l'unité : sa localisation, ses effectifs, ses thématiques de recherche
+Indications sur le service ou l'équipe d'accueil et positionnement hiérarchique.
+L'I2BC est une UMR (CEA/CNRS/UPSaclay) regroupant environ 650 personnes qui héberge 60 équipes de recherche et 17 plateformes technologiques.
+Le service informatique et de calcul scientifique (SICS) de l'I2BC a pour mission de proposer aux équipes de recherche, ainsi qu'aux services soutien et support de l'I2BC, un ensemble de services et compétences dans les domaines de l'informatique.
+Le service est structuré en deux équipes ("Gestion de parc" et "Calcul, Système réseau").
+L'ingénieur-e recruté-e sera rattaché-e à l'équipe "Calcul, Système réseau " dirigée par le responsable du service informatique. L'équipe est composée actuellement de 3 ingénieurs d'étude. L'ingénieur-e renforcera l'équipe sur les missions de développement logiciel et sera aussi amené-e à travailler étroitement avec la plateforme de bio-informatique.
+L'équipe a également en charge les activités de calcul (administration et évolution du cluster de calcul et de l¿ensemble des machines de calcul) et de développement au sein du service.
+Télétravail possible selon les conditions mises en place dans le laboratoire.

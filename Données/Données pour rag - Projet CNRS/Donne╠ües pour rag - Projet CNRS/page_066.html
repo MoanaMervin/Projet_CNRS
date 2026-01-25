@@ -1,0 +1,700 @@
+
+    <script language="JavaScript">
+
+      // Renvoyer la valeur du cookie dont le nom est passe en parametre
+      function getCookie(name) {
+        if (document.cookie.length == 0) {
+          return null;
+        }
+        var regSepCookie = new RegExp('(; )', 'g');
+        var cookies = document.cookie.split(regSepCookie);
+        for (var i = 0; i < cookies.length; i++) {
+          var regInfo = new RegExp('=', 'g');
+          var infos = cookies[i].split(regInfo);
+          if (infos[0] == name) {
+            return unescape(infos[1]);
+          }
+        }
+        return null;
+      }
+
+      // Generer un identifiant user temporaire a sauvegarder en cookie (si pas existant)
+      function getIdentifiantUserTemporaire() {
+        var tempUserId = getCookie("pde_temp_user_id");
+        if (tempUserId == null || tempUserId == "") {
+          var dateExpire = new Date();
+          dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+          tempUserId = Math.random().toString(16).slice(2);
+          document.cookie = "pde_temp_user_id=" + tempUserId + "; expires=" + dateExpire + "; path=/";
+        }
+        return tempUserId;
+      }
+
+      // Mettre a jour le badge compteur nombre de concours dans la page
+      function majBadgeCompteurConcours() {
+        var nbrConcours = getCookie("nbr_concours");
+        if (nbrConcours == null || nbrConcours == 0) {
+          document.getElementById("cptNbrConc").innerHTML = "+";
+        } else {
+          document.getElementById("cptNbrConc").innerHTML = nbrConcours;
+        }
+      }
+
+      // Ajouter un numero de concours a la liste des concours pre-selectionnes
+      function ajouterConcoursFavori(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours");
+        var nbrConcours = 0;
+        var dateExpire = new Date();
+        dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+
+        if (valCookieNumerosConcours == null || valCookieNumerosConcours == "") {
+          valCookieNumerosConcours = numero_concours;
+          nbrConcours = 1;
+        } else {
+          // Transformer la chaine en tableau
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau ne contient pas le numero de concours : Ajout en fin de liste
+          if (arrayCookieNumerosConcours.includes(numero_concours) == false) {
+            valCookieNumerosConcours = valCookieNumerosConcours + "|" + numero_concours;
+            nbrConcours = arrayCookieNumerosConcours.length + 1;
+          }
+        }
+        // Enregistrer la liste des numeros de concours et le nombre de concours en cookies
+        document.cookie = "numeros_concours=" + valCookieNumerosConcours + "; expires=" + dateExpire + "; path=/";
+        document.cookie = "nbr_concours=" + nbrConcours + "; expires=" + dateExpire + "; path=/";
+        majBadgeCompteurConcours();
+      }
+
+      // Supprimer un numero de concours de la liste des concours pre-selectionnes
+      function supprimerConcoursFavori(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours");
+        if (valCookieNumerosConcours != null && valCookieNumerosConcours != "") {
+          var nbrConcours = getCookie("nbr_concours");
+          var dateExpire = new Date();
+          dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+          // Transformer la chaine en tableau
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau contient le numero de concours : Reconstruction de la liste sans ce numero
+          if (arrayCookieNumerosConcours.includes(numero_concours) == true) {
+            valCookieNumerosConcours = "";
+            nbrConcours = 0;
+            for (var i = 0; i < arrayCookieNumerosConcours.length; i++) {
+              if (arrayCookieNumerosConcours[i] != numero_concours) {
+                if (valCookieNumerosConcours.length > 0) {
+                  valCookieNumerosConcours = valCookieNumerosConcours + "|";
+                }
+                valCookieNumerosConcours = valCookieNumerosConcours + arrayCookieNumerosConcours[i];
+                nbrConcours = nbrConcours + 1;
+              }
+            }
+          }
+
+          // Enregistrer la liste des numeros de concours et le nombre de concours en cookies
+          document.cookie = "numeros_concours=" + valCookieNumerosConcours + "; expires=" + dateExpire + "; path=/";
+          document.cookie = "nbr_concours=" + nbrConcours + "; expires=" + dateExpire + "; path=/";
+        }
+      }
+
+      // Gerer le numero de concours selon la liste des numeros de concours en cookie :
+      // - Si numero de concours absent de la liste => Clic pour ajouter le concours
+      // - Si numero de concours present dans la liste => Clic pour supprimer le concours
+      function gererConcoursFavori(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours");
+        if (valCookieNumerosConcours == null || valCookieNumerosConcours == "") {
+          // Si liste de concours vide : Ajout
+          ajouterConcoursFavori(numero_concours);
+          alert("Ajouté à ma sélection");
+        } else {
+          // Transformer la chaine en tableau
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau ne contient pas le numero de concours : Ajout
+          if (arrayCookieNumerosConcours.includes(numero_concours) == false) {
+            ajouterConcoursFavori(numero_concours);
+            alert("Ajouté à ma sélection");
+          }
+          else {
+            // Sinon : Suppression
+            supprimerConcoursFavori(numero_concours);
+            majBadgeCompteurConcours();
+            alert("Retiré de ma sélection");
+          }
+        }
+      }
+
+      // Fonction Ajax interrogation CEL : Existence candidature pour un concours
+      function ajaxRequeteCandidatConcoursCEL(cel_url_requete_candidat_concours) {
+        var tempUserId = getIdentifiantUserTemporaire();
+        cel_url_requete_candidat_concours = cel_url_requete_candidat_concours + "&pde_temp_user_id=" + tempUserId;
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', cel_url_requete_candidat_concours);
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState === 4) {
+            var reponseCEL = xhr.responseText;
+            if (reponseCEL == 1) {
+              // Si reponse = 1, candidature existe deja dans CEL sur ce concours par le candidat
+              // Desactiver le bouton "Postuler" de la fiche concours et l icone etoile favori
+              document.getElementById("btnPostuler").disabled = true;
+              document.getElementById("btnPostuler").title = "Vous avez déjà postulé à ce concours";
+              document.getElementById("iconefavori").style.visibility = "hidden";
+              document.getElementById("cptNbrConc").innerHTML = "";
+            }
+          }
+        };
+        xhr.send();
+      }
+
+      // Verifie si le concours a deja ete postule
+      function checkConcoursPostule(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours_postules");
+        if (valCookieNumerosConcours != null && valCookieNumerosConcours != "") {
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau contient le numero de concours :
+          // Desactiver le bouton "Postuler" de la fiche concours et l icone etoile favori
+          for (var i = 0; i < arrayCookieNumerosConcours.length; i++) {
+            if (arrayCookieNumerosConcours[i] == numero_concours) {
+              document.getElementById("btnPostuler").disabled = true;
+              document.getElementById("btnPostuler").title = "Vous avez déjà postulé à ce concours";
+              document.getElementById("iconefavori").style.visibility = "hidden";
+              document.getElementById("cptNbrConc").innerHTML = "";
+            }
+          }
+        }
+      }
+
+      // Ajouter un numero de concours a la liste des concours postules
+      function ajouterConcoursPostule(numero_concours) {
+        var valCookieNumerosConcours = getCookie("numeros_concours_postules");
+        var dateExpire = new Date();
+        dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+        if (valCookieNumerosConcours == null || valCookieNumerosConcours == "") {
+          valCookieNumerosConcours = numero_concours;
+        } else {
+          // Transformer la chaine en tableau
+          var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+          // Si le tableau ne contient pas le numero de concours : Ajout en fin de liste
+          if (arrayCookieNumerosConcours.includes(numero_concours) == false) {
+            valCookieNumerosConcours = valCookieNumerosConcours + "|" + numero_concours;
+          }
+        }
+        // Enregistrer la liste des numeros de concours postules en cookie
+        document.cookie = "numeros_concours_postules=" + valCookieNumerosConcours + "; expires=" + dateExpire + "; path=/";
+      }
+
+      // Postuler au concours dans application CEL
+      function postulerCEL(numero_concours, detail_concours, cel_url_concours) {
+        if (confirm("Vous souhaitez postuler pour le concours " + detail_concours + ".\nConfirmez-vous ce choix ?")) {
+          // Supprimer le concours de la liste des concours pre-selectionnes
+          supprimerConcoursFavori(numero_concours);
+          majBadgeCompteurConcours();
+          // Ajouter le concours a la liste des concours postules
+          ajouterConcoursPostule(numero_concours);
+          // Desactiver le bouton "Postuler" de la fiche concours
+          document.getElementById("btnPostuler").disabled = true;
+          document.getElementById("btnPostuler").title = "Vous avez déjà postulé à ce concours";
+          // Desactiver l icone etoile favori
+          document.getElementById("iconefavori").style.visibility = "hidden";
+          document.getElementById("cptNbrConc").innerHTML = "";
+
+          // Transmettre identifiant user PDE temporaire a CEL
+          var tempUserId = getIdentifiantUserTemporaire();
+          cel_url_concours = cel_url_concours + "&pde_temp_user_id=" + tempUserId;
+
+          // Ouvrir application CEL dans une nouvelle fenetre
+          window.open(cel_url_concours, '_blank');
+        }
+      }
+
+      // Postuler dans application CEL a tous les concours pre-selectionnes
+      function postulerCELtous(cel_url_concours) {
+        var nbrConcours = getCookie("nbr_concours");
+        if (nbrConcours != null && nbrConcours > 0) {
+          if (confirm("Vous souhaitez postuler pour les " + nbrConcours + " concours pré-sélectionnés.\nConfirmez-vous ce choix ?")) {
+            var dateExpire = new Date();
+            dateExpire.setTime(dateExpire.getTime() + 1800 * 1000);
+            // Ajouter tous les concours pre-selectionnes a la liste des concours postules
+            var valCookieNumerosConcours = getCookie("numeros_concours");
+            var arrayCookieNumerosConcours = valCookieNumerosConcours.split("|");
+            for (var i = 0; i < arrayCookieNumerosConcours.length; i++) {
+              ajouterConcoursPostule(arrayCookieNumerosConcours[i]);
+            }
+            // Vider la liste des concours pre-selectionnes
+            document.cookie = "numeros_concours=; expires=" + dateExpire + "; path=/";
+            // Reinitialiser le nombre de concours pre-selectionnes a 0
+            document.cookie = "nbr_concours=0; expires=" + dateExpire + "; path=/";
+
+            // Transmettre identifiant user PDE temporaire a CEL
+            var tempUserId = getIdentifiantUserTemporaire();
+            cel_url_concours = cel_url_concours + "&pde_temp_user_id=" + tempUserId;
+
+            // Ouvrir application CEL dans une nouvelle fenetre
+            window.open(cel_url_concours, '_blank');
+            // Recharger la page parente
+            window.opener.location.reload();
+            // Fermer la page
+            window.close();
+          }
+        }
+      }
+
+      // Supprimer un concours de la liste des concours pre-selectionnes, depuis icone corbeille
+      function supprimerConcoursListe(numero_concours) {
+        if (confirm("Vous souhaitez supprimer le concours n°" + numero_concours + ".\nConfirmez-vous ce choix ?")) {
+          supprimerConcoursFavori(numero_concours);
+          window.location.reload();
+          // Mettre a jour le badge compteur dans la fenetre parente
+          var nbrConcours = getCookie("nbr_concours");
+          if (nbrConcours == null || nbrConcours == 0) {
+            window.opener.document.getElementById("cptNbrConc").innerHTML = "+";
+          } else {
+            window.opener.document.getElementById("cptNbrConc").innerHTML = nbrConcours;
+          }
+        }
+      }
+
+      // Retour en haut de la page
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+
+    </script>
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src-elem 'self' *.cnrs.fr 'unsafe-inline'; script-src-attr 'self' *.cnrs.fr 'unsafe-inline'; frame-src 'self' *.cnrs.fr 'unsafe-inline'; connect-src 'self' *.cnrs.fr 'unsafe-inline'; font-src 'self' *.cnrs.fr 'unsafe-inline'; style-src 'self' *.cnrs.fr 'unsafe-inline'; img-src 'self' *.cnrs.fr data:; " />
+<link rel="stylesheet" href="/profil/css/autre.css" type="text/css">
+<link rel="stylesheet" href="/profil/css/backtotop.css" type="text/css">
+<title>fiche profil public</title>
+<SCRIPT LANGUAGE="JAVASCRIPT" SRC="/profil/js/comboliste.js"></SCRIPT>
+<SCRIPT LANGUAGE="JAVASCRIPT" SRC="/profil/js/jquery3.4.1.min.js"></SCRIPT>
+<SCRIPT LANGUAGE="JAVASCRIPT" SRC="/profil/js/jquery.textarea.js"></SCRIPT>
+
+      <script type="text/javascript">
+        function getXhr(){
+            var xhr = null;
+            try {
+                xhr = new XMLHttpRequest();
+            } catch(e){
+                xhr = new ActiveXObject("Microsoft.XMLHTTP" );
+            }
+            return xhr;
+          }
+
+          function updateElementByAjax (pUrl, pElementId, pAsynch){
+            updateElementWithFunctionByAjax(pUrl, pElementId, pAsynch, null, false);
+          }
+        /*
+        * Si utilisation de cette méthode, il faut définir la méthode "callBackMessagesErreur".
+        */
+        function updateMessagesErreur(pUrlCheckMessagesErreur) {
+            updateElementWithFunctionByAjax(pUrlCheckMessagesErreur, "erreur", true, callBackMessagesErreur, true);
+        }
+          function updateElementWithFunctionByAjax (pUrl, pElementId, pAsynch, pFunctionCall, pIsInnerHTML){
+            var xhr = getXhr();
+            xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4 && xhr.status  == 200 ){
+                var documentElement = document.getElementById(pElementId);
+                if (documentElement != null) {
+                  if (pIsInnerHTML) {
+                      $("#" + pElementId).html(xhr.responseText);
+                  } else {
+                    documentElement.outerHTML=xhr.responseText;
+                  }
+                  if(pFunctionCall != null) {
+                  pFunctionCall(xhr.responseText);
+                  }
+                }
+              }
+            };
+            xhr.open( "GET", pUrl,  pAsynch);
+            xhr.send(null);
+          }
+      </script>
+      
+<script>top.nbClick=0</script>
+</head>
+<body bgcolor="#FFFFFF"  onLoad=ajaxRequeteCandidatConcoursCEL('http://concoursexternesit.cnrs.fr/public/candidat/requete_get_candidat_concours.php?numero_concours=66'); >
+<div id="divglobale">
+<form name="formFiche" method="post" action="">
+           <script>top.boutonClique="";</script>
+<input type="hidden" name="hidFicheCourante" value="pg_profil_public_referens.pAfficheProfilPublic">
+<br>
+<table width="100%" border=0>
+<tr>
+<td align="left" width="5%"><input type="button" id="btnPostuler" name="btnPostuler" value="Postuler" onClick="postulerCEL('66', 'n°66 : IR - BAP Informatique, statistiques et calcul scientifique - Experte ou expert en calcul scientifique - UMR-Institut de physique du globe de Paris, PARIS 05', 'http://concoursexternesit.cnrs.fr/public/candidat/requete_postuler.php?numeros_concours=66');" ></td>
+<td align="left" width="3%">
+
+      <a id="iconefavori" onclick="gererConcoursFavori('66');"
+        title="Mes concours pr&eacute;-s&eacute;lectionn&eacute;s (favoris)"
+        style="text-decoration: none;">
+          <img src="/profil/images/icon_etoile_favori.png" width="60" height="60" border="0">
+          <span class="icon_etoile_favori_span" style="" id="cptNbrConc">+</span>
+      </a>
+</td>
+<td width="75%"></td>
+<td align="center">
+      <b>Liste des concours</b><br>
+      <a href="PG_PROFIL_PUBLIC_REFERENS.afficherListeConcoursPreselectionnes?destinationId=81"
+      onclick="window.open('PG_PROFIL_PUBLIC_REFERENS.afficherListeConcoursPreselectionnes?destinationId=81', 'newwindow', 'width=700,height=400'); return false;"
+      title="Consulter la liste de mes concours pr&eacute;-s&eacute;lectionn&eacute;s"><img src="/profil/images/icone_liste.png" width=40 height=40 border=0></a>
+      </td>
+</tr>
+</table>
+<center>
+    <table width="60%" border="2" cellspacing="0">
+    <tr>
+      <td class="enteteconcours" bordercolor="#CCCCCC"> 
+<p class="enteteconcours"><span class="enteteconcours">E : Informatique, statistiques et calcul scientifique</span></p>
+        
+<p class="enteteconcours"><span class="enteteconcours">Ingénieur de recherche</span></p>
+        <p class="enteteconcours"><span class="enteteconcours">Concours N&deg; 66</span></p>
+      </td>
+    </tr>
+  </table>
+  </center>
+  
+<p>&nbsp;</p>
+
+<table width="100%" border="0" cellspacing="0">
+  <tr height="25">
+    <td width="20%"><b>Nbre de postes : </b></td>
+    <td width="80%">2</td>
+  </tr>
+
+      <tr height="25">
+          <td width="20%"><b>Emploi-type :</b></td>
+          <td width="80%">Experte ou expert en calcul scientifique</td>
+      </tr>
+    
+</table>
+<br>
+<table width="100%" border="0" cellspacing="0">
+<tr>
+<td class="soustitreprincipal">1er poste du concours N&deg; 66</td>
+</tr>
+</table>
+<br>
+
+    <table width="100%" border="0">
+
+    <tr height="25">
+      <td width="20%"><b>Affectation :</b></td>
+      <td width="80%">UMR-Institut de physique du globe de Paris, PARIS 05</td>
+    </tr> 
+<tr height="25"><td width="20%"><b>Groupe de fonction :</b></td><td width="80%">
+Groupe 2
+</td></tr>
+</td>
+    </tr>
+ </table>
+      
+<br>
+
+  <p>&nbsp;</p>
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="mission"><b>Mission :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr width="100">
+	  <td colspan="2">
+	
+Piloter les développements en photogrammétrie et en traitement d'images pour l'analyse de l'imagerie optique aérienne et satellitaire dans le but de mesurer les déformations du sol d'origine tellurique et la topographie, en s'appuyant sur les techniques émergentes d'IA dédiées à la vision par ordinateur.
+</td>
+    </tr>
+  </table>
+  
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="activites"><b>Activit&eacute;s :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+Piloter les développements méthodologiques en photogrammétrie et en traitement d'imagerie satellitaire, y compris en utilisant l'IA, pour la mesure de déformation. Cela pourra se faire entre autres sous forme de supervision d'étudiants sur des projets méthodologiques.<BR>
+ <BR>
+Implémenter les méthodologies IA développées en vision par ordinateur dans les chaines de mesure de déformation en terre solide.<BR>
+Participer au traitement des données pour les calculs de déformation et/ou topographie du laboratoire, ainsi qu'à leur exploitation et aux publications associées.<BR>
+ <BR>
+Participer au transfert de technologies novatrices développées au laboratoire vers des chaines de traitement opérationnelles ouvertes (via ISdeform et Form@ter par exemple).<BR>
+ <BR>
+Concevoir des méthodologies pour assimiler des données exogènes (radar, lidar, multispectrales...) aux données optiques pour améliorer les méthodes de détection de changement.<BR>
+Apporter aux chercheurs en science de la terre une expertise pour la mesure quantitative de topographie et déformation à partir de données photogrammétriques<BR>
+Participer à des projets de recherche au plan national et international ainsi qu'aux publications associées<BR>
+ <BR>
+Transmettre les compétences et connaissances en photogrammétrie et télédétection pour le calcul de topographie et déformation au travers de formation.<BR>
+ <BR>
+<BR>
+
+</td>
+    </tr>
+  </table>
+  
+
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="competences"><b>Comp&eacute;tences :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+Savoirs :<BR>
+- Photogrammétrie, physique de l'image<BR>
+- Traitement corrélation optique (micmac ou similaire)<BR>
+- Langage de programmation C++<BR>
+- Méthodologie IA dédiées traitement de l'image<BR>
+- Méthodologie de conduite de projet<BR>
+- Langue anglaise : B2 à C1 (cadre européen commun de référence pour les langues)<BR>
+ <BR>
+Savoirs faire :<BR>
+- Pilotage de projet<BR>
+- Mettre au point ou adapter des techniques nouvelles<BR>
+- Apporter des réponses à des besoins spécifiques<BR>
+- Rédiger des documents scientifiques<BR>
+- Pédagogie<BR>
+ <BR>
+Savoirs-être :<BR>
+ <BR>
+- Capacité à travailler en équipe<BR>
+- Organisation, autonomie, capacité de discernement et sens des initiatives dans l'exercice des attributions<BR>
+- Intérêt pour la science, notamment sur les aspects thématiques « terre solide »<BR>
+- Qualité d'écoute et d'anticipation<BR>
+- Capacité d'adaptation<BR>
+- Rigueur et efficacité<BR>
+- Dynamisme et enthousiasme<BR>
+
+</td>
+    </tr>
+  </table>
+  
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="contexte"><b>Contexte :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+1) le cadre de travail :<BR>
+L'institut de physique du globe de Paris (IPGP) est le seul grand établissement d'enseignement supérieur et de recherche dans le domaine des sciences de la Terre, de l'environnement et des planètes en France.<BR>
+L'IPGP est une des très rares institutions au plan mondial qui couvre toutes les disciplines des sciences de la Terre solide au sens large et qui conduit des études à toutes les échelles de temps et d'espace. L'IPGP opère des observatoires volcanologiques, sismologiques, magnétiques, et des processus d'érosion, à l'échelle de toute la planète. L'IPGP a en particulier la responsabilité de l'observation permanente des trois volcans actifs de France (la Soufrière à la Guadeloupe, la Montagne Pelée à la Martinique et le Piton de la Fournaise à la Réunion).<BR>
+L'IPGP est établissement composante de l'université de Paris (https://u-paris.fr/ ), établissement issu de la fusion des universités Paris Descartes et Paris Diderot et de l'intégration de l'institut de physique du globe de Paris.<BR>
+Le poste est localisé au sein de l'équipe de Tectonique et Mécanique de la lithosphère de l'institut de physique du globe de Paris (IPGP), UMR 7154 situé au 1 rue Jussieu Paris 5ème. En fonction des projets, des collaborations avec les autres groupes de recherche de l'IPGP seront possibles. Par ailleurs des collaborations avec l'équipe de photogrammétrie de l'IGN ainsi qu'avec les équipes du SNO ISdeform et de ForM@Ter sont à prévoir.<BR>
+ <BR>
+2) les contraintes liées au poste :<BR>
+Travail localisé à l'IPGP-Cuvier, 1 rue Jussieu Paris 5ème. Des déplacements en France ou à l'étranger pourront être à prévoir en fonction des collaborations. Une participation régulière aux congrès scientifiques internationaux (imagerie, IA, sciences de la terre) est souhaitable.<BR>
+
+</td>
+    </tr>
+  </table>
+  
+<br>
+<table width="100%" border="0" cellspacing="0">
+<tr>
+<td class="soustitreprincipal">2eme poste du concours N&deg; 66</td>
+</tr>
+</table>
+<br>
+
+    <table width="100%" border="0">
+
+    <tr height="25">
+      <td width="20%"><b>Affectation :</b></td>
+      <td width="80%">Groupe de physique des matériaux, ST ETIENNE DU ROUVRAY</td>
+    </tr> 
+<tr height="25"><td width="20%"><b>Groupe de fonction :</b></td><td width="80%">
+Groupe 2
+</td></tr>
+</td>
+    </tr>
+ </table>
+      
+<br>
+
+  <p>&nbsp;</p>
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="mission"><b>Mission :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr width="100">
+	  <td colspan="2">
+	
+L'ingénieur(e) recruté(e) sera chargé(e) du développement de méthodes numériques dédiées au traitement de données multi-dimensionnelles issues des techniques de microscopie du GPM (en particulier sondes atomique tomographiques, microscopies électroniques et Tomographie X). Pour l'implémentation de méthodes algorithmiques basées sur des traitements statistiques des données et l'utilisation de l'intelligence artificielle, il/elle prendra en charge tout ou partie du développement des nouvelles interfaces matériels - logiciels dédiées à l'acquisition de données en lien avec les dispositifs complexes constituants la plateforme instrumentale du GPM. L'ingénieur(e) aura ainsi la responsabilité de la gestion de projets sur des développements algorithmiques spécifiques, ainsi que les logiciels associés. Il/elle participera aux transferts technologiques du savoir-faire du GPM sur les aspects de développements logiciels d'acquisition et de traitement de données en lien avec nos partenaires industriels.<BR>
+<BR>
+
+</td>
+    </tr>
+  </table>
+  
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="activites"><b>Activit&eacute;s :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+1-Prendre la responsabilité de la recherche et du développement des algorithmes mathématiques et des méthodes de calculs scientifiques en lien avec le développement d'une nouvelle plateforme d'analyse et de traitement de données.<BR>
+-Apporter aux chercheurs une expertise dans l'utilisation des méthodes mathématiques et des techniques informatiques pour résoudre leurs problématiques scientifiques, avec des approches type apprentissage automatique <BR>
+-Assurer les responsabilités de gestion de projet sur les développements algorithmiques et informatiques spécifiques et les logiciels associés, afin de répondre aux besoins des départements de recherche <BR>
+-Encadrer un groupe d'ingénieurs et/ou de techniciens en charge des développements algorithmiques et informatiques, assurer le soutien aux utilisateurs des outils de calcul scientifique <BR>
+-Orienter le choix sur les méthodes et outils pertinents en fonction du problème posé et de l'architecture des machines de calcul ciblées <BR>
+-Modéliser, concevoir et développer tout ou partie des algorithmes de traitements, de calculs scientifiques et les solutions logicielles permettant la visualisation des résultats<BR>
+<BR>
+2 -Participer aux activités de recherche et développement de la plateforme instrumentale du GPM <BR>
+-Prendre en charge une partie des interfaces matériels-logiciels dédiés à l'acquisition des données issues de la plateforme instrumentale <BR>
+<BR>
+3 -Participer au transfert technologique du savoir-faire du GPM sur les aspects de développements logiciels d'acquisition et de traitement de données en lien avec des industriels <BR>
+-Assurer le transfert technologique de la nouvelle plateforme de traitement de données du GPM vers les industriels concernés <BR>
+-Participer à des projets de recherche au plan national et international et aux publications associées <BR>
+-Transmettre les connaissances et les compétences en matière de calcul scientifique au travers de présentation et de formation 
+</td>
+    </tr>
+  </table>
+  
+
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="competences"><b>Comp&eacute;tences :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+Savoirs <BR>
+- Connaitre les méthodes mathématiques et algorithmiques de calculs scientifiques associées au traitement de données 1d, 2d et 3d (reconnaissance de forme, filtrage, corrélations, segmentation...) et les méthodes algorithmiques de type apprentissage automatique <BR>
+- Connaitre les outils de modélisation et de simulation numériques de manière à reproduire les expériences complexes du domaine. <BR>
+- Maîtriser les langages de programmation C, C++, C# ainsi que les interfaces logiciels associés aux traitements des données scientifiques (de type Matlab, python). <BR>
+- Maîtriser les développements logiciels Windows temps réel (de type Visual Studio, ) et les langages de programmation associés (C, C++, C# ). <BR>
+<BR>
+Savoir-faire <BR>
+- Analyser et formaliser les processus du domaine d'application (traitement des images 2d et 3d) et les différents besoins en collaboration avec les chercheurs et ingénieurs du laboratoire.<BR>
+- Piloter un projet de développement logiciel de grande ampleur (collaboration entre plusieurs laboratoires et industriels du domaine) et savoir rendre compte auprès du responsable de son activité. <BR>
+- Savoir travailler en équipe dans le cadre de développements collaboratifs (utilisation de forge logicielle, communication et partage d'information au sein de l'équipe). <BR>
+- Piloter un groupe de travail composé d'ingénieurs et de chercheurs de différents horizons. <BR>
+- Maîtriser les techniques de présentation écrites et orales <BR>
+<BR>
+Savoir être <BR>
+- Avoir la capacité à s'intégrer au sein d'une équipe. <BR>
+- Avoir des qualités de rigueur, d'autonomie, prise d'initiative, des capacités de décision. <BR>
+- Adapter sa communication au public cible (chercheurs, ingénieurs et administratifs). <BR>
+- Prendre en compte les enjeux de responsabilités sociétales et de  développement durable  dans son travail <BR>
+- Maitriser la langue anglaise : B2 minimum<BR>
+<BR>
+
+</td>
+    </tr>
+  </table>
+  
+
+  <p>&nbsp;</p>
+
+  <table width="100%" border="0">
+    <tr>
+      <td height="1" width="29%"><a name="contexte"><b>Contexte :</b></a></td>
+      <td height="1" width="70%">&nbsp;
+</td>
+	</tr>
+    <tr>
+	  <td colspan="2">
+	
+Le Groupe de Physique des Matériaux (GPM) est une Unité Mixte de Recherche (UMR 6634) entre l'Université de Rouen Normandie, l'INSA de Rouen Normandie et le CNRS. Il regroupe une soixantaine de chercheurs ou enseignants chercheurs, une trentaine d'ingénieurs, techniciens, administratifs, une cinquantaine de doctorants et une quinzaine de chercheurs contractuels répartis dans cinq départements (Instrumentation Scientifique ; Métallurgie, Microstructures, Mécanique ; Matériaux Fonctionnels et Nanostructures ; Ouvertures thématiques et Innovations ; Systèmes désordonnés et polymères). Les activités de recherche s'appuient sur une plateforme instrumentale de premier plan en microscopie et nano-analyse des matériaux. Parmi ces techniques le GPM développe la sonde atomique tomographique (SAT) qui est un outil unique permettant des cartographies chimiques à l'échelle atomique et en 3D. Le GPM est pionnier dans le développement de cette technique et possède une reconnaissance nationale et internationale pour son expertise sur le développement et l'application de la SAT à la science des matériaux. L'ingénieur(e) de recherche prendra part aux activités de recherche instrumentale dans le développement de ces instruments de pointe et sera donc principalement rattaché au département Instrumentation Scientifique pour le développement d'outils avancés et de méthodes logicielles innovantes pour l'acquisition et le traitement de données de SAT. Le couplage de ces données avec celles issues d'autres instruments (microscopes électroniques, Tomographie X) est un enjeu important pour dépasser les limites actuelles de l'analyse des matériaux et nécessitera de fortes interactions avec les chercheurs de tous les autres départements du laboratoire.
+</td>
+    </tr>
+  </table>
+  
+<br>
+
+  <p>&nbsp;</p>
+
+  <table border="0" width="100%">
+    <tr align="center">
+      <td>
+	  	<script>
+		//ne pas afficher le bouton si login DS
+		//if (top.listeCourante!=""){
+		//   document.write("<input type='button' name='btnRetour' value='Retour &agrave; la liste' onClick='javascript:top.retourListe();'>");
+		//}
+		</script>
+		<input type="button" name="btnRetourConsult" value="Revenir &agrave; la liste des r&eacute;sultats" onClick="javascript:history.go(-1);">
+	  </td>
+    </tr>
+  </table>
+  
+</form>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+
+    <div class="container-top">
+      <a href="" class="top" id="scrollToTop"></a>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var containerTop = document.querySelector(".container-top");
+        var documentHeight = document.documentElement.scrollHeight;
+        var scrollTopBtn = document.querySelector("#scrollToTop");
+
+        function updateOpacity() {
+          var scrollPercentage = (window.scrollY / documentHeight) * 150;
+
+          var opacity = Math.min(1, Math.max(0, scrollPercentage / 75));
+
+          containerTop.style.opacity = opacity;
+        }
+
+        window.addEventListener("scroll", function () {
+          updateOpacity();
+        });
+
+        scrollTopBtn.addEventListener("click", function (event) {
+          event.preventDefault(); // Annule le comportement par défaut du lien
+          scrollToTop();
+        });
+
+        function scrollToTop() {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth" // Permet le défilement en douceur
+          });
+        }
+
+        updateOpacity();
+      });
+    </script>
+</body>
+
+			<head>
+  			  <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+  			  <META HTTP-EQUIV="Expires" CONTENT="-1">
+          <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src-elem 'self' *.cnrs.fr 'unsafe-inline'; script-src-attr 'self' *.cnrs.fr 'unsafe-inline'; frame-src 'self' *.cnrs.fr 'unsafe-inline'; connect-src 'self' *.cnrs.fr 'unsafe-inline'; font-src 'self' *.cnrs.fr 'unsafe-inline'; style-src 'self' *.cnrs.fr 'unsafe-inline'; img-src 'self' *.cnrs.fr data:; " />
+			</head>
+			
+</html>

@@ -1,0 +1,87 @@
++
+Liste des concours
+B : Sciences chimiques et science des matériaux
+Ingénieur d'études
+Concours N° 98
+Nbre de postes :
+1
+Emploi-type :
+Ingenieure ou ingenieur en science des matériaux / caractérisation
+Affectation :
+Environnements et sociétés de l'orient ancien, LYON 07
+Groupe de fonction :
+Groupe 3
+Mission :
+La personne recrutée sera chargée d'adapter, développer et mettre en œuvre des
+méthodes et techniques de caractérisation structurale, mécanique et physico-
+chimique des matériaux dans le domaine de l'archéologie et de la géoarchéologie
+(industrie lithique, os, céramique, matériaux de construction, matrice
+sédimentaire, etc.).
+Activités :
+Le(la) candidat(e) pourra, à des degrés divers, et suivant les priorités du
+moment, être impliqué dans les activités suivantes :
+- Participation aux missions de terrain du laboratoire impliquant le prélèvement
+et/ou l'analyse in-situ de matériaux.
+- au laboratoire : réception et préparation des échantillons pour les analyses
+physico-chimiques (prélèvements, tamisage, séchage, broyage) et les analyses
+chimiques :  purification, dissolution et lessivage, et séparations élémentaires
+par chromatographie liquide.
+-  mesures instrumentales par spéctrométrie à fluorescence X (µXRF), de masse à
+source plasma (ICP-MS) et multi-collecteur (MC-ICP-MS) et d'émission optique (ICP-
+AES), spectroscopie de moyen infrarouge (FTIR-ATR) et Raman au sein du parc
+instrumental du laboratoire (PF OMEAA à Lyon et antenne de Jales en Ardèche).
+- Contrôle et suivi des instruments du parc instrumental du laboratoire (PF OMEAA
+à Lyon et antenne de Jales en Ardèche).
+- Analyses et traitements statistiques des données géochimiques et physico-
+chimiques acquises sur différents matériaux d'étude (céramiques, lithiques,
+ossements, sédiments et minerais).
+- Développement de nouveaux protocoles analytiques adaptés aux matériaux d'étude,
+à la fois sur le terrain et en laboratoire.
+Compétences :
+Outre des connaissances approfondie dans les sciences des matériaux le(la)
+candidat(e) devra posséder des compétences dans certains des domaines suivants :
+- Mesure sur des instruments de spectrométrie, de spectroscopie et de
+sédimentologie.
+- Conditionnement et modalités de stockage des archéomatériaux et sédiments.
+- Techniques d'échantillonnage.
+- Techniques de caractérisation de matériaux (connaissance approfondie) associés à
+différentes matrices (céramiques, os, roches, sédiments, bois, végétaux, micro-
+résidus organiques).
+- Instrumentation et mesure : Spectrométrie infrarouge et de diffraction des
+rayons X, micro-spectrométrie Raman, pXRF, analyses pétrographiques, microscopie,
+INAA, Mesure sur des instruments de spectrométrie, de spectroscopie et de
+sédimentologie.
+- Utilisation de logiciels de traitements statistiques (R ou autre).
+- Savoir travailler en équipe, et développer un réseau de collaborateurs.
+- Connaissance en prévention des risques professionnels.
+- Langue anglaise : B1 à B2 (cadre européen commun de référence pour les langues).
+Contexte :
+L'activité s'exerce au sein du laboratoire Archéorient, unité mixte de recherche
+de près de 80 personnes (doctorants compris) qui dépend de deux tutelles : le
+CNRS et l'université Lyon 2. Ce laboratoire dont les recherches sont orientées
+autour de l'archéologie est basé sur deux sites (Lyon et une antenne en
+Ardèche). Sa spécificité est d'aborder l'étude des sociétés anciennes par le
+biais de différentes disciplines, notamment l'histoire, la géographie,
+l'archéologie. Les terrains de recherche du laboratoire se situent en
+Méditerranée orientale, au Proche et Moyen-Orient (Levant, Irak, Péninsule
+arabique, Iran, pays du Caucase) et en Afrique (Éthiopie, Tunisie, Égypte,
+etc.).
+Les activités de l'agent s'inscriront dans les axes scientifiques du laboratoire
+mobilisant un intérêt pour la caractérisation des archéomatériaux. Il/elle devra
+enfin posséder un vif intérêt pour l'archéologie, dans la mesure où celle-ci
+constituera le cadre exclusif des études de caractérisation des matériaux
+qu'il/elle réalisera.
+L'ingénieur-e d'étude sera rattaché-e principalement à la plateforme
+technologique OMEAA (Observation et Mesure des Environnements Actuels et
+Anciens) sur le campus Porte des Alpes de l'Université Lumière Lyon 2 à Bron.
+Il/elle sera également amené à se déplacer à l'antenne de Jalès en Ardèche pour
+y mener des analyses. Ponctuellement, certaines analyses pourront être réalisées
+dans des laboratoires partenaires qui disposent d'équipements spécifiques.
+L'ingénieur-e d'étude sera également amené-e à participer annuellement à des
+missions sur le terrain à l'étranger.
+Son activité sera placée sous la responsabilité directe du représentant du
+laboratoire à la plateforme OMEAA.
+Une partie des activités de l'agent se fera en salle blanche ;
+Les activités de l'agent incluront l'utilisation dune série d'acides et de
+solvants (HF, acide fluorhydrique ; HNO3, acide nitrique ; HClO4, acide
+perchlorique ; HCl, acide chlorydrique ; HBr, acide bromhy

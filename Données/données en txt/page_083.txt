@@ -1,0 +1,61 @@
++
+Liste des concours
+E : Informatique, statistiques et calcul scientifique
+Ingénieur d'études
+Concours N° 124
+Nbre de postes :
+1
+Emploi-type :
+Administratrice ou administrateur systèmes et réseaux
+Affectation :
+Institut de mécanique et d'ingénierie, TALENCE
+Groupe de fonction :
+Groupe 2
+Mission :
+L'administrateur-rice Systèmes et Réseaux supervise et organise l'administration des infrastructures et des serveurs communs de l'Institut de Mécanique et d'Ingénierie de Bordeaux (I2M).
+Il/elle gère les évolutions et la sécurité du système d'information dans son ensemble en interaction avec tous les membres de l'Unité et encadre une équipe de 2 (équivalents temps plein) informaticiens qui gèrent la partie assistance/support du service (1 technicien plein temps, 1 responsable assistance support).
+Activités :
+- Planifier, installer, automatiser, superviser et améliorer les processus du système d'information et le maintenir en condition opérationnelle,
+- Sécuriser le système d'information : sauvegarder, sécuriser les flux, prévoir et mettre en pratique des solutions de repli ou de contournement (Plan de Reprise d'Activité, Plan de Continuité d'Activité),
+- Planifier et mettre en œuvre les évolutions et la maintenance des matériels, des logiciels et de l'architecture générale du système d'information,
+- Administrer l'interconnexion de l'entité avec les réseaux extérieurs et mettre en place des solutions d'aide à la mobilité des usagers (notamment entre le site de l'École Nationale Supérieure d'Arts et Métiers et le site Université de Bordeaux),
+- Référencer et documenter les composants liés à l'infrastructure, aux logiciels et leurs liens avec la couche applicative,
+- Encadrer une équipe de 2 informaticiens (1 gestionnaire de l'assistance support, 1 temps plein responsable assistance support),
+- Assumer la responsabilité de projets,
+- Négocier avec les fournisseurs et les prestataires de services,
+- Assurer la veille technologique sur les différents aspects de l'infrastructure système et de communication (matériels, logiciels, architecture, protocoles réseaux, gestion des données),
+- Optimiser les accès au calcul scientifique et à l'utilisation des logiciels open source de I2M (NOTUS, POLYTOPIX, GRANOO...) en lien avec le centre de calcul de l'Université de Bordeaux (Mesocentre de Calcul Intensif Aquitain - MCIA) et/ ou celui de l'ENSAM (CASSIOPEE).
+- Gérer la sécurité du système d'information et prendre en charge à terme la responsabilité de CSSI de l'I2M,
+Compétences :
+Savoirs :
+- Méthodologies de mise en exploitation des processus informatiques,
+- Techniques et outils de supervision, de performance et de métrologie,
+- Connaissance approfondie de la sécurité des systèmes d'information et de communication,
+- Méthodes de diagnostic et résolution de problèmes matériels, réseaux ou logiciels,
+- Connaissance générale des méthodes, outils, normes et procédures de la qualité,
+- Compétences linguistiques en anglais : niveau B2 (cadre européen commun de référence pour les langues).
+Savoir-faire :
+- Pratique approfondie des langage de programmation Bash, powershell et DOS,
+- Anticiper les évolutions fonctionnelles et techniques,
+- Pratiquer une veille technologique,
+- Évaluer une solution informatique ou de télécommunication,
+- Modéliser et concevoir les architectures techniques du système d'information,
+- Maitrise de la sécurité du système d'information
+- Rédiger et mettre à jour la documentation fonctionnelle et technique.
+- Animer une équipe
+Savoir-être :
+- Capacité à travailler en équipe
+- Grand sens de la responsabilité
+- Autonomie et sens de l'organisation, savoir priorise
+- Capacité à décider et à porter les décisions
+- Discrétion, sens de la confidentialité
+Contexte :
+I2M est une UMR CNRS de plus de 340 personnes avec quatre tutelles: CNRS, Université de Bordeaux, ENSAM, Bordeaux INP, sous contrat avec INRAE.
+Le parc informatique dédié aux utilisateurs est composé d'environ 500 postes informatiques portables et fixes (Windows 10/11, Mac OS, Linux Ubuntu/Mint) répartis sur l'ensemble des sites de l'I2M (deux sites principaux : ENSAM et Université de Bordeaux).
+L'institut est équipé de 2 salles de serveurs sur 2 sites composées de 15 serveurs physiques et 20 serveurs virtuels (Windows serveur, Linux) dédiés aux outils d'administration système, aux services et aux calculs numériques. L'ensemble des serveurs virtuels est hébergé par un hyperviseur de type Proxmox v8.
+L'Unité entretient un lien fort avec les centres de calcul de l'Université de Bordeaux (MCIA) et de l'ENSAM (CASSIOPEE).
+Ce poste nécessite des échanges réguliers avec les DSI des tutelles de l'unité.
+Les méthodes de conception et de fabrication en lien avec les méthodes de caractérisation nécessitent maintenant de manipuler des modélisations multi physiques complétées par les données expérimentales qui nécessiteront à l'avenir des outils numériques qui sont encore en devenir (concept de jumeau numérique).
+Cette activité équilibrée entre calcul et manipulation de grandes quantités de données crée un contexte particulier dans lequel les différents éléments du réseau jouent un rôle clé.
+Cette fonction ouvre droit à la perception de l'Indemnité de Référence pour les Informaticiens (IRI).
+Le poste se situe dans un secteur relevant de la protection du potentiel scientifique et technique (PPST), et nécessite donc, conformément à la réglementation, que votre arrivée soit autorisée par l'autorité compétente du MESR

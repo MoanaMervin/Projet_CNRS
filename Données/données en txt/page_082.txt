@@ -1,0 +1,195 @@
++
+Liste des concours
+E : Informatique, statistiques et calcul scientifique
+Ingénieur d'études
+Concours N° 123
+Nbre de postes :
+3
+Emploi-type :
+Administratrice ou administrateur systèmes et réseaux
+1er poste du concours N° 123
+Affectation :
+Laboratoire inter-universitaire des systèmes atmosphèriques, CRETEIL
+Groupe de fonction :
+Groupe 2
+Mission :
+L'ingénieur(e) recruté(e) sera responsable du Service Informatique du Laboratoire
+des Systèmes Atmosphérique (LISA).  Il/Elle devra assurer le pilotage, le
+maintien en condition opérationnelle, l'exploitation et l'assistance aux
+utilisateurs du système d'information. Il/Elle mettra en œuvre et coordonnera les
+moyens humains nécessaires pour garantir la cohérence et la pérennité de
+l'ensemble des moyens informatiques. Il/Elle sera notamment responsable d'un
+Assistant Ingénieur (AI), gestionnaire de parc informatique.
+L'ingénieur(e) représentera le laboratoire dans le groupe des ASR de L'Institut
+Pierre-Simon Laplace (l'IPSL) afin de contribuer aux développements de
+l'informatique communautaire de cette fédération. Il/Elle sera le contact
+privilégié des Direction des Système d'Information de l'Université Paris Est
+Créteil (UPEC), de l'Université Paris Cité (UPC) et de la Délégation Régionale
+Ile de France Villejuif (DR1) du CNRS, pour le LISA .
+Il/Elle sera également en charge de la sécurité informatique du laboratoire et de
+l'exploitation des clusters de calcul et des moyens de stockage.
+Activités :
+- Assurer l'administration du système d'information en termes de référentiels,
+règles, démarches, méthodologies et outils
+- Vérifier quotidiennement la pertinence et la performance fonctionnelle du
+système d'information
+- Maintenir les différents serveurs et services
+- Assurer la sécurité du système d'information.
+- Installer et mettre à jour des serveurs
+- Résoudre ou faire remonter les incidents et optimiser les performances
+- Encadrement des personnels du service (1 AI), coordination et répartition des
+tâches
+- Gérer et piloter le budget du service informatique
+- Rédiger de la documentation technique administrateurs
+- Assurer la veille technologique sur les différents aspects de l'infrastructure
+système
+- Gérer les évolutions et la maintenance des matériels, des logiciels et du
+système
+- Créer et gérer les comptes informatiques et messageries des utilisateurs
+- Assurer le support technique de niveau 2
+- Participer aux achats du matériel du service informatique et des équipes de
+recherche
+Compétences :
+- Administration des systèmes d'exploitation Linux (Ubuntu, Debian, CentOS
+apprécié) et/ou des systèmes MacOS et/ou de l'architecture et de l'environnement
+Windows
+- Gestion des serveurs, gestion de l'infrastructure sous Proxmox, du réseau et du
+cluster de calculs
+- Maîtrise des architecture réseaux et services associés (TCP/IP, ACLs, DNS,
+DHCP, VLANs, ssh, Wifi)
+- Gestionnaire inventaire : OCS inventory, GLPI
+- Virtualisation : Vmware, Proxmox
+- Outils systèmes : bash shell, git
+- Stockage de données
+Savoir être
+- Capacité à travailler avec méthode et rigueur et parfois en situation d'urgence
+- Capacité à analyser et hiérarchiser les besoins/demandes
+- Sens du service et du travail en équipe, sens du relationnel
+Contexte :
+Le Laboratoire des Systèmes Atmosphérique (LISA) est une unité mixte de recherche
+(UMR 7583) rattachée à trois tutelles, l'Université Paris-Est Créteil (UPEC),
+l'Université Paris Cité et le CNRS avec un total approximativement 135 membres.
+Il fait partie de l'Observatoire des Sciences de l'Univers EFLUVE et de la
+Fédération de Recherche IPSL. Ses principaux thèmes de recherche portent sur la
+compréhension du fonctionnement des atmosphères terrestre et planétaires, et des
+impacts liés à la modification de la composition de l'atmosphère par les
+activités humaines. Les méthodes utilisées sont fondées sur des observations en
+atmosphère réelle, sur de la simulation expérimentale et de la modélisation
+numérique.
+Pour mener à bien ses activités de recherche, le LISA possède son propre réseau,
+un parc composé de 450 postes (Windows, Mac OS, et Linux), 20 serveurs Linux et 1
+cluster de calcul (14 nœuds de calcul, 696 cœurs et 600 To de stockage). Ces
+serveurs sont hébergés dans une salle dédiée de 26 m2 entièrement gérée par le
+Service Informatique du LISA.
+Pour toutes les missions liées à la sécurité du réseau, le/la responsable du
+Service Informatique sera en contact direct avec la responsable du Département
+Informatique et/ou le Directeur d'unité. Pour toutes les missions liées au calcul
+scientifique, il/elle bénéficiera du soutien du Service Calcul Scientifique du
+Département Informatique.
+Pour plus d'informations, consulter le site web public : http://www.lisa.u-pec.fr
+2eme poste du concours N° 123
+Affectation :
+POUCHET, PARIS 17
+Groupe de fonction :
+Groupe 2
+Mission :
+L'administrateur·trice systèmes et réseaux conçoit, administre, sécurise et assure l'évolution des systèmes, infrastructures et services numériques du site Pouchet du Centre National de la Recherche Scientifique (CNRS). Il/elle garantit la performance, la sécurité, la cohérence et la continuité de service des infrastructures informatiques mutualisées, au service de la recherche.
+Activités :
+Activités principales :
+- Concevoir, mettre en œuvre et maintenir les services et outils nécessaires aux usages numériques (serveurs, réseau, cloud)
+- Administrer les serveurs (Linux, Windows) et équipements réseaux (commutateurs, firewalls)
+-Gérer les évolutions et la maintenance des matériels, des logiciels et systèmes
+- Assurer la disponibilité des services (Web, DNS, Active Directory, Proxy, impression, WiFi, sauvegarde, etc.)
+- Mettre en place des solutions de continuité et de reprise d'activité (PRA, PCA).
+- Veiller à la sécurité des systèmes et réseaux en appliquant et en faisant appliquer les directives de sécurité
+- Documenter et référencer l'ensemble des composants matériels et logiciels et rédiger les procédures d'exploitation
+- Accompagner les unités hébergées dans l'usage des services numériques (cloud, plateformes collaboratives, etc.)
+- Participer au support technique auprès des utilisateurs
+- Négocier avec les fournisseurs et les prestataires de service
+- Assurer une veille technologique active
+Compétences :
+Savoirs :
+- Maîtriser l'administration des systèmes GNU/Linux (Debian, Ubuntu, RedHat) et Windows Server (Active Directory)
+- Maitriser les techniques de la virtualisation des serveurs (ex : Proxmox, VMware)
+- Mettre en œuvre les principales architectures des réseaux locaux et des équipements actifs de réseau : Vlan, firewalls (filtrage TCP/IP), commutateurs (Cisco, HP Comware), VoIP
+- Connaissance approfondie d'au moins un des SGBD standards : PostgreSQL, MariaDB
+- Connaissance des outils d'administration, d'audit et d'analyse des systèmes et des réseaux (ex : Nagios, SNMP...)
+- Performance et métrologie
+- Langage de programmation
+- Connaissance des outils de sauvegarde et de stockage (ex : NAS/SAN)
+- Anglais technique (niveau B2 souhaité, selon le cadre européen commun de référence pour les langues)
+Savoir-faire :
+- Analyser les besoins, proposer des solutions techniques adaptées
+- Automatiser les tâches d'administration (scripts Bash...)
+- Rédiger une documentation technique explicite et structurée
+- Conduire un projet technique en autonomie ou en équipe
+- Diagnostiquer et résoudre des incidents systèmes et réseaux
+Savoir-être :
+- Rigueur, autonomie et sens du service
+- Capacité à travailler en équipe
+- Adaptabilité face à l'évolution des technologies et aux besoins des utilisateurs
+- Réactivité et capacité à gérer les priorités
+- Force de propositions
+Contexte :
+Le site Pouchet, situé 59 rue Pouchet - Paris 17ème héberge, dans un ensemble immobilier propre du CNRS, 7 unités de recherche, des revues scientifiques et l'unité d'appui et de recherche.
+Le site regroupe environ 200 permanents (chercheurs, enseignants-chercheurs, Ingénieurs Techniciens) ainsi que des doctorants et post-doctorants. Ouvert toute l'année, il accueille des séminaires et conférences dans des salles mutualisées.
+Les 13 agents de l'Unité d'Appui à la Recherche Pouchet (UAR2276) exercent leurs activités au service de l'ensemble de la communauté scientifique du site. Ils sont affectés actuellement à 5 services qui assurent des missions de soutien et d'accompagnement de la recherche et concourent au bon fonctionnement des équipements et des espaces collectifs de travail.
+Dans un contexte évolutif, le Service des Systèmes d'Information (SSI) installe, gère et maintient l'ensemble du parc informatique, composé de plus de 350 postes (MacOsX, Windows10/11, Linux) ainsi que les différents serveurs, l'infrastructure réseau et télécommunication du site mais aussi les 9 copieurs mutualisés.
+L'agent-e rejoindra le Service des Systèmes d'Information (SSI) de l'UAR, composé actuellement de deux personnes. L'activité s'exercera en collaboration étroite avec le responsable de service dont il/elle dépendra hiérarchiquement et la gestionnaire d'infrastructures.
+Contexte opérationnel :
+- Possibilité de télétravailler selon les règles en vigueurs propres au CNRS
+- Possibilité de bénéficier de formations en lien avec son activité
+- Restaurant administratif et Comité local d'action sociale sur place
+Cette fonction ouvre droit à la perception de l'Indemnité de Référence pour les Informaticiens(IRI).
+3eme poste du concours N° 123
+Affectation :
+Institut des Sciences des Plantes de Paris Saclay, ORSAY
+Groupe de fonction :
+Groupe 2
+Mission :
+Le/la responsable du Pôle Informatique sera garant de la mise en place et du maintien en service du parc informatique, des infrastructures serveurs, de stockage et de sauvegarde de l'Institut. Animateur/trice du Comité Informatique, en liaison avec le Comité de Direction, le/la responsable devra orienter l'infrastructure informatique du site notamment en s'interfaçant avec le responsable du Pôle bio-informatique et les directions informatiques des tutelles de l'IPS2 (Paris-Saclay, INRAE, CNRS)
+Activités :
+- Participer à l'administration du système d'information en termes de référentiels, règles, démarches, méthodologies et outils
+- Sécuriser la production (sauvegarder, sécuriser les flux, prévoir et mettre en pratique des solutions de repli ou de contournement (PRA, PCA)
+- Appliquer les normes et standards de sécurité
+- Vérifier la pertinence et la performance fonctionnelle du système d'information
+- Proposer des évolutions applicatives (fonctionnelles ou techniques)
+- Mutualiser les bonnes pratiques en matière d'utilisation du système d'information du domaine
+- Résoudre ou faire remonter les incidents
+- Contrôler et planifier de manière efficace les modifications d'applicatifs et/ou de logiciels
+- Participer à l'élaboration d'outils de consultation, de contrôle et de gestion (scripts, procédures, requêtes, reporting)
+- Anticiper les changements et leurs impacts métiers sur le SI et en assurer la promotion par des actions de conseil et de communication
+- Assister la maitrise d'ouvrage dans l'élaboration de cahiers des charges
+- Rédiger la documentation fonctionnelle et technique
+- Animer et coordonner une équipe, assumer la responsabilité de projets
+- Négocier avec les fournisseurs et les prestataires de services
+- Former, conseiller et assister les utilisateurs
+- Déployer des outils logiciels pour la production scientifique, en liaison avec le plateau bio-informatique
+- Assurer la veille technologique
+Compétences :
+- Connaissance approfondie des concepts et techniques d'architecture des systèmes et des réseaux.
+- Performance et métrologie
+- Techniques de virtualisation
+- Anticiper les évolutions fonctionnelles et techniques.
+- Connaissance approfondie du système d'exploitation Windows.
+- Connaissance du système d'exploitation Linux.
+- Connaissance des techniques liées au réseau (vlan, mac adresse ...)
+- Connaissance générale des procédures de sécurité informatique.
+- Langage de programmation
+- Connaissance des techniques d'encadrement d'équipe
+- Savoir animer un réseau d'utilisateurs.
+- Savoir reformuler une demande d'utilisateur en termes techniques.
+- Savoir gérer les situations d'urgence et hiérarchiser les priorités.
+- Savoir rédiger des notes techniques et des supports de formation.
+- Anglais : Expression écrite et orale.
+- Savoir-être (comportements et pratiques de travail) :
+- Aptitude à travailler en réseau d'utilisateurs et en groupes de travail, capacités pédagogiques, compétences organisationnelles avérées.
+- Capacité d'écoute.
+- Savoir gérer les priorités
+Contexte :
+L'institut des sciences des plantes de Paris Saclay (IPS2) est un organisme de recherche basé sur le plateau de Saclay. Il est composé d'un peu plus de 200 personnes (chercheurs, enseignants chercheurs, doctorants, stagiaires) de nationalités diverses.
+Le service informatique sera composé d'un gestionnaire de parc (AI)  et du responsable.
+Les interventions sont diverses et demandent une capacité d'analyse et d'adaptation importante pour comprendre les problèmes et les résoudre. Vous êtes en relation directe avec les utilisateurs, ce qui fait la richesse du poste si vous aimez le contact et le relationnel. L'agent sera sous la responsabilité directe du comité de Direction de l'Unité.
+L'IPS2 dispose d'une capacité de stockage informatique importante (~400To) pour répondre aux besoins croissants en données, impliquant 290 postes. Pour en tirer pleinement parti, une gestion optimisée et rigoureuse est essentielle, tant pour garantir la performance que pour assurer la sécurité et la pérennité des informations stockées.
+L'IPS2 possède un cluster de calcul scientifique géré actuellement par le pôle bio-informatique, le responsable informatique reprendra à terme la gestion du cluster, à savoir l'exploitation des serveurs de calculs et l'installation des logiciels nécessaires à l'activité scientifique (plus de 300 à ce jour).
+L'IPS2 utilisent de nombreux service de l'Université Paris-Saclay comme la messagerie, le système de stockage et les réseaux filaire et WIFI. Le responsable informatique sera chargé de maintenir la coordination avec les équipes de Paris-Saclay.

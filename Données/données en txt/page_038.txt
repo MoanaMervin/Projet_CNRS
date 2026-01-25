@@ -1,0 +1,90 @@
++
+Liste des concours
+C : Sciences de l'ingénieur et instrumentation scientifique
+Ingénieur de recherche
+Concours N° 38
+Nbre de postes :
+1
+Emploi-type :
+Experte electronicienne ou expert electronicien
+Affectation :
+Institut de Recherche en Astrophysique et planétologie, TOULOUSE
+Groupe de fonction :
+Groupe 3
+Mission :
+Sous la responsabilité hiérarchique du directeur d'unité et au sein du groupe des
+électroniciens de l'IRAP, l'expert-e électronicien.ne devra mettre au point des
+solutions techniques d'élaboration de systèmes électroniques utilisés pour le
+fonctionnement des instruments scientifiques pour des applications spatiales. Cela
+passe par la conception d'électronique analogique haute tension de proximité, de
+dispositifs d'électronique rapide, par la réalisation, l'intégration des
+dispositifs et les tests sur des bancs à concevoir et réaliser.
+Activités :
+ACTIVITES PRINCIPALES :
+- Établir, avec les équipes scientifiques du domaine de l'astrophysique, la
+définition des projets ou des instruments.
+- Définir les procédures de validation des performances, valider ou qualifier les
+projets lors de ses différentes étapes, pour les tous les modèles demandés par une
+mission spatiale.
+- Réaliser l'analyse fonctionnelle des systèmes électroniques analogiques
+- Élaborer et rédiger les spécifications des cahiers des charges des composants et
+cartes d'électronique front-end.
+- Modéliser et effectuer les tests de ces composants et cartes.
+- Concevoir les systèmes de prise de mesure, d'acquisition et de traitement des
+données en tant que concepteur ou chef de projet, gérer l'ensemble des ressources
+allouées
+- Rédiger et négocier les contrats techniques, marchés et collaboration avec les
+différents partenaires
+- Diffuser et valoriser ses travaux, assurer le transfert de technologie, ou de
+savoir-faire auprès des collaborateurs ou de partenaires (académiques ou
+industriels).
+ACTIVITES ASSOCIEES :
+- Assumer quand c'est nécessaire le rôle de chef de projet.
+- Spécifier, mettre en œuvre et faire respecter les procédures de sécurité et
+celles d'assurance qualité et d'assurance produit.
+- Assurer le suivi des étapes de qualification spatiale de composants
+électroniques.
+- Réaliser des expertises pour des partenaires
+- Encadrer des stagiaires, des CDD ou superviser des prestataires
+Compétences :
+- Connaissance approfondie de l'électronique et notamment dans le domaine de la
+haute tension.
+- Connaissance approfondie des techniques du traitement du signal
+- Connaissance approfondie de la physique et mathématiques
+- Connaissance et utilisation des langages de programmation (C, Python)
+- Connaissance et utilisation d'outils du domaine (Cadence, Orcad, Allegro,
+LTSpice...)
+- Connaissance des principes et règles de la compatibilité électromagnétique
+- Connaissance générale de l'instrumentation et normes d'interconnexion (standard
+et protocoles)
+- Connaissances des normes et standards du domaine spatial
+- Connaissance du déroulement des projets spatiaux de la proposition à la
+réalisation de systèmes ou sous-systèmes.
+- Maitrise de l'anglais : niveau B2 selon le cadre européen de référence
+Contexte :
+L'IRAP est une Unité Mixte de Recherche du CNRS, de l'Université de Toulouse III
+Paul Sabatier et du CNES, comprenant environ 280 agents dont 70 IT. Ses objectifs
+scientifiques concernent l'étude et la compréhension de l'Univers et de son
+contenu. Avec un effectif de personnels techniques qualifiés dans le domaine de la
+conception, la construction, l'intégration et l'exploitation d'instruments au sol
+et dans l'espace ainsi que d'expériences de laboratoire permettant de caractériser
+les processus physiques, l'IRAP est un des pôles majeurs de l'astrophysique sol-
+espace en France. L'IRAP développe des instruments pour l'astrophysique et
+l'exploration du système solaire, y compris l'analyse des surfaces planétaires.
+Ces instruments intègrent des capteurs, de l'électronique "front end" ainsi que de
+l'électronique numérique pour traiter le signal des capteurs.
+L'ingénieur-e fera partie du groupe des électroniciens de l'IRAP qui regroupe une
+vingtaine de permanents et quelques CDD. Il/elle sera amené-e à travailler en
+salle blanche (ISO8 à ISO5).
+Il/elle s'intègrera dans une ou plusieurs équipes projet appelée à répondre à des
+appels d'offres d'instruments spatiaux mais aussi dans le groupe d'électroniciens
+qui ont une forte compétence en électronique (exemple LEES/COMET INTERCEPTOR,
+iESA/HELIOSWARM, comme auparavant dans les projets BEPI/COLOMBO ou SOLAR ORBITER).
+Il/elle pourra mener des projets de R&D sur son domaine d'expertise.
+L'ingénieur-e travaillera sur le campus de l'Université Paul Sabatier. Le poste
+proposé se situe dans un secteur relevant de la protection du potentiel
+scientifique et technique (PPST) et nécessite donc, conformément à la
+réglementation une autorisation délivrée par l'autorité compétente du MESR.
+Des déplacements en France et à l'étranger sont à prévoir, pour la participation à
+des réunions, de revues ou pour le déroulement d'activités techniques (lors des
+essais par exemple).

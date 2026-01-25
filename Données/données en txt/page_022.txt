@@ -1,0 +1,71 @@
++
+Liste des concours
+C : Sciences de l'ingénieur et instrumentation scientifique
+Ingénieur de recherche
+Concours N° 22
+Nbre de postes :
+1
+Emploi-type :
+Experte ou expert en développement d'expérimentation
+Affectation :
+Laboratoire Jean Perrin, PARIS 05
+Groupe de fonction :
+Groupe 3
+Mission :
+Développer des systèmes d'imagerie pour l'étude des systèmes vivants,
+incluant le contrôle de différents capteurs et actuateurs, l'acquisition et le
+traitement de données en temps réel.
+Activités :
+- Concevoir, en lien avec les équipes concernées, des systèmes d'imagerie pour le
+vivant adaptés aux différents types de systèmes biologiques étudiés.
+- Concevoir des architectures de contrôle et d'acquisition de données, incluant
+l'automatisation des mesures et des signaux de commandes sur différents types
+d'appareil (caméras, capteurs, moteurs, etc.), l'analyse des signaux en temps
+réel et l'interfaçage graphique.
+- Développer des programmes de traitement d'images automatisés (et/ou
+interactifs)
+et de visualisation, adaptés aux besoins spécifiques des équipes.
+- Réaliser un travail bibliographique afin d'évaluer les différentes solutions
+techniques adaptées.
+- Mettre au point et valider les dispositifs et programmes ainsi réalisés.
+- Former les utilisateurs à l'utilisation de ces programmes.
+- Présenter, diffuser et valoriser les réalisations.
+Compétences :
+-	Connaissance approfondie en optique, et plus particulièrement dans le
+domaine de la microscopie optique et de l'imagerie pour le vivant.
+-	Connaissance approfondie des méthodes de programmation et
+d'automatisation pour le contrôle, l'interfaçage d'expériences et l'analyse de
+données en temps réel. Il peut s'agir par exemple de détection et de suivi
+automatisé d'objet, de systèmes de réalité virtuelle, de contrôle en température,
+etc.
+-	Connaissance approfondie en traitement et analyse d'image.
+-	Connaissance générale en physique des interactions lumière/matière,
+physique statistique, traitement du signal.
+-	Connaissance de base en électronique et en mécanique.
+-	Maîtrise de l'Anglais indispensable, niveau B2.
+Contexte :
+Le laboratoire Jean Perrin est une unité de recherche CNRS/SU installée sur le
+campus de Jussieu, regroupant ~50 personnes dont environ 25 titulaires. Ses
+activités se situent à l'interface entre la Physique et la Biologie. Le LJP est
+membre de l'IBPS (Institut de Biologie Paris Seine) qui regroupe l'ensemble des
+laboratoires de Biologie du Campus.
+Le LJP développe des dispositifs expérimentaux originaux centrés sur des
+approches d'imagerie dans des environnements complexes. Le LJP dispose d'une
+compétence reconnue en microscopie pour le vivant et en spectroscopie (e.g.
+microscopie multi- photon, par nappe laser, super-résolution, Raman). Nous
+réalisons également des dispositifs milli- ou micro-fluidiques afin de sonder les
+propriétés de systèmes biologiques dans des contextes parfaitement contrôlés. Ces
+expériences impliquent l'acquisition de larges jeux de données, ce qui nécessite
+la mise au point d'approches automatisées pour l'extraction, la visualisation et
+l'analyse de ces données.
+La personne recrutée travaillera au profit des différentes équipes
+Expérimentales, sous la responsabilité hiérarchique de la Direction d'unité. Elle
+sera intégrée à un nouveau service de soutien à la recherche mis en place à
+l'occasion de ce recrutement, qui regroupera, outre la personne recrutée, deux IR
+spécialisés en microscopie (dont l'un est rattaché partiellement à la plateforme
+d'imagerie de l'IBPS), ainsi qu'un IE en fabrication mécanique. Ce service
+bénéficiera d'une large autonomie dans son organisation, et notamment dans la
+prise en charge des différents projets. Ce mode d'organisation visera en outre à
+permettre un échange efficace des compétences entre ses différents membres. Nous
+nous engageons également à ce que la personne recrutée bénéficie de formations
+adaptées à ses besoins.

@@ -1,0 +1,90 @@
++
+Liste des concours
+D : Sciences humaines et sociales
+Ingénieur d'études
+Concours N° 117
+Nbre de postes :
+1
+Emploi-type :
+Ingenieure ou ingenieur d'études en sciences de l'information géographique
+Affectation :
+Etudes des structures, des processus d'adaptation et des changements de l'espace, AVIGNON
+Groupe de fonction :
+Groupe 3
+Mission :
+L'ingénieur.e d'études choisira, mettra en oeuvre et développera des méthodes de
+collecte et de structuration des données géographiques, qu'il ou elle analysera en
+mobilisant les outils et méthodes de l'analyse spatiale.
+Activités :
+Identifier, collecter, produire et évaluer les données géographiques pertinentes :
+- mettre en œuvre et développer des outils de collecte de données : enquête en
+ligne, scraping, collecte de terrain
+- évaluer, au regard des usages envisagés, la qualité des données mobilisées ou
+produites, quelle qu'en soit la nature (alphanumérique, données de télédétection,
+images satellitaires, etc.)
+- structurer les données collectées (y compris des données massives) en vue de
+leur traitement et de leur diffusion
+Analyser des données géographiques
+- réaliser des analyses statistiques mono et multivariées et des analyses
+géostatistiques
+- réaliser des analyses spatiales, en s'appuyant notamment sur la géomatique
+- cartographier données et résultats
+Réaliser des développements méthodologiques originaux pour la collecte et le
+traitement des données
+- automatiser des tâches et traitements par des scripts
+- créer des scripts, modèles ou logiciels permettant des analyses originales des
+données
+Contribuer à la bancarisation et à la diffusion des données (participation ou
+portage des Plans de Gestion de Données notamment)
+Participer à la valorisation des travaux par la rédaction de rapports de
+recherche, d'articles et des contributions à des sites internet
+Exercer une veille dans les domaines de la collecte, du traitement et de la
+diffusion des données géographiques
+Compétences :
+Savoir
+Connaissance des sources de données géographiques
+Connaissance du cadre légal et déontologique sur la collecte et le traitement des
+données
+Connaissances, ou a minima une appétence pour, les problématiques territoriales et
+d'aménagement du territoire
+Une maîtrise de la langue anglaise (B1 à B2) est un plus
+Savoir-faire
+Maitrise d'outils et méthodes de la collecte des données (enquêtes en ligne,
+scraping, GPS, idéalement traitement d'image, télédétection)
+Maitrise de la structuration des données (y compris massives et multisources) dans
+des SGBD et les SIG (PostGreSQL, PostGIS, FME)
+Compétences en traitement de l'information géographique : statistiques,
+géostatistique, fouille de données
+Compétences en automatisation et programmation dans différents environnements :
+QGIS, PostGreSQL, R, Python, voire Julia ou Jupyter
+Des compétences en Intelligence Artificielle (IA) pour l'exploration et le
+traitement des données seraient un plus (apprentissage profond, réseaux bayésiens)
+Connaissance théorique et pratique sur les plans de gestion de données (la
+connaissance d'OPIDOR est un plus et sera le cas échéant à acquérir)
+Savoir-être
+Autonomie et rigueur
+Planification du travail
+Capacité de raisonnement analytique
+Écoute, travail en équipe et attitude proactive
+Ouverture à l'interdisciplinarité
+Contexte :
+L'UMR ESPACE est un laboratoire multi-sites (Avignon, Aix en Provence, Nice) et
+multi-tutelles (CNRS, Aix Marseille Université, Université Côte d'Azur, Avignon
+Université). L'unité compte une centaine de personnes, dont 50 titulaires.
+Le laboratoire ESPACE étudie principalement les interactions espace-nature-société
+et leur durabilité, de l'échelle du logement à celle du continent. Les principaux
+thèmes étudiés sont : la ville (ses morphologies, ses interactions transport-
+urbanisme, ses marchés foncier et immobilier, ses modèles d'aménagement et leur
+durabilité, etc.) ; l'environnement, en particulier les impacts du changement
+climatique sur les ressources naturelles, sur les risques et leur gestion ; les
+systèmes territoriaux côtiers en Méditerranée ; les interactions entre espaces,
+environnement et santé
+L'ingénieur.e sera sous la responsabilité administrative du Directeur de l'UMR et
+du Directeur.trice adjoint.e du site d'installation qu'il ou elle aura choisi.
+Il/Ellle travaillera en priorité, mais de manière non exclusive, sur les projets
+en géographie humaine développés sur le site de Nice. Les projets intersites
+pourront l'amener à se déplacer sur les différents sites de l'unité.
+En outre, il ou elle apportera une contribution active au groupe de travail sur la
+bancarisation et diffusion des données du laboratoire ESPACE.
+Une partie des activités sont télétravaillables, sous réserve de respecter la
+réglementation en vigueur au CNRS.

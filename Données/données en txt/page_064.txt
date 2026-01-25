@@ -1,0 +1,77 @@
++
+Liste des concours
+E : Informatique, statistiques et calcul scientifique
+Ingénieur de recherche
+Concours N° 64
+Nbre de postes :
+1
+Emploi-type :
+Experte ou expert en information statistique
+Affectation :
+Laboratoire d'océanographie de Villefranche, VILLEFRANCHE SUR MER
+Groupe de fonction :
+Groupe 3
+Mission :
+L'agent développera des outils numériques avancés pour traiter et analyser des
+données océanographiques hétérogènes, facilitant ainsi la compréhension des
+processus biogéochimiques et biologiques marins.
+Activités :
+o Adapter et améliorer les outils existants (e.g. modèles d'apprentissage profond
+pour générer de nouvelles variables biogéochimiques ou exploiter des images de
+plancton ; modèles bio-optiques appliqués aux plateformes satellitaires et in
+situ), notamment en intégrant de nouvelles sources de données (acoustiques,
+hyperspectrales, imagerie haute résolution).
+o Concevoir et mettre en œuvre de nouvelles méthodes numériques adaptées à
+l'hétérogénéité des données, en concertation avec les équipes chargées de leur
+acquisition afin de faciliter leur utilisation synergique.
+o Assurer une veille technologique en analyse de données, notamment en
+apprentissage machine, pour intégrer de nouvelles approches au laboratoire.
+o Contribuer à des projets nationaux/internationaux et aux publications
+scientifiques associées.
+o Participer à l'administration des serveurs de calcul et de données.
+o Réaliser des présentations, formations internes et rédiger des documents
+techniques pour assurer le transfert de compétences.
+Compétences :
+- Savoirs / connaissances
+o Expertise en outils d'analyse de données et modélisation statistique dont
+l'apprentissage machine (notamment Multi Layer Perceptron et Convolutional Neural
+Networks).
+o Connaissance approfondie d'au moins un langage de programmation
+scientifique : Python, R, (éventuellement MATLAB).
+o Compétences en océanographie (biogéochimie, biologie, écologie ou
+physique) ou en informatique (satistiques, apprentissage) avec des connaissances
+en océanographie.
+o Maîtrise de l'environnement Unix/Linux.
+o Anglais scientifique et technique niveau B2 (écrit et oral).
+- Savoir-faire
+o Développer et appliquer des modèles statistiques et des outils
+d'apprentissage machine
+o Maîtrise de la manipulation et de l'analyse des jeux de données
+volumineux stockés en divers formats (e.g. fichiers NetCDF) ou récupérables par
+Application Programming Interfaces (API).
+o Notions d'administration système Linux appréciées.
+o Communiquer efficacement, transmettre des connaissances, identifier
+l'information pertinente et réaliser des synthèses.
+- Savoirs-être
+o Ouverture d'esprit et curiosité intellectuelle.
+o Capacité pédagogique et aptitude au travail collaboratif.
+o Adaptabilité à la diversité des disciplines (biogéochimie, écologie,
+physique).
+o Autonomie et prise d'initative.
+Contexte :
+L'agent travaillera avec les équipes « Optique Marine, Télédétection &
+Applications Biogéochimiques" (OMTAB) et « Computational Plankton Ecology »
+(COMPLEx) du Laboratoire d'Océanographie de Villefranche (LOV), équipes reconnues
+internationalement pour leur expertise en optique marine, biogéochimie et
+écologie du plancton, ainsi que leur contribution dans les programmes
+d'observation (en particulier BGC-Argo) et les bases de données (notamment
+EcoTaxa).
+Affectation au Laboratoire d'Océanographie de Villefranche, à Villefranche-sur-
+Mer. Des déplacements sont à prévoir dans le cadre des projets internationaux
+dans lesquels le laboratoire est impliqué.
+Le poste sera affecté aux équipes OMTAB et COMPLEx du LOV (Villefranche/Mer),
+laboratoire reconnu pour l'analyse de données marines et son implication dans les
+programmes d'observations et projets de recherche nationaux et internationaux,
+notamment la communauté OneArgo. Possibilité de télétravail avec un maximum de
+deux jours par semaine.
+https://lov.imev-mer.fr

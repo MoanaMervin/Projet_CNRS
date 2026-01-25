@@ -1,0 +1,55 @@
++
+Liste des concours
+A : Sciences du vivant, de la terre et de l'environnement
+Ingénieur de recherche
+Concours N° 2
+Nbre de postes :
+1
+Emploi-type :
+Ingenieure ou ingenieur biologiste en analyse de données
+Affectation :
+Dynamique du noyau, PARIS 05
+Groupe de fonction :
+Groupe 3
+Mission :
+Participer aux projets de l'unité « Dynamique du noyau » basés sur le séquençage.
+Concevoir des pipelines d'analyses de données de séquençage à haut-débit et développer des méthodes d'analyse statistique intégrative et des modèles physiques pour étudier l'organisation fonctionnelle du noyau.
+Activités :
+- Concevoir et développer les outils bio-informatiques permettant le traitement des données issues de séquençage à haut-débit de type ChIP-seq et RNA-seq.
+- Définir les plans d'étude appropriés aux questions scientifiques posées
+- Mettre en place des méthodes d'analyse statistique intégrant différents type de données biologiques.
+- Développer des modèles basées sur la physique des polymères pour comprendre les mécanismes qui régissent l'organisation et la dynamique du noyau.
+- Développer des bases de données et systèmes d'information permettant de collecter, structurer, documenter, stocker et mettre en relation les données.
+- Accompagner les utilisateurs dans la conception des expériences afin de garantir la robustesse des analyses.
+- Réaliser des analyses statistiques de données bio-informatiques en soutien aux équipes de recherche.
+- Gérer les moyens techniques alloués aux dispositifs de collecte, de traitement et de stockage des données.
+- Définir les procédures d'assurance qualité des données et les mettre en œuvre.
+- Former, en interne et en externe, aux principes et à la mise en œuvre des techniques de l'analyse des données bioinformatiques.
+- Diffuser et valoriser les résultats et réalisations technologiques sous forme de rapports, brevets, publications, présentations orales.
+- Assurer et organiser la veille scientifique et technologique dans le domaine.
+Compétences :
+Connaissances :
+- Connaissances approfondies en langage de programmation (Python, R, bash ...)
+- Connaissances approfondies en physique des polymères
+- Formation avancée en statistiques
+- Connaissances solides en biologie moléculaire, chromatine, organisation spatiale du génome.
+- Connaissances en structure de bases de données.
+- Anglais scientifique écrit, oral : Niveau C1 (cadre européen de référence pour les langues) requis pour communiquer dans un environnement international
+Savoir-faire :
+- Maitrise de la programmation informatique pour l'analyse de données de séquençage à haut-débit.
+- Maitrise des méthodes statistiques appliquées à la biologie
+- Garantir la qualité et la pertinence des outils d'analyse et des résultats
+- Compétences en simulations par dynamique moléculaire (OpenMM, HOOMD, LAMMPS).
+- Savoir analyser les besoins des utilisateurs.
+- Assurer la veille technologique dans le domaine.
+Savoir-être :
+Rigueur, organisation, sens des responsabilités, esprit d'équipe, aisance relationnelle
+Contexte :
+Le poste est basé au sein de l'unité Dynamique du Noyau (CNRS/Institut Curie/Sorbonne Université) localisée sur le campus parisien de l'Institut Curie. Elle est composée de 6 équipes et d'une plateforme d'imagerie et comprend de 60 à 70 membres.
+L'objectif commun est de développer une vision intégrée de l'organisation fonctionnelle du noyau, à différentes échelles, de la molécule à la cellule, à l'organisme et dans différents contextes, le cycle cellulaire, le développement, dans des situations normales ou pathologiques et au cours de l'évolution.
+Les 6 équipes développent des projets scientifiques complémentaires sur différents systèmes modèles (xénope, souris, drosophile, bombyx mori, S. cerevisiae, lignées cellulaires humaines) avec une approche pluridisciplinaire et notamment à l'interface bio-physique.
+L'ingénieur.e de recherche apportera plus particulièrement un soutien aux projets de l'équipe de biologie computationnelle (dirigée par Leonid Mirny), impliquant des analyses bio-informatiques (ChIP-seq,HiC, transcriptomes) et les projets « single-cell ».
+Aujourd'hui, les projets de l'unité s'appuient largement sur des pipelines mises en place par la plateforme de bioinformatique de l'Institut Curie et sur les outils d'analyse et de modélisation développés par l'équipe Mirny dans le cadre du consortium international Open2C;
+L'environnement de travail est particulièrement favorable à l'interdisciplinarité : les biologistes, physiciens et informaticiens de l'unité collaborent étroitement, avec une bonne compréhension partagée des enjeux méthodologiques liés à l'analyse de données bioinformatiques.
+L'ingénieur-e sera placé.e sous la responsabilité hiérarchique de la Directrice d'Unité.
+Il/elle aura la possibilité de co-superviser des étudiants.

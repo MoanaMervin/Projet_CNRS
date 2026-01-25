@@ -1,0 +1,21 @@
+{
+  "source_file": "page_062.html",
+  "bap": "E : Informatique, statistiques et calcul scientifique",
+  "grade": "Ingénieur de recherche",
+  "concours_label": "Concours N° 62",
+  "concours_num": "62",
+  "nb_postes": "1",
+  "emploi_type": "Cheffe ou chef de projet / experte ou expert en Ingéniérie logicielle",
+  "nb_postes_detectes": 1,
+  "postes": [
+    {
+      "poste_num": 1,
+      "affectation": "Laboratoire de Physique de Clermont Auvergne, AUBIERE",
+      "groupe_fonction": "Groupe 3",
+      "mission": "Au sein d'une équipe composée de 7 développeurs, l'ingénieur(e) sera chargé(e) de piloter des projets d'ingénierie logicielle. Dans le cadre de sa mission principale, l'agent recruté travaillera au développement de la plateforme GATE (www.opengatecollaboration.org). Il (elle) devra proposer des solutions techniques afin d'améliorer les performances de GATE et participer à sa validation. L'ingénieur(e) devra participer à la promotion de la plateforme lors de conférences d'intérêt, de workshops ou de formations. Il (elle) participera également à sa maintenance et à sa documentation.",
+      "activites": "- Assurer une responsabilité de chef de projet.\n- Élaborer les spécifications techniques des besoins en vue de la rédaction du cahier des charges fonctionnelles.\n- Poursuivre les développements d'intérêt pour les équipes scientifiques du LPCA, avec des compétences en programmation C++ et Python au cœur de l'expertise requise.\n- Participer à l'amélioration des performances des développements C++ et la maintenabilité du code.\n- Assurer l'implémentation de nouveaux codes de calcul, intégration de librairies, interface utilisateur graphique ou code open source issus de collaborations scientifiques.\n- Mettre en œuvre l'intégration d'IA en Python, ainsi que la technique de métaprogrammation pour améliorer les performances des algorithmes issus des projet du LPCA.\n- Participer à la communication des résultats (ateliers internes, conférences, publications...).\n- Réaliser une veille technologique.\n- Participer à un réseau professionnel.",
+      "competences": "- Systèmes : Linux/UNIX (CentOS, Ubuntu, SL...), HPC GP/GPU, virtualisation, installation PXE, puppet\n- Langages : C++, Python, Shell (sh, bash), assembleurs\n- Logiciels : GATE, Geant4, Root, Vi, Git, Docker, Doxygen\n- Méthodologie de conduite de projet (connaissance approfondie)\n- Génie Logiciel (connaissance approfondie)\n- Concepts et architectures du système d'information et de communication\n- Protocoles de communication (connaissance approfondie)\n- Méthodes, outils, normes et procédures de la qualité (connaissance approfondie)\n- Maîtrise de l'anglais technique niveau B2-C1(lecture, écriture, oral)\n- Forte capacité de travail en équipe, notamment en relation étroite avec les autres ingénieurs du groupe",
+      "contexte": "Le/la candidat(e) intégrera le Laboratoire de Physique Clermont Auvergne (LPCA: http://clrwww.in2p3.fr/index.php/).\nLe LPCA est une unité mixte de recherche du CNRS-IN2P3 et de l'Université Clermont Auvergne. Installé sur le campus des Cézeaux à Aubière (63), il est composé de 140 agents permanents. Ses activités de recherche s'articulent principalement autour de l'infiniment petit et l'infiniment grand, le LPCA participe notamment à trois expériences du CERN : Atlas, LHCb et Alice. En support à ces expériences le laboratoire héberge un Tier de Calcul dédié à l'exploitation des données issues de ces expériences. Ces dernières années le laboratoire a également développé un pôle de recherche travaillant en lien avec la santé et l'environnement.\nL'agent intégrera le service Calculs et Données, composé de 7 ingénieurs.\nDans le cadre de sa mission principale, l'agent recruté travaillera en collaboration avec le comité technique de la collaboration scientifique internationale OpenGATE."
+    }
+  ]
+}

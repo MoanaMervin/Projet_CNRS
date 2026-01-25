@@ -1,0 +1,95 @@
++
+Liste des concours
+C : Sciences de l'ingénieur et instrumentation scientifique
+Ingénieur de recherche
+Concours N° 25
+Nbre de postes :
+1
+Emploi-type :
+Experte ou expert en développement d'expérimentation
+Affectation :
+Plate-forme de chimie biologique intégrative de Strasbourg, ILLKIRCH GRAFFENSTADEN
+Groupe de fonction :
+Groupe 2
+Mission :
+Missions principales :
+L'ingénieur-e de recherche développe des technologies de microfluidique, y compris
+les logiciels de pilotage des instruments et les routines d'analyse des données.
+Il/Elle conçoit des essais pour les organes sur puce (organ-on-a-chip) et des
+outils pour le travail sur organoïdes. Il/Elle contribue au développement et à la
+validation des techniques nécessaires aux projets en cours utilisant la
+microfluidique.
+Missions secondaires :
+La personne recrutée participe à l'ensemble des activités du service décrites ci-
+dessous, en accord avec l'organisation du laboratoire selon des normes de qualité
+ISO 9001, et NF X50-900.
+Activités :
+Activités Principales :
+- Piloter le département de microfluidique  et encadrer les étudiants et ou
+personnels du service (contribuer aux embauches en fonction des besoins),
+- Réaliser des demandes financières (appels à projets pour instrumentations et
+dans le cadre de projets de recherches, ANR, etc.) et gérer le budget du
+service,
+- Mettre au point et développer des modèles et des tests en microfluidique,
+- Réaliser les prestations : prestation de service et de recherche ; avec des
+collaborateurs publics et privés,
+- Réaliser l'entretien et la maintenance des appareils,
+- Communiquer les résultats (rapports, publications, compte-rendus) et rendre
+compte  à la direction de l'unité et aux différents partenaires.
+Activités Associées :
+- Contribuer à la visibilité du service par des contributions aux enseignements
+(licence, master, écoles d'ingénieurs Ecole Supérieure de Biotechnologie de
+Strasbourg et Télécom Physique Strasbourg), la participation aux congrès et la
+rédaction de rapports et publications,
+- Travailler selon la démarche qualité établie à l'UAR 3286 (www.pcbis.fr).
+Compétences :
+Savoirs :
+- Microfabrication (CAO, micropuces, masques, photolithographie, microgravure,
+impression 3D SLA (Stéréolithographie)), utilisation des technologies  pour
+réaliser des puces microfluidiques en salle blanche, microfluidique,
+- Culture cellulaire en puce microfluidique,
+- Des connaissances sur les organoïdes seront également appréciées,
+- Instrumentation nécessaire à la mise en place des expériences de
+microfluidique (microscope, laser, PMT, caméra rapide, optique, cartes
+d'acquisition),
+- Traitement de données et d'images résultant des expériences de microfluidique,
+connaissance de la fluorescence, polarisation de fluorescence,
+- Programmation (Langages C, C++, Java, Python ; logiciels Matlab, Arduino
+IDELabVIEW, ImageJ ),
+- Des compétences en électronique (cartes électroniques,   montages de circuits,
+logique, etc) seront également appréciées.
+Savoirs faire :
+- Utiliser des équipements  de microfluidique (mis en place au laboratoire et
+permettant de faire des mesures de fluorescence dans des microgoutes) et
+fabrication de puces,
+- Utiliser les outils informatiques (matlab, Arduino, Labview)  nécessaires au
+pilotage des appareils et aux traitements des données (Python, excel),
+- Appliquer et mettre en œuvre une démarche qualité,
+- Appliquer et faire appliquer les règles d'hygiène et de sécurité (Laser,
+Impression 3D SLA, Salle de microfabrication),
+- Utiliser les outils informatiques nécessaires au pilotage des appareils et aux
+traitements des données.
+Savoirs être :
+- Savoir travailler dans une équipe pluridisciplinaire (chimistes, biologistes,
+du domaine public et privé),
+- Ouverture d'esprit et sens du contact (accueil et encadrement d'étudiants et
+chercheurs  du public et du privé).
+Contexte :
+L'UAR 3286 PCBIS (Plateforme de Chimie Biologique Intégrative de Strasbourg) est
+une unité CNRS-Unistra (26 personnes) centrée sur la découverte de molécules
+bioactives et localisée à Illkirch.
+Le laboratoire est accessible par tram et bus, avec possibilité de restauration
+sur place.
+L'ingénieur-e sera responsable du département Microfluidique et sera placé-e sous
+l'autorité du directeur. Il/elle sera amené-e à interagir avec les autres
+départements, les utilisateurs du service (publics et privés).
+Il/elle bénéficiera d'un accompagnement dans sa prise de poste  par la direction
+et un groupe de chercheurs associés au laboratoire pour la microfluidique). Des
+formations en interne dans le service, au CNRS et à l'Unistra sont possibles.
+PCBIS est labellisée Cortecs (réseau des plateformes scientifiques de recherche
+et de service de l'université de Strasbourg), Cancéropôle Est et Infrastructure en
+biologie, santé et agronomie (IBiSA ). Elle est membre de l'institut du médicament
+de Strasbourg (IMS) et de l'infrastructure nationale ChemBioFrance. Située à
+l'interface de la chimie et la biologie l'unité est amenée à développer de
+multiples projets, de l'identification de molécules actives aux essais
+précliniques d'ADME  (Absoption, Distribution, Métabolisme, Elimination).

@@ -1,0 +1,51 @@
++
+Liste des concours
+C : Sciences de l'ingénieur et instrumentation scientifique
+Ingénieur de recherche
+Concours N° 23
+Nbre de postes :
+1
+Emploi-type :
+Experte ou expert en développement d'expérimentation
+Affectation :
+Centre lasers intenses et applications, TALENCE
+Groupe de fonction :
+Groupe 3
+Mission :
+L'ingénieur-e de recherche aura pour mission globale la conception, la mise en place et le pilotage des expériences en interaction laser-matière et de la caractérisation des modifications induites par laser.
+Il-elle sera affecté-e à l'équipe Short-pulse Lasers : Applications and Materials (SLAM) et travaillera sur des procédés laser femtosecondes.
+Activités :
+- Étudier l'interaction laser-matière et les procédés en régime ultrabref;
+- Piloter la réalisation d'expériences;
+- Concevoir et mettre en place des outils de diagnostics in- et ex-situ (imagerie rapide, pyrométrie optique, spectroscopie, interférométrie, ...) pour le suivi et le contrôle des procédés laser : collecter, analyser et interpréter des données;
+- Développer et utiliser des modèles analytiques en relation avec les expériences;
+- Communiquer à l'oral (conférences internationales, séminaires, animer des réunions techniques) et à l'écrit (rédiger des articles dans des revues scientifiques à comité de lecture, rédiger des appels d'offre d'équipement);
+- Rédiger des propositions de projets de recherche collaboratifs dans le cadre des appels à projets de type ANR, Europe, ou Région et les piloter en cas de financement;
+- Encadrer et former à l'instrumentation des étudiants et des non-permanents.
+Compétences :
+Savoirs :
+- Techniques et sciences de l'ingénieur dans le domaine de l'interaction laser et matière (connaissance approfondie), mise en forme de faisceau laser, physique des lasers et optique, sciences des matériaux
+- Instrumentation et métrologie: imagerie, diagnostics et imagerie rapide (connaissance approfondie), microscopie optique et confocale, microscopie électronique à balayage
+- Automatisation, programmation sous Python, pilotage d'instrumentation scientifique, technologie du numérique autour de l'intelligence artificielle et du machine learning
+- Connaissances en traitement et analyses d'images (FFT et FFT inverse)
+- Techniques de présentation écrite et orale
+- Langue anglaise : C1
+Savoir-faire :
+- Etablir un cahier de charges fonctionnelles ou techniques
+- Montage et conduite de projets
+- Environnement et réseaux professionnels regroupant les communautés académiques et/ou industrielles autour de la photonique et du laser au niveau régional, national et international (connaissance générale).
+Savoir-être :
+- Capacité démontrée à travailler en équipe et à partager ses connaissances
+- Savoir faire preuve de curiosité et d'autonomie dans son travail
+- Être réactif et avoir le sens du service
+- Avoir un bon relationnel et être pédagogue
+- Capacité à intégrer et participer activement aux réseaux professionnels métiers
+Contexte :
+Le Centre lasers intenses et applications (CELIA)  est une UMR (CNRS, université de Bordeaux, CEA) d'environ cent personnes qui comprend 5 équipes de recherches dont 4 avec une forte composante expérimentale.
+Une d'elles, l`équipe SLAM (Short-pulse Lasers : Applications and Materials) est constituée de 2 personnels permanents : 1 professeure d'Université et 1 IRHC-CNRS et de 5 doctorant-e-s et d'un post-doctorant. La thématique de recherche concerne les procédés lasers pour la transformation de la matière.
+Sa particularité est d'utiliser un régime d'interaction haute cadence GHz en mode rafale, pionnier et unique en France et très peu répandu à l'internationale. Une autre particularité concerne l'application de ces techniques pour la chirurgie réfractive de la cornée, une activité de valorisation qui s'opère en lien étroit avec des ophtalmologistes.
+L'équipe dispose d'une salle d'expériences adaptée dans notre bâtiment principal (C6).
+Elle comprend, pour l'essentiel, un parc de 3 stations d'usinage femtosecondes et leur métrologie, un prototype pour la chirurgie de la cornée et des appareils de caractérisations (microscope, profilomètre).
+L'ingénieur-e travaillera au sein de l'équipe SLAM sous la responsabilité du chef ou de la cheffe du groupe sur la modification surface et sub-surface, ablation et photo-inscription dans des matériaux conducteurs, diélectriques et/ou semi-conducteurs par lasers ultracourts ainsi que sur le pilotage des instruments et l'automatisation des procédures de caractérisation.
+Des responsabilités particulières pourront être confiées à l'ingénieur-e de recherche en fonction du profil et de l'expérience de la personne recrutée.
+Un laboratoire commun tripartite (TRICORN) a été signé en 2023 avec un industriel du laser, Amplitude, et le centre technologique optique et lasers, Alphanov avec lesquels l'équipe SLAM a une longue tradition de collaboration très fructueuse.

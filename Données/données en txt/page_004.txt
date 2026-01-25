@@ -1,0 +1,107 @@
++
+Liste des concours
+A : Sciences du vivant, de la terre et de l'environnement
+Ingénieur de recherche
+Concours N° 4
+Nbre de postes :
+1
+Emploi-type :
+Ingenieure ou ingenieur biologiste en laboratoire
+Affectation :
+Institut de biologie moléculaire des plantes, STRASBOURG
+Groupe de fonction :
+Groupe 3
+Mission :
+L'ingénieur(e) devra concevoir, développer, adapter et expérimenter de nouvelles
+méthodologies dans le cadre de projets de recherche portant notamment sur
+l'organisation 3D des génomes, la défense du noyau contre des éléments ADN mobiles
+et les processus d'hérédité non-mendélienne tels que l'hérédité épigénétique ou
+les paramutations.
+Il/elle mettra en place dans l'unité un plateau technique d'analyse de la
+structure 3D des génomes et assurera une veille technologique sur les méthodes de
+séquençage des génomes et des épigénomes ainsi que sur les méthodes
+d'analyse bioinformatique des données.
+Activités :
+Activités principales :
+- Déterminer un ensemble cohérent de techniques de biologie nécessaires à la
+réalisation expérimentale de projets scientifiques,
+- Concevoir le développement et conduire en spécialiste la réalisation de
+projets de recherche portant sur l'organisation 3D des génomes, la défense du
+noyau contre des éléments ADN mobiles et/ou les processus d'hérédité non-
+mendélienne tels que l'hérédité épigénétique ou les paramutations, en
+particulier en utilisant le modèle végétal Arabidopsis thaliana,
+- Évaluer et mobiliser les ressources nécessaires aux expérimentations,
+- Conseiller, évaluer et valider les options techniques d'un projet
+scientifique,
+- Expérimenter de nouvelles technologies et établir des protocoles inédits, en
+particulier pour l'étude de la conformation de la chromatine (méthodes de type
+4C, Capture-C ou Hi-C),
+- Valider et interpréter les résultats issus de la réalisation expérimentale de
+projets scientifiques,
+- Proposer de nouvelles pistes en relation avec les résultats obtenus et les
+connaissances du domaine,
+- Assurer une veille scientifique, technologique et bibliographique,
+- Répertorier et gérer les stocks des outils et matériels biologiques utilisés,
+- Former et encadrer le personnel, en particulier les étudiants et chercheurs
+participants aux projet de recherche,
+- Diffuser et valoriser les résultats obtenus sous forme d'articles de
+recherche, ou lors de séminaires (pour diffuser les compétences analytiques du
+plateau technique d'analyse de la structure 3D des génomes notamment),
+- Participer à la rédaction de dossiers dans le cadre de demandes de
+financements pour l'Institut de biologie moléculaire des plantes (IBMP).
+Activités secondaires :
+- Former en interne aux principes et à la mise en œuvre des techniques d'analyse
+3D des génomes et des techniques d'analyse des épigénomes,
+- Appliquer et faire appliquer les règles d'hygiène et de sécurité.
+Compétences :
+Savoirs :
+- Connaissances approfondies en biologie végétale et moléculaire, (génétique des
+plantes, génomique et analyse bioinformatique des données),
+- Très bon niveau bibliographique dans le domaine de l'étude de l'organisation
+3D des génomes,
+- Règlementation en matière d'hygiène et de sécurité,
+- Cadre légal et déontologique,
+- Langue anglaise : B2 à C1 (dans le cadre européen commun de référence pour les
+langues).
+Savoir-faire :
+- Expertise dans plusieurs de ces méthodes : Chromatin Immuno Precipitation
+(ChIP), Reverse ChIP, FISH, Chromosome Conformation Capture (4C, Capture-C, and
+Hi-C), cribles génétiques et techniques d'édition des génomes (en particulier
+pour générer des knock-ins et des grandes délétions),
+- Expertise dans des méthodes de biologie computationnelle, notamment, le
+développement d'applications R-Shiny,
+- Très bonne maitrise de R, ainsi que de Bash, AWK et / ou Python,
+- Maitrise de logiciels tels que GATK, Picard, Samtools, Bedtools, Juicer,
+HiCdat, Git ou Docker,
+- Expertise dans l'analyse des données de génomique et d'épigénomique,
+- Aisance dans la rédaction des documents scientifiques, articles ou demandes de
+financement.
+Savoir être :
+- Etre rigoureux,
+- Faire preuve d'autonomie,
+- Capacité à travailler en équipe,
+- Qualités relationnelles.
+Compétences managériales :
+- Transmission du savoir-faire et des méthodes associées, de techniques pointues
+de biologie, en particulier pour l'analyse de l'organisation 3D des génomes,
+- Savoir encadrer des étudiants de niveau master ou doctorat,
+- Avoir des capacités d'analyse et de prise de décision,
+- Savoir planifier et déléguer,
+- Gérer les relations avec des interlocuteurs, avec les instances de pilotage de
+l'unité,
+- Faire preuve d'intelligence émotionnelle.
+Contexte :
+L'ingénieur-e travaillera à l'institut de biologie moléculaire des plantes du CNRS
+(IBMP), la seule unité propre de recherche du CNRS entièrement dédiée à la
+biologie végétale. L'IBMP est associé à l'Université de Strasbourg. Cette unité
+est constituée de 19 équipes de recherche et d'environ 180 chercheurs, enseignant-
+chercheurs, personnels techniques et contractuels. L'activité de recherche de
+l'Institut est dédiée à l'étude des mécanismes fondamentaux de la vie des plantes.
+Une partie importante des recherches porte sur l'étude de l'organisation
+tridimentionnelle des génomes et sur les régulations épigénétiques. Le modèle
+principal d'étude est la plante Arabidopsis thaliana.
+L'ingénieur-e sera sous la responsabilité hiérarchique directe du directeur de
+l'unité.
+L'IBMP est facilement accessible en transport en commun et un restaurant
+administratif est situé à proximité de l'unité.
+Une partie des activités de l'ingénieur-e sera télétravaillable.

@@ -1,0 +1,98 @@
++
+Liste des concours
+C : Sciences de l'ingénieur et instrumentation scientifique
+Ingénieur de recherche
+Concours N° 30
+Nbre de postes :
+1
+Emploi-type :
+Experte ou expert en développement d'expérimentation
+Affectation :
+Grenoble Images Parole Signal Automatique, ST MARTIN D HERES
+Groupe de fonction :
+Groupe 2
+Mission :
+Assurer la responsabilité technique de l'entrepôt de données ouvertes de
+l'Infrastructure Nationale de Recherche en robotique ROBOTEX 2.0, géré par le
+Gipsa-lab. Apporter son soutien aux expérimentations en robotique au sein de
+ROBOTEX 2.0, et en particulier aux activités expérimentales et partenariales en
+robotique aérienne situées au Gipsa-lab.
+Activités :
+- Assurer la modération et la curation des dépôts de données de la collection
+Robotex2.0 sur l'entrepôt national Recherche Data Gouv. Il s'agit d'assurer
+l'administration fonctionnelle et l'accompagnement des déposants, ainsi que
+l'analyse et la validation des dépôts de données.
+-  Maintenir et faire évoluer la partie matérielle et logicielle de l'entrepôt en
+collaboration avec les instances et services qui les hébergent.
+- Interagir avec l'axe Jumeaux Numériques de Robotex 2.0, ainsi qu'avec les
+différents réseaux thématiques d'ingénieurs répartis dans les laboratoires liés à
+Robotex2.0 (micro-nano robotique, robotique médicale, robotique humanoïde,
+robotique mobile terrestre, robotique aérienne, robotique industrielle et
+robotique XXL).
+- Former et assister les ingénieurs de ces réseaux à la production et à la mise en
+forme de données ouvertes exploitables et valorisables.
+- Communiquer et valoriser les dépôts de données, et travailler au rayonnement
+national et international de l'entrepôt et des productions de données qu'il
+héberge.
+- Conduire une veille technologique en robotique expérimentale, analyser les
+besoins scientifiques en termes d'expérimentation robotique au sein de ROBOTEX2.0.
+-Traduire ces besoins en spécifications techniques et proposer des concepts de
+robots expérimentaux ou des évolutions d'équipements robotiques existants, en
+particulier dans le domaine de la robotique aérienne (robots volants modulaires,
+systèmes de positionnements et de qualification associés).
+Compétences :
+Savoirs fondamentaux:
+- Connaissance approfondie des techniques et sciences de l'ingénieur liées à
+l'automatique, la robotique, la mécatronique, la mesure physique, l'informatique
+embarquée
+- Connaissance approfondie des outils et logiciels liées à la robotique : ROS2,
+Gazebo, Matlab-Simulink temps réel, SOFA, Python, C++
+- Connaissance des outils et logiciels liées à la gestion et publication de
+données : outils web, Dataverse
+- Maitrise de la langue anglaise : B2 (cadre européen commun de référence pour
+les langues)
+- Une connaissance de l'écosystème national de la donnée ouverte de la recherche
+serait appréciée
+- Une connaissance de l'écosystème national de la recherche en robotique serait
+appréciée
+Savoir-faire opérationnels :
+- Avoir une expérience dans la production de données scientifique dans le
+domaine de la robotique
+- Savoir assurer une veille scientifique dans le domaine de la donnée ouverte et
+de la robotique
+- Maitrise des techniques de présentation écrite et orale
+- Une capacité à animer et stimuler une large communauté scientifique serait
+appréciée
+- Une expérience dans le pilotage de projet d'envergure nationale serait
+appréciée
+Savoir être :
+- Savoir interagir avec une grande diversité d'acteurs scientifiques, techniques
+et administratifs
+- Faire preuve de rigueur et avoir le sens de l'organisation
+- Avoir une bonne curiosité intellectuelle et le sens de l'initiative
+Contexte :
+GIPSA-lab est un laboratoire de recherche mixte du CNRS, de Grenoble INP-UGA et de
+l'Université Grenoble-Alpes situé à St Martin d'Hères. Il compte environ 350
+personnes, dont 140 permanents avec 69 enseignants-chercheurs, 34 chercheurs et 37
+ingénieurs et techniciens.
+Il mène des recherches théoriques et appliquées sur l'automatique, le signal, les
+images, la parole, la cognition, la robotique et l'apprentissage.  En s'appuyant
+sur ses plateformes et ses partenariats, GIPSA-lab garde un lien constant avec des
+applications dans des domaines très variés : la santé, l'environnement, l'énergie,
+la géophysique, les systèmes embarqués, la mécatronique, les procédés et systèmes
+industriels, les télécommunications, les réseaux, les transports et véhicules, la
+sécurité et la sûreté de fonctionnement, l'interaction homme-machine, l'ingénierie
+linguistique, les neurosciences, la physiologie et la biomécanique. De par la
+nature de ses recherches, GIPSA-lab est en relation directe et constante avec le
+milieu économique et la société.
+Le laboratoire est porteur de l'Infrastructure Nationale de Recherche en robotique
+ROBOTEX 2.0 et de l'Equipex+ TIRREX. Il a la charge de gérer l'entrepôt de données
+ouverte thématique associé à cette infrastructure ainsi qu'une partie des
+équipements nationaux pour la robotique aérienne.
+Le/la candidat-e intègrera le service plateformes composé de 9 personnels
+permanents, et sera placé-e sous la responsabilité du responsable du service
+plateformes.
+Le/la candidat-e pourra bénéficier de formations et d'un accompagnement pour
+parfaire ses compétences.
+Le/la candidat-e aura la possibilité d'effectuer jusqu'à 2 jours de télétravail
+par semaine.

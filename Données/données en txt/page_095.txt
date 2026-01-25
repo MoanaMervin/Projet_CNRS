@@ -1,0 +1,95 @@
++
+Liste des concours
+D : Sciences humaines et sociales
+Ingénieur d'études
+Concours N° 116
+Nbre de postes :
+1
+Emploi-type :
+Ingenieure ou ingenieur d'études en sciences de l'information géographique
+Affectation :
+Travaux et Recherches archéologiques sur les cultures, les espaces et les sociétés, TOULOUSE
+Groupe de fonction :
+Groupe 3
+Fonction mutualisée avec :
+Géographie de l'Environnement
+Mission :
+L'ingénieur-e d'études en sciences de l'information géographique assurera
+l'acquisition sur le terrain de données spatialisées : artefacts, écofacts et
+données environnementales au moyen de différents instruments, y compris des
+drones. Il procèdera, en étroite collaboration avec les chercheurs et doctorant·es
+des laboratoires TRACES et GEODE, à leur traitement, analyse et à leur restitution
+dans le cadre de diverses actions de diffusion de l'information scientifique. Il
+intégrera le plateau technique P5-TIG-3D (« Télédétection, Imagerie, Géomatique,
+3D ») de la plateforme ArchéoScience du laboratoire TRACES.
+Activités :
+- Participer aux projets de recherche des deux laboratoires depuis leur conception
+jusqu'à leur publication,
+- Concevoir, développer et mettre en œuvre des méthodes et des outils
+d'acquisition et de traitement de données spatiales 2D et 3D adaptées aux objets
+d'étude et aux programmes de recherche soutenus par les membres du laboratoire
+TRACES,
+- Organiser et mettre en forme les bases de données archéologiques et
+environnementales en fonction des différents supports (SGBD, SIG, Webmapping) dans
+le cadre de programmes de recherche de TRACES et de GEODE.
+- Mettre en œuvre un travail d'instrumentations et de mesures physiques dans le
+cadre des terrains d'étude de GEODE,
+-	Participer à la gestion du plateau P5-TIG3D (prêt de matériel,
+maintenance, etc...) et aux prestations de service qui y seront réalisées,
+-	 Transmettre son savoir-faire en participant et/ou organisant des actions
+de formation internes et universitaires orientés sur la géomatiques et les
+méthodes d'acquisition et de traitement de données 2D et 3D à destination des
+chercheur·es, doctorant·es, post-doctorant·es et étudiant·es,
+- Mettre en place une veille technologique sur les outils et méthodes en lien avec
+l'archéomatique et la 3D
+-	Participer à la rédaction des rapports d'opération archéologique auquel
+il-elle collabore et participer aux publications collectives,
+-	Participer aux actions de divulgation scientifiques (publications,
+colloques) dans ses domaines de compétences,
+Compétences :
+Savoirs généraux, théoriques ou disciplinaires:
+-	Connaissances approfondies en archéologie,
+-	Connaissances approfondies en géomatique et 3D (lasergrammétrie,
+photogrammétrie et techniques de relevés par multi-éclairages),
+-	Maîtrise des outils de la géomatique, webmapping et photogrammétrie,
+-	Connaissance en traitement, analyse, visualisation et représentation de
+l'information 2D et 3D,
+-	Connaissance des outils et des techniques en topographie,
+Savoir-faire opérationnels :
+-	Réalisation de géo-traitements en mode vecteur et raster (requêtes
+attributaires et spatiales, croisements des données, analyses de voisinage,
+distribution spatiale, interpolation),
+-	Traitement des données brutes 3D issues de lasergrammétrie,
+photogrammétrie, scanner à lumière pulsée
+-	Maîtrise des systèmes de SIG et webmapping,
+-	Maîtrise des méthodes de relevé topographique en milieu aérien et
+souterrain (station totale, télémètre laser, TLS, DGPS, drones),
+-	Maitrise des acquisitions et traitements de données multi-éclairages
+(RTI, stéréophotométrie),
+-	Maitrise de la prise de vue photographique pour des projets de
+numérisation d'objets et d'environnement 3D,
+-	Être certifier pour le pilotage de drone, à minima disposer du
+certificat « Open A1/A3 »,
+-	Maîtrise de la sémiologie graphique,
+-	Maîtrise des logiciels de DAO,
+-	Maîtrise des techniques de présentation orale et écrite,
+Savoir être:
+-	 Fortes capacités à travailler en équipe,
+-	Autonomie et sens de l'initiative,
+-	Capacité à s'adapter et une certaine polyvalence technique sur le
+terrain,
+Langues : Anglais (lu, parlé, écrit, niveau minimal demandé B1 dans le cadre
+européen de référence), des connaissances en espagnol seront appréciées
+Contexte :
+L'ingénieur-e, archéologue et géomaticien-ne, travaillera dans le cadre des
+activités du plateau P5-TIG-3D de la plateforme ArchéoScience, rattaché au
+laboratoire TRACES et sera sous la responsabilité hiérarchique de la Directrice-
+teur de l'Unité Traces. Il œuvrera pour l'ensemble des équipes et pôles du
+laboratoire TRACES en concertation avec les chercheurs, doctorant·es et post-
+doctorant·es dans le cadre des programmes de recherche portés par ce laboratoire.
+Cette demande est liée au fort développement des activités du plateau P5-TIG-3D et
+de la généralisation des outils et méthodes de géomatique, 3D et webmapping au
+sein du laboratoire TRACES. Ce poste sera mutualisé avec le laboratoire GEODE, qui
+a des besoins en forces vives sur le terrain. Ainsi l'ingénieur-e travaillera avec
+les équipes de chercheurs sur le terrain et il pourra être sollicité pour ses
+compétences en géomatique, en particulier sur le webmaping.

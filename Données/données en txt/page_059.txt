@@ -1,0 +1,93 @@
++
+Liste des concours
+E : Informatique, statistiques et calcul scientifique
+Ingénieur de recherche
+Concours N° 59
+Nbre de postes :
+1
+Emploi-type :
+Cheffe ou chef de projet / experte ou expert en Ingéniérie logicielle
+Affectation :
+Institut de Recherche en Astrophysique et planétologie, TOULOUSE
+Groupe de fonction :
+Groupe 3
+Mission :
+Sous la responsabilité hiérarchique du directeur d'unité et au sein du groupe des
+informaticiens de l'IRAP, le chef-fe de projet ou expert en ingéniérie logicielle
+devra concevoir des solutions en ingénierie logicielle, plus particulièrement des
+logiciels de contrôle d'instrument, superviser l'analyse, le développement, la
+qualification, l'intégration et le déploiement des applications logicielles
+dédiées au contrôle des instruments et données d'environnement. Il/elle sera
+amené-e à animer et coordonner des groupes de travail au sein de consortia
+internationaux.
+Activités :
+ACTIVITES PRINCIPALES :
+- Installer des environnements de développement standardisés en suivant une
+procédure (par exemple sous Fedora)
+- Développer des prototypes logiciels à l'aide d'un framework dédié, mis à
+disposition par l'Observatoire Européen Austral (ESO)
+- Développer et configurer des Interfaces Homme Machine (IHM)
+- Rédiger des documents de conception, des notes techniques et des rapports de
+prototypage en anglais
+- Développer des scripts d'extraction d'informations, de manipulation de fichiers
+- Apporter un support sur l'intégration du logiciel à différents partenaires des
+projets, en France et à l'étranger
+- Participer à la collaboration de développeurs EFISOFT pour les instruments ELT
+(Extremely Large Telescope)
+ACTIVITES ASSOCIEES :
+- Rendre compte de l'avancement au chef de projet/au consortium, savoir présenter
+des résultats
+- Assumer quand c'est nécessaire le rôle de chef de projet ou de responsable de
+work package dans des collaborations.
+- Spécifier, mettre en œuvre et faire respecter les règles de codage et celles
+d'assurance qualité logicielle
+- Encadrer des stagiaires, des CDD ou superviser des prestataires
+Compétences :
+- Maitrise de la programmation en langage de scripts et en langage objet, par
+exemple en Python, C, C++ ou tout autre langage de programmation.
+- Maîtrise des outils de développements logiciel notamment la gestion de versions
+avec Git, et des outils d'intégration continue avec GitLab/GitHub
+- Autonomie et sens de l'organisation pour les activités quotidiennes,
+- Expérience des systèmes d'exploitation Linux et Windows
+- Expérience de création d'IHM, par exemple avec Qt/PyQt ou tout autre
+environnement
+- Connaissance d'outils de conceptions et de tests logiciels
+- Connaissance de l'utilisation de Docker et des machines virtuelles avec par
+exemple VirtualBox
+- Expérience pratique d'intégration et de déploiement de logiciels
+- Expérience préalable dans un projet logiciel de taille conséquente
+- Capacité à se conformer à un cadre logiciel standardisé
+- Aptitude à la communication et au recueil des besoins
+- Autonomie et sens de l'organisation pour les activités quotidiennes,
+- Opiniâtreté pour chercher seul-le la solution à un problème technique
+- Capacité de communication en anglais à l'oral (Niveau B2 selon le cadre européen
+de référence) et à l'écrit (rédaction de documentation)
+Une compétence en programmation d'automates (PLC) en langage Structured Text (ST)
+serait un plus
+Des connaissances en astronomie et/ou astrophysique seraient un plus.
+Contexte :
+L'Institut de Recherche en Astrophysique et Planétologie (IRAP) est une Unité
+Mixte de Recherche du CNRS, de l'Université de Toulouse Paul Sabatier et du CNES,
+comprenant environ 280 agents dont 70 IT.
+Les objectifs scientifiques de l'IRAP concernent l'étude et la compréhension
+l'Univers et de son contenu : la Terre en tant que planète, son environnement
+spatial ionisé, le soleil et ses planètes, les étoiles et leurs systèmes
+planétaires, le milieu interstellaire, les galaxies, les tous premiers astres et
+le Big Bang primordial. Avec un effectif de personnels techniques qualifiés dans
+le domaine de la conception, la construction, l'intégration et l'exploitation
+d'instruments au sol et dans l'espace ainsi que d'expériences de laboratoire
+permettant de caractériser les processus physiques, l'IRAP est un des pôles
+majeurs de l'astrophysique sol-espace en France.
+L'ingénieur.e fera partie du groupe des informaticiens de l'IRAP qui regroupe une
+vingtaine de permanents, CDD et apprenti.
+Il/elle sera intégrée à la structure EFISOFT de l'INSU (ELT French instrument
+control software) qui travaille sur des logiciels standardisés par l'ESO pour les
+futurs instruments de l'ELT.
+Il/elle s'intègrera dans une ou plusieurs équipes projets autour de la thématique.
+L'ingénieur-e travaillera sur le campus de l'Université Paul Sabatier. Le poste
+proposé se situe dans un secteur relevant de la protection du potentiel
+scientifique et technique (PPST) et nécessite donc, conformément à la
+réglementation une autorisation délivrée par l'autorité compétente du MESR.
+Des déplacements en France et à l'étranger sont à prévoir, pour la participation à
+des réunions, de revues ou pour le déroulement d'activités techniques (lors des
+intégrations logicielles par exemple).

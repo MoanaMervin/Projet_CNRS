@@ -1,0 +1,84 @@
++
+Liste des concours
+E : Informatique, statistiques et calcul scientifique
+Ingénieur d'études
+Concours N° 134
+Nbre de postes :
+1
+Emploi-type :
+Ingenieure statisticienne ou ingenieur statisticien
+Affectation :
+Laboratoire Parole et Langage, AIX EN PROVENCE
+Groupe de fonction :
+Groupe 3
+Mission :
+L'ingénieur.e statisticien.ne concevra et mettra en œuvre des méthodologies
+statistiques adaptées à la diversité et à la complexité des données traitées au
+LPL. Il/elle accompagnera et conseillera les chercheurs dans les différentes
+étapes de traitement.
+Activités :
+- Apporter un soutien et une expertise sur les techniques statistiques les plus
+utilisés dans le cadre des recherches sur la parole et le langage (tests
+paramétriques et non-paramétriques, modèle linéaire à effets mixtes, modèles
+bayésiens ...)
+- Organiser la chaîne de traitement des données, de la collecte à l'analyse
+statistique, en veillant à anticiper la structure et la quantité de données
+nécessaires dès la conception de l'étude
+- Concevoir et développer des scripts et des programmes informatiques spécifiques
+aux données traitées (Python, R, MATLAB, Java, ...)
+- Accompagner les membres du laboratoire dans l'utilisation des logiciels dédiés
+(R, Excel, Statistica, ...)
+- Apporter un soutien et un conseil aux utilisateurs pour mettre en œuvre les
+méthodes et outils statistiques adaptés compte tenu de la problématique et des
+données à analyser
+- Rédiger des documentations pour les utilisateurs des chaînes de traitement et
+organiser des formations pour assurer un transfert de compétences
+- Participation à la valorisation scientifique des analyses statistiques
+(publications, présentations scientifiques)
+- Veille de la règlementation et des normes de protection des données statistiques
+et personnelles
+Compétences :
+Connaissances
+- Connaissance approfondie des techniques statistiques et informatiques de
+collecte et de traitement de données
+- Connaissance de la règlementation et des normes en matière de protection des
+données statistiques
+- Notions en Sciences du langage appréciées
+- Langue anglaise : B1 à B2 (cadre européen commun de référence pour les langues)
+Savoir-faire
+- Maîtrise des outils spécifiques à l'activité, en particulier Logiciel R et
+Rstudio et Matlab
+- Bonne maîtrise des langages de programmation Python, R, java, ...
+-Capacité à organiser son travail en fonction de la charge qui peut être variable
+Savoir-être
+- Qualités relationnelles et capacité à travailler en équipe
+- Intérêt et curiosité pour les expérimentations du LPL
+- Capacité d'adaptation
+Contexte :
+Le laboratoire Parole et Langage (CNRS et AMU) a pour objectif principal de mieux
+comprendre les processus en jeu dans la production, la perception, et la
+compréhension du langage.
+Ces recherches sont prioritairement menées dans un cadre expérimental combiné à
+des études quantitatives portant sur de vastes collectes de données de nature très
+variée. Le LPL s'est forgé une identité scientifique dont l'interdisciplinarité
+constitue un élément clé. Il rassemble des chercheur-e-s de différentes origines
+scientifiques (sciences du langage, psycholinguistique, neurosciences, didactique,
+santé, informatique, physique).
+Le laboratoire dispose d'une plateforme expérimentale (CEP, labellisée Plateforme
+Aix-Marseille) qui rassemble une large variété d'instruments (EEG, articulographe
+5D, systèmes de suivi des mouvements oculaires, système EVA, chambre sourde avec
+systèmes d'enregistrement audio-visuel, etc.). 130 personnes (dont plus de 80
+membres permanents) composent cette unité. Le personnel d'appui à la recherche est
+composé de 15 personnes dont 9 sont directement impliqués dans l'accompagnement
+scientifique et technique des projets de recherche (5 IR, 2 AI et 2 T). La
+personne recrutée sera sous la responsabilité de l'IR responsable du pôle «
+science des Données »qui comporte deux autres IR. Elle pourra en outre disposer
+d'un jour de télétravail à compter du 6ème mois sur le poste.Ce pôle propose un
+soutien méthodologique et technique aux chercheurs dans le cadre de leurs projets.
+Il s'agit d'identifier, d'adapter et de mettre en œuvre les méthodes les plus
+pertinentes permettant de faire le lien entre les questions
+du chercheur et ses données. Le pôle fournit conseils et expertises dans plusieurs
+spécialités des Science des Données, notamment dans les domaines de l'intelligence
+artificielle et de l'apprentissage automatique, de la modélisation mathématique,
+de l'analyse statistique, de l'analyse des signaux neurophysiologiques, signal de
+parole

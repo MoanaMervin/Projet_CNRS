@@ -1,0 +1,110 @@
++
+Liste des concours
+D : Sciences humaines et sociales
+Ingénieur de recherche
+Concours N° 41
+Nbre de postes :
+1
+Emploi-type :
+Ingenieure ou ingenieur de recherche en production, traitement et analyse de données
+Affectation :
+Maison des sciences de l'homme Ange Guépin, NANTES
+Groupe de fonction :
+Groupe 2
+Mission :
+Le/la Responsable du Pôle Numérique encadre l'équipe du pôle et coordonne son
+activité, en lien étroit avec la Direction de l'Unité. Il/elle assure la
+conception et le pilotage des dispositifs de recherche soutenus, accompagnés ou
+portés par l'UAR ainsi que la mise en œuvre des outils et des méthodes d'analyse
+de mise en forme de sources et de données. Il/elle accompagne la communauté «
+Sciences Humaines et Sociétés » (SHS) ligérienne dans l'élaboration, la mise en
+œuvre et le développement des aspects numériques de ses projets de recherche, en
+lien avec l'Infrastructure de Recherche Nationale Huma-Num (HN).
+Activités :
+RESPONSABLE DU PÔLE NUMÉRIQUE
+- Mettre en œuvre la stratégie
+- Encadrer les ingénieurs
+- Contribuer à la coordination du SHS Datalab
+- Développer une vision prospective sur l'évolution des méthodes et outils
+- Piloter l'offre de services en relation avec les établissements tutelles
+- Élaborer des outils de suivi et de pilotage
+SOUTIEN A LA RECHERCHE INTERDISCIPLINAIRE
+- Accompagner un dispositif de recherche, superviser l'exploitation pour les
+projets soutenus
+- Assurer le rôle de correspondant de l'IR « étoile » Huma-Num, promouvoir ses
+outils
+- Expertiser les besoins exprimés, évaluer leur pertinence par rapport aux
+orientations scientifiques de la MSH
+- Être en appui aux projets de recherche soutenus par la MSH, en respectant leur
+cadre contractuel
+- Accompagner sur les enjeux de FAIRisation avec les instances dédiées des
+établissements tutelles
+- Aider au choix des outils de traitement, d'analyse critique et de diffusion
+des sources
+- Recueillir, structurer et traiter des données textuelles et iconographiques,
+en assurer l'analyse
+- Valoriser son champ d'expertise (publications scientifiques)
+- Transférer ses compétences dans le cadre d'actions de formation
+CONTRIBUER A L'ANIMATION ET A LA VALORISATION DE LA RECHERCHE
+- Contribuer aux réseaux professionnels nationaux et/ou internationaux, à
+l'animation scientifique sur les sites
+- Participer aux initiatives de Science Ouverte engagées par les tutelles
+- Piloter et coordonner les journées « Ecritures alternatives de la recherche en
+SHS »
+- Organiser des manifestations scientifiques
+Compétences :
+SAVOIRS / CONNAISSANCES
+- Bonne culture scientifique du champ des SHS
+- Connaissance approfondie du champ des humanités numériques, de l'éco-système
+de l'édition scientifique numérique
+- Connaissance approfondie du Langage de modélisation, manipulation et
+publication de données
+- Connaissance approfondie des méthodes et outils en production de données
+- Connaissance des méthodes et outils en traitement et analyse des données, d'un
+ou plusieurs langages de scripts (R, Python), outils et techniques de nettoyage
+de données, outils d'analyse
+- Connaissance du système de gestion de base de données
+- Connaissance des missions et services de l'IR « étoile » HN
+- Langue anglaise : niveau B2
+- Disposer d'un Doctorat en Lettres, Langues et Sciences Humaines et Sociales
+(LLSHS) serait un atout supplémentaire
+SAVOIR-FAIRE
+- Aptitude au management, savoir piloter des projets structurants
+- Capacité à communiquer avec les communautés
+- Aptitude à travailler dans un environnement interdisciplinaire
+- Aptitude à collaborer dans des programmes d'envergure (ERC, ANR, CPER)
+- Aptitude et goût pour la formation, capacité d'écoute et sens de la pédagogie
+- Maitriser un ou plusieurs outils de bases de données, de bibliothèques
+numériques...
+- Savoir utiliser les principaux outils et services proposés par l'IR « étoile »
+HN
+- Savoir élaborer des outils de collecte et de traitement des données
+- Maîtriser les normes de documentation de données, savoir les mettre en œuvre
+- Savoir utiliser des langages et outils de rédaction et de publication multi-
+supports
+- Qualités rédactionnelles
+SAVOIRS-ÊTRE
+- Savoir rendre compte
+- Savoir prioriser
+- Sens du dialogue
+- Bon relationnel
+Contexte :
+Le CNRS, acteur majeur de la recherche publique et de l'innovation, constitue
+l'une des tutelles de la MSH Ange Guépin.
+Celle-ci, fondée en 1993, soutient les recherches interdisciplinaires, en
+particulier dans le domaine des Sciences Humaines et Sociales. Elle finance des
+projets de recherche, accueille des chercheurs afin de leur offrir un
+environnement stimulant et les accompagne durant toutes les phases de leur
+recherche, depuis le montage, jusqu'à la valorisation. Elle accompagne également,
+en tant que structure fédérative régionale, les projets stratégiques impliquant
+la recherche en SHS, en lien avec les partenaires institutionnels et les acteurs
+du territoire (projet Contrat Plan Etat Région, convention cadre régionale...).
+Située à Nantes, la MSH déploie son activité sur les universités ligériennes du
+Mans, Angers, Nantes (27 laboratoires, 1000 chercheurs). A ce titre, des
+déplacements fréquents sont à prévoir sur les sites ainsi qu'au niveau national
+en tant que membre de différents réseaux de plateformes technologiques du Réseau
+national des MSH. Le Pôle Numérique est composé de 3 ingénieurs, de 2
+plateformes, Huma-Num Loire et Progedo Loire, ainsi que d'une cellule d'édition
+électronique.
+Le/la Responsable du Pôle Numérique sera placé-e sous l'autorité de la Secrétaire
+Générale de l'Unité.

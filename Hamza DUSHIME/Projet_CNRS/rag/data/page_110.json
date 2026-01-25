@@ -1,0 +1,21 @@
+{
+  "source_file": "page_110.html",
+  "bap": "C : Sciences de l'ingénieur et instrumentation scientifique",
+  "grade": "Ingénieur d'études",
+  "concours_label": "Concours N° 112",
+  "concours_num": "112",
+  "nb_postes": "1",
+  "emploi_type": "Ingenieure electronicienne ou ingenieur electronicien",
+  "nb_postes_detectes": 1,
+  "postes": [
+    {
+      "poste_num": 1,
+      "affectation": "Institut universitaire des systèmes thermiques industriels, MARSEILLE 13",
+      "groupe_fonction": "Groupe 3",
+      "mission": "Assurer la conception, le développement et la mise au point de dispositifs\nélectroniques dédiés aux différents montages expérimentaux développés au sein du\nlaboratoire IUSTI UMR 7343. Assurer la mise en service et la maintenance de ces\ndispositifs.",
+      "activites": "- Élaborer les spécifications techniques des besoins et rédiger les cahiers\ndes charges fonctionnels ;\n- Étudier des éléments des systèmes électroniques, prise en charge de la\nconception et le développement de cartes électroniques (Composants programmables,\nFPGA, microcontrôleurs, circuits intégrés) et mener les tests associés ;\n- Réaliser l'interfaçage de capteurs ou d'actionneurs, intégrant\nl'informatique de pilotage et d'acquisition ;\n- Transférer des connaissances et savoir-faire techniques en interne et en\nexterne ; interagir avec les chercheurs et étudiants pour la définition des\nbesoins et usages spécifiques de leurs dispositifs expérimentaux.\n- Procéder aux diagnostics des pannes et gérer la maintenance des\ndispositifs électroniques existants ;\n- Rédiger les documents techniques liés à la réalisation et les rapports\nd'essais des dispositifs ;\n- Appliquer et faire appliquer les règles de sécurité et d'hygiène.",
+      "competences": "Savoirs:\nConnaissance générale de l'électronique, en particulier les principes de\nfonctionnement des capteurs et actionneurs, et les protocoles d'interfaçage.\nConnaissance générale des technologies des circuits programmables et des\nmicrocontrôleurs.\nConnaissance en programmation logiciel.\nSavoir élaborer des spécifications techniques des besoins en vue de la rédaction\nd'un cahier des charges fonctionnelles.\nSavoir-faire :\nChoisir les composants adaptés aux contraintes, mettre en œuvre des outils et des\nméthodes de traitement numérique ou analogique du signal,\nMettre en œuvre les techniques de mesures électroniques,\nPiloter un projet.\nSavoir-être :\nAutonomie\nrigueur\nqualités relationnelles affirmées\ncapacité à travailler en équipe\ncapacités d'adaptation aux besoins\nsavoir gérer les priorités\nsens du service à la recherche.",
+      "contexte": "L'IUSTI est un laboratoire de 145 personnes réparties en 3 axes de recherche et 3\nservices support à la recherche (Gestion-Administration - Support expérimental -\nCalcul scientifique). Situé sur le Campus Etoile - Technopole de Château-Gombert,\nses tutelles sont le CNRS et AMU. Le service instrumentation scientifique (3\npersonnes) associé au service Mécanique (3 personnes) constituent le service\nSupport expérimental. Le laboratoire IUSTI comporte une forte composante\nexpérimentale, avec des dispositifs allant de grandes installations (soufflerie\nsupersonique, plateforme tubes à chocs, caisson à feux) à des expériences en salle\nportant sur des sujets et thématiques très variées (thermique, hydrodynamique,\nrhéologie, biomécanique¿). Une partie importante du temps de travail sera\nconsacrée aux nombreux projets de recherche (ERC, ANR, Amidex...) portés par le\nlaboratoire dans lesquels on souhaite développer des instruments originaux.\nLa personne recrutée pourra bénéficier du réseau d¿électroniciens présents sur le\nsite (Fédération CNRS et Institut IMI), du système de suivi de projet (RedMine)\nmis en place et des formations nécessaires. Une partie des activités peut être\nréalisée en télé-travail, celles-ci seront à définir avec le responsable de\nservice. Le laboratoire est en zone à régime restrictif (ZRR). Le laboratoire est\naccessible en transports en communs."
+    }
+  ]
+}

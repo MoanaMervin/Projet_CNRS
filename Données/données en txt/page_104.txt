@@ -1,0 +1,66 @@
++
+Liste des concours
+C : Sciences de l'ingénieur et instrumentation scientifique
+Ingénieur d'études
+Concours N° 106
+Nbre de postes :
+1
+Emploi-type :
+Ingenieure ou ingenieur en conception instrumentale
+Affectation :
+Centre d'Énergétique et de Thermique de Lyon, VILLEURBANNE
+Groupe de fonction :
+Groupe 3
+Mission :
+Au sein du service instrumentation, l'ingénieur en techniques instrumentales sera
+chargé de développer des éléments de bancs d'essais et leur instrumentation, pour
+l'ensemble des projets de recherche du CETHIL
+Activités :
+- Prendre part aux projets de recherche expérimentaux du laboratoire, leur
+suivi et leur élaboration
+- Collecter les nouveaux besoins, planifier et hiérarchiser des
+interventions dans les projets
+- Assurer la coordination avec les autres services techniques du laboratoire
+- Encadrement d'un assistant ingénieur
+- Conception, développement ou évolution de certaines parties d'un
+dispositif expérimental : chaînes de mesure (du capteur à l'acquisition des
+données), systèmes de chauffage ou de refroidissement, de pilotage, de mise en
+sécurité, :
+- Elaboration de cahiers des charges
+- Proposition de choix de fournisseurs et de choix technologiques dans les
+systèmes mis en œuvre
+- Réalisation et qualification de solutions techniques opérationnelles
+- Etalonnage des appareils
+- Formation des utilisateurs
+- Ecriture de procédures d'utilisation
+- Maintenance occasionnelle de systèmes existants et/ou développés et
+assistance technique aux chercheurs
+- Préparation d'échantillons
+Compétences :
+Savoirs / connaissances principales
+- Connaissance générale des techniques de mesures physiques et des
+principes, applications et mise en œuvre des principaux capteurs de mesure
+- Connaissances de base en électronique, sur le conditionnement des signaux
+- Connaissances des logiciels et des langages de programmation pour
+l'acquisition de données et l'interfaçage
+Savoir-faire
+- Maîtriser les techniques expérimentales
+- Organiser et gérer les priorités
+- Appliquer et faire appliquer les règles d'hygiène et de sécurité
+- Interfaçage de cartes électroniques avec les capteurs (savoir-faire
+souhaité)
+- Assurer une veille
+Savoirs-être
+- Esprit coopératif, sens du travail en équipe
+- Bon relationnel
+- Réactivité
+- Sens de l'organisation
+Contexte :
+Le CETHIL est une Unité Mixte de Recherche du CNRS, de l'INSA et de l'UCBL,
+regroupant environ 100 personnes. Ses activités couvrent l'ensemble de la
+thermique et de l'énergétique, sur une large gamme de températures et d'échelles
+spatiales. Le laboratoire bénéficie d'un service d'appui a¿ la recherche composé
+de trois équipes : fabrication, instrumentation et informatique. L'ingénieur(e)
+sera intégré(e) à l'équipe instrumentation. Le laboratoire est situé sur le campus
+de la Doua, qui est desservi par les transports en commun (bus, tramway). Un
+service de restauration de proximité est proposé, sur le site du CNRS.

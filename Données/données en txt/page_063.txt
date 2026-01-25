@@ -1,0 +1,55 @@
++
+Liste des concours
+E : Informatique, statistiques et calcul scientifique
+Ingénieur de recherche
+Concours N° 63
+Nbre de postes :
+1
+Emploi-type :
+Experte ou expert en information statistique
+Affectation :
+Laboratoire de Biométrie et Biologie Evolutive, VILLEURBANNE
+Groupe de fonction :
+Groupe 3
+Mission :
+La personne recrutée sera en charge du développement et de la mise en œuvre de méthodes et outils pour l'analyse de données en écologie et évolution, et réalisera des formations internes.
+Activités :
+- Contribution au développement méthodologique du laboratoire à l'interface entre modélisation, statistique et/ou apprentissage automatique dédiés à la biologie.
+- Veille scientifique pour l'identification d'approches nouvelles en statistiques ou apprentissage automatique et leur mise en œuvre logicielle.
+- Participation à des projets de recherche au sein du laboratoire, ayant une composante forte en méthodologie statistique et/ou analyse de données.
+- Animation collective sur les questions d'analyse de données, de statistiques, et/ou d'apprentissage automatique (journal club, peer coding, formation interne, groupes de travail, etc).
+- Accompagnement des études expérimentales (aide à la planification, modélisation des données, rédaction).
+- Assistance et soutien technique personnalisé sur les questions d'analyse de données et de statistiques auprès des équipes de recherche du laboratoire.
+Compétences :
+Savoir et savoir-faire :
+- Connaissances théoriques en statistiques générales et en modélisation probabiliste et/ou connaissances des développements récents en apprentissage statistique et en IA.
+- Expérience pratique en analyse de données empiriques.
+- Expertises parmi les thèmes suivants :
+Inférence bayésienne, vraisemblance pénalisée,
+Deep learning, IA générative, modèles de fondation,
+Sélection de modèle (validation croisée, critères d'information, test de ratio de vraisemblance),
+Tests multiples, FDR, inférence post sélection,
+Modèles mixtes, modèles mixtes généralisés (GLMM),
+Design expérimental,
+Inférence causale,
+Intégration de données multimodales,
+Études d'association,
+Données multivariées, réduction de dimension, apprentissage non supervisé.
+- Connaissance des outils de développement d'applications et de calcul scientifique (gestion de version).
+Savoir être :
+- Capacité à s'approprier de nouvelles techniques et connaissances en statistiques et en apprentissage automatique.
+- Capacité à animer et emmener un collectif sur les compétences citées préalablement, à développer et réaliser des formations internes, et à encadrer des étudiants.
+- Intérêt pour la biologie quantitative, l'écologie et, plus largement, les sciences du vivant.
+Contexte :
+Les activités du LBBE s'appuient sur trois piliers :
+- des développements méthodologiques en statistique, informatique et mathématique pour la modélisation du vivant;
+- l'écologie et l'évolution abordées de l'échelle moléculaire à l'échelle des communautés;
+- la santé humaine et animale.
+Ces trois piliers sont au cœur d'enjeux scientifiques et sociétaux pour faire face à l'intégration de données hétérogènes dans un contexte de crise de la biodiversité et d'approche globale de la santé.
+Le laboratoire et ses 220 membres est organisé en quatre départements scientifiques hébergeant les équipes de recherche et trois pôles administratifs et technologiques. La personne recrutée rejoindra le Pôle Informatique, sur le campus LyonTech-la DOUA, qui rassemble les 8 personnels permanents en soutien à la recherche en informatique et bioinformatique.
+Le Pôle Informatique travaille en forte interaction avec les équipes de recherche, et est partie prenante de la réflexion stratégique du laboratoire. Les activités du pôle comprennent trois missions :
+- la gestion des infrastructures de calcul et de stockage (cluster de 1200 cœurs de calcul et 1Pb de stockage / cloud de 224 vcpu et 400 Tb),
+- le développement de logiciels et de services,
+- l'analyse de données.
+L'activité du pôle comporte une part de recherche fondamentale en informatique, motivée par les questions de bioinformatique, de génomique et d'écologie évolutive, sur des enjeux d'algorithmique, d'apprentissage automatique et de deep learning, ou de développement de langages dédiés. Cette activité génère des besoins en développement, appui aux projets et formation au sein de l'unité.
+Le LBBE est une unité veillant à la qualité de vie au travail. Une partie des activités est télétravaillable. Enfin, la personne recrutée pourra bénéficier des structures de garde d'enfants, des activités sportives et culturelles offertes par les tutelles de l'unité.

@@ -1,0 +1,63 @@
++
+Liste des concours
+D : Sciences humaines et sociales
+Ingénieur d'études
+Concours N° 118
+Nbre de postes :
+1
+Emploi-type :
+Ingenieure ou ingenieur d'études en sciences de l'information géographique
+Affectation :
+Centre de recherche sur le monde iranien : Langues, cultures et sociétés de l'Antiquité à nos jours, VILLEJUIF
+Groupe de fonction :
+Groupe 3
+Fonction mutualisée avec :
+Institut Français de Recherche sur l'Asie de l'Est
+Mission :
+L'ingénieur/e recruté(e) sera responsable des travaux cartographiques et graphiques multi-thématiques réalisés au sein des deux laboratoires, le Cermi et l'Ifrae. Il/Elle en assurera la conception et la réalisation en interaction avec les membres de ces deux unités de recherche aréales et pluridisciplinaires en sciences humaines et sociales.
+Activités :
+L'ingénieur/e participera aux projets de recherche des deux unités. Il/elle sera fortement encouragé(e) à proposer de nouveaux dispositifs et méthodologies dans son domaine de spécialisation. Il/elle s'impliquera également dans les actions de valorisation des résultats de la recherche.
+-Concevoir et gérer des bases de données géographiques avec les outils adaptés : Système d'Information Géographique (SIG).
+-Produire des cartes en suivant les règles de la sémiologie graphique.
+-Adapter la conception et la réalisation de ses productions aux différents supports de publication (papier, numérique, internet).
+-Constituer des ensembles d'information interopérables et pérennes.
+-Exercer une veille technologique dans les domaines des SIG et de la cartographie en ligne (Webmapping).
+-Travailler avec des prestataires externes pour le développement de certaines applications et assurer une bonne coordination de leur travail avec le sien (réalisation des cahiers des charges).
+-Transmettre ses compétences à ses collègues chercheurs, enseignants-chercheurs et doctorants.
+-Participer à la valorisation des résultats (colloques, séminaires, publications, salons...)
+-Participer à la vie des laboratoires
+-Outre la production de travaux cartographiques, l'agent exercera des activités de soutien auprès des collègues chercheurs, enseignants-chercheurs et doctorants des deux laboratoires sur les méthodes et techniques en traitement et analyse des données.
+L'agent pourra aussi participer à la publication textuelle et graphique des sites internet dédiés aux projets de recherche et des sites propres des deux UMR, en appui de l'ingénieur de recherche (IR) responsable des activités éditoriales du CeRMI et des gestionnaires de l'IFRAE.
+Compétences :
+Savoirs :
+-Maitrise des logiciels SIG (Qgis et/ou ArcMap)
+-Maitrise d'un logiciel de DAO vectoriel (Illustrator ou equivalent libre)
+-Bonne connaissance des règles de la sémiologie graphique
+-Connaissance de l'environnement PostGres-PostGis
+-Compétences en PHP, HTML, CMS
+-Une expérience dans le domaine de l'analyse quantitative serait appréciée
+-Connaissance de l'anglais scientifique et technique : niveau B2 (cadre européen commun de référence pour les langues)
+-Savoir travailler en équipe et dans un environnement international, multiculturel et multilingue (anglais, français principalement)
+Savoirs faire :
+-Appliquer les méthodes et techniques des sciences de l'information géographique
+-Mettre en œuvre la sémiologie graphique et les règles de typographie
+-Utiliser des logiciels de DAO (pour la réalisation de cartes thématiques)
+-Constituer des bases de données et des supports graphiques permettant leur analyse.
+-Utiliser les techniques de présentation
+Les méthodes et techniques devront être adaptées à la thématique de recherche et au mode de diffusion, physique ou numérique.  Des formations seront proposées.
+Savoirs-être :
+-Faire preuve d'autonomie, de capacité à travailler en équipe et avec les doctorants
+-Rigueur et organisation, capacité à hiérarchiser les tâches
+-Avoir une aptitude à la transmission
+-Avoir du sens critique et des capacités de conceptualisation
+-Faire preuve de curiosité intellectuelle
+-Familiarité avec le travail dans un environnement international, multilingue et multiculturel
+Contexte :
+1) le cadre de travail :
+L'agent recruté partagera son temps de travail à égalité entre les deux UMR. Calculé sur une base hebdomadaire, cette répartition du temps de travail pourra être appliquée avec une certaine flexibilité selon les besoins. L'unité de rattachement administratif de l'agent est le CeRMI.
+L'agent recruté travaillera sur le campus du CNRS Paris Ile-de-France-Villejuif, qui est situé au 7 rue Guy Moquet à Villejuif. Il disposera d'un poste de travail dans les locaux du CeRMI. Le campus dispose d'un parking, d'un service de restauration et est accessible en métro M7 (Paul Vaillant-Couturier), M14 (Villejuif-Gustave Roussy) ou en bus 131, 162, 185.
+L'UMR 8041 CeRMI est un laboratoire pluridisciplinaire consacré à l'étude de léaire culturelle iranienne et centrasiatique (https://www.cermi.cnrs). Elle a quatre tutelles : CNRS, Université Sorbonne nouvelle, Inalco et EPHE-PSL. L'unité comprend une quarantaine de membres chercheurs, enseignants-chercheurs, ITA, post-doctorants et doctorants.
+L'UMR 8043 IFRAE est un laboratoire pluridisciplinaire consacré à l'étude de l'Asie de l'est (https://ifrae.cnrs.fr). Elle a trois tutelles : CNRS, Inalco et Université Paris Cité. L'UMR comprend une soixantaine de chercheurs et enseignants-chercheurs, environ 90 doctorants et post-doctorants, ainsi que deux gestionnaires. Ses bureaux sont partagés entre le site de Villejuif et celui de la Maison de la recherche de l'Inalco, 2 rue de Lille, 75007 Paris.
+L'agent exercera ses fonctions sous l'autorité hiérarchique et fonctionnelle des directeurs des deux UMR ; les congés seront validées par la direction du CeRMI (affectation administrative).
+2) les contraintes liées au poste :
+L'ingénieur(e) pourra être amené(e) à se déplacer sur les autres sites des tutelles en cas de manifestation scientifique ou autre motif.

@@ -1,0 +1,40 @@
++
+Liste des concours
+D : Sciences humaines et sociales
+Ingénieur d'études
+Concours N° 115
+Nbre de postes :
+1
+Emploi-type :
+Ingenieure ou ingenieur d'études en production, traitement, analyse de données et enquêtes
+Affectation :
+Laboratoire de Linguistique Formelle, PARIS 13
+Groupe de fonction :
+Groupe 2
+Mission :
+Au sein du Laboratoire de linguistique formelle, l'ingénieur-e dirigera la gestion des salles d'expérimentation et de la plateforme expérimentale. Il ou elle contribuera aux activités de constitution et d'exploitation de données linguistiques et psycholinguistiques, en collaboration étroite avec les chercheur-es concerné-es du laboratoire.
+Activités :
+- Participer à la conception de la manipulation et à la mise au point des protocoles expérimentaux.
+- Collaborer avec les chercheurs et les doctorants pour la collecte et l'analyse de données écrites et orales sur des langues variées,
+- Assurer la collecte de données expérimentales sur des langues variées.
+- Assurer les analyses statistiques, en collaboration avec les chercheur-es concerné-es.
+- Participer à des formations de niveau master et doctorat.
+- Assurer une veille et fournir une expertise sur les questions d'éthique de la recherche en sciences du langage et de la protection des données.
+Compétences :
+Savoirs :
+- Compétences avancées en psychologie du langage et/ou en linguistique expérimentale
+- Bonne connaissance des statistiques inférentielles
+- Bonne connaissance des réglementations en vigueur (RGPD, déontologie scientifique,...) et des enjeux éthiques de la recherche expérimentale sur le langage
+- Connaissance de la conception et la mise en place de campagnes de communication et de valorisation scientifique ;
+- Anglais niveau B2 écrit et oral
+Savoirs faire :
+- Maîtrise de l'analyse des données linguistiques orales et écrites.
+- Maîtrise de la conception et de la programmation d'expériences, en laboratoire (oculomètre, EEG) et sur internet (Ibex).
+- Maîtrise d'au moins un logiciel d'analyse statistique (R, SPSS, STATA,...).
+Savoirs-être :
+- Autonomie et capacité à travailler en équipe et en réseau
+- Capacité à rendre compte et à documenter ses pratiques
+- Capacité à travailler aussi bien avec des débutant-es qu'avec des expert-es
+Contexte :
+L'ingénieur-e travaillera dans les locaux du Laboratoire de Linguistique Formelle, bâtiment Olympe de Gouges de l'Université Paris Cité, Paris 13e. Il ou elle intégrera le service d'ingénierie scientifique au sein duquel il-elle collaborera avec un IGR BAP D, sous la dépendance hiérarchique directe de la direction de l'unité.
+Le LLF rassemble une communauté de plus de 70 personnes et comporte 33 membres permanents dont 3.5 ITA. Il mène des activités en linguistique descriptive, théorique, computationnelle et expérimentale, ainsi que plus ponctuellement en psycholinguistique et en informatique.

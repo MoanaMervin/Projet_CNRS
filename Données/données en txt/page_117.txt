@@ -1,0 +1,84 @@
++
+Liste des concours
+B : Sciences chimiques et science des matériaux
+Ingénieur d'études
+Concours N° 95
+Nbre de postes :
+1
+Emploi-type :
+Ingenieure ou ingenieur en science des matériaux / caractérisation
+Affectation :
+Institut de Science des Matériaux de Mulhouse, MULHOUSE
+Groupe de fonction :
+Groupe 3
+Mission :
+L'ingénieur-e d'études sera en charge de la caractérisation de la réactivité
+photochimique de systèmes photosensibles. Il s'agira, en forte interaction avec
+les membres de l'axe PhotoChimie Moléculaire et PhotoPolymérisation (PM2P),
+d'assister ou conduire des campagnes d'expérience sur des systèmes photosensibles
+dans des procédés et réactions de photopolymérisation.
+Le design de structure chimique par modélisation moléculaire sera aussi réalisé.
+Activités :
+- Définir et mettre au point des protocoles expérimentaux d'analyse et
+participation aux campagnes d'expérience,
+- Étudier par modélisation moléculaire des réactions de photopolymérisation :
+gestion complète des calculs ab-initio et DFT (Density Functional Theory),
+- Concevoir des structures moléculaires :  analyse, traitements, comparaison aux
+données chimiques expérimentales récoltées,
+- Traiter, interpréter et mettre en forme les données expérimentales et
+théoriques, exploiter les résultats avec les demandeurs,
+- Assurer une veille scientifique et technologique,
+- Diffuser et valoriser les résultats de recherche en particulier au travers de
+formations auprès des étudiants de l'axe.
+Compétences :
+Savoirs :
+- Chimie/Sciences des matériaux (connaissance approfondie),
+- Techniques de caractérisation de matériaux (connaissance approfondie)(FTIR,
+rhéologie, (photo)DSC, imagerie thermique),
+- Connaissance générale des outils de calcul scientifique et de modélisation et
+simulation numérique,
+- Connaissance du Logiciel Gaussian fortement appréciée pour l'utilisation de la
+modélisation moléculaire, une formation est prévue dans le cas inverse,
+-Langue anglaise : B1 à B2 (cadre européen commun de référence pour les langues).
+Savoir-faire :
+- Maîtrise des procédés et réactions de photopolymérisation,
+- Suivi des réactions de polymérisation et caractérisations avancées des
+polymères (par exemple par les techniques suivantes : RT-FTIR, photorhéologie,
+PhotoDSC, imagerie thermique...)
+- Design de structure chimique par modélisation moléculaire,
+- Valorisation des résultats et diffusion des connaissances lors des réunions,
+avec les partenaires académiques ou industriels.
+Savoir-être :
+-Autonomie,
+-Rigueur,
+-Fiabilité.
+Contexte :
+Le poste se situe à l'institut de Science des Matériaux de Mulhouse (Unité mixte
+de recherche CNRS-Université de Haute-Alsace) qui regroupe environ 180 personnes
+dont 60 chercheurs permanents ayant des compétences en chimie, physique et
+biologie. Il/elle sera rattachée à l'axe PhotoChimie Moléculaire et
+PhotoPolymérisation (PM2P) qui est reconnu au niveau National et International
+pour le développement de systèmes photosensibles et photopolymérisables et leur
+application dans le domaine des matériaux. Cet axe regroupe actuellement 5
+permanents (un professeur, deux maîtres de conférences et deux chargés de
+recherche) et publie dans les meilleurs journaux internationaux du domaine (e.g.
+Angewandte Chemie : 3 publications depuis le début de l'année 2025). Les suivis
+expérimentaux (polymérisation, caractérisation des propriétés finales des
+matériaux) ainsi que la modélisation moléculaire sont au cœur du travail de
+l'axe et des points prioritaires. Ces études apportent un appui dans la
+validation des résultats expérimentaux obtenus et sont déclinées dans la quasi-
+totalité des publications (+ de 500 depuis 2011) ou projets (notamment LabComs,
+ANRs et contrats industriels). Les travaux réalisés seront en lien direct avec
+les permanents mais aussi non permanents (thèse, post-doc) de l'axe.
+Champs des relations :
+- Le Responsable de l'Axe PhotoChimie Moléculaire et PhotoPolymérisation (PM2P)
+- Les personnels de l'équipe (permanents, PhD, post-doctorants, stagiaires, etc)
+- Les partenaires (équipes de recherche françaises et étrangères, partenaires
+industriels)
+- Les personnels du Mésocentre de Strasbourg et de l'IDRIS (Institut du
+développement et des ressources en informatique scientifique)
+- Les personnels de l'institut
+La personne recrutée pourra solliciter du télétravail sous couvert de son
+responsable, bénéficiera d'une participation forfaitaire aux frais de
+transport et de mutuelle, d'un restaurant universitaire, d'un comité
+d'entreprise.

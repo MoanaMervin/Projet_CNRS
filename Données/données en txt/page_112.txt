@@ -1,0 +1,96 @@
++
+Liste des concours
+C : Sciences de l'ingénieur et instrumentation scientifique
+Ingénieur d'études
+Concours N° 114
+Nbre de postes :
+1
+Emploi-type :
+Ingenieure ou ingenieur en études mécaniques
+Affectation :
+Laboratoire de physique subatomique et des technologies associées, NANTES
+Groupe de fonction :
+Groupe 3
+Mission :
+Dans le cadre des projets du laboratoire et en collaboration avec ses collègues,
+l'ingénieur-e devra assurer la définition, la conception et le suivi de
+réalisation d'ensembles mécaniques.
+Il-elle sera amené-e à travailler sur des projets locaux dont il-elle aura la
+charge ainsi que dans des collaborations internationales de grande ampleur.
+Activités :
+L'ingénieure-e interviendra sur le processus complet de développement mécanique,
+de la définition du besoin à la mise en service. Cela inclut notamment la
+participation aux réunions de projet, les calculs de dimensionnement, la
+conception, la réalisation des plans de fabrication, le suivi de fabrication
+(auprès de l'atelier interne ou de sous-traitants) et le montage des ensembles
+mécaniques qu'il-elle aura conçus sur les sites expérimentaux.
+-	Analyser et traduire en termes de conception mécanique, les cahiers des
+charges ou spécifications techniques des besoins
+-	Réaliser l'avant-projet et la conception mécanique d'ensembles mécaniques
+instrumentaux
+-	Intégrer et coordonner sur le plan technique, les spécialités connexes à
+la mécanique (thermique, vide...)
+-	Réaliser les dossiers de calcul de structure (mécanique, thermique...) et
+les dossiers d'études (cotation fonctionnelle, tolérancement, dessin de
+définition...)
+-	Organiser et rendre compte des essais et de la mise au point
+-	Rédiger des notices et rapports techniques (documents, analyses,
+interfaces, montage et maintenance)
+-	Suivre la fabrication et la construction des projets réalisés en interne
+ou en sous-traitance
+-	Coordonner et suivre le montage et l'intégration de systèmes mécaniques,
+au laboratoire ou sur site d'exploitation, participer aux tests d'intégration
+Compétences :
+Connaissances :
+-	Conception mécanique (connaissance approfondie)
+-	Mécanique du solide
+-	Dessin industriel (connaissance approfondie)
+-	Techniques de calcul appliquées à la mécanique (modélisation par
+éléments finis, résistance des matériaux, thermique élémentaire ; niveau
+opérationnel)
+-	Sciences physiques (connaissance générale)
+-	Concepts, techniques et procédés de fabrication du domaine (connaissance
+approfondie)
+-	Matériaux utilisés et conditions de mise en œuvre en construction
+mécanique
+-	Environnement et réseaux professionnels
+-	Langue anglaise : niveau B1 à B2 minimum du cadre européen commun de
+référence pour les langues
+Compétences opérationnelles :
+-	Savoir appliquer les techniques connexes à la mécanique (vide,
+thermique, écoulement des fluides...)
+-	Maîtrise des logiciels spécifiques au domaine : Conception Assistée par
+Ordinateur (CAO), modélisation numérique...
+-	Capacité à rédiger des rapports ou des documents techniques
+-	Savoir appliquer les procédures d'hygiène et sécurité
+Compétences comportementales :
+-	Capacité et appétence pour le travail en équipe
+-	Disposer d'un esprit d'initiative, d'une certaine inventivité
+-	Faire preuve d'une bonne capacité d'écoute et de pédagogie
+-	Savoir réagir aux aléas
+-	Posséder un bon sens de l'organisation
+Contexte :
+Subatech est une UMR de 200 personnes environ affiliée à trois tutelles :
+CNRS/Nucléaire & Particules, IMT Atlantique et Nantes Université.
+Le service d'études et réalisations mécaniques (12 personnes) comprend un bureau
+d'études et un atelier de réalisation mécanique. Le poste est affecté au bureau
+d'études, sous la responsabilité du chef de service.
+Ce service définit et prend en charge la partie technique des expériences
+auxquelles participent les groupes de physique du laboratoire. Ces expériences,
+de natures diverses, impliquent des technologies variées.
+A titre d'exemple, Subatech travaille sur les grands détecteurs de particules du
+CERN, construit une installation de spectrométrie de masse, intervient sur des
+sujets comme la médecine nucléaire en lien avec le CYCLOTRON ARRONAX ou le
+GANIL.
+Les outils métier utilisés par le bureau d'étude sont 3DEXPERIENCE (Catia V6)
+pour la CAO, TopSolid pour la CFAO et ANSYS pour les calculs par éléments finis
+et CFD, ainsi que les suites bureautiques classiques. Pour la réalisation des
+prototypes, l'atelier mécanique (4 personnes) dispose de machines-outils à
+commande numérique, d'un petit atelier de soudure et d'un atelier d'impression
+3D.
+Des déplacements sur les sites expérimentaux ou pour des réunions de
+collaborations sont à prévoir de façon ponctuelle.
+Une formation initiale à dominante en études mécaniques est exigée pour ce
+poste, qui peut convenir à une personne récemment diplômée ou avec une
+expérience de junior.
+https://www-subatech.in2p3.fr/

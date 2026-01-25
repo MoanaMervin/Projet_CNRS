@@ -1,0 +1,44 @@
++
+Liste des concours
+E : Informatique, statistiques et calcul scientifique
+Ingénieur d'études
+Concours N° 132
+Nbre de postes :
+1
+Emploi-type :
+Ingenieure statisticienne ou ingenieur statisticien
+Affectation :
+Direction d'appui aux partenariats publics, PARIS 16
+Groupe de fonction :
+Groupe 3
+Mission :
+L'ingénieur·e statisticien·ne organisera la gestion des données collectées par la direction, contrôlera leur cohérence et leur qualité, notamment sur les laboratoires liés à l'organisme et leurs personnels. Il/elle élaborera et mettra en œuvre l'enchainement des traitements et assurera l'analyse statistique et la présentation des résultats et bilans produits.
+Activités :
+Définir un plan de recueil, notamment via des extractions des systèmes d'information, et de gestion des données ainsi que la chaîne de traitement associée
+Assurer la sécurité des données collectées
+Contrôler et améliorer la cohérence et la qualité des données
+Construire et gérer des bases de données annuelles, en particulier sur les laboratoires et leurs personnels
+Organiser et maintenir l'environnement de partage des données au sein de la direction d'appui aux partenariats publics (DAPP)
+Concevoir et réaliser des traitements de données afin de produire des indicateurs statistiques, graphiques et cartes spécifiques
+Produire des dossiers de données statistiques structurées en fonction des demandes, notamment celles émanant de la Direction générale déléguée à la science
+Contribuer à la rédaction de rapports et de synthèses de présentation des résultats des analyses statistiques
+Rédiger les documentations sur les données et les traitements réalisés et effectuer des présentations pour le transfert de compétences
+Apporter des conseils sur la pertinence des données traitées ainsi qu'un appui technique aux services de la DAPP
+Effectuer une veille sur la réglementation (décret organique du CNRS et statuts des personnels de recherche)
+Compétences :
+Savoirs :
+Maîtriser les logiciels de traitement de données et savoir les mobiliser à bon escient (SAS et/ou R, Python, ACCESS, EXCEL)
+Connaitre les systèmes de gestion de bases de données et des outils informatiques associés (langage et requête de type SQL)
+Connaitre la réglementation sur la gestion des données (traitement, diffusion, stockage)
+Connaitre les données de gestion relatives aux ressources humaines
+Connaitre le système national de l'enseignement supérieur et de la recherche serait un plus
+Savoir-faire :
+Posséder de bonnes capacités d'analyse et de synthèse
+Maitriser l'expression écrite
+Savoir-être :
+Faire preuve de qualités d'organisation et d'autonomie dans le travail
+Faire preuve d'aptitude à travailler en équipe et d'aisance relationnelle
+Contexte :
+Placée auprès du Directeur Général délégué à la Science, la Direction d'Appui aux Partenariats Publics (DAPP) déploie et instruit la politique partenariale du CNRS avec les institutions publiques tant territoriales que nationales. Elle coordonne le dispositif de représentation du CNRS auprès de ces institutions. Elle est également structure de référence en matière de production et d'analyses de données qui caractérisent l'activité et les partenariats du CNRS. La DAPP réalise ses missions en s'appuyant sur 5 services : Partenaires publics territoriaux, Institutions nationales, Structures et outils d'animation, Données et Indicateurs, Maîtrise d'ouvrage de systèmes d'information.
+Le/la chargé-e d'études statistiques est placé-e sous la responsabilité de la responsable du service « Données et Indicateurs » et exerce ses activités au sein d'une équipe de 6 personnes. Ce service centralise les données décrivant les structures de recherche et d'appui à la recherche, administre des bases de données, réalise des études et produit des indicateurs institutionnels. Il concourt également à la conception de la plateforme d'aide à la décision.
+Lieu de travail : Siège du CNRS (Paris 16ème) Télétravail envisageable selon les règles en vigueur au CNRS et le règlement intérieur de la DAPP
