@@ -1,0 +1,21 @@
+{
+  "source_file": "page_109.html",
+  "bap": "C : Sciences de l'ingénieur et instrumentation scientifique",
+  "grade": "Ingénieur d'études",
+  "concours_label": "Concours N° 111",
+  "concours_num": "111",
+  "nb_postes": "1",
+  "emploi_type": "Ingenieure electronicienne ou ingenieur electronicien",
+  "nb_postes_detectes": 1,
+  "postes": [
+    {
+      "poste_num": 1,
+      "affectation": "Nanosciences et innovation pour les matériaux, la biomédecine et l'énergie, GIF SUR YVETTE",
+      "groupe_fonction": "Groupe 3",
+      "mission": "L'ingénieur(e) aura en charge la conception et la fabrication de circuits radiofréquences à adapter sur les spectromètres RMN (Résonance Magnétique Nucléaire) de l'unité. Il/elle contribuera significativement à la modélisation, la réalisation et l'évaluation du fonctionnement de dispositifs électroniques radiofréquences.",
+      "activites": "- Élaborer les spécifications techniques des besoins en vue de la rédaction du cahier des charges fonctionnelles\n- Concevoir et réaliser des dispositifs électroniques interfaçables avec les expériences RMN in situ (pompage optique au sein de l'aimant par exemple)\n- Participer activement à l'installation de dispositifs tels que des systèmes combinant microfluidique et micro-détection RMN\n- Développer des micro-résonateurs et participer à leur installation sur différentes sondes RMN faites maison par l'atelier mécanique ou par les spécialistes de l'impression 3D\n- Participer aux expériences dès la partie conception d'un appareillage ou d'un dispositif\nDéfinir les méthodes de contrôle et de mesure\n- Maintenir les outils de conception et de développement électronique et informatique\n- Gérer les pannes électroniques de premier niveau, et faire le relais avec le constructeur pour les pannes de niveau supérieur. Réaliser la maintenance des cartes de pilotage des dispositifs installés\n- Rédiger des documents techniques (mode d'emploi des systèmes électroniques installés ; cahiers d'évaluation des performances, etc.)",
+      "competences": "Compétences :\n- Maîtrise globale de l'électronique, et si possible l'électronique radiofréquence\n- Bonnes connaissances pratiques des logiciels de simulation dans le domaine de la radiofréquence, de prototypage et de mesures radio (analyseur réseau)\n- Connaissances des bases de la résonance magnétique nucléaire (formation interne possible)\n- Appliquer les règles d'hygiène et de sécurité\n- Appliquer les procédures de sécurité\nLangue anglaise : B1 à B2 (cadre européen commun de référence pour les langues)\nSavoir-être :\n- Capacité à interagir avec différents membres du groupe\n- Aptitude à rédiger des rapports et des documents techniques\n- Capacité à piloter un projet à moyen terme\n- Capacité à transmettre et à partager ses connaissances.\nDes formations pourront être envisagées pour compléter les compétences du (de la) candidat(e) retenu(e).",
+      "contexte": "L'Unité Mixte de Recherche NIMBE (Nanosciences et Innovation pour les Matériaux, la Biomédecine et l'Energie), CNRS (Centre National de Recherche Scientifique) - CEA (Commissariat à l'Energie Atomique et aux Energies Alternatives) basée sur le site du CEA Paris-Saclay, regroupe une centaine de techniciens et chercheurs qui travaillent sur la maitrise de la conception, du façonnage et de l'analyse de la matière de l'échelle du micron à l'échelle nanométrique, ainsi que sur la compréhension des mécanismes physico-chimiques et de leurs synergies à ces échelles. Ces approches sont appliquées en priorité aux grands enjeux sociétaux : gestion durable de l'énergie, environnement, traitement de l'information, diagnostic biomédical.\nAu sein du NIMBE, le LSDRM (Laboratoire Structure et Dynamique par Résonance Magnétique) conçoit et développe des solutions méthodologiques et instrumentales originales autour de la résonance magnétique afin d'en augmenter la sensibilité et d'étendre son champ d'applications (par exemple : dispositifs optiques ou mécaniques). Ainsi, des compétences fortes en électronique et radiofréquence sont indispensables pour réaliser des montages performants, uniques et innovants. L'ingénieur.e d'études rejoindra ce groupe de 10 permanents et sera sous la responsabilité directe du chef de groupe."
+    }
+  ]
+}

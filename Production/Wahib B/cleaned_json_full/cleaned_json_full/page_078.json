@@ -1,0 +1,21 @@
+{
+  "source_file": "page_078.html",
+  "bap": "E : Informatique, statistiques et calcul scientifique",
+  "grade": "Ingénieur d'études",
+  "concours_label": "Concours N° 119",
+  "concours_num": "119",
+  "nb_postes": "1",
+  "emploi_type": "Administratrice ou administrateur des systèmes d'information",
+  "nb_postes_detectes": 1,
+  "postes": [
+    {
+      "poste_num": 1,
+      "affectation": "Centre de Calcul de l'Institut National de Physique Nucléaire et de Physique des Particules, VILLEURBANNE",
+      "groupe_fonction": "Groupe 3",
+      "mission": "La personne recrutée rejoindra l'équipe Calcul en charge de l'administration, de la gestion et de l'évolution des plateformes de calcul (un millier de serveurs Linux). Ces plateformes fournissent 24h/24, 7j/7, des environnements de calcul HTC, HPC et GPGPU, principalement aux expériences de recherche en physique corpusculaire. Il/elle aura en charge de l'opération des plateformes de calcul du Centre de Calcul de l'IN2P3.",
+      "activites": "- Assurer le suivi de la production, optimiser l'utilisation des ressources de calcul.\n- Développer et déployer les outils permettant d'automatiser des tâches récurrentes dans le cadre de l'opération des plateformes de traitement des données.\n- Garantir le support niveau 3, l'analyse et la résolution d'incident.\n- Rédiger la documentation des procédures et des travaux réalisés dans le cadre de l'activité, dispenser des formations sur les outils et les technologies, intervenir en qualité d'expert.\n- Représenter le CC-IN2P3 dans des conférences ou des groupes de travail nationaux ou internationaux.\n- Assurer une veille technologique en relation avec le domaine d'application.",
+      "competences": "Connaissances\n- Système d'exploitation Linux en environnement réseau IP.\n- Outils de gestion de configuration et de déploiement automatisé (Puppet, ansible).\n- Systèmes de monitoring, en particulier Nagios.\n- Langages de programmation python et bash.\n- Outils de développement collaboratif (Git, CI, etc.).\n- Concepts des plateformes de traitement des données et des logiciels de traitement par lots HTCondor et Slurm.\n- Connaissance de l'environnement logiciel de la grille de calcul EGI/WLCG.\n- Concepts de « containerisation », logiciels Apptainer et Docker.\n- Concepts et bonnes pratiques de la sécurité informatique.\nCompétences opérationnelles\n- Capacité à rapporter sur son activité et à organiser ses tâches.\n- Capacité à établir un diagnostic et à résoudre des problèmes.\n- Capacité à travailler en équipe dans un environnement international et multiculturel.\n- Communication orale et écrite en langues française et anglaise.",
+      "contexte": "Le Centre de Calcul de l'Institut national de physique nucléaire et de physique des particules (CCIN2P3) est une unité de service et de recherche du CNRS. Classé parmi les grandes infrastructures françaises de recherche, il a pour vocation de fournir des moyens de stockage et de traitement de données aux chercheurs impliqués dans les expériences de physique corpusculaire. Plus de 70 collaborations internationales utilisent ses services 24h/24, 7j/7 [Plus d'informations : https://cc.in2p3.fr]."
+    }
+  ]
+}

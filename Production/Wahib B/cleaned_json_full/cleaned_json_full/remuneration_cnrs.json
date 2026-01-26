@@ -1,0 +1,145 @@
+{
+  "source": "CNRS – Rémunération des fonctionnaires",
+  "url": "https://carrieres.cnrs.fr/remuneration-des-fonctionnaires/",
+  "title": "Rémunération des fonctionnaires",
+  "sections": [
+    {
+      "title": "La rémunération, comment ça marche ?",
+      "content": [
+        "Votre rémunération se compose principalement du traitement indiciaire. Plus concrètement, le montant de ce dernier est obtenu (traitement brut mensuel) en multipliant la valeur mensuelle du point d’indice (4,92 euros au 1 er juillet 2023) par l’indice majoré attaché à l’échelon dans lequel vous êtes classé (qui s’échelonne de 340 à 1329).",
+        "À ce traitement de base peuvent s’ajouter mensuellement :"
+      ],
+      "lists": [
+        [
+          "L’indemnité de fonctions, de sujétions et d’expertise (IFSE), liée au grade et à la fonction exercée pour les ingénieurs et techniciens (H/F) ;",
+          "Une indemnité liée au grade et une indemnité liée à l’exercice de certaines fonctions ou responsabilités particulières pour les chercheurs (H/F) ;",
+          "L’indemnité de résidence fixée en pourcentage du traitement de base (3 %, 1 % ou 0 %) en fonction de la résidence administrative (ville d’affectation) ;",
+          "Le supplément familial de traitement (montant dépendant du nombre d’enfants à charge) ;",
+          "Le remboursement partiel des frais de transport domicile-travail ;",
+          "Les primes ou indemnités spécifiques, liées à l’exercice de certaines fonctions."
+        ]
+      ]
+    },
+    {
+      "title": "Rémunération des ingénieurs et techniciens (H/F) au 01/01/2025",
+      "content": [
+        "Un complément indemnitaire annuel (CIA), dont le montant est modulable au regard de la manière de servir et de l’engagement professionnel, peut être versé en juillet et en décembre."
+      ],
+      "lists": []
+    },
+    {
+      "title": "Rémunération des chercheurs (H/F) au 01/01/2025",
+      "content": [
+        "Une prime individuelle liée à la qualité des activités et à l'engagement professionnel peut être versée mensuellement."
+      ],
+      "lists": []
+    },
+    {
+      "title": "Pour aller plus loin",
+      "content": [],
+      "lists": []
+    }
+  ],
+  "tables": [
+    {
+      "title": "Rémunération des ingénieurs et techniciens (H/F) au 01/01/2025",
+      "headers": [
+        "Catégorie fonction publique",
+        "Corps",
+        "Rémunération brute mensuelle minimale en début de carrière *",
+        "Rémunération brute mensuelle maximale en fin de carrière *",
+        "CIA moyen 2024"
+      ],
+      "rows": [
+        {
+          "Catégorie fonction publique": "A",
+          "Corps": "Ingénieur de recherche (IR)",
+          "Rémunération brute mensuelle minimale en début de carrière *": "2 970.67 €",
+          "Rémunération brute mensuelle maximale en fin de carrière *": "6 081.19 €",
+          "CIA moyen 2024": "1 318,16 €"
+        },
+        {
+          "Catégorie fonction publique": "A",
+          "Corps": "Ingénieur d'études (IE)",
+          "Rémunération brute mensuelle minimale en début de carrière *": "2 388.78 €",
+          "Rémunération brute mensuelle maximale en fin de carrière *": "4 572.16 €",
+          "CIA moyen 2024": "1 325,90 €"
+        },
+        {
+          "Catégorie fonction publique": "A",
+          "Corps": "Assistant ingénieur (AI)",
+          "Rémunération brute mensuelle minimale en début de carrière *": "2 226.85 €",
+          "Rémunération brute mensuelle maximale en fin de carrière *": "3 500.23 €",
+          "CIA moyen 2024": "1 170,98 €"
+        },
+        {
+          "Catégorie fonction publique": "B",
+          "Corps": "Technicien de la recherche (TR)",
+          "Rémunération brute mensuelle minimale en début de carrière *": "2 164.17 €",
+          "Rémunération brute mensuelle maximale en fin de carrière *": "3 274.15 €",
+          "CIA moyen 2024": "1 055,75 €"
+        },
+        {
+          "Catégorie fonction publique": "C",
+          "Corps": "Adjoint technique de la recherche (ATR)",
+          "Rémunération brute mensuelle minimale en début de carrière *": "2 092.82 €",
+          "Rémunération brute mensuelle maximale en fin de carrière *": "2 657.14 €",
+          "CIA moyen 2024": "641,20 €"
+        }
+      ]
+    },
+    {
+      "title": "Rémunération des chercheurs (H/F) au 01/01/2025",
+      "headers": [
+        "Catégorie fonction publique",
+        "Corps",
+        "Grade",
+        "Traitement brut mensuel en début de carrière",
+        "Traitement brut mensuel maximum fin de carrière",
+        "Prime de recherche (montant annuel versé mensuellement)"
+      ],
+      "rows": [
+        {
+          "Catégorie fonction publique": "A",
+          "Corps": "Directeur de recherche (DR)",
+          "Grade": "Classe exceptionnelle",
+          "Traitement brut mensuel en début de carrière": "5 799,04 €",
+          "Traitement brut mensuel maximum fin de carrière": "6 566,99 €",
+          "Prime de recherche (montant annuel versé mensuellement)": "4 200 €"
+        },
+        {
+          "Catégorie fonction publique": "A",
+          "Corps": "Directeur de recherche (DR)",
+          "Grade": "1re classe",
+          "Traitement brut mensuel en début de carrière": "4 110,52 €",
+          "Traitement brut mensuel maximum fin de carrière": "5 799,04 €",
+          "Prime de recherche (montant annuel versé mensuellement)": "4 200 €"
+        },
+        {
+          "Catégorie fonction publique": "A",
+          "Corps": "Directeur de recherche (DR)",
+          "Grade": "2e classe",
+          "Traitement brut mensuel en début de carrière": "3 308,11 €",
+          "Traitement brut mensuel maximum fin de carrière": "5 277,22 €",
+          "Prime de recherche (montant annuel versé mensuellement)": "4 200 €"
+        },
+        {
+          "Catégorie fonction publique": "A",
+          "Corps": "Chargé de recherche (CR)",
+          "Grade": "Hors classe",
+          "Traitement brut mensuel en début de carrière": "3 189,96 €",
+          "Traitement brut mensuel maximum fin de carrière": "5 277,22 €",
+          "Prime de recherche (montant annuel versé mensuellement)": "4 200 €"
+        },
+        {
+          "Catégorie fonction publique": "A",
+          "Corps": "Chargé de recherche (CR)",
+          "Grade": "Classe normale",
+          "Traitement brut mensuel en début de carrière": "2 358,01 €",
+          "Traitement brut mensuel maximum fin de carrière": "4 110,52 €",
+          "Prime de recherche (montant annuel versé mensuellement)": "4 200 €"
+        }
+      ]
+    }
+  ]
+}

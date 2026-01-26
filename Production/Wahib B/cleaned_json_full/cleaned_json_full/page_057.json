@@ -1,0 +1,21 @@
+{
+  "source_file": "page_057.html",
+  "bap": "E : Informatique, statistiques et calcul scientifique",
+  "grade": "Ingénieur de recherche",
+  "concours_label": "Concours N° 57",
+  "concours_num": "57",
+  "nb_postes": "1",
+  "emploi_type": "Cheffe ou chef de projet / experte ou expert en Ingéniérie logicielle",
+  "nb_postes_detectes": 1,
+  "postes": [
+    {
+      "poste_num": 1,
+      "affectation": "Observatoire Midi-Pyrénées, TOULOUSE",
+      "groupe_fonction": "Groupe 3",
+      "mission": "Le/la Chef-fe de projet ou expert-e en Ingéniérie logicielle recruté-e participera\naux développements et à la maintenance logicielles de tous les aspects relatifs\naux systèmes d'acquisition embarqués et de transmission de données, ainsi qu'aux\ndéveloppements pour l'automatisation des procédures de traçabilité, et\nl'automatisation des vérifications de qualité pour la transmission des données en\ntemps réel. Il/elle travaillera sous la responsabilité hiérarchique du responsable\nde l'équipe technique IAGOS.",
+      "activites": "ACTIVITES PRINCIPALES :\n- Piloter et développer les évolutions du système d'acquisition IAGOS\nembarqué sur Airbus A340/A330\n- Développer les applications logicielles (front-end et back-end) pour\naccélérer les procédures de maintenance en laboratoire\n- Piloter et développer les logiciels embarqués des futures générations\nd'instruments IAGOS\n- Piloter et développer les logiciels embarqués pour la transmission des\ndonnées en temps réel par wifi et gsm.\n- Maintenir et faire évoluer les logiciels embarqués de traitement de\ndonnées et de traçabilité au laboratoire\nACTIVITES ASSOCIEES :\n- Piloter les procédures d'intégration et de déploiement continu des\nlogiciels\n- Développer les procédures d'acquisition des signaux ARINC pour Airbus A350\n- Définir et s'assurer du suivi d'un plan d'assurance et contrôle qualité\n- Assurer un rôle de conseil et d'expertise\n- Assurer une veille technologique\n- Participer aux réunions de coordination techniques avec les partenaires\neuropéens",
+      "competences": "- Une expérience en informatique embarquée sur avions commerciaux sera\nappréciée\n- Maîtrise des techniques et science de l'ingénieur pour l'élaboration de\nbancs de test\n- Maîtrise des protocoles de communication\n- Maîtrise des outils CI/CD\n- Maîtrise du langage C++\n- Maîtrise de Docker\n- Connaissances requises du langage Python. Des connaissances en Javascript\net Node.js seront appréciées\n- Anglais technique (niveau B2 selon le cadre européen de référence des\nlangues)\n- Avoir une autonomie dans le travail, un sens du relationnel et une\naptitude à travailler en équipe\n- Des connaissances en physique et chimie de l'atmosphère (météorologie,\npollution) seraient un plus.",
+      "contexte": "L'Observatoire Midi-Pyrénées (OMP) souhaite recruter un ingénieur de recherche\npour renforcer l'équipe technique de IAGOS, Infrastructure de Recherche Européenne\nutilisant une flotte d'avions de ligne Airbus équipés d'une instrumentation\nautomatique pour des mesures de la composition de l'atmosphère et la surveillance\ndu climat.\nCe poste est basé à Toulouse, dans les locaux du Laboratoire d'Aérologie (LAERO).\nL'agent-e sera intégré-e dans le groupe IAGOS (qui comprend actuellement 12\npersonnes). Des déplacements seront à prévoir en Europe et ailleurs dans le monde\nselon les besoins de l'Infrastructure de Recherche.\nAprès 6 mois d'ancienneté sur le poste, une partie des activités sont télé-\ntravaillables et seront à définir avec la direction, sous réserve de respecter la\nréglementation en vigueur au CNRS. D'un point de vue hiérarchique, l'agent\ndépendra du directeur de l'OMP."
+    }
+  ]
+}

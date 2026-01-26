@@ -1,0 +1,21 @@
+{
+  "source_file": "page_081.html",
+  "bap": "E : Informatique, statistiques et calcul scientifique",
+  "grade": "Ingénieur d'études",
+  "concours_label": "Concours N° 122",
+  "concours_num": "122",
+  "nb_postes": "1",
+  "emploi_type": "Administratrice ou administrateur systèmes et réseaux",
+  "nb_postes_detectes": 1,
+  "postes": [
+    {
+      "poste_num": 1,
+      "affectation": "Laboratoire de Physique et Chimie Théoriques, VANDOEUVRE LES NANCY",
+      "groupe_fonction": "Groupe 3",
+      "mission": "L'agent sera responsable de la gestion des systèmes et réseaux du laboratoire pour assurer la disponibilité et la performance du parc informatique (matériels et logiciels). Il participera à la gestion de l'infrastructure HPC du laboratoire.",
+      "activites": "- Gérer et maintenir quotidiennement le parc matériel, logiciel, optimiser son utilisation\n- Installer, mettre à jour et paramétrer le système d'exploitation et les logiciels de l'environnement utilisateur\n- Former, conseiller et assister les utilisateurs\n- Mettre en place les moyens et les procédures pour garantir les performances et la disponibilité des systèmes\n- Administrer, maintenir et faire évoluer les choix en matériels informatiques, réseaux et services\n- Négocier avec les fournisseurs d'équipements informatiques dans le respect des règles prédéfinies\n- Appliquer les normes et standards de sécurité\n- Participer à l'administration des ressources de calcul intensif\nActivités associées :\n- Réceptionner et installer le matériel\n- Gérer et sécuriser les données de recherche du laboratoire\n- Suivre l'exploitation des sauvegardes des postes de travail\n- Gérer administrativement le parc informatique (inventorier le matériel, logiciels et licences / suivre les contrats de maintenance, gérer le SAV)\n- Prendre en charge la relation avec les fournisseurs des logiciels métiers et des fournisseurs de matériels\n- Assurer la veille technologique",
+      "competences": "Savoirs :\n- Connaitre les concepts et techniques d'architecture des systèmes et des réseaux\n- Connaitre les technologies, protocoles et outils liés à l'administration de l'infrastructure informatique\n- Connaitre les techniques de virtualisation et de gestion centralisée du parc informatique et de ses accès\n- Connaitre les principaux langages de programmation et de scripting en automatisation de systèmes (Bash, Python, Perl etc..).\n- Maîtriser les outils utilisés pour la conception et l'administration de plateforme Linux/Windows/MacOS\n- Maîtriser les procédures de sécurité informatique\n- Comprendre l'anglais technique du domaine\nSavoir-faire :\n- Comprendre et répondre aux besoins techniques des usagers\n- Rédiger des documents techniques\n- Accompagner et conseiller sur les choix de matériel ou logiciel.\n- Mener une consultation auprès des fournisseurs de matériels informatiques\nSavoir-être :\n- Développer une volonté d'apprentissage et un engagement professionnel durable\n- S'adapter aux évolutions techniques et technologiques\n- Favoriser l'écoute, le dialogue et le travail en équipe\n- Démontrer de bonnes qualités d'adaptation relationnelle et de communication\n- Travailler de manière autonome en faisant preuve d'initiatives et de réactivité",
+      "contexte": "Le Laboratoire de Physique et Chimie Théoriques - LPCT UMR 7019 - (CNRS - Université de Lorraine) est une unité de recherche internationalement reconnue qui regroupe actuellement la plupart des théoriciens (physiciens et chimistes) lorrains localisé sur le site de la Faculté des Sciences à Nancy (Vandœuvre-lès-Nancy) et sur le site de l'IPCM (Institut de Chimie Physique et Matériaux) à Metz (Technopôle de Metz). Le périmètre concerné compte une centaine de personnes (chercheurs/enseignants chercheurs, ingénieurs, techniciens et personnels administratifs).\nL'agent sera localisé sur le site de Nancy. Des déplacements ponctuels sur le site de Metz sont à prévoir.\nL'agent intégrera le service Informatique et Calcul et sera placé sous l'autorité de la responsable du Service de l'unité. Il/elle aura en charge la partie « Service aux Usagers » et travaillera en collaboration avec l'ingénieur HPC.\nLe parc informatique compte une centaine de poste de travail.\nCette fonction ouvre droit à la perception de l'Indemnité de Référence pour les Informaticiens (IRI)"
+    }
+  ]
+}

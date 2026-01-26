@@ -1,0 +1,21 @@
+{
+  "source_file": "page_009.html",
+  "bap": "A : Sciences du vivant, de la terre et de l'environnement",
+  "grade": "Ingénieur de recherche",
+  "concours_label": "Concours N° 9",
+  "concours_num": "9",
+  "nb_postes": "1",
+  "emploi_type": "Ingenieure ou ingenieur biologiste en plateforme scientifique",
+  "nb_postes_detectes": 1,
+  "postes": [
+    {
+      "poste_num": 1,
+      "affectation": "Centre de résonance magnétique biologique et médicale, MARSEILLE 05",
+      "groupe_fonction": "Groupe 3",
+      "mission": "L'ingénieur.e biologiste devra concevoir et conduire des protocoles d'acquisitions\ninnovants en IRM in vivo sur une plateforme préclinique et clinique comportant des\nsystèmes ultra-bas à ultra-haut champs magnétiques, chez des modèles animaux\n(rongeurs) de pathologies humaines et chez l'humain.",
+      "activites": "-Conduire des acquisitions IRM/SRM in vivo de modèles animaux (rongeurs) de\npathologies humaines (système nerveux central, cardiovasculaire et musculaire, et\ninflammation/infection) et chez l'humain, en relation avec les projets des\nutilisateurs ou partenaires\n- Concevoir des protocoles mutualisés et innovants en IRM/SRM préclinique Bruker\n(7T, 9.4T, 11.75T) et clinique (3T (Siemens), 7T (Siemens), ultra-bas champ\n(Multiwave)), en relation avec les projets des utilisateurs ou partenaires, et\nétablir le cahier des charges\n- Prendre en charge le traitement de données (logiciels développés au laboratoire)\n- Assurer et organiser la veille scientifique et technologique\n- Conseiller les utilisateurs et les partenaires sur les possibilités et limites\ndes techniques disponibles, sur l'interprétation des données\n- Diffuser et valoriser les résultats et réalisations technologiques sous forme de\nrapports, brevets, publications, présentations orales, enseignement\n- Appliquer et faire appliquer en situation de travail les réglementations du\ndomaine, en matière d'éthique, d'hygiène et de sécurité et de bonnes pratiques de\nlaboratoire\n- Contribuer aux processus mis en place dans le cadre de la certification qualité\ndu laboratoire",
+      "competences": "Savoirs :\n- Connaissances théoriques et pratiques en imagerie et spectroscopie de résonance\nmagnétique in vivo chez le rongeur et l'humain à différents champs magnétiques\n(ultra-bas à ultra-haut champ)\n- Connaissance de la règlementation en matière d'expérimentation animale :\nformation à l'expérimentation animale niveau concepteur et mise en pratique\n- Connaissance des outils de recueil et de traitement des données (Codes Python,\nR,\ntraitement de spectres SRM, FSLeyes,...))\n- Connaissance de la réglementation en matière d'hygiène et de sécurité\n- Connaissance du cadre légal et déontologique\n- Connaissances en métabolisme et physiologie, du rongeur et de l'humain\n- Connaissances élémentaires des techniques de biochimie et biologie cellulaire\n- Langue anglaise : B2 à C1 (cadre européen commun de référence pour les langues)\nSavoir-faire :\n- Coordonner différents projets\n- Expérience en imagerie et spectroscopie de résonance magnétique\n- Expérience en expérimentation animale\n- Expériences en technologies associées à l'imagerie (analyses biologiques,\npréparation pour l'histologie)\nSavoir-être :\n- Capacité de conceptualisation\n- Créativité / Sens de l'innovation\n- Travail d'équipe",
+      "contexte": "Le Centre de Résonance Magnétique Biologique et Médicale (CRMBM, UMR7339,\nhttps://crmbm.univ-amu.fr) est spécialisé dans le développement et l'application\nde méthodes et d'instruments de Résonance Magnétique pour l'exploration\nmorphologique, métabolique et fonctionnelle des systèmes nerveux, cardio-\nvasculaires, musculosquelettiques ainsi que de l'inflammation chez l'humain et\ndans des modèles animaux (rongeurs).\nLe poste d'ingénieur.e de recherche sera dédié à la plateforme préclinique\n(comportant des IRMs : 7T, 9.4T, 11.75T) située sur le site de la faculté des\nsciences médicales et paramédicales (campus Timone) du laboratoire, mais aussi à\nla plateforme de recherche clinique (comportant des IRMs : 55mT, 3T et 7T) située\nau CHU Timone. L'agent.e sera sous la responsabilité hiérarchique du directeur de\nl'unité."
+    }
+  ]
+}
